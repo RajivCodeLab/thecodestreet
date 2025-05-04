@@ -431,27 +431,21 @@
 </ul>
 <hr>
 <h2 id="-how-it-works--simplified-flow">⚙️ How It Works – Simplified Flow
-</h2><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">graph TD;
-</span></span><span class="line"><span class="cl">  UserInput --&gt; Kernel;
-</span></span><span class="line"><span class="cl">  Kernel --&gt; PluginFunctions;
-</span></span><span class="line"><span class="cl">  Kernel --&gt; ChatCompletion;
-</span></span><span class="line"><span class="cl">  Kernel --&gt; Planner;
-</span></span><span class="line"><span class="cl">  ChatCompletion --&gt; LLM(OpenAI / Azure OpenAI);
-</span></span><span class="line"><span class="cl">  Kernel --&gt; Response;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
+</h2><p><img src="/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/semantic-kernel-flow.png"
+	width="741"
+	height="348"
+	srcset="/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/semantic-kernel-flow_hu_c11a083adf126eb2.png 480w, /post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/semantic-kernel-flow_hu_754b26aa9b86bdc3.png 1024w"
+	loading="lazy"
+	
+		alt="Semantic Kernel Simplified Flow"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="212"
+		data-flex-basis="511px"
+	
+></p>
+<ul>
 <li>You send a prompt like “Send a thank-you email”</li>
 <li>The Kernel evaluates context and finds matching plugin functions</li>
 <li>It uses the LLM to execute or plan steps</li>
