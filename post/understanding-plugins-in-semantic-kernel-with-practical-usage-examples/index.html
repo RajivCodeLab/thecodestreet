@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <link rel="stylesheet" href="/css/custom.css"><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Plugins are the building blocks of Semantic Kernel. They allow your AI agents to perform real-world actions, from sending emails to calling APIs — all securely and modularly.">
+<title>Understanding Plugins in Semantic Kernel – With Practical Usage Examples</title>
+
+<link rel='canonical' href='http://localhost:1313/post/understanding-plugins-in-semantic-kernel-with-practical-usage-examples/'>
+
+<link rel="stylesheet" href="/scss/style.min.b26d86d959882d1513fdab5722a7d62fa65dd3e5c218ec0740aeba799a60b022.css"><meta property='og:title' content="Understanding Plugins in Semantic Kernel – With Practical Usage Examples">
+<meta property='og:description' content="Plugins are the building blocks of Semantic Kernel. They allow your AI agents to perform real-world actions, from sending emails to calling APIs — all securely and modularly.">
+<meta property='og:url' content='http://localhost:1313/post/understanding-plugins-in-semantic-kernel-with-practical-usage-examples/'>
+<meta property='og:site_name' content='Code Street'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Semantic Kernel' /><meta property='article:tag' content='Plugins' /><meta property='article:tag' content='Semantic Kernel Plugins' /><meta property='article:tag' content='GenAI Agents' /><meta property='article:published_time' content='2025-05-02T15:58:12&#43;05:30'/><meta property='article:modified_time' content='2025-05-02T15:58:12&#43;05:30'/><meta property='og:image' content='http://localhost:1313/post/understanding-plugins-in-semantic-kernel-with-practical-usage-examples/plugins.png' />
+<meta name="twitter:title" content="Understanding Plugins in Semantic Kernel – With Practical Usage Examples">
+<meta name="twitter:description" content="Plugins are the building blocks of Semantic Kernel. They allow your AI agents to perform real-world actions, from sending emails to calling APIs — all securely and modularly."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/post/understanding-plugins-in-semantic-kernel-with-practical-usage-examples/plugins.png' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/logo_hu_43b8c6fcb72455d1.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Code Street</a></h1>
+            <h2 class="site-description">ASP.NET, GenAI, Azure, Semantic Kernels Tutorials</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://facebook.com/codestreetyt'
+                        target="_blank"
+                        title="Facebook"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://linkedin.com/in/rjvranjan80'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://youtube.com/@CodeStreetYT'
+                        target="_blank"
+                        title="YouTube"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/category/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Category</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/projects/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-code"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>
+                
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/videos/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+                
+                <span>Videos</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                <form action="/search/" class="search-form widget" >
+        <p>
+            <label>Search</label>
+            <input name="keyword" required placeholder="Type something..." />
+        
+            <button title="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+            </button>
+        </p>
+    </form>
+            
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#-what-are-plugins-in-semantic-kernel">🧠 What Are Plugins in Semantic Kernel?</a></li>
+    <li><a href="#-why-use-plugins">📦 Why Use Plugins?</a></li>
+    <li><a href="#-how-to-create-a-plugin-in-c">🛠️ How to Create a Plugin in C#</a>
+      <ol>
+        <li><a href="#step-1-create-a-plugin-class">Step 1: Create a Plugin Class</a></li>
+        <li><a href="#step-2-register-the-plugin-in-your-kernel">Step 2: Register the Plugin in Your Kernel</a></li>
+        <li><a href="#step-3-run-the-kernel-and-let-llm-use-it">Step 3: Run the Kernel and Let LLM Use It</a></li>
+      </ol>
+    </li>
+    <li><a href="#-more-plugin-examples">💡 More Plugin Examples</a>
+      <ol>
+        <li><a href="#-email-plugin">📨 Email Plugin</a></li>
+        <li><a href="#-calendar-plugin">🗕️ Calendar Plugin</a></li>
+      </ol>
+    </li>
+    <li><a href="#-best-practices">🔐 Best Practices</a></li>
+    <li><a href="#-conclusion">🧠 Conclusion</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/understanding-plugins-in-semantic-kernel-with-practical-usage-examples/">
+                <img src="/post/understanding-plugins-in-semantic-kernel-with-practical-usage-examples/plugins_hu_e12b90c177d20ff4.png"
+                        srcset="/post/understanding-plugins-in-semantic-kernel-with-practical-usage-examples/plugins_hu_e12b90c177d20ff4.png 800w, /post/understanding-plugins-in-semantic-kernel-with-practical-usage-examples/plugins_hu_d383dd3307efdfd0.png 1600w"
+                        width="800" 
+                        height="322" 
+                        loading="lazy"
+                        alt="Featured image of post Understanding Plugins in Semantic Kernel – With Practical Usage Examples" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/semantic-kernel/" >
+                Semantic Kernel
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/understanding-plugins-in-semantic-kernel-with-practical-usage-examples/">Understanding Plugins in Semantic Kernel – With Practical Usage Examples</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Plugins are the building blocks of Semantic Kernel. They allow your AI agents to perform real-world actions, from sending emails to calling APIs — all securely and modularly.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 02, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="-what-are-plugins-in-semantic-kernel">🧠 What Are Plugins in Semantic Kernel?
+</h2><p>In Semantic Kernel, <strong>plugins</strong> are classes containing <strong>functions</strong> (also known as “skills”) that can be exposed to a Large Language Model (LLM) like GPT-4.</p>
+<p>These functions are:</p>
+<ul>
+<li>Clearly named</li>
+<li>Self-describing (via <code>[Description]</code> attribute)</li>
+<li>Callable by the LLM when needed</li>
+</ul>
+<blockquote>
+<p>Think of a plugin like a toolbox. Each function is a tool inside the box, and the LLM can pick the right tool when solving a user request.</p></blockquote>
+<hr>
+<h2 id="-why-use-plugins">📦 Why Use Plugins?
+</h2><ul>
+<li>✅ <strong>Securely expose code logic to LLMs</strong></li>
+<li>✅ <strong>Break logic into reusable modules</strong></li>
+<li>✅ <strong>Auto-discoverable via attributes</strong></li>
+<li>✅ <strong>Chain multiple functions with planners</strong></li>
+<li>✅ <strong>Testable and maintainable</strong></li>
+</ul>
+<hr>
+<h2 id="-how-to-create-a-plugin-in-c">🛠️ How to Create a Plugin in C#
+</h2><h3 id="step-1-create-a-plugin-class">Step 1: Create a Plugin Class
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.SemanticKernel</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">System.ComponentModel</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">MathPlugin</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [KernelFunction(&#34;add&#34;)]</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [Description(&#34;Adds two numbers.&#34;)]</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">int</span> <span class="n">Add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">a</span> <span class="p">+</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="na">
+</span></span></span><span class="line"><span class="cl"><span class="na">    [KernelFunction(&#34;square&#34;)]</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [Description(&#34;Returns the square of a number.&#34;)]</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">int</span> <span class="n">Square</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">x</span> <span class="p">*</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="step-2-register-the-plugin-in-your-kernel">Step 2: Register the Plugin in Your Kernel
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.SemanticKernel</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">builder</span> <span class="p">=</span> <span class="n">Kernel</span><span class="p">.</span><span class="n">CreateBuilder</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">AddOpenAIChatCompletion</span><span class="p">(</span><span class="s">&#34;gpt-4&#34;</span><span class="p">,</span> <span class="s">&#34;&lt;your-api-key&gt;&#34;</span><span class="p">);</span> <span class="c1">// Or AzureOpenAI</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Plugins</span><span class="p">.</span><span class="n">AddFromType</span><span class="p">&lt;</span><span class="n">MathPlugin</span><span class="p">&gt;();</span> <span class="c1">// Register your plugin</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">kernel</span> <span class="p">=</span> <span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="step-3-run-the-kernel-and-let-llm-use-it">Step 3: Run the Kernel and Let LLM Use It
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">prompt</span> <span class="p">=</span> <span class="s">&#34;What is the square of 5 plus 3?&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="k">await</span> <span class="n">kernel</span><span class="p">.</span><span class="n">InvokePromptAsync</span><span class="p">(</span><span class="n">prompt</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">GetValue</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;());</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>➡️ Under the hood, the LLM interprets the prompt and decides to:</p>
+<ul>
+<li>Call <code>add(5, 3)</code></li>
+<li>Then call <code>square(8)</code></li>
+<li>And return <code>64</code></li>
+</ul>
+<hr>
+<h2 id="-more-plugin-examples">💡 More Plugin Examples
+</h2><h3 id="-email-plugin">📨 Email Plugin
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">EmailPlugin</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [KernelFunction(&#34;send_email&#34;)]</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [Description(&#34;Sends an email to a given address with subject and body.&#34;)]</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">string</span> <span class="n">SendEmail</span><span class="p">(</span><span class="kt">string</span> <span class="n">to</span><span class="p">,</span> <span class="kt">string</span> <span class="n">subject</span><span class="p">,</span> <span class="kt">string</span> <span class="n">body</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Your email sending logic here</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s">$&#34;Email sent to {to} with subject &#39;{subject}&#39;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="-calendar-plugin">🗕️ Calendar Plugin
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">CalendarPlugin</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [KernelFunction(&#34;add_meeting&#34;)]</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [Description(&#34;Adds a meeting to your calendar.&#34;)]</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">string</span> <span class="n">AddMeeting</span><span class="p">(</span><span class="kt">string</span> <span class="n">title</span><span class="p">,</span> <span class="kt">string</span> <span class="n">dateTime</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s">$&#34;Meeting &#39;{title}&#39; scheduled for {dateTime}.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>LLMs can now respond to:</p>
+<ul>
+<li>“Schedule a meeting tomorrow at 4 PM titled ‘Budget Review’”</li>
+<li>“Send an email to John saying we’re running late”</li>
+</ul>
+<hr>
+<h2 id="-best-practices">🔐 Best Practices
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Tip</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>📎 Use <code>[Description]</code></td>
+          <td>Helps the LLM understand purpose</td>
+      </tr>
+      <tr>
+          <td>🔍 Keep functions focused</td>
+          <td>Each method should do one task</td>
+      </tr>
+      <tr>
+          <td>📦 Organize by domain</td>
+          <td>Group related functionality</td>
+      </tr>
+      <tr>
+          <td>🥺 Unit testable</td>
+          <td>Keep logic clear of LLM dependency</td>
+      </tr>
+      <tr>
+          <td>⚠️ Avoid unsafe actions</td>
+          <td>Do not expose dangerous operations directly</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h2 id="-conclusion">🧠 Conclusion
+</h2><p>Plugins in Semantic Kernel provide a powerful, modular, and secure way to bridge your application logic with AI models. They empower your agents to not just talk, but also <strong>act</strong> — with precision and structure.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/semantic-kernel/">Semantic Kernel</a>
+        
+            <a href="/tags/plugins/">Plugins</a>
+        
+            <a href="/tags/semantic-kernel-plugins/">Semantic Kernel Plugins</a>
+        
+            <a href="/tags/genai-agents/">GenAI Agents</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/">
+        
+        
+            <div class="article-image">
+                <img src="/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/AI%20Agents.0994451e83c9e1bde2552058daedf613_hu_d5cc897e6db31a9a.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post How to Create AI Agents Using Semantic Kernel’s Agentic Framework"
+                        
+                        data-hash="md5-CZRFHoPJ4b3iVSBY2u32Ew==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">How to Create AI Agents Using Semantic Kernel’s Agentic Framework</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/">
+        
+        
+            <div class="article-image">
+                <img src="/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/semantic-kernel.0a81309ea8548ecba340354115286c9b_hu_4febe3b7ea55e904.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post What is Semantic Kernel? Best Use Cases for Building AI-First Apps with Microsoft’s Open-Source SDK"
+                        
+                        data-hash="md5-CoEwnqhUjsujQDVBFShsmw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">What is Semantic Kernel? Best Use Cases for Building AI-First Apps with Microsoft’s Open-Source SDK</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer custom-footer">
+  <div class="footer-container-2col">
+
+    
+    <div class="footer-left">
+      <p class="footer-text">
+       
+        We share high-quality content on .NET, AI, and modern software development through blogs, tutorials, and videos.
+      </p>
+      <p class="footer-text">
+        &copy;
+        
+          2024 -
+        
+        2025 Code Street
+      </p>
+
+      
+    </div>
+
+    
+    <div class="footer-right">
+      <ul class="footer-menu">
+        
+        <li><a href="/about/">About</a></li>
+        
+        <li><a href="/terms/">Terms</a></li>
+        
+        <li><a href="/privacy/">Privacy</a></li>
+        
+        <li><a href="/disclaimer/">Disclaimer</a></li>
+        
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.fbbb01162ce17480d355ff4ab07206384873343a878e29b7d01a096d50fcb059.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

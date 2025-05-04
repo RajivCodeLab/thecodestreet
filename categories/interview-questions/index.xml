@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Interview Questions on Code Street</title>
+        <link>https://thecodestreet.dev/categories/interview-questions/</link>
+        <description>Recent content in Interview Questions on Code Street</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Code Street</copyright><atom:link href="https://thecodestreet.dev/categories/interview-questions/index.xml" rel="self" type="application/rss+xml" />
+    </channel>
+</rss>

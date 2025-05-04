@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="stylesheet" href="/css/custom.css"><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Leverage the power of Microsoft Semantic Kernel to build smart, modular, and scalable AI agents with C#. This blog walks you through building your first AI agent using the Agentic Framework.">
+<meta name="keywords" content="how to create AI agents, semantic kernel agents, semantic kernel c# example, microsoft semantic kernel"><title>How to Create AI Agents Using Semantic Kernel’s Agentic Framework</title>
+
+<link rel='canonical' href='https://thecodestreet.dev/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/'>
+
+<link rel="stylesheet" href="/scss/style.min.ad8ce7c0c0e78057c22a5b78a4c0e7b5548cf4b2899be789e83602220aac28e0.css"><meta property='og:title' content="How to Create AI Agents Using Semantic Kernel’s Agentic Framework">
+<meta property='og:description' content="Leverage the power of Microsoft Semantic Kernel to build smart, modular, and scalable AI agents with C#. This blog walks you through building your first AI agent using the Agentic Framework.">
+<meta property='og:url' content='https://thecodestreet.dev/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/'>
+<meta property='og:site_name' content='Code Street'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Semantic Kernel' /><meta property='article:tag' content='Agents' /><meta property='article:tag' content='GenAI' /><meta property='article:tag' content='GenAI Agents' /><meta property='article:published_time' content='2025-05-03T15:58:12&#43;05:30'/><meta property='article:modified_time' content='2025-05-03T15:58:12&#43;05:30'/><meta property='og:image' content='https://thecodestreet.dev/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/AI%20Agents.webp' />
+<meta name="twitter:title" content="How to Create AI Agents Using Semantic Kernel’s Agentic Framework">
+<meta name="twitter:description" content="Leverage the power of Microsoft Semantic Kernel to build smart, modular, and scalable AI agents with C#. This blog walks you through building your first AI agent using the Agentic Framework."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://thecodestreet.dev/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/AI%20Agents.webp' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/logo_hu_43b8c6fcb72455d1.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🚀</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Code Street</a></h1>
+            <h2 class="site-description">C#, GenAI, Semantic Kernel, ASP.NET and Azure Tutorials</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://facebook.com/codestreetyt'
+                        target="_blank"
+                        title="Facebook"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://linkedin.com/in/rjvranjan80'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://youtube.com/@CodeStreetYT'
+                        target="_blank"
+                        title="YouTube"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/category/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Category</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/projects/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-code"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>
+                
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/videos/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+                
+                <span>Videos</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                <form action="/search/" class="search-form widget" >
+        <p>
+            <label>Search</label>
+            <input name="keyword" required placeholder="Type something..." />
+        
+            <button title="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+            </button>
+        </p>
+    </form>
+            
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#-what-is-the-semantic-kernel-agentic-framework">🔍 What is the Semantic Kernel Agentic Framework?</a></li>
+    <li><a href="#-prerequisites">🛠️ Prerequisites</a></li>
+    <li><a href="#-architecture-overview">🧱 Architecture Overview</a></li>
+    <li><a href="#-step-by-step-building-an-agent">🚀 Step-by-Step: Building an Agent</a>
+      <ol>
+        <li><a href="#1--define-a-plugin">1. 🔌 Define a Plugin</a></li>
+        <li><a href="#2--set-up-the-kernel">2. 🧠 Set Up the Kernel</a></li>
+        <li><a href="#3--create-a-custom-agent">3. 🤖 Create a Custom Agent</a></li>
+        <li><a href="#4--run-the-agent">4. 🚪 Run the Agent</a></li>
+      </ol>
+    </li>
+    <li><a href="#-what-just-happened">🧠 What Just Happened?</a></li>
+    <li><a href="#-optional-enable-planning">📎 Optional: Enable Planning</a></li>
+    <li><a href="#-best-practices">🔐 Best Practices</a></li>
+    <li><a href="#-conclusion">📚 Conclusion</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/">
+                <img src="/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/AI%20Agents_hu_8e74a3e4f3f20f3f.webp"
+                        srcset="/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/AI%20Agents_hu_8e74a3e4f3f20f3f.webp 800w, /post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/AI%20Agents_hu_703cdc77cf290deb.webp 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post How to Create AI Agents Using Semantic Kernel’s Agentic Framework" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/semantic-kernel/" style="background-color: #114r44; color: #fff;">
+                Semantic Kernel
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/">How to Create AI Agents Using Semantic Kernel’s Agentic Framework</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Leverage the power of Microsoft Semantic Kernel to build smart, modular, and scalable AI agents with C#. This blog walks you through building your first AI agent using the Agentic Framework.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 03, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="-what-is-the-semantic-kernel-agentic-framework">🔍 What is the Semantic Kernel Agentic Framework?
+</h2><p>Microsoft&rsquo;s <a class="link" href="https://github.com/microsoft/semantic-kernel"  target="_blank" rel="noopener"
+    >Semantic Kernel</a> is an open-source SDK designed to simplify integrating AI into your applications. The Agentic Framework within Semantic Kernel helps you build intelligent, task-driven agents that:</p>
+<ul>
+<li>Autonomously plan and execute tasks</li>
+<li>Use plugins (functionality modules)</li>
+<li>Interact via AI services (like OpenAI or Azure OpenAI)</li>
+<li>Maintain conversation context</li>
+</ul>
+<p>The agents are powered by LLMs and enriched through planning, memory, function calling, and more.</p>
+<hr>
+<h2 id="-prerequisites">🛠️ Prerequisites
+</h2><p>To get started, ensure you have:</p>
+<ul>
+<li><a class="link" href="https://dotnet.microsoft.com/"  target="_blank" rel="noopener"
+    >.NET 8 SDK</a></li>
+<li>Visual Studio Code or Visual Studio</li>
+<li>OpenAI or Azure OpenAI API keys</li>
+<li>Basic knowledge of C#</li>
+</ul>
+<p>Install the core Semantic Kernel SDK:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dotnet add package Microsoft.SemanticKernel
+</span></span><span class="line"><span class="cl">dotnet add package Microsoft.SemanticKernel.Agents.OpenAI
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="-architecture-overview">🧱 Architecture Overview
+</h2><p>At its core, an AI agent in Semantic Kernel involves:</p>
+<ol>
+<li><strong>Kernel</strong> – The runtime for all services and plugins.</li>
+<li><strong>Plugins</strong> – Reusable sets of functions exposed to the LLM.</li>
+<li><strong>Agent</strong> – A class implementing <code>IAgent</code>, capable of interacting via <code>ReceiveAsync</code>.</li>
+<li><strong>Planner (Optional)</strong> – For complex, multi-step goals.</li>
+<li><strong>Chat Completion</strong> – Connects to an LLM (e.g., GPT-4).</li>
+</ol>
+<hr>
+<h2 id="-step-by-step-building-an-agent">🚀 Step-by-Step: Building an Agent
+</h2><h3 id="1--define-a-plugin">1. 🔌 Define a Plugin
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.SemanticKernel</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">System.ComponentModel</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">WeatherPlugin</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [KernelFunction(&#34;get_weather&#34;)]</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [Description(&#34;Gets today&#39;s weather for a specific city.&#34;)]</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">string</span> <span class="n">GetWeather</span><span class="p">(</span><span class="kt">string</span> <span class="n">city</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s">$&#34;The weather in {city} is sunny and 25°C.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2--set-up-the-kernel">2. 🧠 Set Up the Kernel
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.SemanticKernel</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.SemanticKernel.ChatCompletion</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.SemanticKernel.Connectors.OpenAI</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.Extensions.Logging</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">builder</span> <span class="p">=</span> <span class="n">Kernel</span><span class="p">.</span><span class="n">CreateBuilder</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">AddOpenAIChatCompletion</span><span class="p">(</span><span class="s">&#34;gpt-4&#34;</span><span class="p">,</span> <span class="s">&#34;&lt;your-api-key&gt;&#34;</span><span class="p">);</span> <span class="c1">// Or AzureOpenAI</span>
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Plugins</span><span class="p">.</span><span class="n">AddFromType</span><span class="p">&lt;</span><span class="n">WeatherPlugin</span><span class="p">&gt;();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddLogging</span><span class="p">(</span><span class="n">logging</span> <span class="p">=&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">logging</span><span class="p">.</span><span class="n">AddConsole</span><span class="p">().</span><span class="n">SetMinimumLevel</span><span class="p">(</span><span class="n">LogLevel</span><span class="p">.</span><span class="n">Information</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">kernel</span> <span class="p">=</span> <span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3--create-a-custom-agent">3. 🤖 Create a Custom Agent
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.SemanticKernel.Agents</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.SemanticKernel.ChatCompletion</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">WeatherAgent</span> <span class="p">:</span> <span class="n">IAgent</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">=&gt;</span> <span class="s">&#34;Weather Agent&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">string</span> <span class="n">Description</span> <span class="p">=&gt;</span> <span class="s">&#34;I can tell you the weather for any city.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="k">readonly</span> <span class="n">Kernel</span> <span class="n">_kernel</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="k">readonly</span> <span class="n">IChatCompletionService</span> <span class="n">_chat</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">WeatherAgent</span><span class="p">(</span><span class="n">Kernel</span> <span class="n">kernel</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_kernel</span> <span class="p">=</span> <span class="n">kernel</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_chat</span> <span class="p">=</span> <span class="n">kernel</span><span class="p">.</span><span class="n">GetRequiredService</span><span class="p">&lt;</span><span class="n">IChatCompletionService</span><span class="p">&gt;();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">AgentThought</span><span class="p">&gt;</span> <span class="n">ReceiveAsync</span><span class="p">(</span><span class="n">AgentThought</span> <span class="n">input</span><span class="p">,</span> <span class="n">Kernel</span> <span class="n">kernel</span><span class="p">,</span> <span class="n">CancellationToken</span> <span class="n">cancellationToken</span> <span class="p">=</span> <span class="k">default</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">var</span> <span class="n">history</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ChatHistory</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">history</span><span class="p">.</span><span class="n">AddUserMessage</span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="n">Input</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_chat</span><span class="p">.</span><span class="n">GetChatMessageContentAsync</span><span class="p">(</span><span class="n">history</span><span class="p">,</span> <span class="n">kernel</span><span class="p">:</span> <span class="n">_kernel</span><span class="p">,</span> <span class="n">cancellationToken</span><span class="p">:</span> <span class="n">cancellationToken</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="k">new</span> <span class="n">AgentThought</span><span class="p">(</span><span class="n">response</span><span class="p">?.</span><span class="n">Content</span> <span class="p">??</span> <span class="s">&#34;I&#39;m not sure.&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="4--run-the-agent">4. 🚪 Run the Agent
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">agent</span> <span class="p">=</span> <span class="k">new</span> <span class="n">WeatherAgent</span><span class="p">(</span><span class="n">kernel</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">input</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AgentThought</span><span class="p">(</span><span class="s">&#34;What&#39;s the weather like in Delhi?&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="k">await</span> <span class="n">agent</span><span class="p">.</span><span class="n">ReceiveAsync</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="n">kernel</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;🤖 Agent: {response.Input}&#34;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="-what-just-happened">🧠 What Just Happened?
+</h2><ul>
+<li>You registered a <strong>plugin</strong> (<code>WeatherPlugin</code>) with a <strong>function</strong> the model can call.</li>
+<li>Created an <strong>Agent class</strong> (<code>WeatherAgent</code>) that wraps the kernel.</li>
+<li>Sent a message (<code>AgentThought</code>) to the agent, who routed it through the kernel and got a response from the LLM.</li>
+<li>The model auto-selected <code>get_weather</code> and generated a meaningful reply.</li>
+</ul>
+<hr>
+<h2 id="-optional-enable-planning">📎 Optional: Enable Planning
+</h2><p>Want your agent to <strong>plan steps</strong> before answering?</p>
+<p>Add the planner using:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dotnet add package Microsoft.SemanticKernel.Planning.Handlebars
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Configure like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.SemanticKernel.Planning.Handlebars</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">planner</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HandlebarsPlanner</span><span class="p">(</span><span class="n">kernel</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">plan</span> <span class="p">=</span> <span class="k">await</span> <span class="n">planner</span><span class="p">.</span><span class="n">CreatePlanAsync</span><span class="p">(</span><span class="s">&#34;Tell me the weather and suggest an outfit.&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">await</span> <span class="n">plan</span><span class="p">.</span><span class="n">InvokeAsync</span><span class="p">(</span><span class="n">kernel</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="-best-practices">🔐 Best Practices
+</h2><ul>
+<li><strong>Keep plugin methods descriptive</strong> with <code>[Description]</code> for better LLM comprehension.</li>
+<li><strong>Limit token size</strong> in plugins to avoid context overflow.</li>
+<li><strong>Use FunctionChoiceBehavior.Auto()</strong> to let LLM decide what to call.</li>
+<li>Add <strong>filters or logging</strong> for observability.</li>
+</ul>
+<hr>
+<h2 id="-conclusion">📚 Conclusion
+</h2><p>The Agentic Framework in Semantic Kernel brings powerful abstractions for building AI-native applications. You can create rich AI agents capable of decision-making, task execution, and integrating into real-world systems.</p>
+<p>Whether you&rsquo;re building a chatbot, automation tool, or an autonomous assistant — Semantic Kernel provides all the primitives you need.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/semantic-kernel/">Semantic Kernel</a>
+        
+            <a href="/tags/agents/">Agents</a>
+        
+            <a href="/tags/genai/">GenAI</a>
+        
+            <a href="/tags/genai-agents/">GenAI Agents</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/">
+        
+        
+            <div class="article-image">
+                <img src="/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/semantic-kernel.0a81309ea8548ecba340354115286c9b_hu_4febe3b7ea55e904.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post What is Semantic Kernel? Best Use Cases for Building AI-First Apps with Microsoft’s Open-Source SDK"
+                        
+                        data-hash="md5-CoEwnqhUjsujQDVBFShsmw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">What is Semantic Kernel? Best Use Cases for Building AI-First Apps with Microsoft’s Open-Source SDK</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/what-is-the-process-framework-in-semantic-kernel-and-how-it-helps-ai-app-development/">
+        
+        
+            <div class="article-image">
+                <img src="/post/what-is-the-process-framework-in-semantic-kernel-and-how-it-helps-ai-app-development/process-framework.abf420f57b8ea47ce3adb47f236619c1_hu_962903365df8f7aa.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post What is the Process Framework in Semantic Kernel and How It Helps AI App Development"
+                        
+                        data-hash="md5-q/Qg9XuOpHzjrbR/I2YZwQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">What is the Process Framework in Semantic Kernel and How It Helps AI App Development</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/semantic-kernel-plugins-explained-boost-your-ai-app-development-with-modular-functionality/">
+        
+        
+            <div class="article-image">
+                <img src="/post/semantic-kernel-plugins-explained-boost-your-ai-app-development-with-modular-functionality/plugins.94f05518495e938e7503bbc8958688ad_hu_5235e97436c46c8a.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Semantic Kernel Plugins Explained: Boost Your AI App Development with Modular Functionality"
+                        
+                        data-hash="md5-lPBVGElek451A7vIlYaIrQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Semantic Kernel Plugins Explained: Boost Your AI App Development with Modular Functionality</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "code-street" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer custom-footer">
+  <div class="footer-container-2col">
+
+    
+    <div class="footer-left">
+      <p class="footer-text">
+       
+        We share high-quality content on .NET, AI, and modern software development through blogs, tutorials, and videos.
+      </p>
+      <p class="footer-text">
+        &copy;
+        
+          2024 -
+        
+        2025 Code Street
+      </p>
+
+      
+    </div>
+
+    
+    <div class="footer-right">
+      <ul class="footer-menu">
+        
+        <li><a href="/about/">About</a></li>
+        
+        <li><a href="/terms/">Terms</a></li>
+        
+        <li><a href="/privacy/">Privacy</a></li>
+        
+        <li><a href="/disclaimer/">Disclaimer</a></li>
+        
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

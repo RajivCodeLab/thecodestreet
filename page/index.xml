@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pages on Code Street</title>
+        <link>https://thecodestreet.dev/page/</link>
+        <description>Recent content in Pages on Code Street</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Code Street</copyright>
+        <lastBuildDate>Sat, 03 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://thecodestreet.dev/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>About</title>
+        <link>https://thecodestreet.dev/about/</link>
+        <pubDate>Sat, 03 May 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://thecodestreet.dev/about/</guid>
+        <description>&lt;p&gt;Welcome to &lt;strong&gt;The Code Street&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m &lt;strong&gt;Rajiv Sharma&lt;/strong&gt;, a software engineer and YouTuber passionate about building solutions using &lt;strong&gt;.NET, GenAI, and Azure Cloud&lt;/strong&gt; technologies like &lt;strong&gt;Semantic Kernel&lt;/strong&gt;. I create practical tutorials and blogs to help developers build real-world projects.&lt;/p&gt;
+&lt;h3 id=&#34;what-youll-find-here&#34;&gt;What You&amp;rsquo;ll Find Here
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Step-by-step tutorials on .NET, Azure, MicroPython&lt;/li&gt;
+&lt;li&gt;YouTube video guides with real-time demos&lt;/li&gt;
+&lt;li&gt;Tips for building and deploying modern web and AI Apps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;lets-connect&#34;&gt;Let&amp;rsquo;s Connect
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;YouTube&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/@codestreet&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Code Street&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://github.com/rajivcodelab&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@rajivranjan-dev&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LinkedIn&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.linkedin.com/in/rjvranjan80&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Rajiv Ranjan&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thanks for visiting and being a part of the journey!&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
+        <title>Disclaimer</title>
+        <link>https://thecodestreet.dev/disclaimer/</link>
+        <pubDate>Sat, 03 May 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://thecodestreet.dev/disclaimer/</guid>
+        <description>&lt;p&gt;&lt;strong&gt;Disclaimer for The Code Street&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;All the information on this website — &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://thecodestreet.dev&lt;/a&gt; — is published in good faith and for general informational purposes only.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Code Street&lt;/strong&gt; does not make any warranties about the completeness, reliability, and accuracy of this information. Any action you take based on the content on this website is strictly at your own risk.&lt;/p&gt;
+&lt;p&gt;We are not liable for any losses or damages in connection with the use of our website.&lt;/p&gt;
+&lt;h3 id=&#34;external-links&#34;&gt;External Links
+&lt;/h3&gt;&lt;p&gt;While we strive to provide quality links to useful and ethical websites, we have no control over their content. Links to external sites do not imply a recommendation or endorsement.&lt;/p&gt;
+&lt;h3 id=&#34;affiliate-disclaimer&#34;&gt;Affiliate Disclaimer
+&lt;/h3&gt;&lt;p&gt;Some links may be affiliate links. If you use them to make a purchase, we may earn a small commission at no extra cost to you.&lt;/p&gt;
+&lt;h3 id=&#34;contact-us&#34;&gt;Contact Us
+&lt;/h3&gt;&lt;p&gt;If you have any questions about this disclaimer, feel free to email &lt;a class=&#34;link&#34; href=&#34;mailto:you@example.com&#34; &gt;you@example.com&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Privacy Policy</title>
+        <link>https://thecodestreet.dev/privacy-policy/</link>
+        <pubDate>Sat, 03 May 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://thecodestreet.dev/privacy-policy/</guid>
+        <description>&lt;p&gt;&lt;strong&gt;Effective Date:&lt;/strong&gt; May 3, 2025&lt;/p&gt;
+&lt;p&gt;At &lt;strong&gt;The Code Street&lt;/strong&gt;, we value your privacy. This Privacy Policy outlines how we collect, use, and safeguard your information when you visit our website.&lt;/p&gt;
+&lt;h3 id=&#34;information-we-collect&#34;&gt;Information We Collect
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Personal Information:&lt;/strong&gt; We do not collect personal information unless you voluntarily provide it (e.g., via contact forms).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usage Data:&lt;/strong&gt; We may collect non-personal data such as browser type, IP address, and pages visited for analytics.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;use-of-cookies&#34;&gt;Use of Cookies
+&lt;/h3&gt;&lt;p&gt;We use cookies to improve your experience on the site. You can disable cookies through your browser settings.&lt;/p&gt;
+&lt;h3 id=&#34;google-adsense&#34;&gt;Google AdSense
+&lt;/h3&gt;&lt;p&gt;Our website may use Google AdSense to display ads. AdSense may use cookies to serve ads based on your prior visits to this or other websites.&lt;/p&gt;
+&lt;p&gt;To opt out, visit &lt;a class=&#34;link&#34; href=&#34;https://adssettings.google.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google’s ad settings&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;third-party-links&#34;&gt;Third-Party Links
+&lt;/h3&gt;&lt;p&gt;Our site may contain links to other websites. We are not responsible for their privacy practices.&lt;/p&gt;
+&lt;h3 id=&#34;contact-us&#34;&gt;Contact Us
+&lt;/h3&gt;&lt;p&gt;If you have any questions, please email us at &lt;a class=&#34;link&#34; href=&#34;mailto:you@example.com&#34; &gt;you@example.com&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;This policy may be updated occasionally. Please check back for changes.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Terms &amp; Conditions</title>
+        <link>https://thecodestreet.dev/terms-conditions/</link>
+        <pubDate>Sat, 03 May 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://thecodestreet.dev/terms-conditions/</guid>
+        <description>&lt;p&gt;&lt;strong&gt;Effective Date:&lt;/strong&gt; May 3, 2025&lt;/p&gt;
+&lt;p&gt;By accessing and using &lt;strong&gt;The Code Street&lt;/strong&gt; (&lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://thecodestreet.dev&lt;/a&gt;), you agree to comply with and be bound by the following Terms &amp;amp; Conditions.&lt;/p&gt;
+&lt;h3 id=&#34;1-use-of-the-site&#34;&gt;1. Use of the Site
+&lt;/h3&gt;&lt;p&gt;You may access and use this website solely for personal and non-commercial purposes. Unauthorized use or duplication of content is strictly prohibited.&lt;/p&gt;
+&lt;h3 id=&#34;2-intellectual-property&#34;&gt;2. Intellectual Property
+&lt;/h3&gt;&lt;p&gt;All content on this site, including text, videos, code samples, and images, is the property of &lt;strong&gt;The Code Street&lt;/strong&gt; unless otherwise stated. Reproduction without permission is not allowed.&lt;/p&gt;
+&lt;h3 id=&#34;3-external-links&#34;&gt;3. External Links
+&lt;/h3&gt;&lt;p&gt;We may link to third-party websites. We are not responsible for the content or practices of those sites.&lt;/p&gt;
+&lt;h3 id=&#34;4-limitation-of-liability&#34;&gt;4. Limitation of Liability
+&lt;/h3&gt;&lt;p&gt;We do our best to ensure the accuracy of content, but we make no guarantees. We are not liable for any losses or damages resulting from the use of this website.&lt;/p&gt;
+&lt;h3 id=&#34;5-changes-to-terms&#34;&gt;5. Changes to Terms
+&lt;/h3&gt;&lt;p&gt;We reserve the right to update these Terms at any time without notice. Your continued use of the site constitutes acceptance of any changes.&lt;/p&gt;
+&lt;h3 id=&#34;6-contact&#34;&gt;6. Contact
+&lt;/h3&gt;&lt;p&gt;For questions about these Terms, email us at &lt;a class=&#34;link&#34; href=&#34;mailto:rjvranjan80@gmail.com&#34; &gt;rjvranjan80@gmail.com&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Category</title>
+        <link>https://thecodestreet.dev/category/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://thecodestreet.dev/category/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Links</title>
+        <link>https://thecodestreet.dev/links/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://thecodestreet.dev/links/</guid>
+        <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
+&lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;links&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub is the world&amp;#39;s largest software development platform.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.com&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://www.typescriptlang.org&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ts-logo-128.jpg&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;image&lt;/code&gt; field accepts both local and external images.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Search</title>
+        <link>https://thecodestreet.dev/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://thecodestreet.dev/search/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Videos</title>
+        <link>https://thecodestreet.dev/videos/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://thecodestreet.dev/videos/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on Code Street</title>
+        <link>https://thecodestreet.dev/categories/</link>
+        <description>Recent content in Categories on Code Street</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Code Street</copyright>
+        <lastBuildDate>Sat, 03 May 2025 15:58:12 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Semantic Kernel</title>
+        <link>https://thecodestreet.dev/categories/semantic-kernel/</link>
+        <pubDate>Sat, 03 May 2025 15:58:12 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/categories/semantic-kernel/</guid>
+        <description>&lt;img src="https://thecodestreet.dev/categories/semantic-kernel/SemanticKernel.png" alt="Featured image of post Semantic Kernel" /&gt;</description>
+        </item>
+        <item>
+        <title>DIY Projects</title>
+        <link>https://thecodestreet.dev/categories/projects/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://thecodestreet.dev/categories/projects/</guid>
+        <description>&lt;img src="https://thecodestreet.dev/categories/projects/diy-ai-agents.png" alt="Featured image of post DIY Projects" /&gt;</description>
+        </item>
+        <item>
+        <title>Interview Questions</title>
+        <link>https://thecodestreet.dev/categories/interview-questions/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://thecodestreet.dev/categories/interview-questions/</guid>
+        <description>&lt;img src="https://thecodestreet.dev/categories/interview-questions/interview.png" alt="Featured image of post Interview Questions" /&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
