@@ -7,7 +7,47 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Code Street</copyright>
-        <lastBuildDate>Sat, 03 May 2025 15:58:12 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 04 May 2025 15:58:12 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AI</title>
+        <link>https://thecodestreet.dev/tags/ai/</link>
+        <pubDate>Sun, 04 May 2025 15:58:12 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/ai/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>GenAI Agents</title>
+        <link>https://thecodestreet.dev/tags/genai-agents/</link>
+        <pubDate>Sun, 04 May 2025 15:58:12 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/genai-agents/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Semantic Kernel</title>
+        <link>https://thecodestreet.dev/tags/semantic-kernel/</link>
+        <pubDate>Sun, 04 May 2025 15:58:12 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/semantic-kernel/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Semantic Kernel C#</title>
+        <link>https://thecodestreet.dev/tags/semantic-kernel-c%23/</link>
+        <pubDate>Sun, 04 May 2025 15:58:12 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/semantic-kernel-c%23/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Semantic Kernel Prompts</title>
+        <link>https://thecodestreet.dev/tags/semantic-kernel-prompts/</link>
+        <pubDate>Sun, 04 May 2025 15:58:12 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/semantic-kernel-prompts/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Agents</title>
         <link>https://thecodestreet.dev/tags/agents/</link>
         <pubDate>Sat, 03 May 2025 15:58:12 +0530</pubDate>
@@ -16,43 +56,11 @@
         <description></description>
         </item>
         <item>
-        <title>AI</title>
-        <link>https://thecodestreet.dev/tags/ai/</link>
-        <pubDate>Sat, 03 May 2025 15:58:12 +0530</pubDate>
-        
-        <guid>https://thecodestreet.dev/tags/ai/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>GenAI</title>
         <link>https://thecodestreet.dev/tags/genai/</link>
         <pubDate>Sat, 03 May 2025 15:58:12 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/genai/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>GenAI Agents</title>
-        <link>https://thecodestreet.dev/tags/genai-agents/</link>
-        <pubDate>Sat, 03 May 2025 15:58:12 +0530</pubDate>
-        
-        <guid>https://thecodestreet.dev/tags/genai-agents/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Semantic Kernel</title>
-        <link>https://thecodestreet.dev/tags/semantic-kernel/</link>
-        <pubDate>Sat, 03 May 2025 15:58:12 +0530</pubDate>
-        
-        <guid>https://thecodestreet.dev/tags/semantic-kernel/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Semantic Kernel C#</title>
-        <link>https://thecodestreet.dev/tags/semantic-kernel-c%23/</link>
-        <pubDate>Sat, 03 May 2025 15:58:12 +0530</pubDate>
-        
-        <guid>https://thecodestreet.dev/tags/semantic-kernel-c%23/</guid>
         <description></description>
         </item>
         <item>

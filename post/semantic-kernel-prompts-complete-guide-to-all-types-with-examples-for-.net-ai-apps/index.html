@@ -2,19 +2,19 @@
 <html lang="en" dir="ltr">
     <head>
         <link rel="stylesheet" href="/css/custom.css"><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Leverage the power of Microsoft Semantic Kernel to build smart, modular, and scalable AI agents with C#. This blog walks you through building your first AI agent using the Agentic Framework.">
-<meta name="keywords" content="how to create AI agents, semantic kernel agents, semantic kernel c# example, microsoft semantic kernel"><title>How to Create AI Agents Using Semantic Kernel’s Agentic Framework</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="When building AI-native applications with Semantic Kernel, prompts are the instructions you give to an LLM like GPT-4 to generate intelligent responses.">
+<meta name="keywords" content="Plain Text Prompt, Semantic Function Prompt, YAML Prompt Template, System Role Prompt, Function-Calling Prompt"><title>Semantic Kernel Prompts: Complete Guide to All Types with Examples for .NET AI Apps</title>
 
-<link rel='canonical' href='https://thecodestreet.dev/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/'>
+<link rel='canonical' href='https://thecodestreet.dev/post/semantic-kernel-prompts-complete-guide-to-all-types-with-examples-for-.net-ai-apps/'>
 
-<link rel="stylesheet" href="/scss/style.min.ad8ce7c0c0e78057c22a5b78a4c0e7b5548cf4b2899be789e83602220aac28e0.css"><meta property='og:title' content="How to Create AI Agents Using Semantic Kernel’s Agentic Framework">
-<meta property='og:description' content="Leverage the power of Microsoft Semantic Kernel to build smart, modular, and scalable AI agents with C#. This blog walks you through building your first AI agent using the Agentic Framework.">
-<meta property='og:url' content='https://thecodestreet.dev/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/'>
+<link rel="stylesheet" href="/scss/style.min.ad8ce7c0c0e78057c22a5b78a4c0e7b5548cf4b2899be789e83602220aac28e0.css"><meta property='og:title' content="Semantic Kernel Prompts: Complete Guide to All Types with Examples for .NET AI Apps">
+<meta property='og:description' content="When building AI-native applications with Semantic Kernel, prompts are the instructions you give to an LLM like GPT-4 to generate intelligent responses.">
+<meta property='og:url' content='https://thecodestreet.dev/post/semantic-kernel-prompts-complete-guide-to-all-types-with-examples-for-.net-ai-apps/'>
 <meta property='og:site_name' content='Code Street'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Semantic Kernel' /><meta property='article:tag' content='Agents' /><meta property='article:tag' content='GenAI' /><meta property='article:tag' content='GenAI Agents' /><meta property='article:published_time' content='2025-05-03T15:58:12&#43;05:30'/><meta property='article:modified_time' content='2025-05-03T15:58:12&#43;05:30'/><meta property='og:image' content='https://thecodestreet.dev/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/TheCodeStreet%20Website%20-%20AI%20Agents.webp' />
-<meta name="twitter:title" content="How to Create AI Agents Using Semantic Kernel’s Agentic Framework">
-<meta name="twitter:description" content="Leverage the power of Microsoft Semantic Kernel to build smart, modular, and scalable AI agents with C#. This blog walks you through building your first AI agent using the Agentic Framework."><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://thecodestreet.dev/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/TheCodeStreet%20Website%20-%20AI%20Agents.webp' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Semantic Kernel' /><meta property='article:tag' content='AI' /><meta property='article:tag' content='Semantic Kernel C#' /><meta property='article:tag' content='Semantic Kernel Prompts' /><meta property='article:tag' content='GenAI Agents' /><meta property='article:published_time' content='2025-05-04T15:58:12&#43;05:30'/><meta property='article:modified_time' content='2025-05-04T15:58:12&#43;05:30'/><meta property='og:image' content='https://thecodestreet.dev/post/semantic-kernel-prompts-complete-guide-to-all-types-with-examples-for-.net-ai-apps/TheCodeStreet%20-%20Prompt.webp' />
+<meta name="twitter:title" content="Semantic Kernel Prompts: Complete Guide to All Types with Examples for .NET AI Apps">
+<meta name="twitter:description" content="When building AI-native applications with Semantic Kernel, prompts are the instructions you give to an LLM like GPT-4 to generate intelligent responses."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://thecodestreet.dev/post/semantic-kernel-prompts-complete-guide-to-all-types-with-examples-for-.net-ai-apps/TheCodeStreet%20-%20Prompt.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EVB34BL08"></script>
@@ -291,21 +291,20 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#-what-is-the-semantic-kernel-agentic-framework">🔍 What is the Semantic Kernel Agentic Framework?</a></li>
-    <li><a href="#-prerequisites">🛠️ Prerequisites</a></li>
-    <li><a href="#-architecture-overview">🧱 Architecture Overview</a></li>
-    <li><a href="#-step-by-step-building-an-agent">🚀 Step-by-Step: Building an Agent</a>
+    <li><a href="#-what-is-a-prompt-in-semantic-kernel">🔍 What is a Prompt in Semantic Kernel?</a></li>
+    <li><a href="#-types-of-prompts-in-semantic-kernel">📦 Types of Prompts in Semantic Kernel</a>
       <ol>
-        <li><a href="#1--define-a-plugin">1. 🔌 Define a Plugin</a></li>
-        <li><a href="#2--set-up-the-kernel">2. 🧠 Set Up the Kernel</a></li>
-        <li><a href="#3--create-a-custom-agent">3. 🤖 Create a Custom Agent</a></li>
-        <li><a href="#4--run-the-agent">4. 🚪 Run the Agent</a></li>
+        <li><a href="#1--plain-text-prompt">1. 🧾 Plain Text Prompt</a></li>
+        <li><a href="#2--semantic-function-prompt-c-inline">2. ⚙️ Semantic Function Prompt (C# Inline)</a></li>
+        <li><a href="#3--yaml-prompt-template">3. 🧠 YAML Prompt Template</a></li>
+        <li><a href="#4--prompt-with-system-role-llm-behavior-control">4. 🛠️ Prompt with System Role (LLM Behavior Control)</a></li>
+        <li><a href="#5--composite-prompt-chain-multiple-inputs">5. 🧩 Composite Prompt (Chain Multiple Inputs)</a></li>
+        <li><a href="#6--function-calling-prompt-with-plugin-integration">6. 🔄 Function-Calling Prompt with Plugin Integration</a></li>
+        <li><a href="#7--step-prompt-in-a-workflow-process-framework">7. 🧭 Step Prompt in a Workflow (Process Framework)</a></li>
       </ol>
     </li>
-    <li><a href="#-what-just-happened">🧠 What Just Happened?</a></li>
-    <li><a href="#-optional-enable-planning">📎 Optional: Enable Planning</a></li>
-    <li><a href="#-best-practices">🔐 Best Practices</a></li>
-    <li><a href="#-conclusion">📚 Conclusion</a></li>
+    <li><a href="#-pro-tips-for-prompt-design">✅ Pro Tips for Prompt Design</a></li>
+    <li><a href="#-learn-more">📚 Learn More</a></li>
   </ol>
 </nav>
         </div>
@@ -320,13 +319,13 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/">
-                <img src="/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/TheCodeStreet%20Website%20-%20AI%20Agents_hu_cf2b8efb008eadb6.webp"
-                        srcset="/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/TheCodeStreet%20Website%20-%20AI%20Agents_hu_cf2b8efb008eadb6.webp 800w, /post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/TheCodeStreet%20Website%20-%20AI%20Agents_hu_9da26d07e8c00d15.webp 1600w"
+            <a href="/post/semantic-kernel-prompts-complete-guide-to-all-types-with-examples-for-.net-ai-apps/">
+                <img src="/post/semantic-kernel-prompts-complete-guide-to-all-types-with-examples-for-.net-ai-apps/TheCodeStreet%20-%20Prompt_hu_6e883257f7e29a1f.webp"
+                        srcset="/post/semantic-kernel-prompts-complete-guide-to-all-types-with-examples-for-.net-ai-apps/TheCodeStreet%20-%20Prompt_hu_6e883257f7e29a1f.webp 800w, /post/semantic-kernel-prompts-complete-guide-to-all-types-with-examples-for-.net-ai-apps/TheCodeStreet%20-%20Prompt_hu_2b2468e1f4557d4a.webp 1600w"
                         width="800" 
                         height="420" 
                         loading="lazy"
-                        alt="Featured image of post How to Create AI Agents Using Semantic Kernel’s Agentic Framework" />
+                        alt="Featured image of post Semantic Kernel Prompts: Complete Guide to All Types with Examples for .NET AI Apps" />
                 
             </a>
         </div>
@@ -345,12 +344,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/">How to Create AI Agents Using Semantic Kernel’s Agentic Framework</a>
+            <a href="/post/semantic-kernel-prompts-complete-guide-to-all-types-with-examples-for-.net-ai-apps/">Semantic Kernel Prompts: Complete Guide to All Types with Examples for .NET AI Apps</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            Leverage the power of Microsoft Semantic Kernel to build smart, modular, and scalable AI agents with C#. This blog walks you through building your first AI agent using the Agentic Framework.
+            When building AI-native applications with Semantic Kernel, prompts are the instructions you give to an LLM like GPT-4 to generate intelligent responses.
         </h3>
         
     </div>
@@ -371,7 +370,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">May 03, 2025</time>
+                <time class="article-time--published">May 04, 2025</time>
             </div>
         
 
@@ -401,174 +400,41 @@
     <section class="article-content">
     
     
-    <h2 id="-what-is-the-semantic-kernel-agentic-framework">🔍 What is the Semantic Kernel Agentic Framework?
-</h2><p>Microsoft&rsquo;s <a class="link" href="https://github.com/microsoft/semantic-kernel"  target="_blank" rel="noopener"
-    >Semantic Kernel</a> is an open-source SDK designed to simplify integrating AI into your applications. The Agentic Framework within Semantic Kernel helps you build intelligent, task-driven agents that:</p>
-<ul>
-<li>Autonomously plan and execute tasks</li>
-<li>Use plugins (functionality modules)</li>
-<li>Interact via AI services (like OpenAI or Azure OpenAI)</li>
-<li>Maintain conversation context</li>
-</ul>
-<p>The agents are powered by LLMs and enriched through planning, memory, function calling, and more.</p>
+    <h1 id="semantic-kernel-prompts-complete-guide-to-all-types-with-examples-for-net-ai-apps">Semantic Kernel Prompts: Complete Guide to All Types with Examples for .NET AI Apps
+</h1><p>When building AI-native applications with <strong>Semantic Kernel</strong>, prompts are the instructions you give to an LLM like GPT-4 to generate intelligent responses.</p>
+<p>This post is your <strong>complete guide to all prompt types in Semantic Kernel</strong> — including how to define, use, and invoke them in your .NET app.</p>
 <hr>
-<h2 id="-prerequisites">🛠️ Prerequisites
-</h2><p>To get started, ensure you have:</p>
+<h2 id="-what-is-a-prompt-in-semantic-kernel">🔍 What is a Prompt in Semantic Kernel?
+</h2><p>A <strong>prompt</strong> is a reusable, structured instruction that tells the AI model what to do. Prompts can be used inside:</p>
 <ul>
-<li><a class="link" href="https://dotnet.microsoft.com/"  target="_blank" rel="noopener"
-    >.NET 8 SDK</a></li>
-<li>Visual Studio Code or Visual Studio</li>
-<li>OpenAI or Azure OpenAI API keys</li>
-<li>Basic knowledge of C#</li>
+<li>Plugins (skills)</li>
+<li>Agent logic</li>
+<li>Planners</li>
+<li>Workflows</li>
 </ul>
-<p>Install the core Semantic Kernel SDK:</p>
+<hr>
+<h2 id="-types-of-prompts-in-semantic-kernel">📦 Types of Prompts in Semantic Kernel
+</h2><p>Below are all supported types, with examples:</p>
+<hr>
+<h3 id="1--plain-text-prompt">1. 🧾 Plain Text Prompt
+</h3><p>Basic prompts stored inline or in <code>.txt</code> files.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dotnet add package Microsoft.SemanticKernel
-</span></span><span class="line"><span class="cl">dotnet add package Microsoft.SemanticKernel.Agents.OpenAI
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">Summarize this article in one paragraph:
+</span></span><span class="line"><span class="cl">{{$input}}
 </span></span></code></pre></td></tr></table>
 </div>
-</div><hr>
-<h2 id="-architecture-overview">🧱 Architecture Overview
-</h2><p>At its core, an AI agent in Semantic Kernel involves:</p>
-<ol>
-<li><strong>Kernel</strong> – The runtime for all services and plugins.</li>
-<li><strong>Plugins</strong> – Reusable sets of functions exposed to the LLM.</li>
-<li><strong>Agent</strong> – A class implementing <code>IAgent</code>, capable of interacting via <code>ReceiveAsync</code>.</li>
-<li><strong>Planner (Optional)</strong> – For complex, multi-step goals.</li>
-<li><strong>Chat Completion</strong> – Connects to an LLM (e.g., GPT-4).</li>
-</ol>
+</div><p>📂 File: <code>summarize.skprompt.txt</code>
+📥 Input passed using the <code>{{$input}}</code> placeholder.</p>
+<p>✅ <strong>Best for</strong>: Simple templated prompts.</p>
 <hr>
-<h2 id="-step-by-step-building-an-agent">🚀 Step-by-Step: Building an Agent
-</h2><h3 id="1--define-a-plugin">1. 🔌 Define a Plugin
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.SemanticKernel</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">System.ComponentModel</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">WeatherPlugin</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="na">    [KernelFunction(&#34;get_weather&#34;)]</span>
-</span></span><span class="line"><span class="cl"><span class="na">    [Description(&#34;Gets today&#39;s weather for a specific city.&#34;)]</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">string</span> <span class="n">GetWeather</span><span class="p">(</span><span class="kt">string</span> <span class="n">city</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s">$&#34;The weather in {city} is sunny and 25°C.&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="2--set-up-the-kernel">2. 🧠 Set Up the Kernel
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.SemanticKernel</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.SemanticKernel.ChatCompletion</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.SemanticKernel.Connectors.OpenAI</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.Extensions.Logging</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">builder</span> <span class="p">=</span> <span class="n">Kernel</span><span class="p">.</span><span class="n">CreateBuilder</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">AddOpenAIChatCompletion</span><span class="p">(</span><span class="s">&#34;gpt-4&#34;</span><span class="p">,</span> <span class="s">&#34;&lt;your-api-key&gt;&#34;</span><span class="p">);</span> <span class="c1">// Or AzureOpenAI</span>
-</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Plugins</span><span class="p">.</span><span class="n">AddFromType</span><span class="p">&lt;</span><span class="n">WeatherPlugin</span><span class="p">&gt;();</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddLogging</span><span class="p">(</span><span class="n">logging</span> <span class="p">=&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">logging</span><span class="p">.</span><span class="n">AddConsole</span><span class="p">().</span><span class="n">SetMinimumLevel</span><span class="p">(</span><span class="n">LogLevel</span><span class="p">.</span><span class="n">Information</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">kernel</span> <span class="p">=</span> <span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">();</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="3--create-a-custom-agent">3. 🤖 Create a Custom Agent
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.SemanticKernel.Agents</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.SemanticKernel.ChatCompletion</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">WeatherAgent</span> <span class="p">:</span> <span class="n">IAgent</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">=&gt;</span> <span class="s">&#34;Weather Agent&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">string</span> <span class="n">Description</span> <span class="p">=&gt;</span> <span class="s">&#34;I can tell you the weather for any city.&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="k">readonly</span> <span class="n">Kernel</span> <span class="n">_kernel</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="k">readonly</span> <span class="n">IChatCompletionService</span> <span class="n">_chat</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">WeatherAgent</span><span class="p">(</span><span class="n">Kernel</span> <span class="n">kernel</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">_kernel</span> <span class="p">=</span> <span class="n">kernel</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">_chat</span> <span class="p">=</span> <span class="n">kernel</span><span class="p">.</span><span class="n">GetRequiredService</span><span class="p">&lt;</span><span class="n">IChatCompletionService</span><span class="p">&gt;();</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">AgentThought</span><span class="p">&gt;</span> <span class="n">ReceiveAsync</span><span class="p">(</span><span class="n">AgentThought</span> <span class="n">input</span><span class="p">,</span> <span class="n">Kernel</span> <span class="n">kernel</span><span class="p">,</span> <span class="n">CancellationToken</span> <span class="n">cancellationToken</span> <span class="p">=</span> <span class="k">default</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">var</span> <span class="n">history</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ChatHistory</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">        <span class="n">history</span><span class="p">.</span><span class="n">AddUserMessage</span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="n">Input</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_chat</span><span class="p">.</span><span class="n">GetChatMessageContentAsync</span><span class="p">(</span><span class="n">history</span><span class="p">,</span> <span class="n">kernel</span><span class="p">:</span> <span class="n">_kernel</span><span class="p">,</span> <span class="n">cancellationToken</span><span class="p">:</span> <span class="n">cancellationToken</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="k">new</span> <span class="n">AgentThought</span><span class="p">(</span><span class="n">response</span><span class="p">?.</span><span class="n">Content</span> <span class="p">??</span> <span class="s">&#34;I&#39;m not sure.&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="4--run-the-agent">4. 🚪 Run the Agent
-</h3><div class="highlight"><div class="chroma">
+<h3 id="2--semantic-function-prompt-c-inline">2. ⚙️ Semantic Function Prompt (C# Inline)
+</h3><p>Prompts defined in C# using <code>CreateFunctionFromPrompt</code>.</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -577,34 +443,108 @@
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">agent</span> <span class="p">=</span> <span class="k">new</span> <span class="n">WeatherAgent</span><span class="p">(</span><span class="n">kernel</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">input</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AgentThought</span><span class="p">(</span><span class="s">&#34;What&#39;s the weather like in Delhi?&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="k">await</span> <span class="n">agent</span><span class="p">.</span><span class="n">ReceiveAsync</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="n">kernel</span><span class="p">);</span>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">prompt</span> <span class="p">=</span> <span class="s">&#34;Write a professional email reply to:\n{{input}}&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">replyFunc</span> <span class="p">=</span> <span class="n">kernel</span><span class="p">.</span><span class="n">CreateFunctionFromPrompt</span><span class="p">(</span><span class="n">prompt</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;🤖 Agent: {response.Input}&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="k">await</span> <span class="n">kernel</span><span class="p">.</span><span class="n">InvokeAsync</span><span class="p">(</span><span class="n">replyFunc</span><span class="p">,</span> <span class="k">new</span><span class="p">()</span> <span class="p">{</span> <span class="p">{</span> <span class="s">&#34;input&#34;</span><span class="p">,</span> <span class="s">&#34;Your shipment is delayed.&#34;</span> <span class="p">}</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">GetValue</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;());</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><hr>
-<h2 id="-what-just-happened">🧠 What Just Happened?
-</h2><ul>
-<li>You registered a <strong>plugin</strong> (<code>WeatherPlugin</code>) with a <strong>function</strong> the model can call.</li>
-<li>Created an <strong>Agent class</strong> (<code>WeatherAgent</code>) that wraps the kernel.</li>
-<li>Sent a message (<code>AgentThought</code>) to the agent, who routed it through the kernel and got a response from the LLM.</li>
-<li>The model auto-selected <code>get_weather</code> and generated a meaningful reply.</li>
-</ul>
+</div><p>✅ <strong>Best for</strong>: Quick integration into business logic.</p>
 <hr>
-<h2 id="-optional-enable-planning">📎 Optional: Enable Planning
-</h2><p>Want your agent to <strong>plan steps</strong> before answering?</p>
-<p>Add the planner using:</p>
+<h3 id="3--yaml-prompt-template">3. 🧠 YAML Prompt Template
+</h3><p>Advanced prompts with metadata, inputs, defaults, and model configs.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">blog_writer</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l">Writes a blog post based on a topic</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">parameters</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">topic</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l">Topic of the blog</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;AI and productivity&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">  Write a 3-paragraph blog post about {{topic}}.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">execution_settings</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">temperature</span><span class="p">:</span><span class="w"> </span><span class="m">0.7</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">max_tokens</span><span class="p">:</span><span class="w"> </span><span class="m">500</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>✅ <strong>Best for</strong>: Structured, reusable prompts with input schemas.</p>
+<hr>
+<h3 id="4--prompt-with-system-role-llm-behavior-control">4. 🛠️ Prompt with System Role (LLM Behavior Control)
+</h3><p>You can set the <strong>system role</strong> using execution settings.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dotnet add package Microsoft.SemanticKernel.Planning.Handlebars
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">  Answer like a financial advisor with short, precise replies.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">execution_settings</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l">system</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">temperature</span><span class="p">:</span><span class="w"> </span><span class="m">0.3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">top_p</span><span class="p">:</span><span class="w"> </span><span class="m">0.95</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
-</div><p>Configure like this:</p>
+</div><p>✅ <strong>Best for</strong>: Controlling model persona or behavior.</p>
+<hr>
+<h3 id="5--composite-prompt-chain-multiple-inputs">5. 🧩 Composite Prompt (Chain Multiple Inputs)
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">parameters</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">intro</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">body</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">conclusion</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">  {{intro}}
+</span></span></span><span class="line"><span class="cl"><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">  {{body}}
+</span></span></span><span class="line"><span class="cl"><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">  {{conclusion}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">execution_settings</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">temperature</span><span class="p">:</span><span class="w"> </span><span class="m">0.6</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>✅ <strong>Best for</strong>: Multi-section emails, reports, or formatted outputs.</p>
+<hr>
+<h3 id="6--function-calling-prompt-with-plugin-integration">6. 🔄 Function-Calling Prompt with Plugin Integration
+</h3><p>Use a prompt that calls a plugin like <code>MathPlugin</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -615,26 +555,72 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.SemanticKernel.Planning.Handlebars</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">planner</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HandlebarsPlanner</span><span class="p">(</span><span class="n">kernel</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">plan</span> <span class="p">=</span> <span class="k">await</span> <span class="n">planner</span><span class="p">.</span><span class="n">CreatePlanAsync</span><span class="p">(</span><span class="s">&#34;Tell me the weather and suggest an outfit.&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="k">await</span> <span class="n">plan</span><span class="p">.</span><span class="n">InvokeAsync</span><span class="p">(</span><span class="n">kernel</span><span class="p">);</span>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">MathPlugin</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [KernelFunction(&#34;add&#34;)]</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [Description(&#34;Adds two numbers&#34;)]</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">int</span> <span class="n">Add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">a</span> <span class="p">+</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><hr>
-<h2 id="-best-practices">🔐 Best Practices
+</div><p>Prompt:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">What is the result of 7 plus 5?
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The LLM auto-selects <code>add(7, 5)</code> via function calling behind the scenes.</p>
+<p>✅ <strong>Best for</strong>: Allowing LLMs to use your business logic.</p>
+<hr>
+<h3 id="7--step-prompt-in-a-workflow-process-framework">7. 🧭 Step Prompt in a Workflow (Process Framework)
+</h3><p>Used inside <code>.yaml</code> workflows:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">ask_topic</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">prompt</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;What topic would you like to write about?&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">write_blog</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">prompt</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Write a blog post about {{ask_topic}}&#34;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>✅ <strong>Best for</strong>: Guided multi-step user flows and automations.</p>
+<h2 id="-pro-tips-for-prompt-design">✅ Pro Tips for Prompt Design
 </h2><ul>
-<li><strong>Keep plugin methods descriptive</strong> with <code>[Description]</code> for better LLM comprehension.</li>
-<li><strong>Limit token size</strong> in plugins to avoid context overflow.</li>
-<li><strong>Use FunctionChoiceBehavior.Auto()</strong> to let LLM decide what to call.</li>
-<li>Add <strong>filters or logging</strong> for observability.</li>
+<li>Use <strong>clear, task-specific language</strong></li>
+<li>Add <strong>instructions + examples</strong> when possible</li>
+<li>Use <code>{{variable}}</code> for flexibility</li>
+<li>Lower <code>temperature</code> for consistency; raise it for creativity</li>
+<li>Test different wording with real user inputs</li>
 </ul>
 <hr>
-<h2 id="-conclusion">📚 Conclusion
-</h2><p>The Agentic Framework in Semantic Kernel brings powerful abstractions for building AI-native applications. You can create rich AI agents capable of decision-making, task execution, and integrating into real-world systems.</p>
-<p>Whether you&rsquo;re building a chatbot, automation tool, or an autonomous assistant — Semantic Kernel provides all the primitives you need.</p>
+<h2 id="-learn-more">📚 Learn More
+</h2><ul>
+<li>🧾 <a class="link" href="https://learn.microsoft.com/en-us/semantic-kernel/prompts/"  target="_blank" rel="noopener"
+    >Semantic Kernel Prompt Docs</a></li>
+<li>💡 <a class="link" href="https://learn.microsoft.com/en-us/semantic-kernel/prompts/prompt-engineering"  target="_blank" rel="noopener"
+    >Prompt Engineering Techniques</a></li>
+<li>🔧 <a class="link" href="https://github.com/microsoft/semantic-kernel/tree/main/samples"  target="_blank" rel="noopener"
+    >GitHub Samples &amp; Examples</a></li>
+</ul>
+<hr>
+<p>💬 Got a unique use-case or prompt format you&rsquo;re working on? Drop it in the comments or tag me — let&rsquo;s learn together!</p>
+<p>If this helped you, don’t forget to ❤️, 🦄, or share it with your .NET AI builder friends!</p>
 
 </section>
 
@@ -645,9 +631,11 @@
         
             <a href="/tags/semantic-kernel/">Semantic Kernel</a>
         
-            <a href="/tags/agents/">Agents</a>
+            <a href="/tags/ai/">AI</a>
         
-            <a href="/tags/genai/">GenAI</a>
+            <a href="/tags/semantic-kernel-c%23/">Semantic Kernel C#</a>
+        
+            <a href="/tags/semantic-kernel-prompts/">Semantic Kernel Prompts</a>
         
             <a href="/tags/genai-agents/">GenAI Agents</a>
         
@@ -671,54 +659,6 @@
             
                 
 <article class="has-image">
-    <a href="/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/">
-        
-        
-            <div class="article-image">
-                <img src="/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/TheCodeStreet%20-%20Thumbnail.23f5dc65621b3957e23dc8b7b53e9d97_hu_336968d65fcfe511.webp" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post What is Semantic Kernel? Best Use Cases for Building AI-First Apps with Microsoft’s Open-Source SDK"
-                        
-                        data-hash="md5-I/XcZWIbOVfiPci3tT6dlw==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">What is Semantic Kernel? Best Use Cases for Building AI-First Apps with Microsoft’s Open-Source SDK</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/post/semantic-kernel-prompts-complete-guide-to-all-types-with-examples-for-.net-ai-apps/">
-        
-        
-            <div class="article-image">
-                <img src="/post/semantic-kernel-prompts-complete-guide-to-all-types-with-examples-for-.net-ai-apps/TheCodeStreet%20-%20Prompt.bb16df3cf9e4ec6fd886f8e0735302c1_hu_6f44dcbe95517536.webp" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post Semantic Kernel Prompts: Complete Guide to All Types with Examples for .NET AI Apps"
-                        
-                        data-hash="md5-uxbfPPnk7G/Yhvjgc1MCwQ==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Semantic Kernel Prompts: Complete Guide to All Types with Examples for .NET AI Apps</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
     <a href="/post/what-is-the-process-framework-in-semantic-kernel-and-how-it-helps-ai-app-development/">
         
         
@@ -736,6 +676,54 @@
 
         <div class="article-details">
             <h2 class="article-title">What is the Process Framework in Semantic Kernel and How It Helps AI App Development</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/">
+        
+        
+            <div class="article-image">
+                <img src="/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/TheCodeStreet%20Website%20-%20AI%20Agents.b1a28814dbb74c0e3a5d9111edd01bae_hu_6c195dd6741b86c9.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post How to Create AI Agents Using Semantic Kernel’s Agentic Framework"
+                        
+                        data-hash="md5-saKIFNu3TA46XZER7dAbrg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">How to Create AI Agents Using Semantic Kernel’s Agentic Framework</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/">
+        
+        
+            <div class="article-image">
+                <img src="/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/TheCodeStreet%20-%20Thumbnail.23f5dc65621b3957e23dc8b7b53e9d97_hu_336968d65fcfe511.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post What is Semantic Kernel? Best Use Cases for Building AI-First Apps with Microsoft’s Open-Source SDK"
+                        
+                        data-hash="md5-I/XcZWIbOVfiPci3tT6dlw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">What is Semantic Kernel? Best Use Cases for Building AI-First Apps with Microsoft’s Open-Source SDK</h2>
         </div>
     </a>
 </article>
