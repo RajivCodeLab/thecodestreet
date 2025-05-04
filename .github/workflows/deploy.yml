@@ -3,7 +3,7 @@ name: Deploy Hugo Site to GitHub Pages
 on:
   push:
     branches:
-      - gh-pages
+      - main
 
 jobs:
   build-deploy:
@@ -19,7 +19,7 @@ jobs:
           hugo-version: '0.147.1' # Use your installed version
 
       - name: Build Site
-        run: hugo --minify
+        run: hugo
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
