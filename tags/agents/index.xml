@@ -13,7 +13,7 @@
         <pubDate>Sat, 03 May 2025 15:58:12 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/</guid>
-        <description>&lt;img src="https://thecodestreet.dev/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/AI%20Agents.webp" alt="Featured image of post How to Create AI Agents Using Semantic Kernel’s Agentic Framework" /&gt;&lt;h2 id=&#34;-what-is-the-semantic-kernel-agentic-framework&#34;&gt;🔍 What is the Semantic Kernel Agentic Framework?
+        <description>&lt;img src="https://thecodestreet.dev/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/TheCodeStreet%20Website%20-%20AI%20Agents.webp" alt="Featured image of post How to Create AI Agents Using Semantic Kernel’s Agentic Framework" /&gt;&lt;h2 id=&#34;-what-is-the-semantic-kernel-agentic-framework&#34;&gt;🔍 What is the Semantic Kernel Agentic Framework?
 &lt;/h2&gt;&lt;p&gt;Microsoft&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://github.com/microsoft/semantic-kernel&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Semantic Kernel&lt;/a&gt; is an open-source SDK designed to simplify integrating AI into your applications. The Agentic Framework within Semantic Kernel helps you build intelligent, task-driven agents that:&lt;/p&gt;
 &lt;ul&gt;
@@ -255,7 +255,7 @@
         <pubDate>Sat, 03 May 2025 15:58:12 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/</guid>
-        <description>&lt;img src="https://thecodestreet.dev/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/semantic-kernel.png" alt="Featured image of post What is Semantic Kernel? Best Use Cases for Building AI-First Apps with Microsoft’s Open-Source SDK" /&gt;&lt;h2 id=&#34;-what-is-semantic-kernel&#34;&gt;🔍 What is Semantic Kernel?
+        <description>&lt;img src="https://thecodestreet.dev/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/TheCodeStreet%20-%20Thumbnail.webp" alt="Featured image of post What is Semantic Kernel? Best Use Cases for Building AI-First Apps with Microsoft’s Open-Source SDK" /&gt;&lt;h2 id=&#34;-what-is-semantic-kernel&#34;&gt;🔍 What is Semantic Kernel?
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/microsoft/semantic-kernel&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Semantic Kernel&lt;/a&gt; is an &lt;strong&gt;open-source SDK&lt;/strong&gt; developed by Microsoft that lets you &lt;strong&gt;infuse AI capabilities&lt;/strong&gt; (like OpenAI, Azure OpenAI, HuggingFace) into your apps by:&lt;/p&gt;
 &lt;p&gt;✅ Integrating LLMs (e.g., GPT-4)

@@ -13,7 +13,7 @@
         <pubDate>Sat, 03 May 2025 15:58:12 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/</guid>
-        <description>&lt;img src="https://thecodestreet.dev/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/AI%20Agents.webp" alt="Featured image of post How to Create AI Agents Using Semantic Kernel’s Agentic Framework" /&gt;&lt;h2 id=&#34;-what-is-the-semantic-kernel-agentic-framework&#34;&gt;🔍 What is the Semantic Kernel Agentic Framework?
+        <description>&lt;img src="https://thecodestreet.dev/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/TheCodeStreet%20Website%20-%20AI%20Agents.webp" alt="Featured image of post How to Create AI Agents Using Semantic Kernel’s Agentic Framework" /&gt;&lt;h2 id=&#34;-what-is-the-semantic-kernel-agentic-framework&#34;&gt;🔍 What is the Semantic Kernel Agentic Framework?
 &lt;/h2&gt;&lt;p&gt;Microsoft&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://github.com/microsoft/semantic-kernel&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Semantic Kernel&lt;/a&gt; is an open-source SDK designed to simplify integrating AI into your applications. The Agentic Framework within Semantic Kernel helps you build intelligent, task-driven agents that:&lt;/p&gt;
 &lt;ul&gt;
@@ -255,7 +255,7 @@
         <pubDate>Sat, 03 May 2025 15:58:12 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/</guid>
-        <description>&lt;img src="https://thecodestreet.dev/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/semantic-kernel.png" alt="Featured image of post What is Semantic Kernel? Best Use Cases for Building AI-First Apps with Microsoft’s Open-Source SDK" /&gt;&lt;h2 id=&#34;-what-is-semantic-kernel&#34;&gt;🔍 What is Semantic Kernel?
+        <description>&lt;img src="https://thecodestreet.dev/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/TheCodeStreet%20-%20Thumbnail.webp" alt="Featured image of post What is Semantic Kernel? Best Use Cases for Building AI-First Apps with Microsoft’s Open-Source SDK" /&gt;&lt;h2 id=&#34;-what-is-semantic-kernel&#34;&gt;🔍 What is Semantic Kernel?
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/microsoft/semantic-kernel&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Semantic Kernel&lt;/a&gt; is an &lt;strong&gt;open-source SDK&lt;/strong&gt; developed by Microsoft that lets you &lt;strong&gt;infuse AI capabilities&lt;/strong&gt; (like OpenAI, Azure OpenAI, HuggingFace) into your apps by:&lt;/p&gt;
 &lt;p&gt;✅ Integrating LLMs (e.g., GPT-4)
@@ -433,7 +433,7 @@
         <pubDate>Sat, 03 May 2025 15:58:12 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/post/what-is-the-process-framework-in-semantic-kernel-and-how-it-helps-ai-app-development/</guid>
-        <description>&lt;img src="https://thecodestreet.dev/post/what-is-the-process-framework-in-semantic-kernel-and-how-it-helps-ai-app-development/process-framework.jpg" alt="Featured image of post What is the Process Framework in Semantic Kernel and How It Helps AI App Development" /&gt;&lt;h2 id=&#34;-what-is-the-process-framework-in-semantic-kernel&#34;&gt;🧠 What is the Process Framework in Semantic Kernel?
+        <description>&lt;img src="https://thecodestreet.dev/post/what-is-the-process-framework-in-semantic-kernel-and-how-it-helps-ai-app-development/TheCodeStreet%20-%20Process%20Framework.webp" alt="Featured image of post What is the Process Framework in Semantic Kernel and How It Helps AI App Development" /&gt;&lt;h2 id=&#34;-what-is-the-process-framework-in-semantic-kernel&#34;&gt;🧠 What is the Process Framework in Semantic Kernel?
 &lt;/h2&gt;&lt;p&gt;The &lt;strong&gt;Process Framework&lt;/strong&gt; in Semantic Kernel is a &lt;strong&gt;high-level orchestration layer&lt;/strong&gt; that allows developers to define complex AI-driven processes as reusable workflows.&lt;/p&gt;
 &lt;p&gt;These processes can:&lt;/p&gt;
 &lt;ul&gt;
@@ -541,7 +541,7 @@
         <pubDate>Fri, 02 May 2025 15:58:12 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/post/semantic-kernel-plugins-explained-boost-your-ai-app-development-with-modular-functionality/</guid>
-        <description>&lt;img src="https://thecodestreet.dev/post/semantic-kernel-plugins-explained-boost-your-ai-app-development-with-modular-functionality/plugins.png" alt="Featured image of post Semantic Kernel Plugins Explained: Boost Your AI App Development with Modular Functionality" /&gt;&lt;h2 id=&#34;-what-are-plugins-in-semantic-kernel&#34;&gt;🔍 What Are Plugins in Semantic Kernel?
+        <description>&lt;img src="https://thecodestreet.dev/post/semantic-kernel-plugins-explained-boost-your-ai-app-development-with-modular-functionality/TheCodeStreet%20-%20Plugins.webp" alt="Featured image of post Semantic Kernel Plugins Explained: Boost Your AI App Development with Modular Functionality" /&gt;&lt;h2 id=&#34;-what-are-plugins-in-semantic-kernel&#34;&gt;🔍 What Are Plugins in Semantic Kernel?
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Semantic Kernel plugins&lt;/strong&gt; are classes that expose one or more methods (functions) that Large Language Models (LLMs) like GPT-4 can call when processing user prompts. These functions are designed to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Perform specific business logic&lt;/li&gt;

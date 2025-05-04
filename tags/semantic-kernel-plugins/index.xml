@@ -13,7 +13,7 @@
         <pubDate>Fri, 02 May 2025 15:58:12 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/post/semantic-kernel-plugins-explained-boost-your-ai-app-development-with-modular-functionality/</guid>
-        <description>&lt;img src="https://thecodestreet.dev/post/semantic-kernel-plugins-explained-boost-your-ai-app-development-with-modular-functionality/plugins.png" alt="Featured image of post Semantic Kernel Plugins Explained: Boost Your AI App Development with Modular Functionality" /&gt;&lt;h2 id=&#34;-what-are-plugins-in-semantic-kernel&#34;&gt;🔍 What Are Plugins in Semantic Kernel?
+        <description>&lt;img src="https://thecodestreet.dev/post/semantic-kernel-plugins-explained-boost-your-ai-app-development-with-modular-functionality/TheCodeStreet%20-%20Plugins.webp" alt="Featured image of post Semantic Kernel Plugins Explained: Boost Your AI App Development with Modular Functionality" /&gt;&lt;h2 id=&#34;-what-are-plugins-in-semantic-kernel&#34;&gt;🔍 What Are Plugins in Semantic Kernel?
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Semantic Kernel plugins&lt;/strong&gt; are classes that expose one or more methods (functions) that Large Language Models (LLMs) like GPT-4 can call when processing user prompts. These functions are designed to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Perform specific business logic&lt;/li&gt;
