@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on Code Street</title>
+        <title>Posts on The Code Street</title>
         <link>https://thecodestreet.dev/post/</link>
-        <description>Recent content in Posts on Code Street</description>
+        <description>Recent content in Posts on The Code Street</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <copyright>Code Street</copyright>
+        <copyright>The Code Street</copyright>
         <lastBuildDate>Wed, 07 May 2025 15:58:12 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>How to Create Your First Agent with the Agentic Framework in Semantic Kernel and .NET</title>
         <link>https://thecodestreet.dev/post/how-to-create-your-first-agent-with-the-agentic-framework-in-semantic-kernel-and-.net/</link>
