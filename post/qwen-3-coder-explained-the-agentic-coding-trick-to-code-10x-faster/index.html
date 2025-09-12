@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="stylesheet" href="/css/custom.css"><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Qwen 3 Coder explained in detail — learn how developers can leverage agentic coding to refactor code, run tests, and boost productivity 10X faster with AI-powered workflows.">
+<meta name="keywords" content="Qwen 3 Coder explained, Qwen 3 Coder tutorial, Qwen 3 Coder VS Code, agentic coding with Qwen, AI coding assistant, Qwen 3 Coder productivity, how to use Qwen 3 Coder, Qwen 3 Coder guide"><title>Qwen 3 Coder Explained: The Agentic Coding Trick to Code 10X Faster</title>
+
+<link rel='canonical' href='https://thecodestreet.dev/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/'>
+
+<link rel="stylesheet" href="/scss/style.min.ad8ce7c0c0e78057c22a5b78a4c0e7b5548cf4b2899be789e83602220aac28e0.css"><meta property='og:title' content="Qwen 3 Coder Explained: The Agentic Coding Trick to Code 10X Faster">
+<meta property='og:description' content="Qwen 3 Coder explained in detail — learn how developers can leverage agentic coding to refactor code, run tests, and boost productivity 10X faster with AI-powered workflows.">
+<meta property='og:url' content='https://thecodestreet.dev/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/'>
+<meta property='og:site_name' content='The Code Street'>
+<meta property='og:type' content='article'>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><meta property='article:section' content='Post' /><meta property='article:tag' content='Qwen 3 Coder' /><meta property='article:tag' content='Agentic Coding' /><meta property='article:tag' content='AI Coding Assistant' /><meta property='article:tag' content='Qwen 3' /><meta property='article:published_time' content='2025-09-12T15:58:12&#43;05:30'/><meta property='article:modified_time' content='2025-09-12T15:58:12&#43;05:30'/><meta property='og:image' content='https://thecodestreet.dev/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/qwen%203%20coder%20explained.webp' />
+<meta name="twitter:title" content="Qwen 3 Coder Explained: The Agentic Coding Trick to Code 10X Faster">
+<meta name="twitter:description" content="Qwen 3 Coder explained in detail — learn how developers can leverage agentic coding to refactor code, run tests, and boost productivity 10X faster with AI-powered workflows."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://thecodestreet.dev/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/qwen%203%20coder%20explained.webp' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EVB34BL08"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-7EVB34BL08');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/logo_hu_43b8c6fcb72455d1.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🚀</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">The Code Street</a></h1>
+            <h2 class="site-description">C#, GenAI, Semantic Kernel, ASP.NET and Azure Tutorials</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://facebook.com/thecodestreet'
+                        target="_blank"
+                        title="Facebook"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://linkedin.com/in/rjvranjan80'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://youtube.com/@TheCodeStreet'
+                        target="_blank"
+                        title="YouTube"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/category/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Category</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/projects/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-code"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>
+                
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://shop.thecodestreet.dev/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+  <path fill="#b8b9bc" d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+</svg>
+                
+                <span>Shop</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/videos/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+                
+                <span>Videos</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                <form action="/search/" class="search-form widget" >
+        <p>
+            <label>Search</label>
+            <input name="keyword" required placeholder="Type something..." />
+        
+            <button title="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+            </button>
+        </p>
+    </form>
+            
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#section-1-the-agentic-shift---from-parrot-to-partner">Section 1: The Agentic Shift - From Parrot to Partner</a></li>
+        <li><a href="#section-2-the-setup---giving-your-agent-tools">Section 2: The Setup - Giving Your Agent Tools</a></li>
+        <li><a href="#section-3-the-live-refactor---commanding-your-agent">Section 3: The Live Refactor - Commanding Your Agent</a></li>
+        <li><a href="#section-4-taking-it-further---automated-testing">Section 4: Taking it Further - Automated Testing</a></li>
+        <li><a href="#section-5-the-principle---why-this-actually-works">Section 5: The Principle - Why This Actually Works</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/">
+                <img src="/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/qwen%203%20coder%20explained_hu_f1ac0cc1bd3154f7.webp"
+                        srcset="/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/qwen%203%20coder%20explained_hu_f1ac0cc1bd3154f7.webp 800w, /post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/qwen%203%20coder%20explained_hu_630ade77e8fbbe45.webp 1600w"
+                        width="800" 
+                        height="420" 
+                        loading="lazy"
+                        alt="Featured image of post Qwen 3 Coder Explained: The Agentic Coding Trick to Code 10X Faster" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/ai-coding/" >
+                AI Coding
+            </a>
+        
+            <a href="/categories/genai/" >
+                GenAI
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/">Qwen 3 Coder Explained: The Agentic Coding Trick to Code 10X Faster</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Qwen 3 Coder explained in detail — learn how developers can leverage agentic coding to refactor code, run tests, and boost productivity 10X faster with AI-powered workflows.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Sep 12, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    5 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>You’ve done it. You prompted your AI assistant, and it spits out 100 lines of Python in seconds. You feel fast. You feel powerful. But then… you spend the next hour debugging. The AI gave you a head start, but in the wrong direction. It didn’t understand the rest of your project, so it generated plausible-but-incorrect code that silently broke everything.</p>
+<p>Sound familiar? This is the productivity trap most developers are in right now. They&rsquo;re using AI, but they&rsquo;re not in control. They’re getting suggestions, not solutions.</p>
+<p>What if I told you that the top 1% of AI-powered developers aren&rsquo;t just prompting anymore? They&rsquo;re <em>commanding</em>. They use one powerful technique that separates them from the rest, and it’s called <strong>agentic coding</strong>. In this article, you’ll see Qwen 3 Coder explained in detail, and learn the exact trick that transforms it from a clever code-suggester into a disciplined junior developer that actually does the real work for you.</p>
+<hr>
+<h3 id="section-1-the-agentic-shift---from-parrot-to-partner">Section 1: The Agentic Shift - From Parrot to Partner
+</h3><p>So what <em>is</em> &ldquo;agentic coding&rdquo;? It sounds like another buzzword, but once you see it in action, you&rsquo;ll be hooked.</p>
+<p>Think of it this way. Standard AI coding is like talking to a parrot. You ask it to &ldquo;write a function that does X,&rdquo; and it just repeats back a function it’s seen before. It’s a one-shot deal. Agentic coding, on the other hand, is like managing a junior developer. You give it a high-level goal, like &ldquo;Refactor this entire module for better security,&rdquo; and it can plan a multi-step process, use tools to check its own work, and even fix its own mistakes along the way.</p>
+<p>This is the fundamental shift. We&rsquo;re moving from a simple request-response model to a delegated workflow. The AI is no longer just a text generator; it&rsquo;s a problem-solving agent that interacts with its environment.</p>
+<p>The model that makes this possible is <strong>Qwen 3 Coder</strong>. It wasn&rsquo;t just trained on code; its post-training was fine-tuned using a technique called long-horizon reinforcement learning, also known as Agent RL. This specifically teaches the model how to perform complex, multi-step tasks using external tools. And the &ldquo;trick&rdquo; to unlocking this power is a specialized command-line tool called the <strong>Qwen Code CLI</strong>. This CLI is our interface for giving high-level commands and letting the agent get to work.</p>
+<hr>
+<h3 id="section-2-the-setup---giving-your-agent-tools">Section 2: The Setup - Giving Your Agent Tools
+</h3><p>An agent is only as good as the tools you give it. So, the first step is to define what our AI junior developer can actually <em>do</em>.</p>
+<p>Here’s our project structure: a simple Python web service with an <code>app</code> directory, and inside is a file called <code>auth.py</code>. This is where our legacy code lives.</p>
+<p>Now, we’re creating a <code>tools</code> directory. This is where we’ll define our agent&rsquo;s capabilities. We’re not writing complex code here; we’re essentially just creating simple shell scripts that the Qwen Code CLI can call.</p>
+<ul>
+<li><strong>Linter</strong>: Using <code>ruff</code> to check for clean code.</li>
+<li><strong>Formatter</strong>: Using <code>black</code> to enforce consistent style.</li>
+<li><strong>Test Runner</strong>: Using <code>pytest</code> to validate functionality.</li>
+</ul>
+<p>By exposing these standard dev tools, we give the agent the ability to write code, check it, format it, and confirm it works. The Qwen Code CLI, adapted from Gemini CLI, makes this integration seamless. It&rsquo;s designed to let the Qwen 3 Coder model call and interpret the output from these tools.</p>
+<hr>
+<h3 id="section-3-the-live-refactor---commanding-your-agent">Section 3: The Live Refactor - Commanding Your Agent
+</h3><p>Here’s our starting point: the <code>auth.py</code> file with insecure password handling. Instead of prompting the AI with “rewrite this function to use bcrypt,” we issue a high-level command via the Qwen Code CLI:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">Refactor</span> <span class="n">the</span> <span class="n">auth</span><span class="o">.</span><span class="n">py</span> <span class="n">module</span><span class="o">.</span> <span class="n">Your</span> <span class="n">main</span> <span class="n">goal</span> <span class="n">is</span> <span class="n">to</span> <span class="n">replace</span> <span class="n">the</span> <span class="n">insecure</span> <span class="n">plaintext</span> <span class="n">password</span> <span class="n">handling</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">login_user</span> <span class="ow">and</span> <span class="n">create_user</span> <span class="n">functions</span><span class="o">.</span> <span class="n">Use</span> <span class="n">the</span> <span class="n">bcrypt</span> <span class="n">library</span> <span class="k">for</span> <span class="n">hashing</span> <span class="ow">and</span> <span class="n">checking</span> <span class="n">passwords</span><span class="o">.</span> <span class="n">After</span> <span class="n">the</span> <span class="n">refactor</span><span class="p">,</span> <span class="n">run</span> <span class="n">the</span> <span class="n">lint</span> <span class="k">tool</span> <span class="n">to</span> <span class="n">ensure</span> <span class="n">the</span> <span class="n">code</span> <span class="n">is</span> <span class="n">clean</span><span class="o">.</span> <span class="n">If</span> <span class="n">the</span> <span class="n">linter</span> <span class="n">passes</span><span class="p">,</span> <span class="n">then</span> <span class="n">run</span> <span class="n">the</span> <span class="n">format</span> <span class="k">tool</span> <span class="n">to</span> <span class="n">apply</span> <span class="n">our</span> <span class="n">project</span><span class="s1">&#39;s code style.</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The agent gets to work:</p>
+<ul>
+<li>Reads <code>auth.py</code> to analyze the code.</li>
+<li>Refactors functions with <code>bcrypt</code>.</li>
+<li>Runs the linter. If it fails, it fixes the issue and retries.</li>
+<li>Runs the formatter.</li>
+</ul>
+<p>The result: clean, secure, properly formatted code — all in under a minute. That’s the power of an agentic workflow with Qwen 3 Coder explained in action.</p>
+<hr>
+<h3 id="section-4-taking-it-further---automated-testing">Section 4: Taking it Further - Automated Testing
+</h3><p>The code is refactored, but does it actually work? Let’s delegate testing too.</p>
+<p>Command to the agent:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">Analyze</span> <span class="n">the</span> <span class="n">newly</span> <span class="n">refactored</span> <span class="n">auth</span><span class="o">.</span><span class="n">py</span> <span class="n">file</span><span class="o">.</span> <span class="n">Create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">test</span> <span class="n">file</span> <span class="n">named</span> <span class="n">test_auth</span><span class="o">.</span><span class="n">py</span> <span class="n">with</span> <span class="n">pytest</span> <span class="n">unit</span> <span class="n">tests</span> <span class="n">covering</span> <span class="n">success</span> <span class="ow">and</span> <span class="n">failure</span> <span class="n">cases</span><span class="o">.</span> <span class="n">Run</span> <span class="n">the</span> <span class="n">tests</span> <span class="n">with</span> <span class="n">the</span> <span class="n">run_tests</span> <span class="k">tool</span> <span class="ow">and</span> <span class="n">report</span> <span class="n">the</span> <span class="n">results</span><span class="o">.</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The agent:</p>
+<ul>
+<li>Analyzes <code>auth.py</code>.</li>
+<li>Writes <code>test_auth.py</code> with comprehensive test cases.</li>
+<li>Runs <code>pytest</code> and reports results.</li>
+</ul>
+<p>The output: <code>5 tests passed</code>. The agent refactored the code and wrote tests to prove it works — closing the full development loop.</p>
+<hr>
+<h3 id="section-5-the-principle---why-this-actually-works">Section 5: The Principle - Why This Actually Works
+</h3><p>It looks like magic, but it’s really three technologies converging:</p>
+<ol>
+<li><strong>The Model</strong>: Qwen 3 Coder is a Mixture-of-Experts model with 480B parameters, fine-tuned with Agent RL for multi-step tool use.</li>
+<li><strong>The Context</strong>: With a context window of 256k tokens (extendable beyond 1M), it can handle entire codebases at once.</li>
+<li><strong>The Prompt</strong>: Instead of line-level instructions, we provide strategy, constraints, and success criteria — like an engineering manager delegating tasks.</li>
+</ol>
+<p>This combination makes Qwen 3 Coder uniquely powerful for agentic workflows.</p>
+<hr>
+<h3 id="conclusion">Conclusion
+</h3><p>The future of software development isn’t about typing faster or generating boilerplate. It’s about changing our role from writing code to directing intelligent agents.</p>
+<p>With <strong>Qwen 3 Coder explained</strong> in this guide, you’ve seen how agentic coding transforms AI from a passive assistant into an active junior developer. By giving it the right tools, context, and goals, you move beyond prompting and start commanding.</p>
+<p>This isn’t just a productivity trick; it’s a new mental model for development. The developers who adopt it now will have a 10X advantage tomorrow.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/qwen-3-coder/">Qwen 3 Coder</a>
+        
+            <a href="/tags/agentic-coding/">Agentic Coding</a>
+        
+            <a href="/tags/ai-coding-assistant/">AI Coding Assistant</a>
+        
+            <a href="/tags/qwen-3/">Qwen 3</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "code-street" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer custom-footer">
+  <div class="footer-container-2col">
+
+    
+    <div class="footer-left">
+      <p class="footer-text">
+       
+        We share high-quality content on .NET, AI, and modern software development through blogs, tutorials, and videos.
+      </p>
+      <p class="footer-text">
+        &copy;
+        
+          2024 -
+        
+        2025 The Code Street
+      </p>
+
+      
+    </div>
+
+    
+    <div class="footer-right">
+      <ul class="footer-menu">
+        
+        <li><a href="/about/">About</a></li>
+        
+        <li><a href="/terms/">Terms</a></li>
+        
+        <li><a href="/privacy/">Privacy</a></li>
+        
+        <li><a href="/disclaimer/">Disclaimer</a></li>
+        
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

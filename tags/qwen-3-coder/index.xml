@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Qwen 3 Coder on The Code Street</title>
+        <link>https://thecodestreet.dev/tags/qwen-3-coder/</link>
+        <description>Recent content in Qwen 3 Coder on The Code Street</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>The Code Street</copyright>
+        <lastBuildDate>Fri, 12 Sep 2025 15:58:12 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/qwen-3-coder/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Qwen 3 Coder Explained: The Agentic Coding Trick to Code 10X Faster</title>
+        <link>https://thecodestreet.dev/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/</link>
+        <pubDate>Fri, 12 Sep 2025 15:58:12 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/</guid>
+        <description>&lt;img src="https://thecodestreet.dev/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/qwen%203%20coder%20explained.webp" alt="Featured image of post Qwen 3 Coder Explained: The Agentic Coding Trick to Code 10X Faster" /&gt;&lt;p&gt;You’ve done it. You prompted your AI assistant, and it spits out 100 lines of Python in seconds. You feel fast. You feel powerful. But then… you spend the next hour debugging. The AI gave you a head start, but in the wrong direction. It didn’t understand the rest of your project, so it generated plausible-but-incorrect code that silently broke everything.&lt;/p&gt;
+&lt;p&gt;Sound familiar? This is the productivity trap most developers are in right now. They&amp;rsquo;re using AI, but they&amp;rsquo;re not in control. They’re getting suggestions, not solutions.&lt;/p&gt;
+&lt;p&gt;What if I told you that the top 1% of AI-powered developers aren&amp;rsquo;t just prompting anymore? They&amp;rsquo;re &lt;em&gt;commanding&lt;/em&gt;. They use one powerful technique that separates them from the rest, and it’s called &lt;strong&gt;agentic coding&lt;/strong&gt;. In this article, you’ll see Qwen 3 Coder explained in detail, and learn the exact trick that transforms it from a clever code-suggester into a disciplined junior developer that actually does the real work for you.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;section-1-the-agentic-shift---from-parrot-to-partner&#34;&gt;Section 1: The Agentic Shift - From Parrot to Partner
+&lt;/h3&gt;&lt;p&gt;So what &lt;em&gt;is&lt;/em&gt; &amp;ldquo;agentic coding&amp;rdquo;? It sounds like another buzzword, but once you see it in action, you&amp;rsquo;ll be hooked.&lt;/p&gt;
+&lt;p&gt;Think of it this way. Standard AI coding is like talking to a parrot. You ask it to &amp;ldquo;write a function that does X,&amp;rdquo; and it just repeats back a function it’s seen before. It’s a one-shot deal. Agentic coding, on the other hand, is like managing a junior developer. You give it a high-level goal, like &amp;ldquo;Refactor this entire module for better security,&amp;rdquo; and it can plan a multi-step process, use tools to check its own work, and even fix its own mistakes along the way.&lt;/p&gt;
+&lt;p&gt;This is the fundamental shift. We&amp;rsquo;re moving from a simple request-response model to a delegated workflow. The AI is no longer just a text generator; it&amp;rsquo;s a problem-solving agent that interacts with its environment.&lt;/p&gt;
+&lt;p&gt;The model that makes this possible is &lt;strong&gt;Qwen 3 Coder&lt;/strong&gt;. It wasn&amp;rsquo;t just trained on code; its post-training was fine-tuned using a technique called long-horizon reinforcement learning, also known as Agent RL. This specifically teaches the model how to perform complex, multi-step tasks using external tools. And the &amp;ldquo;trick&amp;rdquo; to unlocking this power is a specialized command-line tool called the &lt;strong&gt;Qwen Code CLI&lt;/strong&gt;. This CLI is our interface for giving high-level commands and letting the agent get to work.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;section-2-the-setup---giving-your-agent-tools&#34;&gt;Section 2: The Setup - Giving Your Agent Tools
+&lt;/h3&gt;&lt;p&gt;An agent is only as good as the tools you give it. So, the first step is to define what our AI junior developer can actually &lt;em&gt;do&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Here’s our project structure: a simple Python web service with an &lt;code&gt;app&lt;/code&gt; directory, and inside is a file called &lt;code&gt;auth.py&lt;/code&gt;. This is where our legacy code lives.&lt;/p&gt;
+&lt;p&gt;Now, we’re creating a &lt;code&gt;tools&lt;/code&gt; directory. This is where we’ll define our agent&amp;rsquo;s capabilities. We’re not writing complex code here; we’re essentially just creating simple shell scripts that the Qwen Code CLI can call.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Linter&lt;/strong&gt;: Using &lt;code&gt;ruff&lt;/code&gt; to check for clean code.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Formatter&lt;/strong&gt;: Using &lt;code&gt;black&lt;/code&gt; to enforce consistent style.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Test Runner&lt;/strong&gt;: Using &lt;code&gt;pytest&lt;/code&gt; to validate functionality.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By exposing these standard dev tools, we give the agent the ability to write code, check it, format it, and confirm it works. The Qwen Code CLI, adapted from Gemini CLI, makes this integration seamless. It&amp;rsquo;s designed to let the Qwen 3 Coder model call and interpret the output from these tools.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;section-3-the-live-refactor---commanding-your-agent&#34;&gt;Section 3: The Live Refactor - Commanding Your Agent
+&lt;/h3&gt;&lt;p&gt;Here’s our starting point: the &lt;code&gt;auth.py&lt;/code&gt; file with insecure password handling. Instead of prompting the AI with “rewrite this function to use bcrypt,” we issue a high-level command via the Qwen Code CLI:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Refactor&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;auth&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;module&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Your&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;main&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;goal&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;replace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;insecure&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;plaintext&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;password&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;handling&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;login_user&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;create_user&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;functions&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Use&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bcrypt&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;library&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hashing&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;checking&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;passwords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;After&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;refactor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;run&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lint&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;tool&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ensure&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;code&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;clean&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;If&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;linter&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;passes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;then&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;run&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;format&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;tool&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;apply&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;our&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;project&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;s code style.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The agent gets to work:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reads &lt;code&gt;auth.py&lt;/code&gt; to analyze the code.&lt;/li&gt;
+&lt;li&gt;Refactors functions with &lt;code&gt;bcrypt&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Runs the linter. If it fails, it fixes the issue and retries.&lt;/li&gt;
+&lt;li&gt;Runs the formatter.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The result: clean, secure, properly formatted code — all in under a minute. That’s the power of an agentic workflow with Qwen 3 Coder explained in action.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;section-4-taking-it-further---automated-testing&#34;&gt;Section 4: Taking it Further - Automated Testing
+&lt;/h3&gt;&lt;p&gt;The code is refactored, but does it actually work? Let’s delegate testing too.&lt;/p&gt;
+&lt;p&gt;Command to the agent:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Analyze&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;newly&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;refactored&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;auth&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Create&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;test&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;named&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;test_auth&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pytest&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unit&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tests&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;covering&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;success&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;failure&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cases&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Run&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tests&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;run_tests&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;tool&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;report&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;results&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The agent:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Analyzes &lt;code&gt;auth.py&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Writes &lt;code&gt;test_auth.py&lt;/code&gt; with comprehensive test cases.&lt;/li&gt;
+&lt;li&gt;Runs &lt;code&gt;pytest&lt;/code&gt; and reports results.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The output: &lt;code&gt;5 tests passed&lt;/code&gt;. The agent refactored the code and wrote tests to prove it works — closing the full development loop.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;section-5-the-principle---why-this-actually-works&#34;&gt;Section 5: The Principle - Why This Actually Works
+&lt;/h3&gt;&lt;p&gt;It looks like magic, but it’s really three technologies converging:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;The Model&lt;/strong&gt;: Qwen 3 Coder is a Mixture-of-Experts model with 480B parameters, fine-tuned with Agent RL for multi-step tool use.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The Context&lt;/strong&gt;: With a context window of 256k tokens (extendable beyond 1M), it can handle entire codebases at once.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The Prompt&lt;/strong&gt;: Instead of line-level instructions, we provide strategy, constraints, and success criteria — like an engineering manager delegating tasks.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This combination makes Qwen 3 Coder uniquely powerful for agentic workflows.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;/h3&gt;&lt;p&gt;The future of software development isn’t about typing faster or generating boilerplate. It’s about changing our role from writing code to directing intelligent agents.&lt;/p&gt;
+&lt;p&gt;With &lt;strong&gt;Qwen 3 Coder explained&lt;/strong&gt; in this guide, you’ve seen how agentic coding transforms AI from a passive assistant into an active junior developer. By giving it the right tools, context, and goals, you move beyond prompting and start commanding.&lt;/p&gt;
+&lt;p&gt;This isn’t just a productivity trick; it’s a new mental model for development. The developers who adopt it now will have a 10X advantage tomorrow.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

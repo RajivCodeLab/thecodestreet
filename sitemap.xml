@@ -2,12 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://thecodestreet.dev/tags/agents/</loc>
-    <lastmod>2025-05-07T15:58:12+05:30</lastmod>
+    <loc>https://thecodestreet.dev/tags/agentic-coding/</loc>
+    <lastmod>2025-09-12T15:58:12+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/categories/ai-coding/</loc>
+    <lastmod>2025-09-12T15:58:12+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/ai-coding-assistant/</loc>
+    <lastmod>2025-09-12T15:58:12+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/categories/</loc>
+    <lastmod>2025-09-12T15:58:12+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/categories/genai/</loc>
+    <lastmod>2025-09-12T15:58:12+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/post/</loc>
+    <lastmod>2025-09-12T15:58:12+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/qwen-3/</loc>
+    <lastmod>2025-09-12T15:58:12+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/qwen-3-coder/</loc>
+    <lastmod>2025-09-12T15:58:12+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/</loc>
+    <lastmod>2025-09-12T15:58:12+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/</loc>
+    <lastmod>2025-09-12T15:58:12+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/</loc>
+    <lastmod>2025-09-12T15:58:12+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/agents/</loc>
     <lastmod>2025-05-07T15:58:12+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -18,11 +68,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/post/how-to-create-your-first-agent-with-the-agentic-framework-in-semantic-kernel-and-.net/</loc>
-    <lastmod>2025-05-07T15:58:12+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/post/</loc>
     <lastmod>2025-05-07T15:58:12+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -38,16 +83,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/tags/sk-agents/</loc>
-    <lastmod>2025-05-07T15:58:12+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/tags/</loc>
-    <lastmod>2025-05-07T15:58:12+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/</loc>
     <lastmod>2025-05-07T15:58:12+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -93,7 +128,7 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/about/</loc>
-    <lastmod>2025-05-03T00:00:00+00:00</lastmod>
+    <lastmod>2025-06-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -103,7 +138,7 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/page/</loc>
-    <lastmod>2025-05-03T00:00:00+00:00</lastmod>
+    <lastmod>2025-06-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
