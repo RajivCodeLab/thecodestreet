@@ -7,7 +7,55 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>The Code Street</copyright>
-        <lastBuildDate>Fri, 12 Sep 2025 15:58:12 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 13 Sep 2025 01:50:10 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AI Coding</title>
+        <link>https://thecodestreet.dev/tags/ai-coding/</link>
+        <pubDate>Sat, 13 Sep 2025 01:50:10 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/ai-coding/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Build a RAG Application</title>
+        <link>https://thecodestreet.dev/tags/build-a-rag-application/</link>
+        <pubDate>Sat, 13 Sep 2025 01:50:10 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/build-a-rag-application/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>DeepSeek R1</title>
+        <link>https://thecodestreet.dev/tags/deepseek-r1/</link>
+        <pubDate>Sat, 13 Sep 2025 01:50:10 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/deepseek-r1/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Ollama</title>
+        <link>https://thecodestreet.dev/tags/ollama/</link>
+        <pubDate>Sat, 13 Sep 2025 01:50:10 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/ollama/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>RAG Application</title>
+        <link>https://thecodestreet.dev/tags/rag-application/</link>
+        <pubDate>Sat, 13 Sep 2025 01:50:10 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/rag-application/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Semantic Kernel</title>
+        <link>https://thecodestreet.dev/tags/semantic-kernel/</link>
+        <pubDate>Sat, 13 Sep 2025 01:50:10 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/semantic-kernel/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Agentic Coding</title>
         <link>https://thecodestreet.dev/tags/agentic-coding/</link>
         <pubDate>Fri, 12 Sep 2025 15:58:12 +0530</pubDate>
@@ -53,14 +101,6 @@
         <pubDate>Wed, 07 May 2025 15:58:12 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/genai/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Semantic Kernel</title>
-        <link>https://thecodestreet.dev/tags/semantic-kernel/</link>
-        <pubDate>Wed, 07 May 2025 15:58:12 +0530</pubDate>
-        
-        <guid>https://thecodestreet.dev/tags/semantic-kernel/</guid>
         <description></description>
         </item>
         <item>
