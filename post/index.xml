@@ -8,12 +8,12 @@
         <language>en</language>
         <copyright>The Code Street</copyright>
         <lastBuildDate>Sat, 13 Sep 2025 01:50:10 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Build a RAG Application with DeepSeek R1, OLAMA, and Semantic Kernel</title>
-        <link>https://thecodestreet.dev/post/build-a-rag-application-with-deepseek-r1-olama-and-semantic-kernel/</link>
+        <title>Build a RAG Application with DeepSeek R1, OLLAMA, and Semantic Kernel</title>
+        <link>https://thecodestreet.dev/post/build-a-rag-application-with-deepseek-r1-ollama-and-semantic-kernel/</link>
         <pubDate>Sat, 13 Sep 2025 01:50:10 +0530</pubDate>
         
-        <guid>https://thecodestreet.dev/post/build-a-rag-application-with-deepseek-r1-olama-and-semantic-kernel/</guid>
-        <description>&lt;img src="https://thecodestreet.dev/post/build-a-rag-application-with-deepseek-r1-olama-and-semantic-kernel/Build%20a%20RAG%20Application%20with%20DeepSeek%20R1.webp" alt="Featured image of post Build a RAG Application with DeepSeek R1, OLAMA, and Semantic Kernel" /&gt;&lt;p&gt;Are you curious about how to combine your &lt;strong&gt;own data&lt;/strong&gt; with AI so it can answer questions instantly? In this guide, I’ll show you how to build a simple &lt;strong&gt;RAG (Retrieval-Augmented Generation) application&lt;/strong&gt; using &lt;strong&gt;DeepSeek R1&lt;/strong&gt;, &lt;strong&gt;OLLAMA&lt;/strong&gt;, and &lt;strong&gt;Microsoft Semantic Kernel&lt;/strong&gt;.&lt;/p&gt;
+        <guid>https://thecodestreet.dev/post/build-a-rag-application-with-deepseek-r1-ollama-and-semantic-kernel/</guid>
+        <description>&lt;img src="https://thecodestreet.dev/post/build-a-rag-application-with-deepseek-r1-ollama-and-semantic-kernel/Build%20a%20RAG%20Application%20with%20DeepSeek%20R1.webp" alt="Featured image of post Build a RAG Application with DeepSeek R1, OLLAMA, and Semantic Kernel" /&gt;&lt;p&gt;Are you curious about how to combine your &lt;strong&gt;own data&lt;/strong&gt; with AI so it can answer questions instantly? In this guide, I’ll show you how to build a simple &lt;strong&gt;RAG (Retrieval-Augmented Generation) application&lt;/strong&gt; using &lt;strong&gt;DeepSeek R1&lt;/strong&gt;, &lt;strong&gt;OLLAMA&lt;/strong&gt;, and &lt;strong&gt;Microsoft Semantic Kernel&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;We’ll create a basic &lt;strong&gt;Expense Manager&lt;/strong&gt; scenario where you can ask questions like:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;“How much did I spend on coffee?”&lt;/em&gt;&lt;/li&gt;

@@ -3,22 +3,22 @@
     <head>
         <link rel="stylesheet" href="/css/custom.css"><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Learn step-by-step how to build a RAG application using DeepSeek R1, OLLAMA, and Microsoft Semantic Kernel. In this tutorial, we create an AI-powered expense manager that answers natural-language questions from your own documents.">
-<meta name="keywords" content="DeepSeek R1 RAG tutorial, Semantic Kernel RAG example, DeepSeek R1 with AMA, build expense manager with RAG, AI document Q&amp;A with DeepSeek, DeepSeek R1 tutorial, Semantic Kernel expense manager, RAG application in .NET, DeepSeek R1"><title>Build a RAG Application with DeepSeek R1, OLAMA, and Semantic Kernel</title>
+<meta name="keywords" content="DeepSeek R1 RAG tutorial, Semantic Kernel RAG example, DeepSeek R1 with AMA, build expense manager with RAG, AI document Q&amp;A with DeepSeek, DeepSeek R1 tutorial, Semantic Kernel expense manager, RAG application in .NET, DeepSeek R1"><title>Build a RAG Application with DeepSeek R1, OLLAMA, and Semantic Kernel</title>
 
-<link rel='canonical' href='https://thecodestreet.dev/post/build-a-rag-application-with-deepseek-r1-olama-and-semantic-kernel/'>
+<link rel='canonical' href='https://thecodestreet.dev/post/build-a-rag-application-with-deepseek-r1-ollama-and-semantic-kernel/'>
 
-<link rel="stylesheet" href="/scss/style.min.ad8ce7c0c0e78057c22a5b78a4c0e7b5548cf4b2899be789e83602220aac28e0.css"><meta property='og:title' content="Build a RAG Application with DeepSeek R1, OLAMA, and Semantic Kernel">
+<link rel="stylesheet" href="/scss/style.min.ad8ce7c0c0e78057c22a5b78a4c0e7b5548cf4b2899be789e83602220aac28e0.css"><meta property='og:title' content="Build a RAG Application with DeepSeek R1, OLLAMA, and Semantic Kernel">
 <meta property='og:description' content="Learn step-by-step how to build a RAG application using DeepSeek R1, OLLAMA, and Microsoft Semantic Kernel. In this tutorial, we create an AI-powered expense manager that answers natural-language questions from your own documents.">
-<meta property='og:url' content='https://thecodestreet.dev/post/build-a-rag-application-with-deepseek-r1-olama-and-semantic-kernel/'>
+<meta property='og:url' content='https://thecodestreet.dev/post/build-a-rag-application-with-deepseek-r1-ollama-and-semantic-kernel/'>
 <meta property='og:site_name' content='The Code Street'>
 <meta property='og:type' content='article'>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><meta property='article:section' content='Post' /><meta property='article:tag' content='Build a RAG Application' /><meta property='article:tag' content='Semantic Kernel' /><meta property='article:tag' content='RAG Application' /><meta property='article:tag' content='AI Coding' /><meta property='article:tag' content='Ollama' /><meta property='article:tag' content='DeepSeek R1' /><meta property='article:published_time' content='2025-09-13T01:50:10&#43;05:30'/><meta property='article:modified_time' content='2025-09-13T01:50:10&#43;05:30'/><meta property='og:image' content='https://thecodestreet.dev/post/build-a-rag-application-with-deepseek-r1-olama-and-semantic-kernel/Build%20a%20RAG%20Application%20with%20DeepSeek%20R1.webp' />
-<meta name="twitter:title" content="Build a RAG Application with DeepSeek R1, OLAMA, and Semantic Kernel">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><meta property='article:section' content='Post' /><meta property='article:tag' content='Build a RAG Application' /><meta property='article:tag' content='Semantic Kernel' /><meta property='article:tag' content='RAG Application' /><meta property='article:tag' content='AI Coding' /><meta property='article:tag' content='Ollama' /><meta property='article:tag' content='DeepSeek R1' /><meta property='article:published_time' content='2025-09-13T01:50:10&#43;05:30'/><meta property='article:modified_time' content='2025-09-13T01:50:10&#43;05:30'/><meta property='og:image' content='https://thecodestreet.dev/post/build-a-rag-application-with-deepseek-r1-ollama-and-semantic-kernel/Build%20a%20RAG%20Application%20with%20DeepSeek%20R1.webp' />
+<meta name="twitter:title" content="Build a RAG Application with DeepSeek R1, OLLAMA, and Semantic Kernel">
 <meta name="twitter:description" content="Learn step-by-step how to build a RAG application using DeepSeek R1, OLLAMA, and Microsoft Semantic Kernel. In this tutorial, we create an AI-powered expense manager that answers natural-language questions from your own documents."><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://thecodestreet.dev/post/build-a-rag-application-with-deepseek-r1-olama-and-semantic-kernel/Build%20a%20RAG%20Application%20with%20DeepSeek%20R1.webp' />
+    <meta name="twitter:image" content='https://thecodestreet.dev/post/build-a-rag-application-with-deepseek-r1-ollama-and-semantic-kernel/Build%20a%20RAG%20Application%20with%20DeepSeek%20R1.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EVB34BL08"></script>
@@ -330,13 +330,13 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/post/build-a-rag-application-with-deepseek-r1-olama-and-semantic-kernel/">
-                <img src="/post/build-a-rag-application-with-deepseek-r1-olama-and-semantic-kernel/Build%20a%20RAG%20Application%20with%20DeepSeek%20R1_hu_78d58ff4fe51ca7d.webp"
-                        srcset="/post/build-a-rag-application-with-deepseek-r1-olama-and-semantic-kernel/Build%20a%20RAG%20Application%20with%20DeepSeek%20R1_hu_78d58ff4fe51ca7d.webp 800w, /post/build-a-rag-application-with-deepseek-r1-olama-and-semantic-kernel/Build%20a%20RAG%20Application%20with%20DeepSeek%20R1_hu_954aa55e8a0eac0b.webp 1600w"
+            <a href="/post/build-a-rag-application-with-deepseek-r1-ollama-and-semantic-kernel/">
+                <img src="/post/build-a-rag-application-with-deepseek-r1-ollama-and-semantic-kernel/Build%20a%20RAG%20Application%20with%20DeepSeek%20R1_hu_78d58ff4fe51ca7d.webp"
+                        srcset="/post/build-a-rag-application-with-deepseek-r1-ollama-and-semantic-kernel/Build%20a%20RAG%20Application%20with%20DeepSeek%20R1_hu_78d58ff4fe51ca7d.webp 800w, /post/build-a-rag-application-with-deepseek-r1-ollama-and-semantic-kernel/Build%20a%20RAG%20Application%20with%20DeepSeek%20R1_hu_954aa55e8a0eac0b.webp 1600w"
                         width="800" 
                         height="420" 
                         loading="lazy"
-                        alt="Featured image of post Build a RAG Application with DeepSeek R1, OLAMA, and Semantic Kernel" />
+                        alt="Featured image of post Build a RAG Application with DeepSeek R1, OLLAMA, and Semantic Kernel" />
                 
             </a>
         </div>
@@ -355,7 +355,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/post/build-a-rag-application-with-deepseek-r1-olama-and-semantic-kernel/">Build a RAG Application with DeepSeek R1, OLAMA, and Semantic Kernel</a>
+            <a href="/post/build-a-rag-application-with-deepseek-r1-ollama-and-semantic-kernel/">Build a RAG Application with DeepSeek R1, OLLAMA, and Semantic Kernel</a>
         </h2>
     
         
@@ -709,30 +709,6 @@
             
                 
 <article class="has-image">
-    <a href="/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/">
-        
-        
-            <div class="article-image">
-                <img src="/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/TheCodeStreet%20-%20Thumbnail.23f5dc65621b3957e23dc8b7b53e9d97_hu_336968d65fcfe511.webp" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post What is Semantic Kernel? Best Use Cases for Building AI-First Apps with Microsoft’s Open-Source SDK"
-                        
-                        data-hash="md5-I/XcZWIbOVfiPci3tT6dlw==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">What is Semantic Kernel? Best Use Cases for Building AI-First Apps with Microsoft’s Open-Source SDK</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
     <a href="/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/">
         
         
@@ -774,6 +750,30 @@
 
         <div class="article-details">
             <h2 class="article-title">What is the Process Framework in Semantic Kernel and How It Helps AI App Development</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/">
+        
+        
+            <div class="article-image">
+                <img src="/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/TheCodeStreet%20-%20Thumbnail.23f5dc65621b3957e23dc8b7b53e9d97_hu_336968d65fcfe511.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post What is Semantic Kernel? Best Use Cases for Building AI-First Apps with Microsoft’s Open-Source SDK"
+                        
+                        data-hash="md5-I/XcZWIbOVfiPci3tT6dlw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">What is Semantic Kernel? Best Use Cases for Building AI-First Apps with Microsoft’s Open-Source SDK</h2>
         </div>
     </a>
 </article>
