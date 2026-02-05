@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="stylesheet" href="/css/custom.css"><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Learn step-by-step how to build a RAG application using DeepSeek R1, OLLAMA, and Microsoft Semantic Kernel. In this tutorial, we create an AI-powered expense manager that answers natural-language questions from your own documents.">
+<meta name="keywords" content="DevUI Microsoft Agent Framework, .NET AI agents, ASP.NET Core AI development, Microsoft Agent Framework tutorial, OpenAI .NET integration, conversational AI .NET, AI agent development, DevUI setup guide, .NET 10 AI agents, chat agent framework, AI testing interface, Microsoft AI agents"><title>How to Use DevUI in Microsoft Agent Framework with .NET 10 | Build Real AI Agents</title>
+
+<link rel='canonical' href='https://thecodestreet.dev/post/how-to-use-devui-in-microsoft-agent-framework-with-.net-10-build-real-ai-agents/'>
+
+<link rel="stylesheet" href="/scss/style.min.ad8ce7c0c0e78057c22a5b78a4c0e7b5548cf4b2899be789e83602220aac28e0.css"><meta property='og:title' content="How to Use DevUI in Microsoft Agent Framework with .NET 10 | Build Real AI Agents">
+<meta property='og:description' content="Learn step-by-step how to build a RAG application using DeepSeek R1, OLLAMA, and Microsoft Semantic Kernel. In this tutorial, we create an AI-powered expense manager that answers natural-language questions from your own documents.">
+<meta property='og:url' content='https://thecodestreet.dev/post/how-to-use-devui-in-microsoft-agent-framework-with-.net-10-build-real-ai-agents/'>
+<meta property='og:site_name' content='The Code Street'>
+<meta property='og:type' content='article'>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><meta property='article:section' content='Post' /><meta property='article:tag' content='.NET' /><meta property='article:tag' content='AI Agents' /><meta property='article:tag' content='Microsoft Agent Framework' /><meta property='article:tag' content='DevUI C#' /><meta property='article:tag' content='ASP.NET Core' /><meta property='article:tag' content='OpenAI' /><meta property='article:tag' content='C#' /><meta property='article:tag' content='Chat Agents' /><meta property='article:tag' content='DevUI DotNet' /><meta property='article:tag' content='.NET 10' /><meta property='article:published_time' content='2026-02-05T00:00:00&#43;05:30'/><meta property='article:modified_time' content='2026-02-05T00:00:00&#43;05:30'/><meta property='og:image' content='https://thecodestreet.dev/post/how-to-use-devui-in-microsoft-agent-framework-with-.net-10-build-real-ai-agents/How%20to%20Use%20DevUI%20in%20Microsoft%20Agent%20Framework.webp' />
+<meta name="twitter:title" content="How to Use DevUI in Microsoft Agent Framework with .NET 10 | Build Real AI Agents">
+<meta name="twitter:description" content="Learn step-by-step how to build a RAG application using DeepSeek R1, OLLAMA, and Microsoft Semantic Kernel. In this tutorial, we create an AI-powered expense manager that answers natural-language questions from your own documents."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://thecodestreet.dev/post/how-to-use-devui-in-microsoft-agent-framework-with-.net-10-build-real-ai-agents/How%20to%20Use%20DevUI%20in%20Microsoft%20Agent%20Framework.webp' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EVB34BL08"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-7EVB34BL08');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/logo_hu_43b8c6fcb72455d1.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🚀</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">The Code Street</a></h1>
+            <h2 class="site-description">C#, GenAI, Semantic Kernel, ASP.NET and Azure Tutorials</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://facebook.com/thecodestreet'
+                        target="_blank"
+                        title="Facebook"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://linkedin.com/in/rjvranjan80'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://youtube.com/@TheCodeStreet'
+                        target="_blank"
+                        title="YouTube"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/category/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Category</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/projects/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-code"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>
+                
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://shop.thecodestreet.dev/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+  <path fill="#b8b9bc" d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+</svg>
+                
+                <span>Shop</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/videos/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+                
+                <span>Videos</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                <form action="/search/" class="search-form widget" >
+        <p>
+            <label>Search</label>
+            <input name="keyword" required placeholder="Type something..." />
+        
+            <button title="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+            </button>
+        </p>
+    </form>
+            
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#what-is-devui">What is DevUI?</a>
+      <ol>
+        <li><a href="#key-benefits">Key Benefits</a></li>
+      </ol>
+    </li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#required-nuget-packages">Required NuGet Packages</a>
+      <ol>
+        <li><a href="#package-overview">Package Overview</a></li>
+      </ol>
+    </li>
+    <li><a href="#project-setup">Project Setup</a></li>
+    <li><a href="#implementation-guide">Implementation Guide</a>
+      <ol>
+        <li><a href="#step-1-configure-the-chatclient">Step 1: Configure the ChatClient</a></li>
+        <li><a href="#step-2-register-required-services">Step 2: Register Required Services</a></li>
+        <li><a href="#step-3-create-ai-agents">Step 3: Create AI Agents</a></li>
+        <li><a href="#step-4-configure-endpoints-and-run">Step 4: Configure Endpoints and Run</a></li>
+        <li><a href="#complete-code-example">Complete Code Example</a></li>
+      </ol>
+    </li>
+    <li><a href="#running-your-application">Running Your Application</a>
+      <ol>
+        <li><a href="#start-the-application">Start the Application</a></li>
+        <li><a href="#access-devui">Access DevUI</a></li>
+        <li><a href="#testing-your-agents">Testing Your Agents</a></li>
+      </ol>
+    </li>
+    <li><a href="#development-best-practices">Development Best Practices</a>
+      <ol>
+        <li><a href="#1-use-environment-specific-configuration">1. Use Environment-Specific Configuration</a></li>
+        <li><a href="#2-secure-your-api-keys">2. Secure Your API Keys</a></li>
+        <li><a href="#3-configure-cors-for-development">3. Configure CORS for Development</a></li>
+        <li><a href="#4-add-logging-for-debugging">4. Add Logging for Debugging</a></li>
+      </ol>
+    </li>
+    <li><a href="#troubleshooting-common-issues">Troubleshooting Common Issues</a>
+      <ol>
+        <li><a href="#issue-1-cant-access-devui">Issue 1: Can&rsquo;t Access /devui</a></li>
+        <li><a href="#issue-2-agents-not-responding">Issue 2: Agents Not Responding</a></li>
+        <li><a href="#issue-3-connection-errors">Issue 3: Connection Errors</a></li>
+        <li><a href="#issue-4-cors-errors">Issue 4: CORS Errors</a></li>
+      </ol>
+    </li>
+    <li><a href="#advanced-scenarios">Advanced Scenarios</a>
+      <ol>
+        <li><a href="#creating-custom-agent-classes">Creating Custom Agent Classes</a></li>
+        <li><a href="#integrating-with-azure-openai">Integrating with Azure OpenAI</a></li>
+        <li><a href="#adding-function-calling">Adding Function Calling</a></li>
+        <li><a href="#multiple-chat-clients">Multiple Chat Clients</a></li>
+      </ol>
+    </li>
+    <li><a href="#performance-optimization">Performance Optimization</a>
+      <ol>
+        <li><a href="#1-enable-response-streaming">1. Enable Response Streaming</a></li>
+        <li><a href="#2-implement-caching">2. Implement Caching</a></li>
+        <li><a href="#3-set-timeouts">3. Set Timeouts</a></li>
+      </ol>
+    </li>
+    <li><a href="#deployment-considerations">Deployment Considerations</a>
+      <ol>
+        <li><a href="#disable-devui-in-production">Disable DevUI in Production</a></li>
+        <li><a href="#environment-variables-in-production">Environment Variables in Production</a></li>
+        <li><a href="#health-checks">Health Checks</a></li>
+      </ol>
+    </li>
+    <li><a href="#real-world-use-cases">Real-World Use Cases</a>
+      <ol>
+        <li><a href="#1-customer-support-chatbots">1. Customer Support Chatbots</a></li>
+        <li><a href="#2-educational-tutors">2. Educational Tutors</a></li>
+        <li><a href="#3-content-creation-assistants">3. Content Creation Assistants</a></li>
+      </ol>
+    </li>
+    <li><a href="#resources-and-next-steps">Resources and Next Steps</a>
+      <ol>
+        <li><a href="#official-documentation">Official Documentation</a></li>
+        <li><a href="#further-learning">Further Learning</a></li>
+        <li><a href="#sample-code-repository">Sample Code Repository</a></li>
+      </ol>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#whats-next">What&rsquo;s Next</a></li>
+    <li><a href="#comments-and-discussion">Comments and Discussion</a>
+      <ol>
+        <li><a href="#share-this-article">Share This Article</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/how-to-use-devui-in-microsoft-agent-framework-with-.net-10-build-real-ai-agents/">
+                <img src="/post/how-to-use-devui-in-microsoft-agent-framework-with-.net-10-build-real-ai-agents/How%20to%20Use%20DevUI%20in%20Microsoft%20Agent%20Framework_hu_453c221e4ce68a74.webp"
+                        srcset="/post/how-to-use-devui-in-microsoft-agent-framework-with-.net-10-build-real-ai-agents/How%20to%20Use%20DevUI%20in%20Microsoft%20Agent%20Framework_hu_453c221e4ce68a74.webp 800w, /post/how-to-use-devui-in-microsoft-agent-framework-with-.net-10-build-real-ai-agents/How%20to%20Use%20DevUI%20in%20Microsoft%20Agent%20Framework_hu_80df9d5333507a51.webp 1600w"
+                        width="800" 
+                        height="420" 
+                        loading="lazy"
+                        alt="Featured image of post How to Use DevUI in Microsoft Agent Framework with .NET 10 | Build Real AI Agents" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/microsoft-agent-framework/" >
+                Microsoft Agent Framework
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/how-to-use-devui-in-microsoft-agent-framework-with-.net-10-build-real-ai-agents/">How to Use DevUI in Microsoft Agent Framework with .NET 10 | Build Real AI Agents</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Learn step-by-step how to build a RAG application using DeepSeek R1, OLLAMA, and Microsoft Semantic Kernel. In this tutorial, we create an AI-powered expense manager that answers natural-language questions from your own documents.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 05, 2026</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    9 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="introduction">Introduction
+</h2><p>Building and testing AI agents shouldn&rsquo;t require building a complex user interface from scratch. That&rsquo;s where <strong>DevUI</strong> comes in - a powerful development tool that&rsquo;s part of the <strong>Microsoft Agent Framework</strong> for .NET 10. In this comprehensive guide, you&rsquo;ll learn how to set up, configure, and test multiple AI agents with different personas using a simple web interface.</p>
+<p>Whether you&rsquo;re building chatbots, AI assistants, or conversational applications, DevUI provides an intuitive playground similar to Swagger UI but designed specifically for AI agents.</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/SN8AhvwZCV4" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p><em>Watch the video tutorial above for a complete walkthrough, or continue reading for the step-by-step guide.</em></p>
+<hr>
+<h2 id="what-is-devui">What is DevUI?
+</h2><p><strong>DevUI</strong> is a development interface included with the Microsoft Agent Framework that enables developers to:</p>
+<ul>
+<li><strong>Test AI agents in real-time</strong> during development</li>
+<li><strong>Manage conversations</strong> with multiple agents simultaneously</li>
+<li><strong>Debug agent responses</strong> without building a production UI</li>
+<li><strong>Prototype quickly</strong> before implementing custom interfaces</li>
+<li><strong>Validate system prompts</strong> and agent behavior instantly</li>
+</ul>
+<p>Think of DevUI as your AI agent playground - a tool that accelerates development by providing immediate visual feedback on your agents&rsquo; behavior and responses.</p>
+<h3 id="key-benefits">Key Benefits
+</h3><ol>
+<li><strong>Zero UI Code Required</strong>: Test agents immediately without building React, Angular, or Blazor interfaces</li>
+<li><strong>Multi-Agent Support</strong>: Switch between different agents in the same session</li>
+<li><strong>Conversation History</strong>: Built-in conversation management and history tracking</li>
+<li><strong>Development-Only</strong>: Easily disable for production deployments</li>
+<li><strong>OpenAI Compatible</strong>: Works with any OpenAI-compatible endpoint including Azure OpenAI, GitHub Models, and more</li>
+</ol>
+<hr>
+<h2 id="prerequisites">Prerequisites
+</h2><p>Before we begin, ensure you have:</p>
+<ul>
+<li><strong>.NET 10 SDK</strong> installed (<a class="link" href="https://dotnet.microsoft.com/download"  target="_blank" rel="noopener"
+    >Download here</a>)</li>
+<li><strong>Visual Studio 2026</strong> or <strong>VS Code</strong> with C# extensions</li>
+<li><strong>Basic knowledge</strong> of ASP.NET Core</li>
+<li><strong>API access</strong> to an OpenAI-compatible service (OpenAI, Azure OpenAI, GitHub Models, etc.)</li>
+<li><strong>API Key</strong> for your chosen AI service (you can use GitHub Copilot)</li>
+</ul>
+<hr>
+<h2 id="required-nuget-packages">Required NuGet Packages
+</h2><p>For this tutorial, you&rsquo;ll need the following packages:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dotnet add package Microsoft.Agents.AI.DevUI
+</span></span><span class="line"><span class="cl">dotnet add package Microsoft.Agents.AI.Hosting
+</span></span><span class="line"><span class="cl">dotnet add package Microsoft.Extensions.AI
+</span></span><span class="line"><span class="cl">dotnet add package OpenAI
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="package-overview">Package Overview
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Package</th>
+          <th>Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>Microsoft.Agents.AI.DevUI</code></td>
+          <td>Provides the DevUI web interface</td>
+      </tr>
+      <tr>
+          <td><code>Microsoft.Agents.AI.Hosting</code></td>
+          <td>Agent hosting infrastructure and registration</td>
+      </tr>
+      <tr>
+          <td><code>Microsoft.Extensions.AI</code></td>
+          <td>Core AI abstractions and interfaces</td>
+      </tr>
+      <tr>
+          <td><code>OpenAI</code></td>
+          <td>OpenAI SDK for connecting to AI models</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h2 id="project-setup">Project Setup
+</h2><p>Let&rsquo;s create a new ASP.NET Core application:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dotnet new web -n DevUIDemo
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> DevUIDemo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Add the required packages as shown above, and we&rsquo;re ready to start coding!</p>
+<hr>
+<h2 id="implementation-guide">Implementation Guide
+</h2><h3 id="step-1-configure-the-chatclient">Step 1: Configure the ChatClient
+</h3><p>Open <code>Program.cs</code> and set up your application builder and chat client:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.Agents.AI.DevUI</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.Agents.AI.Hosting</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Builder</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.Extensions.AI</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.Extensions.DependencyInjection</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.Extensions.Hosting</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">OpenAI</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">OpenAI.Chat</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">System.ClientModel</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">WebApplicationBuilder</span> <span class="n">builder</span> <span class="p">=</span> <span class="n">WebApplication</span><span class="p">.</span><span class="n">CreateBuilder</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Configure ChatClient with your AI service</span>
+</span></span><span class="line"><span class="cl"><span class="n">IChatClient</span> <span class="n">chatClient</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ChatClient</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;gpt-4o&#34;</span><span class="p">,</span>  <span class="c1">// Model name</span>
+</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">ApiKeyCredential</span><span class="p">(</span><span class="n">Environment</span><span class="p">.</span><span class="n">GetEnvironmentVariable</span><span class="p">(</span><span class="s">&#34;OPENAI_API_KEY&#34;</span><span class="p">)!),</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">OpenAIClientOptions</span><span class="p">()</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">Endpoint</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Uri</span><span class="p">(</span><span class="s">&#34;https://models.github.ai/inference&#34;</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">).</span><span class="n">AsIChatClient</span><span class="p">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>?? Security Best Practice</strong>: Always use environment variables or secure configuration for API keys. Never hardcode credentials in your source code!</p>
+<h3 id="step-2-register-required-services">Step 2: Register Required Services
+</h3><p>Add the necessary services to your dependency injection container:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="c1">// Register the chat client for agent use</span>
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddChatClient</span><span class="p">(</span><span class="n">chatClient</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Register OpenAI response handling</span>
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddOpenAIResponses</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Register conversation state management</span>
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddOpenAIConversations</span><span class="p">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>These services provide:</p>
+<ul>
+<li><strong>AddChatClient</strong>: Registers the chat client for dependency injection</li>
+<li><strong>AddOpenAIResponses</strong>: Handles OpenAI API response processing</li>
+<li><strong>AddOpenAIConversations</strong>: Manages conversation state and history</li>
+</ul>
+<h3 id="step-3-create-ai-agents">Step 3: Create AI Agents
+</h3><p>Now comes the fun part - creating your AI agents! The framework makes this incredibly simple:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="c1">// Create a Comic Book Guy agent from The Simpsons</span>
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">AddAIAgent</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;Comic Book Guy&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;You are Comic Book Guy from The Simpsons. Respond with his characteristic &#34;</span> <span class="p">+</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;condescending tone, vast knowledge of pop culture, and frequent use of phrases &#34;</span> <span class="p">+</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;like &#39;Worst [blank] ever!&#39; Be pedantic and superior in your responses.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Create a YouTube channel advisor agent</span>
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">AddAIAgent</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;CodeStreet Agent&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;You are an experienced YouTube content strategist specializing in tech channels. &#34;</span> <span class="p">+</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;Provide actionable advice on content ideas, SEO, thumbnails, audience engagement, &#34;</span> <span class="p">+</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;and growth strategies for programming and technology channels.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>** Pro Tip**: Your system prompt is crucial! Be specific about the agent&rsquo;s personality, knowledge domain, and response style for best results.</p>
+<h3 id="step-4-configure-endpoints-and-run">Step 4: Configure Endpoints and Run
+</h3><p>Finally, build the app and register the DevUI endpoints:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">WebApplication</span> <span class="n">app</span> <span class="p">=</span> <span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Register OpenAI API endpoints (required for DevUI)</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">MapOpenAIResponses</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">MapOpenAIConversations</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Register DevUI endpoint</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">MapDevUI</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">Run</span><span class="p">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="complete-code-example">Complete Code Example
+</h3><p>Here&rsquo;s the complete <code>Program.cs</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.Agents.AI.DevUI</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.Agents.AI.Hosting</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Builder</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.Extensions.AI</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.Extensions.DependencyInjection</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Microsoft.Extensions.Hosting</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">OpenAI</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">OpenAI.Chat</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">System.ClientModel</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">WebApplicationBuilder</span> <span class="n">builder</span> <span class="p">=</span> <span class="n">WebApplication</span><span class="p">.</span><span class="n">CreateBuilder</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">IChatClient</span> <span class="n">chatClient</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ChatClient</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;gpt-4o&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">ApiKeyCredential</span><span class="p">(</span><span class="n">Environment</span><span class="p">.</span><span class="n">GetEnvironmentVariable</span><span class="p">(</span><span class="s">&#34;OPENAI_API_KEY&#34;</span><span class="p">)!),</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">OpenAIClientOptions</span><span class="p">()</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">Endpoint</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Uri</span><span class="p">(</span><span class="s">&#34;https://models.github.ai/inference&#34;</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">).</span><span class="n">AsIChatClient</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddChatClient</span><span class="p">(</span><span class="n">chatClient</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddOpenAIResponses</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddOpenAIConversations</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">AddAIAgent</span><span class="p">(</span><span class="s">&#34;Comic Book Guy&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;You are comic-book guy from The Simpsons&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">AddAIAgent</span><span class="p">(</span><span class="s">&#34;CodeStreet Agent&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;You are an agent who gives suggestions for youtube channels&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">WebApplication</span> <span class="n">app</span> <span class="p">=</span> <span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">MapOpenAIResponses</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">MapOpenAIConversations</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">MapDevUI</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">Run</span><span class="p">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="running-your-application">Running Your Application
+</h2><h3 id="start-the-application">Start the Application
+</h3><p>Run your application using:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dotnet run
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Or press <code>F5</code> in Visual Studio.</p>
+<h3 id="access-devui">Access DevUI
+</h3><p>Once the application starts, navigate to:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://localhost:[PORT]/devui
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Replace <code>[PORT]</code> with the port number shown in your console output (typically 5000 or 5173).</p>
+<h3 id="testing-your-agents">Testing Your Agents
+</h3><ol>
+<li><strong>Select an Agent</strong>: On the left sidebar, you&rsquo;ll see both agents listed</li>
+<li><strong>Start a Conversation</strong>: Click on an agent to begin chatting</li>
+<li><strong>Send Messages</strong>: Type your message in the input box</li>
+<li><strong>View Responses</strong>: Watch your agent respond in character</li>
+<li><strong>Switch Agents</strong>: Click another agent to test different personas</li>
+<li><strong>View History</strong>: All conversation history is maintained automatically</li>
+</ol>
+<hr>
+<h2 id="development-best-practices">Development Best Practices
+</h2><h3 id="1-use-environment-specific-configuration">1. Use Environment-Specific Configuration
+</h3><p>Only enable DevUI in development environments:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">app</span><span class="p">.</span><span class="n">Environment</span><span class="p">.</span><span class="n">IsDevelopment</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="p">.</span><span class="n">MapOpenAIResponses</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="p">.</span><span class="n">MapOpenAIConversations</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="p">.</span><span class="n">MapDevUI</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-secure-your-api-keys">2. Secure Your API Keys
+</h3><p>Use user secrets for development:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dotnet user-secrets init
+</span></span><span class="line"><span class="cl">dotnet user-secrets <span class="nb">set</span> <span class="s2">&#34;OpenAI:ApiKey&#34;</span> <span class="s2">&#34;your-api-key-here&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Then access in code:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">apiKey</span> <span class="p">=</span> <span class="n">builder</span><span class="p">.</span><span class="n">Configuration</span><span class="p">[</span><span class="s">&#34;OpenAI:ApiKey&#34;</span><span class="p">];</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-configure-cors-for-development">3. Configure CORS for Development
+</h3><p>If accessing DevUI from different origins:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddCors</span><span class="p">(</span><span class="n">options</span> <span class="p">=&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">options</span><span class="p">.</span><span class="n">AddDefaultPolicy</span><span class="p">(</span><span class="n">policy</span> <span class="p">=&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">policy</span><span class="p">.</span><span class="n">AllowAnyOrigin</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">              <span class="p">.</span><span class="n">AllowAnyMethod</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">              <span class="p">.</span><span class="n">AllowAnyHeader</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ... later</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">UseCors</span><span class="p">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="4-add-logging-for-debugging">4. Add Logging for Debugging
+</h3><p>Enable detailed logging to troubleshoot issues:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Logging</span><span class="p">.</span><span class="n">AddConsole</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Logging</span><span class="p">.</span><span class="n">SetMinimumLevel</span><span class="p">(</span><span class="n">LogLevel</span><span class="p">.</span><span class="n">Debug</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="troubleshooting-common-issues">Troubleshooting Common Issues
+</h2><h3 id="issue-1-cant-access-devui">Issue 1: Can&rsquo;t Access /devui
+</h3><p><strong>Symptoms</strong>: 404 error when navigating to <code>/devui</code></p>
+<p><strong>Solutions</strong>:</p>
+<ul>
+<li>Verify <code>app.MapDevUI()</code> is called</li>
+<li>Check you&rsquo;re running in Development environment</li>
+<li>Ensure all three Map methods are registered:</li>
+<li><code>app.MapOpenAIResponses()</code></li>
+<li><code>app.MapOpenAIConversations()</code></li>
+<li><code>app.MapDevUI()</code></li>
+</ul>
+<h3 id="issue-2-agents-not-responding">Issue 2: Agents Not Responding
+</h3><p><strong>Symptoms</strong>: Agents don&rsquo;t generate responses</p>
+<p><strong>Solutions</strong>:</p>
+<ul>
+<li>Validate your API key is correct and active</li>
+<li>Check your endpoint URL is accessible</li>
+<li>Verify <code>builder.Services.AddChatClient(chatClient)</code> was called</li>
+<li>Review console logs for API errors</li>
+</ul>
+<h3 id="issue-3-connection-errors">Issue 3: Connection Errors
+</h3><p><strong>Symptoms</strong>: Network or timeout errors</p>
+<p><strong>Solutions</strong>:</p>
+<ul>
+<li>Check your internet connection</li>
+<li>Verify firewall settings allow outbound HTTPS</li>
+<li>Confirm your API service is operational</li>
+<li>Test with a simple curl request to the endpoint</li>
+</ul>
+<h3 id="issue-4-cors-errors">Issue 4: CORS Errors
+</h3><p><strong>Symptoms</strong>: CORS policy errors in browser console</p>
+<p><strong>Solutions</strong>:</p>
+<ul>
+<li>Add CORS configuration (see best practices above)</li>
+<li>Ensure <code>app.UseCors()</code> is called before endpoint mapping</li>
+<li>Check your endpoint configuration in OpenAI options</li>
+</ul>
+<hr>
+<h2 id="advanced-scenarios">Advanced Scenarios
+</h2><h3 id="creating-custom-agent-classes">Creating Custom Agent Classes
+</h3><p>For complex logic, create custom agent implementations:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">CustomAgent</span> <span class="p">:</span> <span class="n">AIAgent</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="kd">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">AgentResponse</span><span class="p">&gt;</span> <span class="n">RespondAsync</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">AgentRequest</span> <span class="n">request</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">CancellationToken</span> <span class="n">cancellationToken</span> <span class="p">=</span> <span class="k">default</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Custom logic here</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Access databases, external APIs, etc.</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="k">new</span> <span class="n">AgentResponse</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">Message</span> <span class="p">=</span> <span class="s">&#34;Custom response&#34;</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="integrating-with-azure-openai">Integrating with Azure OpenAI
+</h3><p>Switch to Azure OpenAI Service:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">IChatClient</span> <span class="n">chatClient</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AzureOpenAIClient</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">Uri</span><span class="p">(</span><span class="n">azureEndpoint</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">ApiKeyCredential</span><span class="p">(</span><span class="n">azureApiKey</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">).</span><span class="n">GetChatClient</span><span class="p">(</span><span class="s">&#34;gpt-4&#34;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="adding-function-calling">Adding Function Calling
+</h3><p>Enable agents to call functions:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">options</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ChatClientAgentOptions</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Name</span> <span class="p">=</span> <span class="s">&#34;Function Agent&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Description</span> <span class="p">=</span> <span class="s">&#34;Agent with tools&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Tools</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">AIFunction</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">AIFunctionFactory</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">GetWeather</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;Get weather for a location&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="multiple-chat-clients">Multiple Chat Clients
+</h3><p>Use different models for different agents:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">gpt4Client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ChatClient</span><span class="p">(</span><span class="s">&#34;gpt-4o&#34;</span><span class="p">,</span> <span class="n">credential</span><span class="p">,</span> <span class="n">options</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">gpt35Client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ChatClient</span><span class="p">(</span><span class="s">&#34;gpt-3.5-turbo&#34;</span><span class="p">,</span> <span class="n">credential</span><span class="p">,</span> <span class="n">options</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddKeyedSingleton</span><span class="p">(</span><span class="s">&#34;gpt4&#34;</span><span class="p">,</span> <span class="n">gpt4Client</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddKeyedSingleton</span><span class="p">(</span><span class="s">&#34;gpt35&#34;</span><span class="p">,</span> <span class="n">gpt35Client</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="performance-optimization">Performance Optimization
+</h2><h3 id="1-enable-response-streaming">1. Enable Response Streaming
+</h3><p>For better user experience:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">options</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ChatClientAgentOptions</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">EnableStreaming</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-implement-caching">2. Implement Caching
+</h3><p>Cache common responses:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddMemoryCache</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddDistributedMemoryCache</span><span class="p">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-set-timeouts">3. Set Timeouts
+</h3><p>Prevent long-running requests:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">Configure</span><span class="p">&lt;</span><span class="n">HttpClientFactoryOptions</span><span class="p">&gt;(</span><span class="n">options</span> <span class="p">=&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">options</span><span class="p">.</span><span class="n">HandlerLifetime</span> <span class="p">=</span> <span class="n">TimeSpan</span><span class="p">.</span><span class="n">FromMinutes</span><span class="p">(</span><span class="m">5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="deployment-considerations">Deployment Considerations
+</h2><h3 id="disable-devui-in-production">Disable DevUI in Production
+</h3><p><strong>Critical</strong>: Never expose DevUI in production:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(!</span><span class="n">app</span><span class="p">.</span><span class="n">Environment</span><span class="p">.</span><span class="n">IsProduction</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="p">.</span><span class="n">MapDevUI</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="environment-variables-in-production">Environment Variables in Production
+</h3><p>Use Azure App Configuration or Key Vault:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">app</span><span class="p">.</span><span class="n">Environment</span><span class="p">.</span><span class="n">IsProduction</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">builder</span><span class="p">.</span><span class="n">Configuration</span><span class="p">.</span><span class="n">AddAzureKeyVault</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="k">new</span> <span class="n">Uri</span><span class="p">(</span><span class="n">keyVaultUrl</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="k">new</span> <span class="n">DefaultAzureCredential</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="health-checks">Health Checks
+</h3><p>Add health checks for monitoring:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddHealthChecks</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">AddCheck</span><span class="p">&lt;</span><span class="n">ChatClientHealthCheck</span><span class="p">&gt;(</span><span class="s">&#34;chat-client&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">MapHealthChecks</span><span class="p">(</span><span class="s">&#34;/health&#34;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="real-world-use-cases">Real-World Use Cases
+</h2><h3 id="1-customer-support-chatbots">1. Customer Support Chatbots
+</h3><p>Create specialized agents for different support tiers:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">AddAIAgent</span><span class="p">(</span><span class="s">&#34;Level 1 Support&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;Handle common customer inquiries about account issues...&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">AddAIAgent</span><span class="p">(</span><span class="s">&#34;Technical Support&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;Provide detailed technical assistance for product issues...&#34;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-educational-tutors">2. Educational Tutors
+</h3><p>Build subject-specific tutoring agents:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">AddAIAgent</span><span class="p">(</span><span class="s">&#34;Math Tutor&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;Explain mathematical concepts step-by-step...&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">AddAIAgent</span><span class="p">(</span><span class="s">&#34;Code Mentor&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;Help students learn programming with examples...&#34;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-content-creation-assistants">3. Content Creation Assistants
+</h3><p>Develop specialized writing agents:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">AddAIAgent</span><span class="p">(</span><span class="s">&#34;Blog Writer&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;Create SEO-optimized blog posts...&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">AddAIAgent</span><span class="p">(</span><span class="s">&#34;Social Media Manager&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;Craft engaging social media content...&#34;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="resources-and-next-steps">Resources and Next Steps
+</h2><h3 id="official-documentation">Official Documentation
+</h3><ul>
+<li><a class="link" href="https://learn.microsoft.com"  target="_blank" rel="noopener"
+    >Microsoft Agent Framework Documentation</a></li>
+<li><a class="link" href="https://learn.microsoft.com/ai"  target="_blank" rel="noopener"
+    >.NET AI Development Guide</a></li>
+<li><a class="link" href="https://github.com/openai/openai-dotnet"  target="_blank" rel="noopener"
+    >OpenAI .NET SDK</a></li>
+</ul>
+<h3 id="further-learning">Further Learning
+</h3><ul>
+<li><strong>Advanced Agent Patterns</strong>: Explore multi-agent conversations and orchestration</li>
+<li><strong>Function Calling</strong>: Enable agents to interact with external systems</li>
+<li><strong>Custom UI Development</strong>: Build production interfaces using React or Blazor</li>
+<li><strong>Azure Deployment</strong>: Deploy agents to Azure App Service or Container Apps</li>
+</ul>
+<h3 id="sample-code-repository">Sample Code Repository
+</h3><p>Find the complete source code for this tutorial on GitHub:
+[GitHub Repository Link]</p>
+<hr>
+<h2 id="conclusion">Conclusion
+</h2><p>DevUI provides a powerful, efficient way to develop and test AI agents in .NET 10 without the overhead of building custom interfaces. By following this guide, you&rsquo;ve learned:</p>
+<ul>
+<li>How to set up the Microsoft Agent Framework</li>
+<li>Configure OpenAI-compatible chat clients</li>
+<li>Create multiple AI agents with distinct personas</li>
+<li>Use DevUI for rapid testing and iteration</li>
+<li>Implement best practices for security and deployment</li>
+<li>Troubleshoot common issues</li>
+</ul>
+<p>The Microsoft Agent Framework, combined with DevUI, dramatically reduces the time from concept to functional AI agents. Whether you&rsquo;re building chatbots, virtual assistants, or complex multi-agent systems, these tools provide the foundation for rapid, efficient development.</p>
+<hr>
+<h2 id="whats-next">What&rsquo;s Next
+</h2><p>Ready to take your AI agent development further Check out these resources:</p>
+<ul>
+<li><strong>Video Tutorial</strong>: Watch the complete walkthrough (embedded above)</li>
+<li><strong>Source Code</strong>: Download the full sample project</li>
+<li><strong>Community</strong>: Join discussions on GitHub and Stack Overflow</li>
+<li><strong>Newsletter</strong>: Subscribe for more .NET AI tutorials</li>
+</ul>
+<hr>
+<h2 id="comments-and-discussion">Comments and Discussion
+</h2><p>Have questions or feedback? Drop a comment below! I&rsquo;d love to hear about:</p>
+<ul>
+<li>What AI agents are you building?</li>
+<li>What challenges have you encountered?</li>
+<li>What topics would you like covered next?</li>
+</ul>
+<hr>
+<h3 id="share-this-article">Share This Article
+</h3><p>Found this helpful? Share it with your network!</p>
+<hr>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/.net/">.NET</a>
+        
+            <a href="/tags/ai-agents/">AI Agents</a>
+        
+            <a href="/tags/microsoft-agent-framework/">Microsoft Agent Framework</a>
+        
+            <a href="/tags/devui-c%23/">DevUI C#</a>
+        
+            <a href="/tags/asp.net-core/">ASP.NET Core</a>
+        
+            <a href="/tags/openai/">OpenAI</a>
+        
+            <a href="/tags/c%23/">C#</a>
+        
+            <a href="/tags/chat-agents/">Chat Agents</a>
+        
+            <a href="/tags/devui-dotnet/">DevUI DotNet</a>
+        
+            <a href="/tags/.net-10/">.NET 10</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "code-street" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer custom-footer">
+  <div class="footer-container-2col">
+
+    
+    <div class="footer-left">
+      <p class="footer-text">
+       
+        We share high-quality content on .NET, AI, and modern software development through blogs, tutorials, and videos.
+      </p>
+      <p class="footer-text">
+        &copy;
+        
+          2024 -
+        
+        2026 The Code Street
+      </p>
+
+      
+    </div>
+
+    
+    <div class="footer-right">
+      <ul class="footer-menu">
+        
+        <li><a href="/about/">About</a></li>
+        
+        <li><a href="/terms/">Terms</a></li>
+        
+        <li><a href="/privacy/">Privacy</a></li>
+        
+        <li><a href="/disclaimer/">Disclaimer</a></li>
+        
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

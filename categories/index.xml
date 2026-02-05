@@ -7,7 +7,15 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>The Code Street</copyright>
-        <lastBuildDate>Sat, 13 Sep 2025 01:50:10 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Microsoft Agent Framework</title>
+        <link>https://thecodestreet.dev/categories/microsoft-agent-framework/</link>
+        <pubDate>Thu, 05 Feb 2026 00:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/categories/microsoft-agent-framework/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Semantic Kernel</title>
         <link>https://thecodestreet.dev/categories/semantic-kernel/</link>
         <pubDate>Sat, 13 Sep 2025 01:50:10 +0530</pubDate>

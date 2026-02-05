@@ -7,7 +7,87 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>The Code Street</copyright>
-        <lastBuildDate>Sat, 13 Sep 2025 01:50:10 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>.NET</title>
+        <link>https://thecodestreet.dev/tags/.net/</link>
+        <pubDate>Thu, 05 Feb 2026 00:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/.net/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>.NET 10</title>
+        <link>https://thecodestreet.dev/tags/.net-10/</link>
+        <pubDate>Thu, 05 Feb 2026 00:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/.net-10/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>AI Agents</title>
+        <link>https://thecodestreet.dev/tags/ai-agents/</link>
+        <pubDate>Thu, 05 Feb 2026 00:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/ai-agents/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>ASP.NET Core</title>
+        <link>https://thecodestreet.dev/tags/asp.net-core/</link>
+        <pubDate>Thu, 05 Feb 2026 00:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/asp.net-core/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>C#</title>
+        <link>https://thecodestreet.dev/tags/c%23/</link>
+        <pubDate>Thu, 05 Feb 2026 00:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/c%23/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Chat Agents</title>
+        <link>https://thecodestreet.dev/tags/chat-agents/</link>
+        <pubDate>Thu, 05 Feb 2026 00:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/chat-agents/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>DevUI C#</title>
+        <link>https://thecodestreet.dev/tags/devui-c%23/</link>
+        <pubDate>Thu, 05 Feb 2026 00:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/devui-c%23/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>DevUI DotNet</title>
+        <link>https://thecodestreet.dev/tags/devui-dotnet/</link>
+        <pubDate>Thu, 05 Feb 2026 00:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/devui-dotnet/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Microsoft Agent Framework</title>
+        <link>https://thecodestreet.dev/tags/microsoft-agent-framework/</link>
+        <pubDate>Thu, 05 Feb 2026 00:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/microsoft-agent-framework/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>OpenAI</title>
+        <link>https://thecodestreet.dev/tags/openai/</link>
+        <pubDate>Thu, 05 Feb 2026 00:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/openai/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>AI Coding</title>
         <link>https://thecodestreet.dev/tags/ai-coding/</link>
         <pubDate>Sat, 13 Sep 2025 01:50:10 +0530</pubDate>
