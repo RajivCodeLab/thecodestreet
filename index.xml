@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>The Code Street – Learn C#, ASP.NET, GenAI, Semantic Kernel, Azure on The Code Street</title>
+        <title>The Code Street – AI Tutorials: AI Agents, Local LLMs &amp; AI Coding Tools on The Code Street</title>
         <link>https://thecodestreet.dev/</link>
-        <description>Recent content in The Code Street – Learn C#, ASP.NET, GenAI, Semantic Kernel, Azure on The Code Street</description>
+        <description>Recent content in The Code Street – AI Tutorials: AI Agents, Local LLMs &amp; AI Coding Tools on The Code Street</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>The Code Street</copyright>
-        <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 27 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://thecodestreet.dev/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>How to Use DevUI in Microsoft Agent Framework with .NET 10 | Build Real AI Agents</title>
         <link>https://thecodestreet.dev/post/how-to-use-devui-in-microsoft-agent-framework-with-.net-10-build-real-ai-agents/</link>
         <pubDate>Thu, 05 Feb 2026 00:00:00 +0530</pubDate>
@@ -801,9 +801,9 @@
 &lt;/h2&gt;&lt;p&gt;Ready to take your AI agent development further Check out these resources:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Video Tutorial&lt;/strong&gt;: Watch the complete walkthrough (embedded above)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Source Code&lt;/strong&gt;: Download the full sample project&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Community&lt;/strong&gt;: Join discussions on GitHub and Stack Overflow&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Newsletter&lt;/strong&gt;: Subscribe for more .NET AI tutorials&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;More AI tutorials&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/@TheCodeStreet?sub_confirmation=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Subscribe to The Code Street on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;All videos&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/videos/&#34; &gt;Browse every tutorial&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;comments-and-discussion&#34;&gt;Comments and Discussion
@@ -813,10 +813,6 @@
 &lt;li&gt;What challenges have you encountered?&lt;/li&gt;
 &lt;li&gt;What topics would you like covered next?&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;share-this-article&#34;&gt;Share This Article
-&lt;/h3&gt;&lt;p&gt;Found this helpful? Share it with your network!&lt;/p&gt;
-&lt;hr&gt;
 </description>
         </item>
         <item>
@@ -1032,9 +1028,6 @@
 &lt;p&gt;This workflow is powerful because you’re not just chatting with an LLM — you’re giving it &lt;strong&gt;your own knowledge base&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;💡 Want the complete project code? I’ve uploaded it (along with the text and PDF files) on my &lt;a class=&#34;link&#34; href=&#34;https://buymeacoffee.com/thecodestreet/e/374480&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt; &lt;strong&gt;Buy Me a  Coffee&lt;/strong&gt; &lt;/a&gt;.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/post/semantic-kernel-prompts-complete-guide-to-all-types-with-examples-for-.net-ai-apps/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Semantic Kernel Prompts: Complete Guide to All Types with Examples for .NET AI Apps&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -1115,9 +1108,6 @@
 &lt;/h3&gt;&lt;p&gt;The future of software development isn’t about typing faster or generating boilerplate. It’s about changing our role from writing code to directing intelligent agents.&lt;/p&gt;
 &lt;p&gt;With &lt;strong&gt;Qwen 3 Coder explained&lt;/strong&gt; in this guide, you’ve seen how agentic coding transforms AI from a passive assistant into an active junior developer. By giving it the right tools, context, and goals, you move beyond prompting and start commanding.&lt;/p&gt;
 &lt;p&gt;This isn’t just a productivity trick; it’s a new mental model for development. The developers who adopt it now will have a 10X advantage tomorrow.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/post/semantic-kernel-prompts-complete-guide-to-all-types-with-examples-for-.net-ai-apps/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Semantic Kernel Prompts: Complete Guide to All Types with Examples for .NET AI Apps&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -2111,13 +2101,15 @@
         
         <guid>https://thecodestreet.dev/about/</guid>
         <description>&lt;p&gt;Welcome to &lt;strong&gt;The Code Street&lt;/strong&gt;!&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;m &lt;strong&gt;Rajiv Sharma&lt;/strong&gt;, a software engineer and YouTuber passionate about building solutions using &lt;strong&gt;.NET, GenAI, and Azure Cloud&lt;/strong&gt; technologies like &lt;strong&gt;Semantic Kernel&lt;/strong&gt;. I create practical tutorials and blogs to help developers build real-world projects.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m &lt;strong&gt;Rajiv Sharma&lt;/strong&gt;, a software engineer and YouTuber. I make practical, no-fluff &lt;strong&gt;AI tutorials&lt;/strong&gt; for developers who want to actually build with AI, not just read about it.&lt;/p&gt;
 &lt;h3 id=&#34;what-youll-find-here&#34;&gt;What You&amp;rsquo;ll Find Here
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Step-by-step tutorials on .NET, Azure, GenAI&lt;/li&gt;
-&lt;li&gt;YouTube video guides with real-time demos&lt;/li&gt;
-&lt;li&gt;Tips for building and deploying modern web and AI Apps&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI agents&lt;/strong&gt;: how to design, build and debug agents that use tools and work together&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Local LLMs&lt;/strong&gt;: running models like Qwen and DeepSeek on your own machine with Ollama, for free&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI coding tools&lt;/strong&gt;: getting real work done with Claude Code, Qwen Code and other AI assistants&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Honest reviews&lt;/strong&gt; of the AI tools everyone is talking about, tested on real projects&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Every tutorial has a step-by-step video on YouTube, and most come with working code.&lt;/p&gt;
 &lt;h3 id=&#34;lets-connect&#34;&gt;Let&amp;rsquo;s Connect
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;YouTube&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/@TheCodeStreet&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -2388,42 +2380,7 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://thecodestreet.dev/projects/rag-app-with-deepseek-r1/</guid>
-        <description>&lt;p&gt;This is a real-time IoT dashboard built using Raspberry Pi and WebSockets.&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Links</title>
-        <link>https://thecodestreet.dev/links/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://thecodestreet.dev/links/</guid>
-        <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
-&lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;links&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub is the world&amp;#39;s largest software development platform.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.com&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://www.typescriptlang.org&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ts-logo-128.jpg&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;code&gt;image&lt;/code&gt; field accepts both local and external images.&lt;/p&gt;
+        <description>&lt;p&gt;Complete source code for the RAG application built with DeepSeek R1, Ollama and Semantic Kernel, including the sample text and PDF files.&lt;/p&gt;
 </description>
         </item>
         <item>

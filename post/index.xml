@@ -801,9 +801,9 @@
 &lt;/h2&gt;&lt;p&gt;Ready to take your AI agent development further Check out these resources:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Video Tutorial&lt;/strong&gt;: Watch the complete walkthrough (embedded above)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Source Code&lt;/strong&gt;: Download the full sample project&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Community&lt;/strong&gt;: Join discussions on GitHub and Stack Overflow&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Newsletter&lt;/strong&gt;: Subscribe for more .NET AI tutorials&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;More AI tutorials&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/@TheCodeStreet?sub_confirmation=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Subscribe to The Code Street on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;All videos&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/videos/&#34; &gt;Browse every tutorial&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;comments-and-discussion&#34;&gt;Comments and Discussion
@@ -813,10 +813,6 @@
 &lt;li&gt;What challenges have you encountered?&lt;/li&gt;
 &lt;li&gt;What topics would you like covered next?&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;share-this-article&#34;&gt;Share This Article
-&lt;/h3&gt;&lt;p&gt;Found this helpful? Share it with your network!&lt;/p&gt;
-&lt;hr&gt;
 </description>
         </item>
         <item>
@@ -1032,9 +1028,6 @@
 &lt;p&gt;This workflow is powerful because you’re not just chatting with an LLM — you’re giving it &lt;strong&gt;your own knowledge base&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;💡 Want the complete project code? I’ve uploaded it (along with the text and PDF files) on my &lt;a class=&#34;link&#34; href=&#34;https://buymeacoffee.com/thecodestreet/e/374480&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt; &lt;strong&gt;Buy Me a  Coffee&lt;/strong&gt; &lt;/a&gt;.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/post/semantic-kernel-prompts-complete-guide-to-all-types-with-examples-for-.net-ai-apps/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Semantic Kernel Prompts: Complete Guide to All Types with Examples for .NET AI Apps&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -1115,9 +1108,6 @@
 &lt;/h3&gt;&lt;p&gt;The future of software development isn’t about typing faster or generating boilerplate. It’s about changing our role from writing code to directing intelligent agents.&lt;/p&gt;
 &lt;p&gt;With &lt;strong&gt;Qwen 3 Coder explained&lt;/strong&gt; in this guide, you’ve seen how agentic coding transforms AI from a passive assistant into an active junior developer. By giving it the right tools, context, and goals, you move beyond prompting and start commanding.&lt;/p&gt;
 &lt;p&gt;This isn’t just a productivity trick; it’s a new mental model for development. The developers who adopt it now will have a 10X advantage tomorrow.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/post/semantic-kernel-prompts-complete-guide-to-all-types-with-examples-for-.net-ai-apps/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Semantic Kernel Prompts: Complete Guide to All Types with Examples for .NET AI Apps&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
