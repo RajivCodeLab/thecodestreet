@@ -12,6 +12,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://thecodestreet.dev/post/</loc>
+    <lastmod>2026-10-28T10:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://thecodestreet.dev/categories/</loc>
     <lastmod>2026-10-28T10:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -38,11 +43,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/tags/ollama/</loc>
-    <lastmod>2026-10-28T10:00:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/post/</loc>
     <lastmod>2026-10-28T10:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -249,11 +249,6 @@
   </url><url>
     <loc>https://thecodestreet.dev/disclaimer/</loc>
     <lastmod>2025-05-03T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/page/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
