@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="stylesheet" href="/css/custom.css"><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="REA (Reverse Engineer Anything) lets Claude Code look inside installed apps with no source code. Here's what it really does, how to set it up on Windows, the errors I hit and how to fix them, and whether it lives up to the hype.">
+<meta name="keywords" content="rea reverse engineer anything, rea claude code, rea github tutorial, reverse engineer app with ai, claude code mcp server, rea setup windows, rea doctor"><title>REA Tutorial: Reverse Engineer Any App with Claude Code (Setup, Fixes &amp; Honest Review)</title>
+
+<link rel='canonical' href='https://thecodestreet.dev/post/rea-reverse-engineer-anything-claude-code/'>
+
+<link rel="stylesheet" href="/scss/style.min.86afb6925d63f7c383f64abfa5b01183a2ad21c91d72cb626559e001e899e65c.css"><meta property='og:title' content="REA Tutorial: Reverse Engineer Any App with Claude Code (Setup, Fixes & Honest Review)">
+<meta property='og:description' content="REA (Reverse Engineer Anything) lets Claude Code look inside installed apps with no source code. Here's what it really does, how to set it up on Windows, the errors I hit and how to fix them, and whether it lives up to the hype.">
+<meta property='og:url' content='https://thecodestreet.dev/post/rea-reverse-engineer-anything-claude-code/'>
+<meta property='og:site_name' content='The Code Street'>
+<meta property='og:type' content='article'>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><meta property='article:section' content='Post' /><meta property='article:tag' content='REA' /><meta property='article:tag' content='Claude Code' /><meta property='article:tag' content='Reverse Engineering' /><meta property='article:tag' content='MCP' /><meta property='article:tag' content='AI Agents' /><meta property='article:tag' content='Electron' /><meta property='article:published_time' content='2026-10-20T18:00:00&#43;05:30'/><meta property='article:modified_time' content='2026-10-20T18:00:00&#43;05:30'/><meta property='og:image' content='https://thecodestreet.dev/post/rea-reverse-engineer-anything-claude-code/cover.jpg' />
+<meta name="twitter:title" content="REA Tutorial: Reverse Engineer Any App with Claude Code (Setup, Fixes & Honest Review)">
+<meta name="twitter:description" content="REA (Reverse Engineer Anything) lets Claude Code look inside installed apps with no source code. Here's what it really does, how to set it up on Windows, the errors I hit and how to fix them, and whether it lives up to the hype."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://thecodestreet.dev/post/rea-reverse-engineer-anything-claude-code/cover.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EVB34BL08"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-7EVB34BL08');
+        }
+      </script><link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","author":{"@type":"Person","name":"Rajiv Lochan Sharma","url":"https://thecodestreet.dev/about/"},"dateModified":"2026-10-20T18:00:00+05:30","datePublished":"2026-10-20T18:00:00+05:30","description":"REA (Reverse Engineer Anything) lets Claude Code look inside installed apps with no source code. Here's what it really does, how to set it up on Windows, the errors I hit and how to fix them, and whether it lives up to the hype.","headline":"REA Tutorial: Reverse Engineer Any App with Claude Code (Setup, Fixes \u0026 Honest Review)","image":"https://thecodestreet.dev/post/rea-reverse-engineer-anything-claude-code/cover.jpg","mainEntityOfPage":"https://thecodestreet.dev/post/rea-reverse-engineer-anything-claude-code/","publisher":{"@type":"Organization","logo":"https://thecodestreet.dev/img/logo_hu_3a37d9dbae6062.webp","name":"The Code Street","sameAs":["https://www.youtube.com/@TheCodeStreet","https://github.com/rajivcodelab","https://www.linkedin.com/in/rjvranjan80","https://facebook.com/thecodestreet"],"url":"https://thecodestreet.dev/"}},{"@type":"VideoObject","contentUrl":"https://www.youtube.com/watch?v=H_KYsLCeWUE","description":"REA (Reverse Engineer Anything) is the viral GitHub repo that lets Claude Code reverse engineer any app — no source code needed.","embedUrl":"https://www.youtube.com/embed/H_KYsLCeWUE","name":"REA GitHub Tutorial: Reverse Engineer Anything with Claude Code (Full Setup + Fixes)","thumbnailUrl":"https://i.ytimg.com/vi/H_KYsLCeWUE/hqdefault.jpg","uploadDate":"2026-10-20"}]}
+</script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+
+        <a class="cs-skip" href="#content">Skip to content</a>
+        <header class="cs-header" id="cs-header">
+    <div class="cs-header__inner">
+        <a class="cs-brand" href="/" aria-label="The Code Street home"><img src="/img/logo_hu_2cd295f811d27b71.png" width="96" height="96" alt="">
+            <span>The <em>Code</em> Street</span>
+        </a>
+
+        <nav class="cs-nav" id="cs-nav" aria-label="Main">
+            <ul>
+                <li>
+                    <a class="cs-nav__link is-active" href="/post/" aria-current="page">Tutorials</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/categories/">Topics</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/videos/">Videos</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/projects/">Projects</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="https://shop.thecodestreet.dev/" target="_blank" rel="noopener">Shop<svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/about/">About</a>
+                </li>
+            </ul>
+            <a class="cs-btn cs-btn--youtube cs-nav__cta" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg><span>Subscribe</span>
+            </a>
+        </nav>
+
+        <div class="cs-header__actions">
+            <a class="cs-iconbtn" href="/search/" aria-label="Search tutorials"><svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></a>
+            <button class="cs-iconbtn cs-nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="cs-nav">
+                <span class="cs-nav-toggle__open"><svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></span>
+                <span class="cs-nav-toggle__close"><svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+            </button>
+        </div>
+    </div>
+    <div class="cs-progress" aria-hidden="true"><span></span></div>
+</header>
+
+        <div class="cs-shell ">
+            <main id="content" class="main cs-main">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/rea-reverse-engineer-anything-claude-code/">
+                <img src="/post/rea-reverse-engineer-anything-claude-code/cover_hu_c4689b838b3eddfe.jpg"
+                        srcset="/post/rea-reverse-engineer-anything-claude-code/cover_hu_c4689b838b3eddfe.jpg 800w, /post/rea-reverse-engineer-anything-claude-code/cover_hu_f4723a08f7f626be.jpg 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post REA Tutorial: Reverse Engineer Any App with Claude Code (Setup, Fixes &amp; Honest Review)" />
+                
+            </a>
+        </div>
+    
+
+    
+<div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/ai-coding/" >
+                AI Coding
+            </a>
+        
+            <a href="/categories/ai-agents/" >
+                AI Agents
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h1 class="article-title">
+            <a href="/post/rea-reverse-engineer-anything-claude-code/">REA Tutorial: Reverse Engineer Any App with Claude Code (Setup, Fixes &amp; Honest Review)</a>
+        </h1>
+
+        
+        <p class="article-subtitle">
+            REA (Reverse Engineer Anything) lets Claude Code look inside installed apps with no source code. Here&#39;s what it really does, how to set it up on Windows, the errors I hit and how to fix them, and whether it lives up to the hype.
+        </p>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Oct 20, 2026</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    7 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>There&rsquo;s a GitHub repo called <strong>REA, Reverse Engineer Anything</strong>, and the hype around it is huge. People claim it can clone any software, and its star count has shot into the hundreds of thousands.</p>
+<p>So I installed it, pointed it at a real app on my PC, and here&rsquo;s my honest take: what it actually does, how to set it up (especially on Windows), the errors you&rsquo;ll hit, and whether it&rsquo;s worth it.</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/H_KYsLCeWUE" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<h2 id="what-rea-promises">What REA Promises
+</h2><p>REA makes three big promises:</p>
+<ol>
+<li><strong>Inspect almost any software</strong>: desktop apps, Android apps, websites and even firmware.</li>
+<li><strong>Explain how a feature works</strong>, not just what&rsquo;s on screen, but what happens behind it.</li>
+<li><strong>No source code needed.</strong> It works on apps already installed on your computer.</li>
+</ol>
+<h2 id="why-everyone-is-talking-about-it">Why Everyone Is Talking About It
+</h2><p>Give an AI a screenshot of an app and it can copy the <em>look</em>: layout, colours, buttons. That&rsquo;s like judging a restaurant by its menu. You see the dishes, but you have no idea what&rsquo;s happening in the kitchen.</p>
+<p><strong>REA lets the AI walk into the kitchen.</strong> It can check what happens when you click a button, where data is stored, which part of the app runs a feature, which servers it talks to, and how all the parts connect.</p>
+<h2 id="separating-hype-from-reality">Separating Hype from Reality
+</h2><p><strong>What it really does:</strong></p>
+<ul>
+<li>Finds real evidence inside the app&rsquo;s files</li>
+<li>Explains that evidence in plain language</li>
+<li>Tells you what it <em>couldn&rsquo;t</em> figure out (my favourite part)</li>
+</ul>
+<p><strong>What it doesn&rsquo;t do:</strong></p>
+<ul>
+<li>There&rsquo;s no magic &ldquo;clone this app&rdquo; button. Your AI assistant still has to build and test things.</li>
+<li>Heavily locked-down apps need extra tools and may still leave open questions.</li>
+</ul>
+<p>Open, web-based apps reveal a lot. Heavily protected apps reveal much less.</p>
+<h2 id="how-it-works-a-detective-story">How It Works: A Detective Story
+</h2><p>Four pieces work together:</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Piece</th>
+          <th>Role</th>
+          <th>In REA</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Investigator</strong></td>
+          <td>Understands your question, decides what to look at</td>
+          <td>Your AI agent (Claude Code, Codex…)</td>
+      </tr>
+      <tr>
+          <td><strong>Playbook</strong></td>
+          <td>Training manual: what to check, how to follow clues, how to record doubts</td>
+          <td>The REA skill</td>
+      </tr>
+      <tr>
+          <td><strong>Connection</strong></td>
+          <td>Lets the agent call outside tools</td>
+          <td>The MCP server</td>
+      </tr>
+      <tr>
+          <td><strong>Scanners</strong></td>
+          <td>The actual analysis tools; REA picks the right one for each app</td>
+          <td>200+ REA analysis tools</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>The workflow is five steps: pick an app (or one feature), let REA inspect the installed files, collect <strong>evidence with proof for every finding</strong>, decide what to do with what you learned, then build and compare.</p>
+<h3 id="confidence-labels">Confidence Labels
+</h3><p>This is what makes REA different from an AI confidently guessing. Every finding is labelled:</p>
+<ul>
+<li><strong>Observed</strong>: seen directly in the app&rsquo;s files</li>
+<li><strong>Derived</strong>: worked out from what it saw (2 + 2 = 4)</li>
+<li><strong>Inferred</strong>: a reasoned guess, and clearly marked as one</li>
+<li><strong>Unknown</strong>: couldn&rsquo;t determine it, flagged for you to test</li>
+</ul>
+<p>In my test, when REA checked VS Code&rsquo;s security switches, it marked the result <em>observed</em> and attached the file&rsquo;s fingerprint as proof.</p>
+<h2 id="setup">Setup
+</h2><p>You need <strong>Node.js 22.19 or newer</strong>. Check with:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">node -v
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="option-a-let-your-agent-install-it">Option A: Let Your Agent Install It
+</h3><p>Copy the REA GitHub link into Claude Code and say &ldquo;install this for me&rdquo;. If anything fails, talk it through with the agent step by step.</p>
+<h3 id="option-b-the-setup-wizard">Option B: The Setup Wizard
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npx rea-agents setup
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The wizard asks which AI agent you use and connects REA to it.</p>
+<h3 id="the-windows-catch">The Windows Catch
+</h3><p>On Windows, the wizard doesn&rsquo;t update Claude Code&rsquo;s settings for you, so you register REA yourself. These are the steps that worked for me:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1. Install globally so the `rea` command works from any folder</span>
+</span></span><span class="line"><span class="cl">npm install -g rea-agents
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. (Recommended) check that everything is in place</span>
+</span></span><span class="line"><span class="cl">rea doctor
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. Register REA as an MCP server for Claude Code</span>
+</span></span><span class="line"><span class="cl">claude mcp add rea -- cmd /c rea mcp
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Then <strong>fully restart Claude Code</strong> and run <code>/mcp</code> to confirm REA is listed and connected.</p>
+<h2 id="the-real-test-whats-inside-vs-code">The Real Test: What&rsquo;s Inside VS Code?
+</h2><p>Instead of a toy demo, I pointed REA at an app most of us use every day: <strong>VS Code</strong>. I opened Claude Code, pasted my prompt (it&rsquo;s in the video description), approved the tool calls carefully, and waited. Here&rsquo;s what came back.</p>
+<p><strong>What VS Code is made of.</strong> It&rsquo;s built on <strong>Electron</strong>, a kit for building desktop apps with web technology. Inside is <strong>Chromium</strong> (the engine behind Chrome) plus <strong>Node.js</strong>, all packed into one large executable that&rsquo;s officially signed by Microsoft. The giveaway is its internal name: <code>electron.exe</code>. VS Code is essentially a website running in its own private Chrome window.</p>
+<p><strong>Electron fuses.</strong> Electron apps have &ldquo;fuses&rdquo;, like the child lock on a car&rsquo;s back door: set at the factory and hard to change later. REA showed which are on (for example, the one that lets <code>code.exe</code> act as a plain Node.js program, needed for the CLI and background helpers) and which are off. VS Code relies on its own checksum verification instead. These are design choices, not bugs, but it&rsquo;s why security researchers love studying Electron apps.</p>
+<p><strong>Who VS Code talks to.</strong> Think of it as checking your phone&rsquo;s call log: Microsoft&rsquo;s update server (where &ldquo;Restart to update&rdquo; comes from), the extension marketplace, a GitHub-hosted gallery of MCP servers, A/B testing services, a Bing-backed settings search, and download servers for AI agents.</p>
+<p><strong>VS Code is a team, not one program.</strong> Like a restaurant kitchen:</p>
+<ul>
+<li>The <strong>main process</strong> is the manager that starts everyone else.</li>
+<li>The <strong>workbench window</strong> is the dining area, everything you see.</li>
+<li>The <strong>shared process</strong> handles paperwork like installing extensions.</li>
+<li>The <strong>extension host</strong> is a separate station where extensions run.</li>
+<li>The <strong>PTY host</strong> runs your terminals, and a <strong>file watcher</strong> notices file changes.</li>
+<li>A newer <strong>agent host</strong> runs AI agent sessions.</li>
+</ul>
+<p>That explains something you&rsquo;ve probably noticed: when one extension hangs, VS Code itself doesn&rsquo;t freeze.</p>
+<h2 id="errors-i-hit-and-how-to-fix-them">Errors I Hit and How to Fix Them
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Error</th>
+          <th>Fix</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>claude</code> is not recognized as an internal or external command</td>
+          <td>Add Claude Code&rsquo;s <code>bin</code> folder to your <code>PATH</code></td>
+      </tr>
+      <tr>
+          <td>MCP server <code>rea</code> already exists in user config</td>
+          <td>Nothing to fix. Just restart Claude Code</td>
+      </tr>
+      <tr>
+          <td><code>/mcp</code> doesn&rsquo;t list REA</td>
+          <td>Claude Code wasn&rsquo;t fully restarted, or you&rsquo;re in a different session. Close it completely and reopen it on the same PC</td>
+      </tr>
+      <tr>
+          <td>&ldquo;Provider unavailable&rdquo;</td>
+          <td>REA is missing a provider for native <code>.exe</code> analysis. Install <strong>Ghidra</strong> and <strong>Java</strong>, then run <code>rea doctor</code></td>
+      </tr>
+      <tr>
+          <td>REA won&rsquo;t install</td>
+          <td>Your Node.js is too old. Install the latest Node LTS</td>
+      </tr>
+      <tr>
+          <td>Android analysis fails</td>
+          <td>Install the full <strong>Java JDK</strong>; the JRE isn&rsquo;t enough</td>
+      </tr>
+      <tr>
+          <td>A tool asks for Python pwntools</td>
+          <td>Only one tool needs it, so you can skip it</td>
+      </tr>
+      <tr>
+          <td>Saved report is missing results</td>
+          <td>Run the analysis and the export in the <strong>same</strong> Claude Code session</td>
+      </tr>
+  </tbody>
+</table></div>
+<blockquote>
+<p><strong>Security tip:</strong> Only install REA from the official repo. Copycat repos are a common phishing trick.</p></blockquote>
+<p>If you remember one thing, make it <strong><code>rea doctor</code></strong>. It&rsquo;s like a mechanic plugging a scanner into your car before touching anything: it changes nothing and tells you exactly what&rsquo;s missing.</p>
+<h2 id="verdict-is-rea-worth-the-hype">Verdict: Is REA Worth the Hype?
+</h2><p><strong>For understanding apps: yes.</strong> What used to take hours of clicking around tools like Ghidra took me minutes, explained in plain English. I learned more about VS Code&rsquo;s internals in one session than I knew before.</p>
+<p><strong>But it&rsquo;s not a magic clone button.</strong> Building something good with what you learn is still your job. Always check findings marked <em>inferred</em> or <em>unknown</em> before you trust them.</p>
+<h3 id="how-ill-actually-use-it">How I&rsquo;ll Actually Use It
+</h3><ol>
+<li><strong>Checking my own release builds</strong>: open my own APK and see what really ships, like leftover debug settings, keys or forgotten servers. A free security check before every release.</li>
+<li><strong>Learning before building</strong>: study how a well-made open-source app implements a feature.</li>
+<li><strong>Auditing the tools I install</strong>: see exactly which servers they talk to, like we did with VS Code.</li>
+</ol>
+<p>REA won&rsquo;t build an app for you in one click, but it gives your AI agent eyes inside any app, and it&rsquo;s honest about what it doesn&rsquo;t know.</p>
+
+</section>
+
+
+    
+        <aside class="cs-post-cta">
+    
+    <div class="cs-post-cta-text">
+        <h2>Enjoyed this tutorial?</h2>
+        <p>
+            I publish step-by-step AI videos on YouTube: AI agents, local LLMs and AI coding tools.
+            Subscribe so you don't miss the next one, and join 4,900&#43; other developers.
+        </p>
+        <div class="cs-hero-actions">
+            
+<a class="cs-btn cs-btn--youtube" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    <span>Subscribe on YouTube</span>
+</a>
+
+            <a class="cs-btn cs-btn--ghost" href="/videos/">More videos</a>
+        </div>
+    </div>
+</aside>
+
+    
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/rea/">REA</a>
+        
+            <a href="/tags/claude-code/">Claude Code</a>
+        
+            <a href="/tags/reverse-engineering/">Reverse Engineering</a>
+        
+            <a href="/tags/mcp/">MCP</a>
+        
+            <a href="/tags/ai-agents/">AI Agents</a>
+        
+            <a href="/tags/electron/">Electron</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+<aside class="cs-related" aria-labelledby="cs-related-title">
+    <h2 id="cs-related-title">Keep learning</h2>
+    <div class="cs-grid cs-grid--related">
+        <article class="cs-card cs-card--default">
+    <a class="cs-card__media" href="/post/claude-code-for-free-ollama-qwen/" tabindex="-1" aria-hidden="true"><img src="/post/claude-code-for-free-ollama-qwen/cover_hu_953d648817466eea.jpg"
+                srcset="/post/claude-code-for-free-ollama-qwen/cover_hu_953d648817466eea.jpg 640w, /post/claude-code-for-free-ollama-qwen/cover.jpg 1280w"
+                sizes="(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw" width="640" height="360"
+                loading="lazy" alt="">
+    </a>
+    <div class="cs-card__body">
+        <div class="cs-tags"><a class="cs-tag" href="/categories/local-llms/">Local LLMs</a><a class="cs-tag" href="/categories/ai-coding/">AI Coding</a>
+        </div>
+        <h3 class="cs-card__title"><a href="/post/claude-code-for-free-ollama-qwen/">Claude Code For Free: Local Setup with Ollama &#43; Qwen 3.8</a></h3><p class="cs-card__desc">Run Claude Code for free on your own PC. No API key, no subscription, no bill. A step-by-step local setup with Ollama and Qwen 3.8, plus the exact settings file and prompt I used.</p>
+        <div class="cs-meta">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg><time datetime="2026-10-28">Oct 28, 2026</time></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+6 min read</span>
+        </div>
+    </div>
+</article>
+
+        <article class="cs-card cs-card--default">
+    <a class="cs-card__media" href="/post/qwen-3-vs-code-ollama/" tabindex="-1" aria-hidden="true"><img src="/post/qwen-3-vs-code-ollama/cover_hu_6d401978e3e29226.jpg"
+                srcset="/post/qwen-3-vs-code-ollama/cover_hu_6d401978e3e29226.jpg 640w, /post/qwen-3-vs-code-ollama/cover.jpg 1280w"
+                sizes="(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw" width="640" height="360"
+                loading="lazy" alt="">
+    </a>
+    <div class="cs-card__body">
+        <div class="cs-tags"><a class="cs-tag" href="/categories/local-llms/">Local LLMs</a><a class="cs-tag" href="/categories/ai-coding/">AI Coding</a>
+        </div>
+        <h3 class="cs-card__title"><a href="/post/qwen-3-vs-code-ollama/">How to Use Qwen 3 with VS Code for Free: Local AI Coding with Ollama</a></h3><p class="cs-card__desc">Set up Qwen 3 as a free, private AI coding assistant in VS Code. Install Ollama, download a Qwen model, connect the Qwen Code Companion extension and generate your first app, step by step.</p>
+        <div class="cs-meta">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg><time datetime="2026-08-02">Aug 02, 2026</time></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+4 min read</span>
+        </div>
+    </div>
+</article>
+
+        <article class="cs-card cs-card--default">
+    <a class="cs-card__media" href="/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/" tabindex="-1" aria-hidden="true"><img src="/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/qwen%203%20coder%20explained_hu_61d165e49048f51d.webp"
+                srcset="/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/qwen%203%20coder%20explained_hu_61d165e49048f51d.webp 640w, /post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/qwen%203%20coder%20explained.webp 1200w"
+                sizes="(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw" width="640" height="336"
+                loading="lazy" alt="">
+    </a>
+    <div class="cs-card__body">
+        <div class="cs-tags"><a class="cs-tag" href="/categories/ai-coding/">AI Coding</a><a class="cs-tag" href="/categories/genai/">GenAI</a>
+        </div>
+        <h3 class="cs-card__title"><a href="/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/">Qwen 3 Coder Explained: The Agentic Coding Trick to Code 10X Faster</a></h3><p class="cs-card__desc">Qwen 3 Coder explained in detail — learn how developers can leverage agentic coding to refactor code, run tests, and boost productivity 10X faster with AI-powered workflows.</p>
+        <div class="cs-meta">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg><time datetime="2025-09-12">Sep 12, 2025</time></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+5 min read</span>
+        </div>
+    </div>
+</article>
+
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "code-street" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#what-rea-promises">What REA Promises</a></li>
+    <li><a href="#why-everyone-is-talking-about-it">Why Everyone Is Talking About It</a></li>
+    <li><a href="#separating-hype-from-reality">Separating Hype from Reality</a></li>
+    <li><a href="#how-it-works-a-detective-story">How It Works: A Detective Story</a>
+      <ol>
+        <li><a href="#confidence-labels">Confidence Labels</a></li>
+      </ol>
+    </li>
+    <li><a href="#setup">Setup</a>
+      <ol>
+        <li><a href="#option-a-let-your-agent-install-it">Option A: Let Your Agent Install It</a></li>
+        <li><a href="#option-b-the-setup-wizard">Option B: The Setup Wizard</a></li>
+        <li><a href="#the-windows-catch">The Windows Catch</a></li>
+      </ol>
+    </li>
+    <li><a href="#the-real-test-whats-inside-vs-code">The Real Test: What&rsquo;s Inside VS Code?</a></li>
+    <li><a href="#errors-i-hit-and-how-to-fix-them">Errors I Hit and How to Fix Them</a></li>
+    <li><a href="#verdict-is-rea-worth-the-hype">Verdict: Is REA Worth the Hype?</a>
+      <ol>
+        <li><a href="#how-ill-actually-use-it">How I&rsquo;ll Actually Use It</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+            
+                <section class="widget cs-youtube-widget">
+    <div class="widget-icon">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    </div>
+    <h2 class="widget-title section-title">Watch on YouTube</h2>
+
+    <div class="cs-youtube-widget-card">
+        <p>
+            Video walkthroughs of every tutorial, with <strong>4,900&#43;</strong> developers subscribed.
+        </p>
+        
+<a class="cs-btn cs-btn--youtube" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    <span>Subscribe on YouTube</span>
+</a>
+
+    </div>
+</section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <footer class="cs-footer">
+    <div class="cs-container cs-footer__grid">
+        <div class="cs-footer__brand">
+            <a class="cs-brand" href="/" aria-label="The Code Street home"><img src="/img/logo_hu_2cd295f811d27b71.png" width="96" height="96" alt="" loading="lazy">
+                <span>The <em>Code</em> Street</span>
+            </a>
+            <p>Hands-on AI tutorials for developers: AI agents, local LLMs and AI coding tools, through blogs and videos.</p>
+            <ul class="cs-social">
+                <li>
+                    <a href="https://facebook.com/thecodestreet" target="_blank" rel="noopener me" aria-label="Facebook" title="Facebook"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg></a>
+                </li>
+                <li>
+                    <a href="https://github.com/rajivcodelab" target="_blank" rel="noopener me" aria-label="GitHub" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+</a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/in/rjvranjan80" target="_blank" rel="noopener me" aria-label="LinkedIn" title="LinkedIn"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg></a>
+                </li>
+                <li>
+                    <a href="/index.xml" target="_blank" rel="noopener me" aria-label="RSS" title="RSS"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+</a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/@TheCodeStreet" target="_blank" rel="noopener me" aria-label="YouTube" title="YouTube"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg></a>
+                </li>
+            </ul>
+        </div>
+
+        <nav class="cs-footer__col" aria-label="Topics">
+            <p class="cs-footer__title">Topics</p>
+            <ul>
+                <li><a href="/categories/semantic-kernel/">Semantic Kernel</a></li>
+                <li><a href="/categories/ai-coding/">AI Coding</a></li>
+                <li><a href="/categories/local-llms/">Local LLMs</a></li>
+                <li><a href="/categories/ai-agents/">AI Agents</a></li>
+                <li><a href="/categories/genai/">GenAI</a></li>
+                <li><a href="/categories/microsoft-agent-framework/">Microsoft Agent Framework</a></li>
+                <li><a href="/categories/">All topics</a></li>
+            </ul>
+        </nav>
+
+        <nav class="cs-footer__col" aria-label="Learn">
+            <p class="cs-footer__title">Learn</p>
+            <ul>
+                <li><a href="/post/">All tutorials</a></li>
+                <li><a href="/videos/">Videos</a></li>
+                <li><a href="/projects/">Source code &amp; projects</a></li>
+                <li><a href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">YouTube channel</a></li>
+                <li><a href="/index.xml">RSS feed</a></li>
+            </ul>
+        </nav>
+
+        <nav class="cs-footer__col" aria-label="About">
+            <p class="cs-footer__title">The Code Street</p>
+            <ul>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/terms-conditions/">Terms</a></li>
+                <li><a href="/privacy-policy/">Privacy</a></li>
+                <li><a href="/disclaimer/">Disclaimer</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="cs-container cs-footer__bottom">
+        <span>&copy; 2024 &ndash; 2026 The Code Street</span>
+        <span>Made for developers learning AI.</span>
+    </div>
+</footer>
+
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.64e2e29c7b1bd8b3ca8af9b66224401a6b239f453fa4363850ad78c31899208a.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script>
+    
+    document.addEventListener('click', function (e) {
+        var facade = e.target.closest('.cs-video-facade');
+        if (!facade) return;
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + facade.dataset.videoId + '?autoplay=1&rel=0';
+        iframe.title = facade.getAttribute('aria-label');
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.className = 'cs-video-iframe';
+        facade.replaceWith(iframe);
+    });
+
+    
+    (function () {
+        var header = document.getElementById('cs-header');
+        if (!header) return;
+
+        var toggle = header.querySelector('.cs-nav-toggle');
+        function setMenu(open) {
+            header.classList.toggle('is-open', open);
+            if (toggle) toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        if (toggle) {
+            toggle.addEventListener('click', function () { setMenu(!header.classList.contains('is-open')); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+            document.addEventListener('click', function (e) { if (!header.contains(e.target)) setMenu(false); });
+            header.querySelector('.cs-nav').addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+        }
+
+        var bar = header.querySelector('.cs-progress span');
+        var article = document.querySelector('.article-content');
+        var ticking = false;
+        function update() {
+            ticking = false;
+            header.classList.toggle('is-scrolled', window.scrollY > 4);
+            if (bar && article) {
+                var top = article.getBoundingClientRect().top + window.scrollY;
+                var total = article.offsetHeight - window.innerHeight * 0.5;
+                var done = total > 0 ? (window.scrollY - top + header.offsetHeight) / total : 0;
+                bar.style.transform = 'scaleX(' + Math.max(0, Math.min(1, done)) + ')';
+            }
+        }
+        function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+        update();
+    })();
+</script>
+
+    </body>
+</html>

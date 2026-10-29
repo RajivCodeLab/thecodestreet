@@ -62,6 +62,41 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://thecodestreet.dev/categories/ai-agents/</loc>
+    <lastmod>2026-10-20T18:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/ai-agents/</loc>
+    <lastmod>2026-10-20T18:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/electron/</loc>
+    <lastmod>2026-10-20T18:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/mcp/</loc>
+    <lastmod>2026-10-20T18:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/rea/</loc>
+    <lastmod>2026-10-20T18:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/post/rea-reverse-engineer-anything-claude-code/</loc>
+    <lastmod>2026-10-20T18:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/reverse-engineering/</loc>
+    <lastmod>2026-10-20T18:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://thecodestreet.dev/tags/context-window/</loc>
     <lastmod>2026-10-17T18:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -77,17 +112,32 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://thecodestreet.dev/post/qwen-3-vs-code-ollama/</loc>
+    <lastmod>2026-08-02T18:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/qwen-3/</loc>
+    <lastmod>2026-08-02T18:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/qwen-code/</loc>
+    <lastmod>2026-08-02T18:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/vs-code/</loc>
+    <lastmod>2026-08-02T18:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://thecodestreet.dev/tags/.net/</loc>
     <lastmod>2026-02-05T00:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/tags/.net-10/</loc>
-    <lastmod>2026-02-05T00:00:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/tags/ai-agents/</loc>
     <lastmod>2026-02-05T00:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -178,11 +228,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/categories/genai/</loc>
-    <lastmod>2025-09-12T15:58:12+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/tags/qwen-3/</loc>
     <lastmod>2025-09-12T15:58:12+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

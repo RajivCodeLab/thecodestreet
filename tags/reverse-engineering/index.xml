@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Reverse Engineering on The Code Street</title>
+        <link>https://thecodestreet.dev/tags/reverse-engineering/</link>
+        <description>Recent content in Reverse Engineering on The Code Street</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>The Code Street</copyright>
+        <lastBuildDate>Tue, 20 Oct 2026 18:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/reverse-engineering/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>REA Tutorial: Reverse Engineer Any App with Claude Code (Setup, Fixes &amp; Honest Review)</title>
+        <link>https://thecodestreet.dev/post/rea-reverse-engineer-anything-claude-code/</link>
+        <pubDate>Tue, 20 Oct 2026 18:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/post/rea-reverse-engineer-anything-claude-code/</guid>
+        <description>&lt;img src="https://thecodestreet.dev/post/rea-reverse-engineer-anything-claude-code/cover.jpg" alt="Featured image of post REA Tutorial: Reverse Engineer Any App with Claude Code (Setup, Fixes &amp; Honest Review)" /&gt;&lt;p&gt;There&amp;rsquo;s a GitHub repo called &lt;strong&gt;REA, Reverse Engineer Anything&lt;/strong&gt;, and the hype around it is huge. People claim it can clone any software, and its star count has shot into the hundreds of thousands.&lt;/p&gt;
+&lt;p&gt;So I installed it, pointed it at a real app on my PC, and here&amp;rsquo;s my honest take: what it actually does, how to set it up (especially on Windows), the errors you&amp;rsquo;ll hit, and whether it&amp;rsquo;s worth it.&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/H_KYsLCeWUE&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;what-rea-promises&#34;&gt;What REA Promises
+&lt;/h2&gt;&lt;p&gt;REA makes three big promises:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Inspect almost any software&lt;/strong&gt;: desktop apps, Android apps, websites and even firmware.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Explain how a feature works&lt;/strong&gt;, not just what&amp;rsquo;s on screen, but what happens behind it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No source code needed.&lt;/strong&gt; It works on apps already installed on your computer.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;why-everyone-is-talking-about-it&#34;&gt;Why Everyone Is Talking About It
+&lt;/h2&gt;&lt;p&gt;Give an AI a screenshot of an app and it can copy the &lt;em&gt;look&lt;/em&gt;: layout, colours, buttons. That&amp;rsquo;s like judging a restaurant by its menu. You see the dishes, but you have no idea what&amp;rsquo;s happening in the kitchen.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;REA lets the AI walk into the kitchen.&lt;/strong&gt; It can check what happens when you click a button, where data is stored, which part of the app runs a feature, which servers it talks to, and how all the parts connect.&lt;/p&gt;
+&lt;h2 id=&#34;separating-hype-from-reality&#34;&gt;Separating Hype from Reality
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;What it really does:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Finds real evidence inside the app&amp;rsquo;s files&lt;/li&gt;
+&lt;li&gt;Explains that evidence in plain language&lt;/li&gt;
+&lt;li&gt;Tells you what it &lt;em&gt;couldn&amp;rsquo;t&lt;/em&gt; figure out (my favourite part)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;What it doesn&amp;rsquo;t do:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There&amp;rsquo;s no magic &amp;ldquo;clone this app&amp;rdquo; button. Your AI assistant still has to build and test things.&lt;/li&gt;
+&lt;li&gt;Heavily locked-down apps need extra tools and may still leave open questions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Open, web-based apps reveal a lot. Heavily protected apps reveal much less.&lt;/p&gt;
+&lt;h2 id=&#34;how-it-works-a-detective-story&#34;&gt;How It Works: A Detective Story
+&lt;/h2&gt;&lt;p&gt;Four pieces work together:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Piece&lt;/th&gt;
+          &lt;th&gt;Role&lt;/th&gt;
+          &lt;th&gt;In REA&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Investigator&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Understands your question, decides what to look at&lt;/td&gt;
+          &lt;td&gt;Your AI agent (Claude Code, Codex…)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Playbook&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Training manual: what to check, how to follow clues, how to record doubts&lt;/td&gt;
+          &lt;td&gt;The REA skill&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Connection&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Lets the agent call outside tools&lt;/td&gt;
+          &lt;td&gt;The MCP server&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Scanners&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;The actual analysis tools; REA picks the right one for each app&lt;/td&gt;
+          &lt;td&gt;200+ REA analysis tools&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The workflow is five steps: pick an app (or one feature), let REA inspect the installed files, collect &lt;strong&gt;evidence with proof for every finding&lt;/strong&gt;, decide what to do with what you learned, then build and compare.&lt;/p&gt;
+&lt;h3 id=&#34;confidence-labels&#34;&gt;Confidence Labels
+&lt;/h3&gt;&lt;p&gt;This is what makes REA different from an AI confidently guessing. Every finding is labelled:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Observed&lt;/strong&gt;: seen directly in the app&amp;rsquo;s files&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Derived&lt;/strong&gt;: worked out from what it saw (2 + 2 = 4)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Inferred&lt;/strong&gt;: a reasoned guess, and clearly marked as one&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unknown&lt;/strong&gt;: couldn&amp;rsquo;t determine it, flagged for you to test&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In my test, when REA checked VS Code&amp;rsquo;s security switches, it marked the result &lt;em&gt;observed&lt;/em&gt; and attached the file&amp;rsquo;s fingerprint as proof.&lt;/p&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup
+&lt;/h2&gt;&lt;p&gt;You need &lt;strong&gt;Node.js 22.19 or newer&lt;/strong&gt;. Check with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;node -v
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;option-a-let-your-agent-install-it&#34;&gt;Option A: Let Your Agent Install It
+&lt;/h3&gt;&lt;p&gt;Copy the REA GitHub link into Claude Code and say &amp;ldquo;install this for me&amp;rdquo;. If anything fails, talk it through with the agent step by step.&lt;/p&gt;
+&lt;h3 id=&#34;option-b-the-setup-wizard&#34;&gt;Option B: The Setup Wizard
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx rea-agents setup
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The wizard asks which AI agent you use and connects REA to it.&lt;/p&gt;
+&lt;h3 id=&#34;the-windows-catch&#34;&gt;The Windows Catch
+&lt;/h3&gt;&lt;p&gt;On Windows, the wizard doesn&amp;rsquo;t update Claude Code&amp;rsquo;s settings for you, so you register REA yourself. These are the steps that worked for me:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1. Install globally so the `rea` command works from any folder&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install -g rea-agents
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2. (Recommended) check that everything is in place&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rea doctor
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 3. Register REA as an MCP server for Claude Code&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;claude mcp add rea -- cmd /c rea mcp
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Then &lt;strong&gt;fully restart Claude Code&lt;/strong&gt; and run &lt;code&gt;/mcp&lt;/code&gt; to confirm REA is listed and connected.&lt;/p&gt;
+&lt;h2 id=&#34;the-real-test-whats-inside-vs-code&#34;&gt;The Real Test: What&amp;rsquo;s Inside VS Code?
+&lt;/h2&gt;&lt;p&gt;Instead of a toy demo, I pointed REA at an app most of us use every day: &lt;strong&gt;VS Code&lt;/strong&gt;. I opened Claude Code, pasted my prompt (it&amp;rsquo;s in the video description), approved the tool calls carefully, and waited. Here&amp;rsquo;s what came back.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What VS Code is made of.&lt;/strong&gt; It&amp;rsquo;s built on &lt;strong&gt;Electron&lt;/strong&gt;, a kit for building desktop apps with web technology. Inside is &lt;strong&gt;Chromium&lt;/strong&gt; (the engine behind Chrome) plus &lt;strong&gt;Node.js&lt;/strong&gt;, all packed into one large executable that&amp;rsquo;s officially signed by Microsoft. The giveaway is its internal name: &lt;code&gt;electron.exe&lt;/code&gt;. VS Code is essentially a website running in its own private Chrome window.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Electron fuses.&lt;/strong&gt; Electron apps have &amp;ldquo;fuses&amp;rdquo;, like the child lock on a car&amp;rsquo;s back door: set at the factory and hard to change later. REA showed which are on (for example, the one that lets &lt;code&gt;code.exe&lt;/code&gt; act as a plain Node.js program, needed for the CLI and background helpers) and which are off. VS Code relies on its own checksum verification instead. These are design choices, not bugs, but it&amp;rsquo;s why security researchers love studying Electron apps.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Who VS Code talks to.&lt;/strong&gt; Think of it as checking your phone&amp;rsquo;s call log: Microsoft&amp;rsquo;s update server (where &amp;ldquo;Restart to update&amp;rdquo; comes from), the extension marketplace, a GitHub-hosted gallery of MCP servers, A/B testing services, a Bing-backed settings search, and download servers for AI agents.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;VS Code is a team, not one program.&lt;/strong&gt; Like a restaurant kitchen:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;strong&gt;main process&lt;/strong&gt; is the manager that starts everyone else.&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;workbench window&lt;/strong&gt; is the dining area, everything you see.&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;shared process&lt;/strong&gt; handles paperwork like installing extensions.&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;extension host&lt;/strong&gt; is a separate station where extensions run.&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;PTY host&lt;/strong&gt; runs your terminals, and a &lt;strong&gt;file watcher&lt;/strong&gt; notices file changes.&lt;/li&gt;
+&lt;li&gt;A newer &lt;strong&gt;agent host&lt;/strong&gt; runs AI agent sessions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That explains something you&amp;rsquo;ve probably noticed: when one extension hangs, VS Code itself doesn&amp;rsquo;t freeze.&lt;/p&gt;
+&lt;h2 id=&#34;errors-i-hit-and-how-to-fix-them&#34;&gt;Errors I Hit and How to Fix Them
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Error&lt;/th&gt;
+          &lt;th&gt;Fix&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;claude&lt;/code&gt; is not recognized as an internal or external command&lt;/td&gt;
+          &lt;td&gt;Add Claude Code&amp;rsquo;s &lt;code&gt;bin&lt;/code&gt; folder to your &lt;code&gt;PATH&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;MCP server &lt;code&gt;rea&lt;/code&gt; already exists in user config&lt;/td&gt;
+          &lt;td&gt;Nothing to fix. Just restart Claude Code&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;/mcp&lt;/code&gt; doesn&amp;rsquo;t list REA&lt;/td&gt;
+          &lt;td&gt;Claude Code wasn&amp;rsquo;t fully restarted, or you&amp;rsquo;re in a different session. Close it completely and reopen it on the same PC&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&amp;ldquo;Provider unavailable&amp;rdquo;&lt;/td&gt;
+          &lt;td&gt;REA is missing a provider for native &lt;code&gt;.exe&lt;/code&gt; analysis. Install &lt;strong&gt;Ghidra&lt;/strong&gt; and &lt;strong&gt;Java&lt;/strong&gt;, then run &lt;code&gt;rea doctor&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;REA won&amp;rsquo;t install&lt;/td&gt;
+          &lt;td&gt;Your Node.js is too old. Install the latest Node LTS&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Android analysis fails&lt;/td&gt;
+          &lt;td&gt;Install the full &lt;strong&gt;Java JDK&lt;/strong&gt;; the JRE isn&amp;rsquo;t enough&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;A tool asks for Python pwntools&lt;/td&gt;
+          &lt;td&gt;Only one tool needs it, so you can skip it&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Saved report is missing results&lt;/td&gt;
+          &lt;td&gt;Run the analysis and the export in the &lt;strong&gt;same&lt;/strong&gt; Claude Code session&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Security tip:&lt;/strong&gt; Only install REA from the official repo. Copycat repos are a common phishing trick.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;If you remember one thing, make it &lt;strong&gt;&lt;code&gt;rea doctor&lt;/code&gt;&lt;/strong&gt;. It&amp;rsquo;s like a mechanic plugging a scanner into your car before touching anything: it changes nothing and tells you exactly what&amp;rsquo;s missing.&lt;/p&gt;
+&lt;h2 id=&#34;verdict-is-rea-worth-the-hype&#34;&gt;Verdict: Is REA Worth the Hype?
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;For understanding apps: yes.&lt;/strong&gt; What used to take hours of clicking around tools like Ghidra took me minutes, explained in plain English. I learned more about VS Code&amp;rsquo;s internals in one session than I knew before.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;But it&amp;rsquo;s not a magic clone button.&lt;/strong&gt; Building something good with what you learn is still your job. Always check findings marked &lt;em&gt;inferred&lt;/em&gt; or &lt;em&gt;unknown&lt;/em&gt; before you trust them.&lt;/p&gt;
+&lt;h3 id=&#34;how-ill-actually-use-it&#34;&gt;How I&amp;rsquo;ll Actually Use It
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Checking my own release builds&lt;/strong&gt;: open my own APK and see what really ships, like leftover debug settings, keys or forgotten servers. A free security check before every release.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Learning before building&lt;/strong&gt;: study how a well-made open-source app implements a feature.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Auditing the tools I install&lt;/strong&gt;: see exactly which servers they talk to, like we did with VS Code.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;REA won&amp;rsquo;t build an app for you in one click, but it gives your AI agent eyes inside any app, and it&amp;rsquo;s honest about what it doesn&amp;rsquo;t know.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

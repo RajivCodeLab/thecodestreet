@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>VS Code on The Code Street</title>
+        <link>https://thecodestreet.dev/tags/vs-code/</link>
+        <description>Recent content in VS Code on The Code Street</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>The Code Street</copyright>
+        <lastBuildDate>Sun, 02 Aug 2026 18:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/vs-code/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>How to Use Qwen 3 with VS Code for Free: Local AI Coding with Ollama</title>
+        <link>https://thecodestreet.dev/post/qwen-3-vs-code-ollama/</link>
+        <pubDate>Sun, 02 Aug 2026 18:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/post/qwen-3-vs-code-ollama/</guid>
+        <description>&lt;img src="https://thecodestreet.dev/post/qwen-3-vs-code-ollama/cover.jpg" alt="Featured image of post How to Use Qwen 3 with VS Code for Free: Local AI Coding with Ollama" /&gt;&lt;p&gt;What if you could have a GitHub Copilot-style assistant inside VS Code that runs &lt;strong&gt;entirely on your own machine&lt;/strong&gt;, costs nothing, and never sends your code to the cloud?&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s exactly what you get by combining &lt;strong&gt;Qwen 3&lt;/strong&gt;, &lt;strong&gt;Ollama&lt;/strong&gt; and the &lt;strong&gt;Qwen Code Companion&lt;/strong&gt; extension. In this guide we&amp;rsquo;ll set everything up from scratch, fix the most common setup issues, and generate our first piece of code.&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/1TUeKUC2ffk&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;what-you-need&#34;&gt;What You Need
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;A Windows, macOS or Linux machine with enough RAM/VRAM for the model you pick (more on that below)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://code.visualstudio.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VS Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;About 15 minutes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;step-1-install-ollama&#34;&gt;Step 1: Install Ollama
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://ollama.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ollama&lt;/a&gt; is the easiest way to run open models locally. Download the installer for your OS from the website (on Windows you can also paste the install command into PowerShell) and run it.&lt;/p&gt;
+&lt;p&gt;Once installed, Ollama runs in the background and exposes a local API that other tools, including VS Code extensions, can talk to.&lt;/p&gt;
+&lt;h2 id=&#34;step-2-pick-and-download-a-qwen-model&#34;&gt;Step 2: Pick and Download a Qwen Model
+&lt;/h2&gt;&lt;p&gt;Open the &lt;strong&gt;Models&lt;/strong&gt; page on the Ollama website and search for Qwen. You&amp;rsquo;ll notice two kinds of models:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cloud models&lt;/strong&gt; need you to sign in and pay for a subscription.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Local models&lt;/strong&gt; download to your machine and run for free. That&amp;rsquo;s what we want.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Qwen comes in several sizes. Bigger models are smarter but need more memory, so pick the largest one your machine can comfortably run. In the video I use a recent Qwen 3 release; the larger variants are around 24 GB on disk.&lt;/p&gt;
+&lt;p&gt;To download a model, copy its &lt;code&gt;ollama run&lt;/code&gt; / &lt;code&gt;ollama pull&lt;/code&gt; command from the model page and paste it into a terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ollama pull &amp;lt;model-name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;When the download finishes, open the Ollama app and send it a quick message. The first reply can be slow while the model loads into memory; after that it&amp;rsquo;s much faster.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Tip:&lt;/strong&gt; Ask the model &amp;ldquo;What kind of tasks can you do?&amp;rdquo; It will tell you it can write and debug code in Python, JavaScript, HTML, CSS, SQL and more, but that it can&amp;rsquo;t browse the internet or run code on your machine. For that, you need an &lt;em&gt;agent&lt;/em&gt;, which is exactly what we&amp;rsquo;ll plug it into next.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;step-3-install-the-qwen-code-companion-extension&#34;&gt;Step 3: Install the Qwen Code Companion Extension
+&lt;/h2&gt;&lt;p&gt;In VS Code, open the &lt;strong&gt;Extensions&lt;/strong&gt; panel and search for &lt;strong&gt;Qwen Code&lt;/strong&gt; (not &amp;ldquo;Qwen Coder&amp;rdquo;). Install &lt;strong&gt;Qwen Code Companion&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s still in preview, but it already gives you a native IDE experience: chat in the sidebar, and review, edit and accept file changes right inside VS Code. Think of it as a free, local alternative to GitHub Copilot Chat.&lt;/p&gt;
+&lt;h2 id=&#34;step-4-connect-it-to-ollama&#34;&gt;Step 4: Connect It to Ollama
+&lt;/h2&gt;&lt;p&gt;Click the new Qwen icon in the activity bar to open the setup pop-up, then:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Choose &lt;strong&gt;Custom provider&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select &lt;strong&gt;OpenAI compatible&lt;/strong&gt;. Ollama exposes an OpenAI-compatible API, so any tool that speaks OpenAI can use your local models.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Set the &lt;strong&gt;base URL&lt;/strong&gt; to:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://localhost:11434/v1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For the &lt;strong&gt;API key&lt;/strong&gt;, type anything. Ollama doesn&amp;rsquo;t check it, but the field can&amp;rsquo;t be empty.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For the &lt;strong&gt;model name&lt;/strong&gt;, enter the &lt;em&gt;exact&lt;/em&gt; name of the model you downloaded. The safest way is to copy it from the Ollama app or from &lt;code&gt;ollama list&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Press Enter, confirm, and say &amp;ldquo;hi&amp;rdquo;. If you get a reply, you&amp;rsquo;re connected.&lt;/p&gt;
+&lt;h2 id=&#34;step-5-generate-your-first-app&#34;&gt;Step 5: Generate Your First App
+&lt;/h2&gt;&lt;p&gt;Open a folder as your workspace and give Qwen a small task, for example:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Write a simple HTML page with a list I can add items to.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Qwen writes the file directly into your workspace. Open it in the browser and it works. Then push it further:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Apply dark mode CSS and make it responsive.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;In my test this took about two to three minutes on local hardware, and the result even included a dark/light mode toggle.&lt;/p&gt;
+&lt;h2 id=&#34;troubleshooting&#34;&gt;Troubleshooting
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Problem&lt;/th&gt;
+          &lt;th&gt;Fix&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Extension can&amp;rsquo;t connect&lt;/td&gt;
+          &lt;td&gt;Make sure Ollama is running and the base URL ends with &lt;code&gt;/v1&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&amp;ldquo;Model not found&amp;rdquo;&lt;/td&gt;
+          &lt;td&gt;The model name must match &lt;code&gt;ollama list&lt;/code&gt; exactly, including the tag&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Very slow responses&lt;/td&gt;
+          &lt;td&gt;Try a smaller Qwen variant, or close other GPU-heavy apps&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Something else is broken&lt;/td&gt;
+          &lt;td&gt;Use the extension&amp;rsquo;s &lt;strong&gt;Doctor&lt;/strong&gt; command to diagnose it&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;wrapping-up&#34;&gt;Wrapping Up
+&lt;/h2&gt;&lt;p&gt;You now have a private, free AI coding assistant in VS Code. Next, I&amp;rsquo;ll push this setup harder by building real apps and showing where Qwen shines and where it struggles. I&amp;rsquo;ll also try the same model with OpenCode.&lt;/p&gt;
+&lt;p&gt;If your assistant forgets things in long sessions, read about &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/post/what-is-context-size-in-ollama/&#34; &gt;context size in Ollama&lt;/a&gt;. It&amp;rsquo;s the setting that matters most for local coding agents.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
