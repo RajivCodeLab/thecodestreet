@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="stylesheet" href="/css/custom.css"><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Run Claude Code for free on your own PC. No API key, no subscription, no bill. A step-by-step local setup with Ollama and Qwen 3.8, plus the exact settings file and prompt I used.">
+<meta name="keywords" content="claude code free, claude code ollama, claude code local, claude code qwen, ollama launch claude, claude code without api key, qwen 3.8 ollama"><title>Claude Code For Free: Local Setup with Ollama &#43; Qwen 3.8</title>
+
+<link rel='canonical' href='https://thecodestreet.dev/post/claude-code-for-free-ollama-qwen/'>
+
+<link rel="stylesheet" href="/scss/style.min.5684fc128c58571771c954519c62ef9e92d9d6ec60b61b288580eddb7e647b5d.css"><meta property='og:title' content="Claude Code For Free: Local Setup with Ollama + Qwen 3.8">
+<meta property='og:description' content="Run Claude Code for free on your own PC. No API key, no subscription, no bill. A step-by-step local setup with Ollama and Qwen 3.8, plus the exact settings file and prompt I used.">
+<meta property='og:url' content='https://thecodestreet.dev/post/claude-code-for-free-ollama-qwen/'>
+<meta property='og:site_name' content='The Code Street'>
+<meta property='og:type' content='article'>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><meta property='article:section' content='Post' /><meta property='article:tag' content='Claude Code' /><meta property='article:tag' content='Ollama' /><meta property='article:tag' content='Qwen' /><meta property='article:tag' content='Local LLMs' /><meta property='article:tag' content='AI Coding Assistant' /><meta property='article:published_time' content='2026-10-29T10:00:00&#43;05:30'/><meta property='article:modified_time' content='2026-10-29T10:00:00&#43;05:30'/><meta property='og:image' content='https://thecodestreet.dev/post/claude-code-for-free-ollama-qwen/cover.jpg' />
+<meta name="twitter:title" content="Claude Code For Free: Local Setup with Ollama + Qwen 3.8">
+<meta name="twitter:description" content="Run Claude Code for free on your own PC. No API key, no subscription, no bill. A step-by-step local setup with Ollama and Qwen 3.8, plus the exact settings file and prompt I used."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://thecodestreet.dev/post/claude-code-for-free-ollama-qwen/cover.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EVB34BL08"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-7EVB34BL08');
+        }
+      </script><script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","author":{"@type":"Person","name":"Rajiv Lochan Sharma","url":"https://thecodestreet.dev/about/"},"dateModified":"2026-10-29T10:00:00+05:30","datePublished":"2026-10-29T10:00:00+05:30","description":"Run Claude Code for free on your own PC. No API key, no subscription, no bill. A step-by-step local setup with Ollama and Qwen 3.8, plus the exact settings file and prompt I used.","headline":"Claude Code For Free: Local Setup with Ollama + Qwen 3.8","image":"https://thecodestreet.dev/post/claude-code-for-free-ollama-qwen/cover.jpg","mainEntityOfPage":"https://thecodestreet.dev/post/claude-code-for-free-ollama-qwen/","publisher":{"@type":"Organization","logo":"https://thecodestreet.dev/img/logo_hu_3a37d9dbae6062.webp","name":"The Code Street","sameAs":["https://www.youtube.com/@TheCodeStreet","https://github.com/rajivcodelab","https://www.linkedin.com/in/rjvranjan80","https://facebook.com/thecodestreet"],"url":"https://thecodestreet.dev/"}},{"@type":"VideoObject","contentUrl":"https://www.youtube.com/watch?v=7GaWpOj9MKs","description":"Run Claude Code for free on your own PC. No API key, no subscription, no bill. A step-by-step local setup with Ollama and Qwen 3.8, plus the exact settings file and prompt I used.","embedUrl":"https://www.youtube.com/embed/7GaWpOj9MKs","name":"Claude Code For Free: Local Setup with Ollama + Qwen 3.8","thumbnailUrl":"https://i.ytimg.com/vi/7GaWpOj9MKs/hqdefault.jpg","uploadDate":"2026-10-29"}]}
+</script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/logo_hu_b0a0b28a2a14923f.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">The Code Street</a></h1>
+            <h2 class="site-description">AI tutorials for developers. AI agents, local LLMs and AI coding tools</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://facebook.com/thecodestreet'
+                        target="_blank"
+                        title="Facebook"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/rajivcodelab'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://linkedin.com/in/rjvranjan80'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://youtube.com/@TheCodeStreet'
+                        target="_blank"
+                        title="YouTube"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/category/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Category</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/projects/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-code"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>
+                
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://shop.thecodestreet.dev/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+  <path fill="#b8b9bc" d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+</svg>
+                
+                <span>Shop</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/videos/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+                
+                <span>Videos</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                <form action="/search/" class="search-form widget" >
+        <p>
+            <label>Search</label>
+            <input name="keyword" required placeholder="Type something..." />
+        
+            <button title="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+            </button>
+        </p>
+    </form>
+            
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#what-free-really-means">What &ldquo;Free&rdquo; Really Means</a></li>
+    <li><a href="#what-you-need">What You Need</a></li>
+    <li><a href="#step-1-install-claude-code">Step 1: Install Claude Code</a></li>
+    <li><a href="#step-2-install-ollama">Step 2: Install Ollama</a></li>
+    <li><a href="#step-3-the-magic-command">Step 3: The Magic Command</a></li>
+    <li><a href="#optional-make-it-permanent-with-settingslocaljson">Optional: Make It Permanent with settings.local.json</a></li>
+    <li><a href="#step-4-build-something">Step 4: Build Something</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#wrapping-up">Wrapping Up</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+            
+                <section class="widget cs-youtube-widget">
+    <div class="widget-icon">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    </div>
+    <h2 class="widget-title section-title">Watch on YouTube</h2>
+
+    <div class="cs-youtube-widget-card">
+        <p>
+            Video walkthroughs of every tutorial, with <strong>4,900&#43;</strong> developers subscribed.
+        </p>
+        
+<a class="cs-btn cs-btn--youtube" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    <span>Subscribe on YouTube</span>
+</a>
+
+    </div>
+</section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/claude-code-for-free-ollama-qwen/">
+                <img src="/post/claude-code-for-free-ollama-qwen/cover_hu_4d5cdc2901e6a540.jpg"
+                        srcset="/post/claude-code-for-free-ollama-qwen/cover_hu_4d5cdc2901e6a540.jpg 800w, /post/claude-code-for-free-ollama-qwen/cover_hu_c04e751d224c8a35.jpg 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post Claude Code For Free: Local Setup with Ollama &#43; Qwen 3.8" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/local-llms/" >
+                Local LLMs
+            </a>
+        
+            <a href="/categories/ai-coding/" >
+                AI Coding
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/claude-code-for-free-ollama-qwen/">Claude Code For Free: Local Setup with Ollama &#43; Qwen 3.8</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Run Claude Code for free on your own PC. No API key, no subscription, no bill. A step-by-step local setup with Ollama and Qwen 3.8, plus the exact settings file and prompt I used.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Oct 29, 2026</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    6 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Claude Code is one of the best AI coding tools around right now. The catch? The more you use it, the bigger the bill gets.</p>
+<p>In this guide I&rsquo;ll show you how I run <strong>Claude Code completely free, on my own PC</strong>. No API key, no subscription, no usage limits. The AI model runs locally through <strong>Ollama</strong>, using <strong>Qwen 3.8</strong>, and the whole thing comes down to <strong>one command</strong>.</p>
+<p>Prefer watching? Here&rsquo;s the full 5-minute video:</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/7GaWpOj9MKs" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<h2 id="what-free-really-means">What &ldquo;Free&rdquo; Really Means
+</h2><p>Let&rsquo;s be honest up front. &ldquo;Free&rdquo; here means <strong>no API bill</strong>. Claude Code talks to a model running on your own machine instead of a paid cloud API.</p>
+<p>What you <em>do</em> pay with is hardware: your GPU, RAM, disk space and a bit of electricity. If you already have a decent PC, this setup costs you nothing extra.</p>
+<h2 id="what-you-need">What You Need
+</h2><p>The Qwen 3.8 27B model is about <strong>18 GB</strong>, so your machine needs enough memory to hold it.</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th></th>
+          <th>Must have</th>
+          <th>Recommended</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Memory</strong></td>
+          <td>32 GB total (RAM + GPU)</td>
+          <td>32 GB+ RAM</td>
+      </tr>
+      <tr>
+          <td><strong>GPU</strong></td>
+          <td>Optional (much slower without)</td>
+          <td>24 GB VRAM (e.g. RTX 4090)</td>
+      </tr>
+      <tr>
+          <td><strong>Mac</strong></td>
+          <td>n/a</td>
+          <td>Apple Silicon, 32 GB+ unified memory</td>
+      </tr>
+      <tr>
+          <td><strong>Disk</strong></td>
+          <td>20 GB free</td>
+          <td>Fast NVMe SSD</td>
+      </tr>
+      <tr>
+          <td><strong>OS</strong></td>
+          <td>Windows, macOS or Linux</td>
+          <td>n/a</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>You&rsquo;ll also need <strong>Ollama 0.15 or newer</strong>. We&rsquo;ll install it in step 2.</p>
+<p>No big GPU? It still works. Ollama splits the model between your GPU and RAM, it&rsquo;s just slower.</p>
+<h2 id="step-1-install-claude-code">Step 1: Install Claude Code
+</h2><p>Use the official one-line installer.</p>
+<p><strong>macOS, Linux or WSL:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -fsSL https://claude.ai/install.sh <span class="p">|</span> bash
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Windows (PowerShell):</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">irm </span><span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">claude</span><span class="p">.</span><span class="n">ai</span><span class="p">/</span><span class="n">install</span><span class="p">.</span><span class="py">ps1</span> <span class="p">|</span> <span class="nb">iex
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>Check that it installed:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">claude --version
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="step-2-install-ollama">Step 2: Install Ollama
+</h2><p>Ollama is what runs the AI model on your own computer.</p>
+<p><strong>macOS or Linux:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -fsSL https://ollama.com/install.sh <span class="p">|</span> sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Windows:</strong> download the installer from <a class="link" href="https://ollama.com"  target="_blank" rel="noopener"
+    >ollama.com</a>.</p>
+<p>Then check your version. <strong>It must be 0.15 or newer:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ollama --version
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If it&rsquo;s older, update Ollama before moving on. The next step won&rsquo;t work on old versions.</p>
+<h2 id="step-3-the-magic-command">Step 3: The Magic Command
+</h2><p>This is the one command that does it all:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ollama launch claude --model qwen3.8:27b
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>That&rsquo;s it. Ollama starts Claude Code and points it at Qwen 3.8 running locally on your machine. No API key, nothing sent to a paid cloud API, no bill.</p>
+<p><strong>Prefer two steps?</strong> Download the model first (about 18 GB, so grab a coffee), then launch:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ollama pull qwen3.8:27b
+</span></span><span class="line"><span class="cl">ollama launch claude --model qwen3.8:27b
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Quick sanity check that the model works on its own:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ollama run qwen3.8:27b
+</span></span><span class="line"><span class="cl"><span class="c1"># say hi, then type /bye to exit</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="optional-make-it-permanent-with-settingslocaljson">Optional: Make It Permanent with settings.local.json
+</h2><p><code>ollama launch</code> is perfect for getting started. But if you want Claude Code to <strong>always</strong> use your local model in a project, even when you just type <code>claude</code>, put the settings in a file instead.</p>
+<p>Create this file inside your project folder:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">your-project/
+</span></span><span class="line"><span class="cl">└── .claude/
+</span></span><span class="line"><span class="cl">    └── settings.local.json
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Paste in these settings:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;env&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;ANTHROPIC_BASE_URL&#34;</span><span class="p">:</span> <span class="s2">&#34;http://127.0.0.1:11434&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;ANTHROPIC_AUTH_TOKEN&#34;</span><span class="p">:</span> <span class="s2">&#34;ollama&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;ANTHROPIC_API_KEY&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;ANTHROPIC_MODEL&#34;</span><span class="p">:</span> <span class="s2">&#34;qwen3.8:27b&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;ANTHROPIC_DEFAULT_OPUS_MODEL&#34;</span><span class="p">:</span> <span class="s2">&#34;qwen3.8:27b&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;ANTHROPIC_DEFAULT_SONNET_MODEL&#34;</span><span class="p">:</span> <span class="s2">&#34;qwen3.8:27b&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;ANTHROPIC_DEFAULT_FABLE_MODEL&#34;</span><span class="p">:</span> <span class="s2">&#34;qwen3.8:27b&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;ANTHROPIC_DEFAULT_HAIKU_MODEL&#34;</span><span class="p">:</span> <span class="s2">&#34;qwen3.8:27b&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;CLAUDE_CODE_SUBAGENT_MODEL&#34;</span><span class="p">:</span> <span class="s2">&#34;qwen3.8:27b&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;CLAUDE_CODE_MAX_CONTEXT_TOKENS&#34;</span><span class="p">:</span> <span class="s2">&#34;65536&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>What each setting does:</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Setting</th>
+          <th>What it does</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>ANTHROPIC_BASE_URL</code></td>
+          <td>Points Claude Code at Ollama on your own machine (port <code>11434</code>) instead of the cloud</td>
+      </tr>
+      <tr>
+          <td><code>ANTHROPIC_AUTH_TOKEN</code></td>
+          <td>Required, but Ollama ignores it, so any word works. I use <code>ollama</code></td>
+      </tr>
+      <tr>
+          <td><code>ANTHROPIC_API_KEY</code></td>
+          <td>Left empty so no real Anthropic key gets used by accident</td>
+      </tr>
+      <tr>
+          <td><code>ANTHROPIC_MODEL</code></td>
+          <td>The main model Claude Code uses: your local Qwen</td>
+      </tr>
+      <tr>
+          <td><code>ANTHROPIC_DEFAULT_*_MODEL</code></td>
+          <td>Maps every built-in model choice (Opus, Sonnet, Fable, Haiku) to Qwen, so switching models never reaches for a paid one</td>
+      </tr>
+      <tr>
+          <td><code>CLAUDE_CODE_SUBAGENT_MODEL</code></td>
+          <td>Makes sub-agents use Qwen too</td>
+      </tr>
+      <tr>
+          <td><code>CLAUDE_CODE_MAX_CONTEXT_TOKENS</code></td>
+          <td>How much context Claude Code works with. <code>65536</code> = 64k</td>
+      </tr>
+  </tbody>
+</table></div>
+<blockquote>
+<p><strong>Tip:</strong> <code>settings.local.json</code> is meant for your own machine, so keep it out of Git. Also set Ollama&rsquo;s <strong>context length to 64k</strong> in its settings so it matches the <code>65536</code> above. Too small, and Claude Code forgets your files halfway through a task.</p></blockquote>
+<p>Make sure Ollama is running, then start Claude Code from your project folder as usual:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">claude
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="step-4-build-something">Step 4: Build Something
+</h2><p>Time to prove it works. I gave Claude Code this prompt:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Create a simple Snake game in a single index.html file
+</span></span><span class="line"><span class="cl">using HTML, CSS, and vanilla JavaScript.
+</span></span><span class="line"><span class="cl">Use a neon cyberpunk design, arrow-key controls, score tracking,
+</span></span><span class="line"><span class="cl">collision detection, and a restart button.
+</span></span><span class="line"><span class="cl">No external libraries or files.
+</span></span><span class="line"><span class="cl">Save the complete, working code to index.html.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Then I let Qwen work. Everything ran on my own PC, with no API calls and no tokens being counted.</p>
+<p>When it finished, I opened <code>index.html</code> in the browser and it worked: neon look, arrow keys, score, collisions and a working restart button.</p>
+<p>Is it as fast or as sharp as paid Claude? No. But for small projects, learning and side builds, it&rsquo;s genuinely useful, and it costs nothing.</p>
+<h2 id="troubleshooting">Troubleshooting
+</h2><p><strong><code>command not found</code></strong></p>
+<p>Start the Ollama app (or run <code>ollama serve</code>), then open a <strong>fresh</strong> terminal window.</p>
+<p><strong>The model won&rsquo;t load</strong></p>
+<p>It&rsquo;s too big for your machine. Try a smaller Qwen size from the <a class="link" href="https://ollama.com/library"  target="_blank" rel="noopener"
+    >Ollama library</a>.</p>
+<p><strong>It&rsquo;s slow or forgets things mid-task</strong></p>
+<ul>
+<li>Close other GPU-heavy apps (games, video editors, heavy browser tabs).</li>
+<li>Raise the <strong>context length</strong> in Ollama&rsquo;s settings so it matches <code>CLAUDE_CODE_MAX_CONTEXT_TOKENS</code>.</li>
+<li>Check the model fits in your GPU memory. If it spills into RAM, it gets much slower.</li>
+</ul>
+<p><strong>Claude Code still asks for a login or a key</strong></p>
+<p>Double-check <code>ANTHROPIC_BASE_URL</code> and <code>ANTHROPIC_AUTH_TOKEN</code> in your settings, make sure Ollama is running, and restart Claude Code.</p>
+<h2 id="faq">FAQ
+</h2><p><strong>Is this really free?</strong></p>
+<p>Yes. There&rsquo;s no API bill. You only use your own hardware.</p>
+<p><strong>Do I need an Anthropic account or API key?</strong></p>
+<p>No API key is needed for this setup. The model runs locally through Ollama.</p>
+<p><strong>Does my code leave my computer?</strong></p>
+<p>The AI model runs on your machine, so your prompts go to Ollama at <code>127.0.0.1</code>, not to a paid cloud model.</p>
+<p><strong>Can I use a different model?</strong></p>
+<p>Yes. Pull any model from the Ollama library and swap <code>qwen3.8:27b</code> for its name in the command or settings. Coding-focused models work best.</p>
+<p><strong>Can I use this inside VS Code?</strong></p>
+<p>Yes, and that&rsquo;s my next video. <a class="link" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1"  target="_blank" rel="noopener"
+    >Subscribe on YouTube</a> so you don&rsquo;t miss it.</p>
+<h2 id="wrapping-up">Wrapping Up
+</h2><p>That&rsquo;s the whole setup:</p>
+<ol>
+<li>Install Claude Code</li>
+<li>Install Ollama</li>
+<li>Run <code>ollama launch claude --model qwen3.8:27b</code></li>
+<li>Build something</li>
+</ol>
+<p>If you get stuck, drop your error and your GPU in the <a class="link" href="https://youtu.be/7GaWpOj9MKs"  target="_blank" rel="noopener"
+    >video comments</a> and I&rsquo;ll help you out.</p>
+<p>Happy (free) coding! 🚀</p>
+
+</section>
+
+
+    
+        <aside class="cs-post-cta">
+    
+    <div class="cs-post-cta-text">
+        <h2>Enjoyed this tutorial?</h2>
+        <p>
+            I publish step-by-step AI videos on YouTube: AI agents, local LLMs and AI coding tools.
+            Subscribe so you don't miss the next one, and join 4,900&#43; other developers.
+        </p>
+        <div class="cs-hero-actions">
+            
+<a class="cs-btn cs-btn--youtube" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    <span>Subscribe on YouTube</span>
+</a>
+
+            <a class="cs-btn cs-btn--ghost" href="/videos/">More videos</a>
+        </div>
+    </div>
+</aside>
+
+    
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/claude-code/">Claude Code</a>
+        
+            <a href="/tags/ollama/">Ollama</a>
+        
+            <a href="/tags/qwen/">Qwen</a>
+        
+            <a href="/tags/local-llms/">Local LLMs</a>
+        
+            <a href="/tags/ai-coding-assistant/">AI Coding Assistant</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/">
+        
+        
+            <div class="article-image">
+                <img src="/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/qwen%203%20coder%20explained.dd1d10674c10d5069b7ddd04d2bc980c_hu_13e46f4c475c7c4e.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Qwen 3 Coder Explained: The Agentic Coding Trick to Code 10X Faster"
+                        
+                        data-hash="md5-3R0QZ0wQ1Qabfd0E0ryYDA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Qwen 3 Coder Explained: The Agentic Coding Trick to Code 10X Faster</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "code-street" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer custom-footer">
+  <div class="footer-container-2col">
+
+    
+    <div class="footer-left">
+      <p class="footer-text">
+       
+        Hands-on AI tutorials for developers: AI agents, local LLMs and AI coding tools, through blogs and videos.
+      </p>
+      <p class="footer-text">
+        &copy;
+        
+          2024 -
+        
+        2026 The Code Street
+      </p>
+
+      
+    </div>
+
+    
+    <div class="footer-right">
+      <ul class="footer-menu">
+        
+        <li><a href="/about/">About</a></li>
+        
+        <li><a href="/terms/">Terms</a></li>
+        
+        <li><a href="/privacy/">Privacy</a></li>
+        
+        <li><a href="/disclaimer/">Disclaimer</a></li>
+        
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script>
+    
+    document.addEventListener('click', function (e) {
+        var facade = e.target.closest('.cs-video-facade');
+        if (!facade) return;
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + facade.dataset.videoId + '?autoplay=1&rel=0';
+        iframe.title = facade.getAttribute('aria-label');
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.className = 'cs-video-iframe';
+        facade.replaceWith(iframe);
+    });
+</script>
+
+    </body>
+</html>
