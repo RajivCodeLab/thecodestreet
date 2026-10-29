@@ -316,6 +316,106 @@
 </description>
         </item>
         <item>
+        <title>What Is Context Size in Ollama? Context Window Explained for Beginners</title>
+        <link>https://thecodestreet.dev/post/what-is-context-size-in-ollama/</link>
+        <pubDate>Sat, 17 Oct 2026 18:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/post/what-is-context-size-in-ollama/</guid>
+        <description>&lt;img src="https://thecodestreet.dev/post/what-is-context-size-in-ollama/cover.jpg" alt="Featured image of post What Is Context Size in Ollama? Context Window Explained for Beginners" /&gt;&lt;p&gt;Have you ever wondered what happens when you bump Ollama&amp;rsquo;s context size from 8K to 16K, 32K or even 256K? Does the AI get smarter? Does it remember more? And why does your memory usage jump every time you move that slider?&lt;/p&gt;
+&lt;p&gt;In this guide I&amp;rsquo;ll explain context size in plain language, show a real before-and-after test with a coding agent, and help you choose the right setting for your machine.&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/-_E-3PKpbgQ&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;what-is-context-size&#34;&gt;What Is Context Size?
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Context size is the amount of information a model can work with at one time.&lt;/strong&gt; Think of it as the AI&amp;rsquo;s &lt;em&gt;working memory&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Say you&amp;rsquo;re asking a local model to help you build an app. You give it your requirements, some code, an error message and the earlier conversation. The model needs all of that in view to give a good answer. The context size decides how much of it fits.&lt;/p&gt;
+&lt;p&gt;When the conversation grows past that limit, the oldest information falls out of the window and the model simply can&amp;rsquo;t see it anymore.&lt;/p&gt;
+&lt;h2 id=&#34;tokens-not-words&#34;&gt;Tokens, Not Words
+&lt;/h2&gt;&lt;p&gt;Context size is measured in &lt;strong&gt;tokens&lt;/strong&gt;, not words. A token can be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a whole word,&lt;/li&gt;
+&lt;li&gt;part of a word,&lt;/li&gt;
+&lt;li&gt;a punctuation mark,&lt;/li&gt;
+&lt;li&gt;or a piece of code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So &lt;strong&gt;16K tokens is not 16,000 words&lt;/strong&gt;. Code in particular tends to use a lot of tokens, which is why coding agents need bigger contexts than simple chat.&lt;/p&gt;
+&lt;h2 id=&#34;the-numbers-you-see-in-ollama&#34;&gt;The Numbers You See in Ollama
+&lt;/h2&gt;&lt;p&gt;Open Ollama&amp;rsquo;s &lt;strong&gt;Settings&lt;/strong&gt; and you&amp;rsquo;ll find a &lt;strong&gt;Context length&lt;/strong&gt; slider. The default is &lt;strong&gt;4K&lt;/strong&gt;, and you can raise it through 8K, 16K, 32K, 64K and 128K, up to &lt;strong&gt;256K&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You can also set it per session or per model:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# inside an interactive `ollama run` session&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/set parameter num_ctx &lt;span class=&#34;m&#34;&gt;32768&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# in a Modelfile
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PARAMETER num_ctx 32768
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;a-real-test-8k-vs-64k&#34;&gt;A Real Test: 8K vs 64K
+&lt;/h2&gt;&lt;p&gt;To see the difference, I connected Qwen to VS Code (here&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/post/qwen-3-vs-code-ollama/&#34; &gt;how to set that up&lt;/a&gt;) and gave the agent the same task twice:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Build a simple expense tracker where I can add an expense with amount, category, description and date.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;At 8K&lt;/strong&gt;, the agent couldn&amp;rsquo;t even get going. It stalled while using its tools and the turn was stopped. Coding agents send a large system prompt and tool definitions along with your request, so a small window leaves very little room to actually work.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;At 64K&lt;/strong&gt;, with a fresh session and the same prompt, it planned the app and started writing the classes straight away.&lt;/p&gt;
+&lt;p&gt;For writing larger amounts of code or more complex logic, &lt;strong&gt;128K&lt;/strong&gt; gives the agent even more breathing room.&lt;/p&gt;
+&lt;p&gt;The point of this test isn&amp;rsquo;t whether the generated code is perfect. It&amp;rsquo;s to show how much context size changes what a local model can do.&lt;/p&gt;
+&lt;h2 id=&#34;why-bigger-contexts-use-more-memory&#34;&gt;Why Bigger Contexts Use More Memory
+&lt;/h2&gt;&lt;p&gt;The model has to keep its working memory in RAM or VRAM while it generates. A larger context means a larger memory footprint, which can make responses slower, or make the model fail to load on smaller machines.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-choose&#34;&gt;How to Choose
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Use case&lt;/th&gt;
+          &lt;th&gt;Suggested context&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Quick questions, short chats&lt;/td&gt;
+          &lt;td&gt;4K–8K&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Chatting about a document or longer conversation&lt;/td&gt;
+          &lt;td&gt;16K–32K&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Coding agents (VS Code, OpenCode, Claude Code-style tools)&lt;/td&gt;
+          &lt;td&gt;64K and up&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Large codebases or long agent sessions&lt;/td&gt;
+          &lt;td&gt;128K+, if your hardware allows&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Start with the smallest value that works for your task, then increase it if the model starts &amp;ldquo;forgetting&amp;rdquo; or agents stop mid-task.&lt;/p&gt;
+&lt;h2 id=&#34;recap&#34;&gt;Recap
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Context size is the AI&amp;rsquo;s &lt;strong&gt;working memory&lt;/strong&gt;, measured in &lt;strong&gt;tokens&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;A &lt;strong&gt;larger&lt;/strong&gt; context lets the model work with more information but &lt;strong&gt;needs more memory&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;A &lt;strong&gt;smaller&lt;/strong&gt; context saves resources but limits how much fits in one request.&lt;/li&gt;
+&lt;li&gt;For coding agents, the default 4K is far too small. Go to 64K or higher.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>How to Use DevUI in Microsoft Agent Framework with .NET 10 | Build Real AI Agents</title>
         <link>https://thecodestreet.dev/post/how-to-use-devui-in-microsoft-agent-framework-with-.net-10-build-real-ai-agents/</link>
         <pubDate>Thu, 05 Feb 2026 00:00:00 +0530</pubDate>

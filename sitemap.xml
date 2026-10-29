@@ -62,6 +62,21 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://thecodestreet.dev/tags/context-window/</loc>
+    <lastmod>2026-10-17T18:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/tokens/</loc>
+    <lastmod>2026-10-17T18:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/post/what-is-context-size-in-ollama/</loc>
+    <lastmod>2026-10-17T18:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://thecodestreet.dev/tags/.net/</loc>
     <lastmod>2026-02-05T00:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
