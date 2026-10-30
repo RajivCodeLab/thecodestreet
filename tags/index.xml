@@ -7,10 +7,10 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>The Code Street</copyright>
-        <lastBuildDate>Wed, 28 Oct 2026 10:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 30 Oct 2026 10:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>AI Coding Assistant</title>
         <link>https://thecodestreet.dev/tags/ai-coding-assistant/</link>
-        <pubDate>Wed, 28 Oct 2026 10:00:00 +0530</pubDate>
+        <pubDate>Fri, 30 Oct 2026 10:00:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/ai-coding-assistant/</guid>
         <description></description>
@@ -18,7 +18,7 @@
         <item>
         <title>Claude Code</title>
         <link>https://thecodestreet.dev/tags/claude-code/</link>
-        <pubDate>Wed, 28 Oct 2026 10:00:00 +0530</pubDate>
+        <pubDate>Fri, 30 Oct 2026 10:00:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/claude-code/</guid>
         <description></description>
@@ -26,7 +26,7 @@
         <item>
         <title>Local LLMs</title>
         <link>https://thecodestreet.dev/tags/local-llms/</link>
-        <pubDate>Wed, 28 Oct 2026 10:00:00 +0530</pubDate>
+        <pubDate>Fri, 30 Oct 2026 10:00:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/local-llms/</guid>
         <description></description>
@@ -34,7 +34,7 @@
         <item>
         <title>Ollama</title>
         <link>https://thecodestreet.dev/tags/ollama/</link>
-        <pubDate>Wed, 28 Oct 2026 10:00:00 +0530</pubDate>
+        <pubDate>Fri, 30 Oct 2026 10:00:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/ollama/</guid>
         <description></description>
@@ -42,9 +42,17 @@
         <item>
         <title>Qwen</title>
         <link>https://thecodestreet.dev/tags/qwen/</link>
-        <pubDate>Wed, 28 Oct 2026 10:00:00 +0530</pubDate>
+        <pubDate>Fri, 30 Oct 2026 10:00:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/qwen/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>VS Code</title>
+        <link>https://thecodestreet.dev/tags/vs-code/</link>
+        <pubDate>Fri, 30 Oct 2026 10:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/vs-code/</guid>
         <description></description>
         </item>
         <item>
@@ -117,14 +125,6 @@
         <pubDate>Sun, 02 Aug 2026 18:00:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/qwen-code/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>VS Code</title>
-        <link>https://thecodestreet.dev/tags/vs-code/</link>
-        <pubDate>Sun, 02 Aug 2026 18:00:00 +0530</pubDate>
-        
-        <guid>https://thecodestreet.dev/tags/vs-code/</guid>
         <description></description>
         </item>
         <item>

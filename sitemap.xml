@@ -3,61 +3,71 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://thecodestreet.dev/categories/ai-coding/</loc>
-    <lastmod>2026-10-28T10:00:00+05:30</lastmod>
+    <lastmod>2026-10-30T10:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/tags/ai-coding-assistant/</loc>
-    <lastmod>2026-10-28T10:00:00+05:30</lastmod>
+    <lastmod>2026-10-30T10:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/post/</loc>
-    <lastmod>2026-10-28T10:00:00+05:30</lastmod>
+    <lastmod>2026-10-30T10:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/categories/</loc>
-    <lastmod>2026-10-28T10:00:00+05:30</lastmod>
+    <lastmod>2026-10-30T10:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/tags/claude-code/</loc>
-    <lastmod>2026-10-28T10:00:00+05:30</lastmod>
+    <lastmod>2026-10-30T10:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://thecodestreet.dev/post/claude-code-for-free-ollama-qwen/</loc>
-    <lastmod>2026-10-28T10:00:00+05:30</lastmod>
+    <loc>https://thecodestreet.dev/post/claude-code-free-vs-code-ollama-qwen/</loc>
+    <lastmod>2026-10-30T10:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/categories/local-llms/</loc>
-    <lastmod>2026-10-28T10:00:00+05:30</lastmod>
+    <lastmod>2026-10-30T10:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/tags/local-llms/</loc>
-    <lastmod>2026-10-28T10:00:00+05:30</lastmod>
+    <lastmod>2026-10-30T10:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/tags/ollama/</loc>
-    <lastmod>2026-10-28T10:00:00+05:30</lastmod>
+    <lastmod>2026-10-30T10:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/tags/qwen/</loc>
-    <lastmod>2026-10-28T10:00:00+05:30</lastmod>
+    <lastmod>2026-10-30T10:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/tags/</loc>
-    <lastmod>2026-10-28T10:00:00+05:30</lastmod>
+    <lastmod>2026-10-30T10:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/</loc>
+    <lastmod>2026-10-30T10:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/vs-code/</loc>
+    <lastmod>2026-10-30T10:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/post/claude-code-for-free-ollama-qwen/</loc>
     <lastmod>2026-10-28T10:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -123,11 +133,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/tags/qwen-code/</loc>
-    <lastmod>2026-08-02T18:00:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/tags/vs-code/</loc>
     <lastmod>2026-08-02T18:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
