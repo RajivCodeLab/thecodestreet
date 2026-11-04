@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="stylesheet" href="/css/custom.css"><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Liquid AI's LFM3-1.7B fits in about 1 GB, supports a 256K-token context window, and beats Qwen 3.5 9B on agent tasks. Here's what it is, how its tri-hybrid architecture works, where it wins, and where bigger models still win.">
+<meta name="keywords" content="liquid lfm3, lfm3 explained, liquid ai lfm3, lfm3 1.7b, lfm3 vs qwen, small language model, best local ai model, local llm"><title>Liquid LFM3 Explained: Is This the Most Efficient Local AI Model?</title>
+
+<link rel='canonical' href='https://thecodestreet.dev/post/liquid-lfm3-explained/'>
+
+<link rel="stylesheet" href="/scss/style.min.86afb6925d63f7c383f64abfa5b01183a2ad21c91d72cb626559e001e899e65c.css"><meta property='og:title' content="Liquid LFM3 Explained: Is This the Most Efficient Local AI Model?">
+<meta property='og:description' content="Liquid AI's LFM3-1.7B fits in about 1 GB, supports a 256K-token context window, and beats Qwen 3.5 9B on agent tasks. Here's what it is, how its tri-hybrid architecture works, where it wins, and where bigger models still win.">
+<meta property='og:url' content='https://thecodestreet.dev/post/liquid-lfm3-explained/'>
+<meta property='og:site_name' content='The Code Street'>
+<meta property='og:type' content='article'>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><meta property='article:section' content='Post' /><meta property='article:tag' content='LFM3' /><meta property='article:tag' content='Liquid AI' /><meta property='article:tag' content='Local LLMs' /><meta property='article:tag' content='Small Language Models' /><meta property='article:tag' content='AI Agents' /><meta property='article:tag' content='Qwen' /><meta property='article:published_time' content='2026-11-04T21:00:00&#43;05:30'/><meta property='article:modified_time' content='2026-11-04T21:00:00&#43;05:30'/><meta property='og:image' content='https://thecodestreet.dev/post/liquid-lfm3-explained/cover.jpg' />
+<meta name="twitter:title" content="Liquid LFM3 Explained: Is This the Most Efficient Local AI Model?">
+<meta name="twitter:description" content="Liquid AI's LFM3-1.7B fits in about 1 GB, supports a 256K-token context window, and beats Qwen 3.5 9B on agent tasks. Here's what it is, how its tri-hybrid architecture works, where it wins, and where bigger models still win."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://thecodestreet.dev/post/liquid-lfm3-explained/cover.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EVB34BL08"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-7EVB34BL08');
+        }
+      </script><link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","author":{"@type":"Person","name":"Rajiv Lochan Sharma","url":"https://thecodestreet.dev/about/"},"dateModified":"2026-11-04T21:00:00+05:30","datePublished":"2026-11-04T21:00:00+05:30","description":"Liquid AI's LFM3-1.7B fits in about 1 GB, supports a 256K-token context window, and beats Qwen 3.5 9B on agent tasks. Here's what it is, how its tri-hybrid architecture works, where it wins, and where bigger models still win.","headline":"Liquid LFM3 Explained: Is This the Most Efficient Local AI Model?","image":"https://thecodestreet.dev/post/liquid-lfm3-explained/cover.jpg","mainEntityOfPage":"https://thecodestreet.dev/post/liquid-lfm3-explained/","publisher":{"@type":"Organization","logo":"https://thecodestreet.dev/img/logo_hu_3a37d9dbae6062.webp","name":"The Code Street","sameAs":["https://www.youtube.com/@TheCodeStreet","https://github.com/rajivcodelab","https://www.linkedin.com/in/rjvranjan80","https://facebook.com/thecodestreet"],"url":"https://thecodestreet.dev/"}},{"@type":"VideoObject","contentUrl":"https://www.youtube.com/watch?v=S3YUCTjpX4s","description":"Liquid AI's LFM3-1.7B fits in about 1 GB, supports a 256K-token context window, and beats Qwen 3.5 9B on agent tasks. Here's what it is, how its tri-hybrid architecture works, where it wins, and where bigger models still win.","embedUrl":"https://www.youtube.com/embed/S3YUCTjpX4s","name":"Liquid LFM3 Explained: Is This the Most Efficient Local AI Model?","thumbnailUrl":"https://i.ytimg.com/vi/S3YUCTjpX4s/hqdefault.jpg","uploadDate":"2026-11-04"}]}
+</script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+
+        <a class="cs-skip" href="#content">Skip to content</a>
+        <header class="cs-header" id="cs-header">
+    <div class="cs-header__inner">
+        <a class="cs-brand" href="/" aria-label="The Code Street home"><img src="/img/logo_hu_2cd295f811d27b71.png" width="96" height="96" alt="">
+            <span>The <em>Code</em> Street</span>
+        </a>
+
+        <nav class="cs-nav" id="cs-nav" aria-label="Main">
+            <ul>
+                <li>
+                    <a class="cs-nav__link is-active" href="/post/" aria-current="page">Tutorials</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/categories/">Topics</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/videos/">Videos</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/projects/">Projects</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="https://shop.thecodestreet.dev/" target="_blank" rel="noopener">Shop<svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/about/">About</a>
+                </li>
+            </ul>
+            <a class="cs-btn cs-btn--youtube cs-nav__cta" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg><span>Subscribe</span>
+            </a>
+        </nav>
+
+        <div class="cs-header__actions">
+            <a class="cs-iconbtn" href="/search/" aria-label="Search tutorials"><svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></a>
+            <button class="cs-iconbtn cs-nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="cs-nav">
+                <span class="cs-nav-toggle__open"><svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></span>
+                <span class="cs-nav-toggle__close"><svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+            </button>
+        </div>
+    </div>
+    <div class="cs-progress" aria-hidden="true"><span></span></div>
+</header>
+
+        <div class="cs-shell ">
+            <main id="content" class="main cs-main">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/liquid-lfm3-explained/">
+                <img src="/post/liquid-lfm3-explained/cover_hu_e7c703acb86d4430.jpg"
+                        srcset="/post/liquid-lfm3-explained/cover_hu_e7c703acb86d4430.jpg 800w, /post/liquid-lfm3-explained/cover_hu_89f52658cb855214.jpg 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post Liquid LFM3 Explained: Is This the Most Efficient Local AI Model?" />
+                
+            </a>
+        </div>
+    
+
+    
+<div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/local-llms/" >
+                Local LLMs
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h1 class="article-title">
+            <a href="/post/liquid-lfm3-explained/">Liquid LFM3 Explained: Is This the Most Efficient Local AI Model?</a>
+        </h1>
+
+        
+        <p class="article-subtitle">
+            Liquid AI&#39;s LFM3-1.7B fits in about 1 GB, supports a 256K-token context window, and beats Qwen 3.5 9B on agent tasks. Here&#39;s what it is, how its tri-hybrid architecture works, where it wins, and where bigger models still win.
+        </p>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 04, 2026</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    6 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>What if a 1 GB AI model could beat a model more than five times its size?</p>
+<p>Not on everything, but on the tasks that matter most for AI agents. That&rsquo;s exactly what Liquid AI is claiming with <strong>LFM3</strong>, its new family of small, open-weight models released on <strong>October 27, 2026</strong>.</p>
+<p>In this post, I&rsquo;ll break down what LFM3 is, how its architecture works, where it wins, where it doesn&rsquo;t, and who should actually use it.</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/S3YUCTjpX4s" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<h2 id="what-is-lfm3">What Is LFM3?
+</h2><p>LFM3 is the third generation of Liquid Foundation Models from Liquid AI. The headline model is <strong>LFM3-1.7B</strong>, a text model built for local agents and specialised applications.</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Spec</th>
+          <th>LFM3-1.7B</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Parameters</strong></td>
+          <td>1.7 billion</td>
+      </tr>
+      <tr>
+          <td><strong>Size at 4-bit</strong></td>
+          <td>~1 GB</td>
+      </tr>
+      <tr>
+          <td><strong>Context window</strong></td>
+          <td>256K tokens</td>
+      </tr>
+      <tr>
+          <td><strong>Architecture</strong></td>
+          <td>Tri-hybrid (convolution + attention)</td>
+      </tr>
+      <tr>
+          <td><strong>Pre-training data</strong></td>
+          <td>22 trillion tokens</td>
+      </tr>
+      <tr>
+          <td><strong>Weights</strong></td>
+          <td>Open-weight</td>
+      </tr>
+      <tr>
+          <td><strong>Developer</strong></td>
+          <td>Liquid AI</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>To put that size in perspective: at 4-bit precision, the model fits in about <strong>one gigabyte</strong>, smaller than many mobile games. Yet it supports a <strong>256,000-token context window</strong>, enough to hold a small book in memory at once.</p>
+<p>It also outperforms Liquid&rsquo;s previous <strong>LFM2.5-2.6B</strong> while using <strong>35% fewer parameters</strong>.</p>
+<h2 id="not-one-model-a-family-of-six">Not One Model, a Family of Six
+</h2><p>LFM3 isn&rsquo;t a single model. The first release includes six models, all built from the same base, <strong>LFM3-1.7B-Base</strong>, and all around the 2-billion-parameter range:</p>
+<ul>
+<li><strong>Text:</strong> for local agents and specialised apps</li>
+<li><strong>Vision:</strong> image understanding</li>
+<li><strong>Audio:</strong> speech and sound input</li>
+<li><strong>Omni:</strong> combines multiple input types</li>
+<li><strong>Two Decision models:</strong> specialised versions of the vision and omni models</li>
+</ul>
+<p>Liquid also says every model in the family can be <strong>fine-tuned on a single GPU</strong>, which makes it practical for developers who want to customise a model for their own use case.</p>
+<h2 id="why-is-lfm3-so-fast-the-tri-hybrid-architecture">Why Is LFM3 So Fast? The Tri-Hybrid Architecture
+</h2><p>Most language models are pure transformers. Every layer uses attention, which gets expensive in both memory and speed as the context grows.</p>
+<p>LFM3 takes a different approach that Liquid calls a <strong>tri-hybrid architecture</strong>. Of its 24 layers:</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Layers</th>
+          <th>Type</th>
+          <th>What it does</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>13</strong></td>
+          <td>Convolution</td>
+          <td>Fast and lightweight</td>
+      </tr>
+      <tr>
+          <td><strong>5</strong></td>
+          <td>Sliding-window attention</td>
+          <td>Looks only at the nearest 256 tokens</td>
+      </tr>
+      <tr>
+          <td><strong>6</strong></td>
+          <td>Global attention</td>
+          <td>Full attention across the whole context</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>This mix keeps memory usage low and speed high, especially with long inputs.</p>
+<p>What&rsquo;s clever is <em>how</em> Liquid arrived at this design. They used <strong>hardware-in-the-loop architecture search</strong>, testing candidates directly on <strong>14 device and backend combinations</strong>. These included phones (Samsung Galaxy S26 Ultra, OnePlus 15), a Raspberry Pi 5, laptops (Apple M4 Max, AMD Ryzen AI), cloud CPUs, GPUs and a Qualcomm Hexagon NPU.</p>
+<p>The result is a model shaped by real-world hardware, not just benchmarks.</p>
+<h2 id="lfm3-vs-qwen-35-9b-where-it-wins">LFM3 vs Qwen 3.5 9B: Where It Wins
+</h2><p>Liquid compared LFM3-1.7B against several models, including <strong>Qwen 3.5 9B</strong>, which is more than five times bigger. Here&rsquo;s where the tiny model comes out ahead:</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Benchmark</th>
+          <th>What it tests</th>
+          <th>LFM3-1.7B</th>
+          <th>Qwen 3.5 9B</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>WebArena-Verified</strong></td>
+          <td>Long tasks in a web browser</td>
+          <td><strong>38.42</strong></td>
+          <td>28.94</td>
+      </tr>
+      <tr>
+          <td><strong>AutomationBench</strong></td>
+          <td>Tasks inside business apps</td>
+          <td><strong>41.29</strong></td>
+          <td>15.10</td>
+      </tr>
+      <tr>
+          <td><strong>BFCL V4</strong></td>
+          <td>Function / tool calling</td>
+          <td><strong>71.39</strong></td>
+          <td>62.83</td>
+      </tr>
+      <tr>
+          <td><strong>IFEval</strong></td>
+          <td>Instruction following</td>
+          <td><strong>96.66</strong></td>
+          <td>92.08</td>
+      </tr>
+      <tr>
+          <td><strong>LiveCodeBench v6</strong></td>
+          <td>Coding problems</td>
+          <td><strong>73.46</strong></td>
+          <td>69.86</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>In simple terms: when it comes to <strong>following instructions, calling tools and completing agent-style tasks</strong>, LFM3 punches far above its weight. On AutomationBench it scores nearly <strong>three times</strong> higher than Qwen 3.5 9B.</p>
+<h2 id="where-lfm3-loses-the-honest-comparison">Where LFM3 Loses: The Honest Comparison
+</h2><p>To be fair, and Liquid is upfront about this too, <strong>larger models still win on agentic coding and general knowledge</strong>:</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Benchmark</th>
+          <th>What it tests</th>
+          <th>LFM3-1.7B</th>
+          <th>Qwen 3.5 9B</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>SWE-bench Verified</strong></td>
+          <td>Fixing real code issues</td>
+          <td>43.40</td>
+          <td><strong>51.20</strong></td>
+      </tr>
+      <tr>
+          <td><strong>GPQA Diamond</strong></td>
+          <td>Graduate-level science</td>
+          <td>63.37</td>
+          <td><strong>80.40</strong></td>
+      </tr>
+      <tr>
+          <td><strong>RULER 128K</strong></td>
+          <td>Long-context retrieval</td>
+          <td>65.56</td>
+          <td><strong>87.11</strong></td>
+      </tr>
+  </tbody>
+</table></div>
+<p>This makes sense. A model this small simply can&rsquo;t store as much world knowledge as one five times its size. LFM3 isn&rsquo;t a replacement for big models. It&rsquo;s a different tool for a different job.</p>
+<h2 id="efficiency-lfm3s-real-superpower">Efficiency: LFM3&rsquo;s Real Superpower
+</h2><p>Where LFM3 really shines is efficiency.</p>
+<p><strong>Memory for long context.</strong> At a full 128K-token context, LFM3 needs just <strong>1.6 GB</strong> of KV cache:</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Model</th>
+          <th>KV cache at 128K</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>LFM3-1.7B</strong></td>
+          <td><strong>1.6 GB</strong></td>
+      </tr>
+      <tr>
+          <td>Qwen 3.5 4B</td>
+          <td>4.3 GB</td>
+      </tr>
+      <tr>
+          <td>MiniCPM5 2B</td>
+          <td>5.6 GB</td>
+      </tr>
+  </tbody>
+</table></div>
+<p><strong>On-device speed.</strong> Measured with llama.cpp at Q4_0 and a 32K context, Liquid reports that LFM3-1.7B decodes <strong>1.8 to 2.8 times faster</strong> than the next fastest model tested, while using the least memory.</p>
+<p><strong>Server scale.</strong> On a single NVIDIA B300 GPU, LFM3 can generate <strong>3.6 billion tokens per day</strong> at 1,024 concurrent requests. Liquid even ran <strong>more than 300,000 LFM3 agents in parallel</strong> to analyse the Enron email archive.</p>
+<p>That&rsquo;s the kind of scale small, efficient models unlock.</p>
+<h2 id="who-should-use-lfm3">Who Should Use LFM3?
+</h2><p>LFM3 is a great fit if you:</p>
+<ul>
+<li><strong>Have an older laptop or limited RAM.</strong> It&rsquo;s one of the most capable models you can run on modest hardware.</li>
+<li><strong>Are building local AI agents.</strong> Its tool-calling and instruction-following scores make it a strong choice.</li>
+<li><strong>Target phones or edge devices.</strong> The architecture was designed on real mobile and edge hardware.</li>
+<li><strong>Care about privacy.</strong> Running locally means your data never leaves your machine.</li>
+</ul>
+<p>Chip makers are paying attention too: <strong>AMD, Qualcomm and Ambarella</strong> all backed the launch, with plans to run LFM3 on their processors.</p>
+<p>LFM3 is <strong>not</strong> the best choice if you need a heavy-duty coding assistant for large codebases or deep factual knowledge. For that, a larger model like Qwen is still the better pick, or use LFM3 alongside one.</p>
+<blockquote>
+<p>Want a bigger local coding model? See <a class="link" href="/post/claude-code-free-vs-code-ollama-qwen/" >Claude Code For Free in VS Code with Ollama + Qwen 3.8</a>.</p></blockquote>
+<h2 id="final-thoughts-is-lfm3-worth-it">Final Thoughts: Is LFM3 Worth It?
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th></th>
+          <th>Verdict</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>✅ <strong>Tiny and fast</strong></td>
+          <td>About 1 GB, with a 256K context window</td>
+      </tr>
+      <tr>
+          <td>✅ <strong>Great at agents and instructions</strong></td>
+          <td>Beats models 5x its size on these tasks</td>
+      </tr>
+      <tr>
+          <td>⚠️ <strong>Not for heavy coding or deep knowledge</strong></td>
+          <td>Bigger models still win there</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>What excites me most is the direction. AI doesn&rsquo;t have to live in a giant data centre. With models like LFM3, capable AI can run right on your laptop.</p>
+<h2 id="whats-next">What&rsquo;s Next?
+</h2><p>In my next video, I&rsquo;ll show you how to <strong>install and run Liquid LFM3 locally using Ollama</strong> and put it to the test with real-world prompts and tasks.</p>
+<p>Watch the <a class="link" href="https://youtu.be/S3YUCTjpX4s"  target="_blank" rel="noopener"
+    >LFM3 explainer on YouTube</a> and subscribe to <strong>The Code Street</strong> so you don&rsquo;t miss the hands-on follow-up.</p>
+<p>Would you trust a 1 GB AI model with your daily work, or would you still stick with larger models like Qwen? Let me know in the YouTube comments.</p>
+<h2 id="sources">Sources
+</h2><ul>
+<li>Liquid AI: <a class="link" href="https://www.liquid.ai/blog/lfm3"  target="_blank" rel="noopener"
+    >Introducing LFM3</a></li>
+<li>Hugging Face: <a class="link" href="https://huggingface.co/LiquidAI/LFM3-1.7B"  target="_blank" rel="noopener"
+    >LiquidAI/LFM3-1.7B</a></li>
+</ul>
+<p><em>All benchmark figures are as published by Liquid AI.</em></p>
+
+</section>
+
+
+    
+        <aside class="cs-post-cta">
+    
+    <div class="cs-post-cta-text">
+        <h2>Enjoyed this tutorial?</h2>
+        <p>
+            I publish step-by-step AI videos on YouTube: AI agents, local LLMs and AI coding tools.
+            Subscribe so you don't miss the next one, and join 4,900&#43; other developers.
+        </p>
+        <div class="cs-hero-actions">
+            
+<a class="cs-btn cs-btn--youtube" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    <span>Subscribe on YouTube</span>
+</a>
+
+            <a class="cs-btn cs-btn--ghost" href="/videos/">More videos</a>
+        </div>
+    </div>
+</aside>
+
+    
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/lfm3/">LFM3</a>
+        
+            <a href="/tags/liquid-ai/">Liquid AI</a>
+        
+            <a href="/tags/local-llms/">Local LLMs</a>
+        
+            <a href="/tags/small-language-models/">Small Language Models</a>
+        
+            <a href="/tags/ai-agents/">AI Agents</a>
+        
+            <a href="/tags/qwen/">Qwen</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+<aside class="cs-related" aria-labelledby="cs-related-title">
+    <h2 id="cs-related-title">Keep learning</h2>
+    <div class="cs-grid cs-grid--related">
+        <article class="cs-card cs-card--default">
+    <a class="cs-card__media" href="/post/claude-code-free-vs-code-ollama-qwen/" tabindex="-1" aria-hidden="true"><img src="/post/claude-code-free-vs-code-ollama-qwen/cover_hu_6b348ea12ce5e16.jpg"
+                srcset="/post/claude-code-free-vs-code-ollama-qwen/cover_hu_6b348ea12ce5e16.jpg 640w, /post/claude-code-free-vs-code-ollama-qwen/cover.jpg 1280w"
+                sizes="(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw" width="640" height="360"
+                loading="lazy" alt="">
+    </a>
+    <div class="cs-card__body">
+        <div class="cs-tags"><a class="cs-tag" href="/categories/local-llms/">Local LLMs</a><a class="cs-tag" href="/categories/ai-coding/">AI Coding</a>
+        </div>
+        <h3 class="cs-card__title"><a href="/post/claude-code-free-vs-code-ollama-qwen/">Claude Code For Free in VS Code: Full Setup Guide with Ollama &#43; Qwen 3.8</a></h3><p class="cs-card__desc">Run Claude Code for free inside VS Code with no Claude login and no API bill. Install Ollama, download Qwen 3.8, set up the Claude Code extension with two small config changes, and build a full Space Shooter game from one prompt.</p>
+        <div class="cs-meta">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg><time datetime="2026-10-30">Oct 30, 2026</time></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+6 min read</span>
+        </div>
+    </div>
+</article>
+
+        <article class="cs-card cs-card--default">
+    <a class="cs-card__media" href="/post/claude-code-for-free-ollama-qwen/" tabindex="-1" aria-hidden="true"><img src="/post/claude-code-for-free-ollama-qwen/cover_hu_953d648817466eea.jpg"
+                srcset="/post/claude-code-for-free-ollama-qwen/cover_hu_953d648817466eea.jpg 640w, /post/claude-code-for-free-ollama-qwen/cover.jpg 1280w"
+                sizes="(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw" width="640" height="360"
+                loading="lazy" alt="">
+    </a>
+    <div class="cs-card__body">
+        <div class="cs-tags"><a class="cs-tag" href="/categories/local-llms/">Local LLMs</a><a class="cs-tag" href="/categories/ai-coding/">AI Coding</a>
+        </div>
+        <h3 class="cs-card__title"><a href="/post/claude-code-for-free-ollama-qwen/">Claude Code For Free: Local Setup with Ollama &#43; Qwen 3.8</a></h3><p class="cs-card__desc">Run Claude Code for free on your own PC. No API key, no subscription, no bill. A step-by-step local setup with Ollama and Qwen 3.8, plus the exact settings file and prompt I used.</p>
+        <div class="cs-meta">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg><time datetime="2026-10-28">Oct 28, 2026</time></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+6 min read</span>
+        </div>
+    </div>
+</article>
+
+        <article class="cs-card cs-card--default">
+    <a class="cs-card__media" href="/post/what-is-context-size-in-ollama/" tabindex="-1" aria-hidden="true"><img src="/post/what-is-context-size-in-ollama/cover_hu_23ed58b84963c658.jpg"
+                srcset="/post/what-is-context-size-in-ollama/cover_hu_23ed58b84963c658.jpg 640w, /post/what-is-context-size-in-ollama/cover.jpg 1280w"
+                sizes="(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw" width="640" height="360"
+                loading="lazy" alt="">
+    </a>
+    <div class="cs-card__body">
+        <div class="cs-tags"><a class="cs-tag" href="/categories/local-llms/">Local LLMs</a>
+        </div>
+        <h3 class="cs-card__title"><a href="/post/what-is-context-size-in-ollama/">What Is Context Size in Ollama? Context Window Explained for Beginners</a></h3><p class="cs-card__desc">What does changing Ollama&#39;s context length from 4K to 256K actually do? Learn what context size is, how tokens work, why bigger contexts use more memory, and how to choose the right setting for your PC.</p>
+        <div class="cs-meta">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg><time datetime="2026-10-17">Oct 17, 2026</time></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+3 min read</span>
+        </div>
+    </div>
+</article>
+
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "code-street" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#what-is-lfm3">What Is LFM3?</a></li>
+    <li><a href="#not-one-model-a-family-of-six">Not One Model, a Family of Six</a></li>
+    <li><a href="#why-is-lfm3-so-fast-the-tri-hybrid-architecture">Why Is LFM3 So Fast? The Tri-Hybrid Architecture</a></li>
+    <li><a href="#lfm3-vs-qwen-35-9b-where-it-wins">LFM3 vs Qwen 3.5 9B: Where It Wins</a></li>
+    <li><a href="#where-lfm3-loses-the-honest-comparison">Where LFM3 Loses: The Honest Comparison</a></li>
+    <li><a href="#efficiency-lfm3s-real-superpower">Efficiency: LFM3&rsquo;s Real Superpower</a></li>
+    <li><a href="#who-should-use-lfm3">Who Should Use LFM3?</a></li>
+    <li><a href="#final-thoughts-is-lfm3-worth-it">Final Thoughts: Is LFM3 Worth It?</a></li>
+    <li><a href="#whats-next">What&rsquo;s Next?</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+            
+                <section class="widget cs-youtube-widget">
+    <div class="widget-icon">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    </div>
+    <h2 class="widget-title section-title">Watch on YouTube</h2>
+
+    <div class="cs-youtube-widget-card">
+        <p>
+            Video walkthroughs of every tutorial, with <strong>4,900&#43;</strong> developers subscribed.
+        </p>
+        
+<a class="cs-btn cs-btn--youtube" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    <span>Subscribe on YouTube</span>
+</a>
+
+    </div>
+</section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <footer class="cs-footer">
+    <div class="cs-container cs-footer__grid">
+        <div class="cs-footer__brand">
+            <a class="cs-brand" href="/" aria-label="The Code Street home"><img src="/img/logo_hu_2cd295f811d27b71.png" width="96" height="96" alt="" loading="lazy">
+                <span>The <em>Code</em> Street</span>
+            </a>
+            <p>Hands-on AI tutorials for developers: AI agents, local LLMs and AI coding tools, through blogs and videos.</p>
+            <ul class="cs-social">
+                <li>
+                    <a href="https://facebook.com/thecodestreet" target="_blank" rel="noopener me" aria-label="Facebook" title="Facebook"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg></a>
+                </li>
+                <li>
+                    <a href="https://github.com/rajivcodelab" target="_blank" rel="noopener me" aria-label="GitHub" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+</a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/in/rjvranjan80" target="_blank" rel="noopener me" aria-label="LinkedIn" title="LinkedIn"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg></a>
+                </li>
+                <li>
+                    <a href="/index.xml" target="_blank" rel="noopener me" aria-label="RSS" title="RSS"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+</a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/@TheCodeStreet" target="_blank" rel="noopener me" aria-label="YouTube" title="YouTube"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg></a>
+                </li>
+            </ul>
+        </div>
+
+        <nav class="cs-footer__col" aria-label="Topics">
+            <p class="cs-footer__title">Topics</p>
+            <ul>
+                <li><a href="/categories/semantic-kernel/">Semantic Kernel</a></li>
+                <li><a href="/categories/ai-coding/">AI Coding</a></li>
+                <li><a href="/categories/local-llms/">Local LLMs</a></li>
+                <li><a href="/categories/ai-agents/">AI Agents</a></li>
+                <li><a href="/categories/genai/">GenAI</a></li>
+                <li><a href="/categories/microsoft-agent-framework/">Microsoft Agent Framework</a></li>
+                <li><a href="/categories/">All topics</a></li>
+            </ul>
+        </nav>
+
+        <nav class="cs-footer__col" aria-label="Learn">
+            <p class="cs-footer__title">Learn</p>
+            <ul>
+                <li><a href="/post/">All tutorials</a></li>
+                <li><a href="/videos/">Videos</a></li>
+                <li><a href="/projects/">Source code &amp; projects</a></li>
+                <li><a href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">YouTube channel</a></li>
+                <li><a href="/index.xml">RSS feed</a></li>
+            </ul>
+        </nav>
+
+        <nav class="cs-footer__col" aria-label="About">
+            <p class="cs-footer__title">The Code Street</p>
+            <ul>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/terms-conditions/">Terms</a></li>
+                <li><a href="/privacy-policy/">Privacy</a></li>
+                <li><a href="/disclaimer/">Disclaimer</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="cs-container cs-footer__bottom">
+        <span>&copy; 2024 &ndash; 2026 The Code Street</span>
+        <span>Made for developers learning AI.</span>
+    </div>
+</footer>
+
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.64e2e29c7b1bd8b3ca8af9b66224401a6b239f453fa4363850ad78c31899208a.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script>
+    
+    document.addEventListener('click', function (e) {
+        var facade = e.target.closest('.cs-video-facade');
+        if (!facade) return;
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + facade.dataset.videoId + '?autoplay=1&rel=0';
+        iframe.title = facade.getAttribute('aria-label');
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.className = 'cs-video-iframe';
+        facade.replaceWith(iframe);
+    });
+
+    
+    (function () {
+        var header = document.getElementById('cs-header');
+        if (!header) return;
+
+        var toggle = header.querySelector('.cs-nav-toggle');
+        function setMenu(open) {
+            header.classList.toggle('is-open', open);
+            if (toggle) toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        if (toggle) {
+            toggle.addEventListener('click', function () { setMenu(!header.classList.contains('is-open')); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+            document.addEventListener('click', function (e) { if (!header.contains(e.target)) setMenu(false); });
+            header.querySelector('.cs-nav').addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+        }
+
+        var bar = header.querySelector('.cs-progress span');
+        var article = document.querySelector('.article-content');
+        var ticking = false;
+        function update() {
+            ticking = false;
+            header.classList.toggle('is-scrolled', window.scrollY > 4);
+            if (bar && article) {
+                var top = article.getBoundingClientRect().top + window.scrollY;
+                var total = article.offsetHeight - window.innerHeight * 0.5;
+                var done = total > 0 ? (window.scrollY - top + header.offsetHeight) / total : 0;
+                bar.style.transform = 'scaleX(' + Math.max(0, Math.min(1, done)) + ')';
+            }
+        }
+        function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+        update();
+    })();
+</script>
+
+    </body>
+</html>

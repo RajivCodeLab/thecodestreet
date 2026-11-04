@@ -7,7 +7,266 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>The Code Street</copyright>
-        <lastBuildDate>Fri, 30 Oct 2026 10:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/local-llms/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 04 Nov 2026 21:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/local-llms/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Liquid LFM3 Explained: Is This the Most Efficient Local AI Model?</title>
+        <link>https://thecodestreet.dev/post/liquid-lfm3-explained/</link>
+        <pubDate>Wed, 04 Nov 2026 21:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/post/liquid-lfm3-explained/</guid>
+        <description>&lt;img src="https://thecodestreet.dev/post/liquid-lfm3-explained/cover.jpg" alt="Featured image of post Liquid LFM3 Explained: Is This the Most Efficient Local AI Model?" /&gt;&lt;p&gt;What if a 1 GB AI model could beat a model more than five times its size?&lt;/p&gt;
+&lt;p&gt;Not on everything, but on the tasks that matter most for AI agents. That&amp;rsquo;s exactly what Liquid AI is claiming with &lt;strong&gt;LFM3&lt;/strong&gt;, its new family of small, open-weight models released on &lt;strong&gt;October 27, 2026&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In this post, I&amp;rsquo;ll break down what LFM3 is, how its architecture works, where it wins, where it doesn&amp;rsquo;t, and who should actually use it.&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/S3YUCTjpX4s&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;what-is-lfm3&#34;&gt;What Is LFM3?
+&lt;/h2&gt;&lt;p&gt;LFM3 is the third generation of Liquid Foundation Models from Liquid AI. The headline model is &lt;strong&gt;LFM3-1.7B&lt;/strong&gt;, a text model built for local agents and specialised applications.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Spec&lt;/th&gt;
+          &lt;th&gt;LFM3-1.7B&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;1.7 billion&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Size at 4-bit&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;~1 GB&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Context window&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;256K tokens&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Architecture&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Tri-hybrid (convolution + attention)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Pre-training data&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;22 trillion tokens&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Weights&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Open-weight&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Developer&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Liquid AI&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;To put that size in perspective: at 4-bit precision, the model fits in about &lt;strong&gt;one gigabyte&lt;/strong&gt;, smaller than many mobile games. Yet it supports a &lt;strong&gt;256,000-token context window&lt;/strong&gt;, enough to hold a small book in memory at once.&lt;/p&gt;
+&lt;p&gt;It also outperforms Liquid&amp;rsquo;s previous &lt;strong&gt;LFM2.5-2.6B&lt;/strong&gt; while using &lt;strong&gt;35% fewer parameters&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;not-one-model-a-family-of-six&#34;&gt;Not One Model, a Family of Six
+&lt;/h2&gt;&lt;p&gt;LFM3 isn&amp;rsquo;t a single model. The first release includes six models, all built from the same base, &lt;strong&gt;LFM3-1.7B-Base&lt;/strong&gt;, and all around the 2-billion-parameter range:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Text:&lt;/strong&gt; for local agents and specialised apps&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vision:&lt;/strong&gt; image understanding&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Audio:&lt;/strong&gt; speech and sound input&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Omni:&lt;/strong&gt; combines multiple input types&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Two Decision models:&lt;/strong&gt; specialised versions of the vision and omni models&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Liquid also says every model in the family can be &lt;strong&gt;fine-tuned on a single GPU&lt;/strong&gt;, which makes it practical for developers who want to customise a model for their own use case.&lt;/p&gt;
+&lt;h2 id=&#34;why-is-lfm3-so-fast-the-tri-hybrid-architecture&#34;&gt;Why Is LFM3 So Fast? The Tri-Hybrid Architecture
+&lt;/h2&gt;&lt;p&gt;Most language models are pure transformers. Every layer uses attention, which gets expensive in both memory and speed as the context grows.&lt;/p&gt;
+&lt;p&gt;LFM3 takes a different approach that Liquid calls a &lt;strong&gt;tri-hybrid architecture&lt;/strong&gt;. Of its 24 layers:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Layers&lt;/th&gt;
+          &lt;th&gt;Type&lt;/th&gt;
+          &lt;th&gt;What it does&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;13&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Convolution&lt;/td&gt;
+          &lt;td&gt;Fast and lightweight&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;5&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Sliding-window attention&lt;/td&gt;
+          &lt;td&gt;Looks only at the nearest 256 tokens&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;6&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Global attention&lt;/td&gt;
+          &lt;td&gt;Full attention across the whole context&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;This mix keeps memory usage low and speed high, especially with long inputs.&lt;/p&gt;
+&lt;p&gt;What&amp;rsquo;s clever is &lt;em&gt;how&lt;/em&gt; Liquid arrived at this design. They used &lt;strong&gt;hardware-in-the-loop architecture search&lt;/strong&gt;, testing candidates directly on &lt;strong&gt;14 device and backend combinations&lt;/strong&gt;. These included phones (Samsung Galaxy S26 Ultra, OnePlus 15), a Raspberry Pi 5, laptops (Apple M4 Max, AMD Ryzen AI), cloud CPUs, GPUs and a Qualcomm Hexagon NPU.&lt;/p&gt;
+&lt;p&gt;The result is a model shaped by real-world hardware, not just benchmarks.&lt;/p&gt;
+&lt;h2 id=&#34;lfm3-vs-qwen-35-9b-where-it-wins&#34;&gt;LFM3 vs Qwen 3.5 9B: Where It Wins
+&lt;/h2&gt;&lt;p&gt;Liquid compared LFM3-1.7B against several models, including &lt;strong&gt;Qwen 3.5 9B&lt;/strong&gt;, which is more than five times bigger. Here&amp;rsquo;s where the tiny model comes out ahead:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Benchmark&lt;/th&gt;
+          &lt;th&gt;What it tests&lt;/th&gt;
+          &lt;th&gt;LFM3-1.7B&lt;/th&gt;
+          &lt;th&gt;Qwen 3.5 9B&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;WebArena-Verified&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Long tasks in a web browser&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;38.42&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;28.94&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;AutomationBench&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Tasks inside business apps&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;41.29&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;15.10&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;BFCL V4&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Function / tool calling&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;71.39&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;62.83&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;IFEval&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Instruction following&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;96.66&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;92.08&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;LiveCodeBench v6&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Coding problems&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;73.46&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;69.86&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;In simple terms: when it comes to &lt;strong&gt;following instructions, calling tools and completing agent-style tasks&lt;/strong&gt;, LFM3 punches far above its weight. On AutomationBench it scores nearly &lt;strong&gt;three times&lt;/strong&gt; higher than Qwen 3.5 9B.&lt;/p&gt;
+&lt;h2 id=&#34;where-lfm3-loses-the-honest-comparison&#34;&gt;Where LFM3 Loses: The Honest Comparison
+&lt;/h2&gt;&lt;p&gt;To be fair, and Liquid is upfront about this too, &lt;strong&gt;larger models still win on agentic coding and general knowledge&lt;/strong&gt;:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Benchmark&lt;/th&gt;
+          &lt;th&gt;What it tests&lt;/th&gt;
+          &lt;th&gt;LFM3-1.7B&lt;/th&gt;
+          &lt;th&gt;Qwen 3.5 9B&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;SWE-bench Verified&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Fixing real code issues&lt;/td&gt;
+          &lt;td&gt;43.40&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;51.20&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;GPQA Diamond&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Graduate-level science&lt;/td&gt;
+          &lt;td&gt;63.37&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;80.40&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;RULER 128K&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Long-context retrieval&lt;/td&gt;
+          &lt;td&gt;65.56&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;87.11&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;This makes sense. A model this small simply can&amp;rsquo;t store as much world knowledge as one five times its size. LFM3 isn&amp;rsquo;t a replacement for big models. It&amp;rsquo;s a different tool for a different job.&lt;/p&gt;
+&lt;h2 id=&#34;efficiency-lfm3s-real-superpower&#34;&gt;Efficiency: LFM3&amp;rsquo;s Real Superpower
+&lt;/h2&gt;&lt;p&gt;Where LFM3 really shines is efficiency.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Memory for long context.&lt;/strong&gt; At a full 128K-token context, LFM3 needs just &lt;strong&gt;1.6 GB&lt;/strong&gt; of KV cache:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Model&lt;/th&gt;
+          &lt;th&gt;KV cache at 128K&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;LFM3-1.7B&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;1.6 GB&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Qwen 3.5 4B&lt;/td&gt;
+          &lt;td&gt;4.3 GB&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;MiniCPM5 2B&lt;/td&gt;
+          &lt;td&gt;5.6 GB&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;On-device speed.&lt;/strong&gt; Measured with llama.cpp at Q4_0 and a 32K context, Liquid reports that LFM3-1.7B decodes &lt;strong&gt;1.8 to 2.8 times faster&lt;/strong&gt; than the next fastest model tested, while using the least memory.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Server scale.&lt;/strong&gt; On a single NVIDIA B300 GPU, LFM3 can generate &lt;strong&gt;3.6 billion tokens per day&lt;/strong&gt; at 1,024 concurrent requests. Liquid even ran &lt;strong&gt;more than 300,000 LFM3 agents in parallel&lt;/strong&gt; to analyse the Enron email archive.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s the kind of scale small, efficient models unlock.&lt;/p&gt;
+&lt;h2 id=&#34;who-should-use-lfm3&#34;&gt;Who Should Use LFM3?
+&lt;/h2&gt;&lt;p&gt;LFM3 is a great fit if you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Have an older laptop or limited RAM.&lt;/strong&gt; It&amp;rsquo;s one of the most capable models you can run on modest hardware.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Are building local AI agents.&lt;/strong&gt; Its tool-calling and instruction-following scores make it a strong choice.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Target phones or edge devices.&lt;/strong&gt; The architecture was designed on real mobile and edge hardware.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Care about privacy.&lt;/strong&gt; Running locally means your data never leaves your machine.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Chip makers are paying attention too: &lt;strong&gt;AMD, Qualcomm and Ambarella&lt;/strong&gt; all backed the launch, with plans to run LFM3 on their processors.&lt;/p&gt;
+&lt;p&gt;LFM3 is &lt;strong&gt;not&lt;/strong&gt; the best choice if you need a heavy-duty coding assistant for large codebases or deep factual knowledge. For that, a larger model like Qwen is still the better pick, or use LFM3 alongside one.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Want a bigger local coding model? See &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/post/claude-code-free-vs-code-ollama-qwen/&#34; &gt;Claude Code For Free in VS Code with Ollama + Qwen 3.8&lt;/a&gt;.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;final-thoughts-is-lfm3-worth-it&#34;&gt;Final Thoughts: Is LFM3 Worth It?
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;Verdict&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;✅ &lt;strong&gt;Tiny and fast&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;About 1 GB, with a 256K context window&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;✅ &lt;strong&gt;Great at agents and instructions&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Beats models 5x its size on these tasks&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;⚠️ &lt;strong&gt;Not for heavy coding or deep knowledge&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Bigger models still win there&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;What excites me most is the direction. AI doesn&amp;rsquo;t have to live in a giant data centre. With models like LFM3, capable AI can run right on your laptop.&lt;/p&gt;
+&lt;h2 id=&#34;whats-next&#34;&gt;What&amp;rsquo;s Next?
+&lt;/h2&gt;&lt;p&gt;In my next video, I&amp;rsquo;ll show you how to &lt;strong&gt;install and run Liquid LFM3 locally using Ollama&lt;/strong&gt; and put it to the test with real-world prompts and tasks.&lt;/p&gt;
+&lt;p&gt;Watch the &lt;a class=&#34;link&#34; href=&#34;https://youtu.be/S3YUCTjpX4s&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LFM3 explainer on YouTube&lt;/a&gt; and subscribe to &lt;strong&gt;The Code Street&lt;/strong&gt; so you don&amp;rsquo;t miss the hands-on follow-up.&lt;/p&gt;
+&lt;p&gt;Would you trust a 1 GB AI model with your daily work, or would you still stick with larger models like Qwen? Let me know in the YouTube comments.&lt;/p&gt;
+&lt;h2 id=&#34;sources&#34;&gt;Sources
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Liquid AI: &lt;a class=&#34;link&#34; href=&#34;https://www.liquid.ai/blog/lfm3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Introducing LFM3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hugging Face: &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/LiquidAI/LFM3-1.7B&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LiquidAI/LFM3-1.7B&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;All benchmark figures are as published by Liquid AI.&lt;/em&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Claude Code For Free in VS Code: Full Setup Guide with Ollama &#43; Qwen 3.8</title>
         <link>https://thecodestreet.dev/post/claude-code-free-vs-code-ollama-qwen/</link>
         <pubDate>Fri, 30 Oct 2026 10:00:00 +0530</pubDate>

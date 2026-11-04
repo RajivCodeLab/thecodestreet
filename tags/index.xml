@@ -7,7 +7,55 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>The Code Street</copyright>
-        <lastBuildDate>Fri, 30 Oct 2026 10:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 04 Nov 2026 21:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AI Agents</title>
+        <link>https://thecodestreet.dev/tags/ai-agents/</link>
+        <pubDate>Wed, 04 Nov 2026 21:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/ai-agents/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>LFM3</title>
+        <link>https://thecodestreet.dev/tags/lfm3/</link>
+        <pubDate>Wed, 04 Nov 2026 21:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/lfm3/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Liquid AI</title>
+        <link>https://thecodestreet.dev/tags/liquid-ai/</link>
+        <pubDate>Wed, 04 Nov 2026 21:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/liquid-ai/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Local LLMs</title>
+        <link>https://thecodestreet.dev/tags/local-llms/</link>
+        <pubDate>Wed, 04 Nov 2026 21:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/local-llms/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Qwen</title>
+        <link>https://thecodestreet.dev/tags/qwen/</link>
+        <pubDate>Wed, 04 Nov 2026 21:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/qwen/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Small Language Models</title>
+        <link>https://thecodestreet.dev/tags/small-language-models/</link>
+        <pubDate>Wed, 04 Nov 2026 21:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/small-language-models/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>AI Coding Assistant</title>
         <link>https://thecodestreet.dev/tags/ai-coding-assistant/</link>
         <pubDate>Fri, 30 Oct 2026 10:00:00 +0530</pubDate>
@@ -24,14 +72,6 @@
         <description></description>
         </item>
         <item>
-        <title>Local LLMs</title>
-        <link>https://thecodestreet.dev/tags/local-llms/</link>
-        <pubDate>Fri, 30 Oct 2026 10:00:00 +0530</pubDate>
-        
-        <guid>https://thecodestreet.dev/tags/local-llms/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>Ollama</title>
         <link>https://thecodestreet.dev/tags/ollama/</link>
         <pubDate>Fri, 30 Oct 2026 10:00:00 +0530</pubDate>
@@ -40,27 +80,11 @@
         <description></description>
         </item>
         <item>
-        <title>Qwen</title>
-        <link>https://thecodestreet.dev/tags/qwen/</link>
-        <pubDate>Fri, 30 Oct 2026 10:00:00 +0530</pubDate>
-        
-        <guid>https://thecodestreet.dev/tags/qwen/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>VS Code</title>
         <link>https://thecodestreet.dev/tags/vs-code/</link>
         <pubDate>Fri, 30 Oct 2026 10:00:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/vs-code/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>AI Agents</title>
-        <link>https://thecodestreet.dev/tags/ai-agents/</link>
-        <pubDate>Tue, 20 Oct 2026 18:00:00 +0530</pubDate>
-        
-        <guid>https://thecodestreet.dev/tags/ai-agents/</guid>
         <description></description>
         </item>
         <item>
