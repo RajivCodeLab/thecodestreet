@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Node.js on The Code Street</title>
+        <link>https://thecodestreet.dev/tags/node.js/</link>
+        <description>Recent content in Node.js on The Code Street</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>The Code Street</copyright>
+        <lastBuildDate>Mon, 09 Nov 2026 18:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/node.js/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Can a 1.7B Model Be an AI Agent? Building a Local Agent with LFM3 &#43; Ollama</title>
+        <link>https://thecodestreet.dev/post/lfm3-local-ai-agent/</link>
+        <pubDate>Mon, 09 Nov 2026 18:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/post/lfm3-local-ai-agent/</guid>
+        <description>&lt;img src="https://thecodestreet.dev/post/lfm3-local-ai-agent/cover.png" alt="Featured image of post Can a 1.7B Model Be an AI Agent? Building a Local Agent with LFM3 &#43; Ollama" /&gt;&lt;p&gt;Imagine running an AI agent on your own computer, without paying for expensive APIs, without sending your data to the cloud, and without a 70-billion-parameter model.&lt;/p&gt;
+&lt;p&gt;Can a model with just 1.7 billion parameters actually behave like an agent? Can it calculate numbers, check the weather, manage files, save notes and complete several tasks on its own?&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s the question I set out to test with &lt;strong&gt;LFM3&lt;/strong&gt;, the small model from Liquid AI. I built a complete local agent around it using Ollama, Node.js and React, and then gave it real work. The full walkthrough is on YouTube, and this post covers the same ground in written form.&lt;/p&gt;
+&lt;h2 id=&#34;-watch-the-video&#34;&gt;🎥 Watch the Video
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/48GChL-fGJs&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;👉 &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/48GChL-fGJs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch on YouTube: Can a 1.7B Model Be an AI Agent?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-four-parts&#34;&gt;The Four Parts
+&lt;/h2&gt;&lt;p&gt;The app has four components:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;React frontend.&lt;/strong&gt; This is where you talk to the agent and watch what it&amp;rsquo;s doing.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Node.js backend.&lt;/strong&gt; It talks to the model, handles requests and runs the execution loop.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ollama.&lt;/strong&gt; It runs LFM3 locally on your machine.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JavaScript tools.&lt;/strong&gt; These are the functions the agent can call: a calculator, a weather lookup, file access and notes.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The key idea is the loop between them. The model decides what should happen, the backend executes the operation, and the result goes back to the model.&lt;/p&gt;
+&lt;h2 id=&#34;tool-calling-the-model-chooses-your-code-executes&#34;&gt;Tool Calling: The Model Chooses, Your Code Executes
+&lt;/h2&gt;&lt;p&gt;A language model is good at understanding instructions and generating text. On its own, it can&amp;rsquo;t check live weather, read a file or run a calculation in your app. Tool calling fills that gap.&lt;/p&gt;
+&lt;p&gt;You give the model a list of tools. Each tool has a name, a description and a set of parameters. When the model needs a calculation, it replies with a structured request, for example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;calculator&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;arguments&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;expression&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;7800 * 0.18&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The model is not doing the math. It is asking the application to run the calculator. The backend checks the arguments, calls the real JavaScript function, and gets back &lt;code&gt;1404&lt;/code&gt;. That result goes to LFM3, which turns it into a normal reply.&lt;/p&gt;
+&lt;p&gt;The model never gets unrestricted access to your computer. It can only request the tools you have registered.&lt;/p&gt;
+&lt;h2 id=&#34;one-request-several-tools&#34;&gt;One Request, Several Tools
+&lt;/h2&gt;&lt;p&gt;Calling one tool is useful. The more interesting case is a single instruction that needs several steps:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Check the weather in Mumbai, calculate 18% GST on 7,800 rupees, save a note about the result, and prepare a summary.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;The model works through it in order:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Weather:&lt;/strong&gt; requests the weather tool for current conditions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Calculator:&lt;/strong&gt; calculates 18% GST, which is 1,404 rupees, for a total of 9,204 rupees.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Save note:&lt;/strong&gt; stores the result.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Summary:&lt;/strong&gt; writes the final answer from the tool results.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The sequence is not hardcoded in the frontend. The model reads the tool descriptions and decides what to call. The backend keeps the loop going, running tools and returning their results, until the model has a final answer. That loop is what separates an agent from a chatbot.&lt;/p&gt;
+&lt;h2 id=&#34;watching-the-agent-think-live-events-and-metrics&#34;&gt;Watching the Agent Think: Live Events and Metrics
+&lt;/h2&gt;&lt;p&gt;I didn&amp;rsquo;t want a black box where you send a message and wait. The app streams progress to the frontend with &lt;strong&gt;Server-Sent Events (SSE)&lt;/strong&gt;. You can see when the request arrives, when LFM3 starts, which tool it selected, when the JavaScript runs, and what came back. If a tool fails, the error shows up in the same timeline.&lt;/p&gt;
+&lt;p&gt;The dashboard also records performance:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Tool execution time&lt;/strong&gt;, measured around the actual JavaScript function.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Time to first token (TTFT)&lt;/strong&gt;, how quickly the model starts answering.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tokens per second&lt;/strong&gt;, from Ollama&amp;rsquo;s response metadata.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These numbers come from the running application, not from a demo.&lt;/p&gt;
+&lt;h2 id=&#34;safety-is-not-optional&#34;&gt;Safety Is Not Optional
+&lt;/h2&gt;&lt;p&gt;Giving an agent tools means controlling what those tools can do. The app uses several guardrails:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Allow-list.&lt;/strong&gt; The model can only call tools registered in the app.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Argument validation.&lt;/strong&gt; Arguments must match the tool&amp;rsquo;s schema before anything runs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No &lt;code&gt;eval&lt;/code&gt;, no arbitrary shell.&lt;/strong&gt; Maths goes through a dedicated expression parser.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;File sandbox.&lt;/strong&gt; File operations stay inside one workspace folder.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Human approval.&lt;/strong&gt; Sensitive actions, like deleting a file, pause until a person approves or denies them.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The approval step matters most. An agent should have the minimum permissions it needs, and anything sensitive should stay under human control.&lt;/p&gt;
+&lt;h2 id=&#34;adding-your-own-tool&#34;&gt;Adding Your Own Tool
+&lt;/h2&gt;&lt;p&gt;Extending the agent means adding a JavaScript function. In the walkthrough I add a &lt;code&gt;roll_dice&lt;/code&gt; tool: I register its name, a description, the number of sides as a parameter, and a short implementation that returns a random number from 1 to that count. After restarting the backend, the agent finds the tool in its list. Asking it to &amp;ldquo;roll a six-sided dice&amp;rdquo; makes LFM3 pick the tool, supply the argument, and return the JavaScript result.&lt;/p&gt;
+&lt;p&gt;The model gets a new capability without retraining or changing its architecture. You extend the agent with your own code.&lt;/p&gt;
+&lt;h2 id=&#34;the-real-test&#34;&gt;The Real Test
+&lt;/h2&gt;&lt;p&gt;The demo uses one prompt that needs several tools:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Check the weather in Bengaluru, calculate 18% GST on 7,800 rupees, save a note containing the calculation result and today&amp;rsquo;s date, and prepare a summary.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;The agent calls the weather tool, runs the GST calculation, saves the note and then writes a summary. The weather lookup uses an external data source. The model inference runs locally through Ollama.&lt;/p&gt;
+&lt;h2 id=&#34;performance-and-limits&#34;&gt;Performance and Limits
+&lt;/h2&gt;&lt;p&gt;LFM3 is not trying to replace large coding or reasoning models. Here&amp;rsquo;s what it handles well and where it struggles:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Strengths&lt;/th&gt;
+          &lt;th&gt;Limits&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Classification&lt;/td&gt;
+          &lt;td&gt;Complex reasoning&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Structured extraction&lt;/td&gt;
+          &lt;td&gt;Tasks that need broad world knowledge&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Simple automation&lt;/td&gt;
+          &lt;td&gt;Occasionally picks the wrong tool&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Lightweight, focused agents&lt;/td&gt;
+          &lt;td&gt;Sometimes gives invalid arguments&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Tool calling is not perfect every time. That&amp;rsquo;s why validation, error handling and approval matter. Tool execution and model inference also take very different amounts of time. A calculator finishes almost instantly, while generating a reply takes longer. Watch both.&lt;/p&gt;
+&lt;h2 id=&#34;takeaways&#34;&gt;Takeaways
+&lt;/h2&gt;&lt;p&gt;Can a 1.7-billion-parameter model behave like an agent? Yes, within the right boundaries. It won&amp;rsquo;t outperform larger models. But you can connect a small local model to your own functions, limit what it can touch, and get real work done.&lt;/p&gt;
+&lt;p&gt;The pattern in one line:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The model asks for a tool. Your code executes it. The result goes back to the model.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you want to build something like this, start with one tool, add validation, and only then add more. I&amp;rsquo;d love to hear what you would build with a local agent. Tell me in the comments on the video.&lt;/p&gt;
+&lt;p&gt;Thanks for reading, and see you in the next one.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

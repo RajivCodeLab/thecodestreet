@@ -7,10 +7,10 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>The Code Street</copyright>
-        <lastBuildDate>Wed, 04 Nov 2026 21:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 09 Nov 2026 18:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>AI Agents</title>
         <link>https://thecodestreet.dev/tags/ai-agents/</link>
-        <pubDate>Wed, 04 Nov 2026 21:00:00 +0530</pubDate>
+        <pubDate>Mon, 09 Nov 2026 18:00:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/ai-agents/</guid>
         <description></description>
@@ -18,7 +18,7 @@
         <item>
         <title>LFM3</title>
         <link>https://thecodestreet.dev/tags/lfm3/</link>
-        <pubDate>Wed, 04 Nov 2026 21:00:00 +0530</pubDate>
+        <pubDate>Mon, 09 Nov 2026 18:00:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/lfm3/</guid>
         <description></description>
@@ -26,7 +26,7 @@
         <item>
         <title>Liquid AI</title>
         <link>https://thecodestreet.dev/tags/liquid-ai/</link>
-        <pubDate>Wed, 04 Nov 2026 21:00:00 +0530</pubDate>
+        <pubDate>Mon, 09 Nov 2026 18:00:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/liquid-ai/</guid>
         <description></description>
@@ -34,9 +34,41 @@
         <item>
         <title>Local LLMs</title>
         <link>https://thecodestreet.dev/tags/local-llms/</link>
-        <pubDate>Wed, 04 Nov 2026 21:00:00 +0530</pubDate>
+        <pubDate>Mon, 09 Nov 2026 18:00:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/local-llms/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Node.js</title>
+        <link>https://thecodestreet.dev/tags/node.js/</link>
+        <pubDate>Mon, 09 Nov 2026 18:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/node.js/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Ollama</title>
+        <link>https://thecodestreet.dev/tags/ollama/</link>
+        <pubDate>Mon, 09 Nov 2026 18:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/ollama/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>React</title>
+        <link>https://thecodestreet.dev/tags/react/</link>
+        <pubDate>Mon, 09 Nov 2026 18:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/react/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Tool Calling</title>
+        <link>https://thecodestreet.dev/tags/tool-calling/</link>
+        <pubDate>Mon, 09 Nov 2026 18:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/tool-calling/</guid>
         <description></description>
         </item>
         <item>
@@ -69,14 +101,6 @@
         <pubDate>Fri, 30 Oct 2026 10:00:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/claude-code/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Ollama</title>
-        <link>https://thecodestreet.dev/tags/ollama/</link>
-        <pubDate>Fri, 30 Oct 2026 10:00:00 +0530</pubDate>
-        
-        <guid>https://thecodestreet.dev/tags/ollama/</guid>
         <description></description>
         </item>
         <item>
