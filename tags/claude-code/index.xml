@@ -7,7 +7,197 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>The Code Street</copyright>
-        <lastBuildDate>Fri, 30 Oct 2026 10:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/claude-code/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 10 Nov 2026 21:30:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/claude-code/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Claude Code New Update: Fable 5.2, Ultrathink &amp; 15&#43; Features Explained</title>
+        <link>https://thecodestreet.dev/post/claude-code-update-fable-5-2/</link>
+        <pubDate>Tue, 10 Nov 2026 21:30:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/post/claude-code-update-fable-5-2/</guid>
+        <description>&lt;img src="https://thecodestreet.dev/post/claude-code-update-fable-5-2/cover.png" alt="Featured image of post Claude Code New Update: Fable 5.2, Ultrathink &amp; 15&#43; Features Explained" /&gt;&lt;p&gt;Claude Code just got a new model, a way to try that model on the Pro plan this week, and a command that shows what is eating your usage limit and then fixes it for you.&lt;/p&gt;
+&lt;p&gt;Those are three of the changes. This release has more than fifteen, and a few of them will change how you work every day.&lt;/p&gt;
+&lt;p&gt;In this post I go through every one of them in plain language, with an example for each. It is the written version of my video, with all the commands and prompts in one place so you can copy them.&lt;/p&gt;
+&lt;h2 id=&#34;-watch-the-video&#34;&gt;🎥 Watch the Video
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/nOX1v1cTq_0&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;👉 &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/nOX1v1cTq_0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch on YouTube: Claude Code New Update&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;quick-reference&#34;&gt;Quick Reference
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;What&lt;/th&gt;
+          &lt;th&gt;How to use it&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Switch to Fable 5.2&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;/model claude-fable-5-2&lt;/code&gt; (needs v2.1.321 or later)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;See and fix what is using your plan&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;/usage&lt;/code&gt;, then press &lt;code&gt;f&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Free up disk space&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;/storage&lt;/code&gt; in the desktop app&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Think harder for one turn&lt;/td&gt;
+          &lt;td&gt;Put &lt;code&gt;ultrathink&lt;/code&gt; in your message&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Stop auto mode blocking your own repos&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;/auto-mode-setup&lt;/code&gt; in the terminal&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;fable-52-and-the-pro-trial&#34;&gt;Fable 5.2 and the Pro Trial
+&lt;/h2&gt;&lt;p&gt;Fable 5.2 is out. It generates output up to &lt;strong&gt;30% faster&lt;/strong&gt; than Fable 5.1.&lt;/p&gt;
+&lt;p&gt;The Claude Code team is honest about where it fits. Fable is a great model for big, open-ended tasks. For most everyday coding, they still recommend starting with &lt;strong&gt;Opus 5.5&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A simple way to decide:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;Fix this bug in my login screen&amp;rdquo; → stay on Opus 5.5.&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Plan and build the whole offline sync system for my app&amp;rdquo; → this is where Fable 5.2 fits.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To switch, run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/model claude-fable-5-2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;You need Claude Code &lt;strong&gt;v2.1.321 or later&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;try-fable-on-pro-this-week&#34;&gt;Try Fable on Pro this week
+&lt;/h3&gt;&lt;p&gt;On &lt;strong&gt;Pro&lt;/strong&gt; and &lt;strong&gt;Team Standard&lt;/strong&gt;, Fable is included for up to &lt;strong&gt;50% of your weekly limit through November 16&lt;/strong&gt;. After that, Fable uses usage credits, if you have turned them on.&lt;/p&gt;
+&lt;p&gt;There may also be a Fable reset waiting for you. If you were a paid subscriber before November 9 at 10:00 AM PT, check &lt;strong&gt;Settings &amp;gt; Usage&lt;/strong&gt; on web or desktop. The deadline to use it depends on your plan:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Plan&lt;/th&gt;
+          &lt;th&gt;Use the Fable reset by&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Pro, Team Standard&lt;/td&gt;
+          &lt;td&gt;November 16, 2026&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Max, Ultra, Team Premium&lt;/td&gt;
+          &lt;td&gt;March 8, 2027&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;claude-sets-up-your-cloud-environment&#34;&gt;Claude Sets Up Your Cloud Environment
+&lt;/h2&gt;&lt;p&gt;A cloud session means Claude works on your code on Anthropic&amp;rsquo;s servers, not on your laptop. You can start a task from any device and it keeps going in the background.&lt;/p&gt;
+&lt;p&gt;The annoying part was the setup. Dependencies, network access and API keys were all your job.&lt;/p&gt;
+&lt;p&gt;On &lt;strong&gt;Pro, Max and Ultra&lt;/strong&gt;, Claude can now set up the cloud environment for you. It tells you when the session is missing a dependency, network access or an API key, and shows you the changes to approve.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt; you open your React Native project in a cloud session and ask Claude to run the tests. The tests need a package that is not installed, and they need your Firebase API key. Claude now flags both and shows you the setup changes, so the session does not just fail.&lt;/p&gt;
+&lt;p&gt;Two details matter here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;API keys go into a form&lt;/strong&gt;, so Claude does not see the key itself.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The setup is saved&lt;/strong&gt;, so your next session starts with the same environment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;free-up-disk-space-with-storage&#34;&gt;Free Up Disk Space with /storage
+&lt;/h2&gt;&lt;p&gt;Old sessions in the desktop app leave their worktrees on your computer. A worktree is a separate working copy of your project, and after a few weeks of daily use they add up.&lt;/p&gt;
+&lt;p&gt;Type &lt;code&gt;/storage&lt;/code&gt;, or open Settings, to see how much space your sessions and worktrees take. From there you can clear the worktrees you have not used in a while. Your sessions, conversations and branches all stay. You can remove inactive tasks from the same place.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️ &lt;strong&gt;Commit first.&lt;/strong&gt; Uncommitted changes are deleted along with the worktree.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;see-and-fix-what-is-using-your-plan&#34;&gt;See and Fix What Is Using Your Plan
+&lt;/h2&gt;&lt;p&gt;Running &lt;code&gt;/usage&lt;/code&gt; in the terminal already showed what was using most of your plan. It now also shows how to fix it.&lt;/p&gt;
+&lt;p&gt;Press &lt;code&gt;f&lt;/code&gt;, and Claude Code sends a prompt by itself to fix whatever it can.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt; &lt;code&gt;/usage&lt;/code&gt; shows that one very long conversation is burning through most of your limit. You press &lt;code&gt;f&lt;/code&gt; and Claude takes care of it, so you do not have to work out the fix yourself.&lt;/p&gt;
+&lt;h3 id=&#34;idle-conversations-are-compacted-automatically&#34;&gt;Idle conversations are compacted automatically
+&lt;/h3&gt;&lt;p&gt;There is a second saving that happens on its own. If a long conversation sits idle, Claude Code now compacts it, which means it replaces the conversation with a summary, before the cache expires. That takes about one hour.&lt;/p&gt;
+&lt;p&gt;Why it matters: resuming an uncached conversation means reprocessing your full context, and that costs usage. So if you go for lunch in the middle of a long session, Claude works from the summary when you come back.&lt;/p&gt;
+&lt;p&gt;You will see a banner when this happens, and you can turn it off in &lt;code&gt;/config&lt;/code&gt;. It also works in VS Code and the desktop app&amp;rsquo;s Code tab for conversations over 200K tokens.&lt;/p&gt;
+&lt;h2 id=&#34;ultrathink-is-back&#34;&gt;Ultrathink Is Back
+&lt;/h2&gt;&lt;p&gt;Claude Code has effort levels, which control how hard Claude thinks before it answers. Put the word &lt;code&gt;ultrathink&lt;/code&gt; in your message and Claude uses the &lt;strong&gt;xhigh&lt;/strong&gt; effort level for that one turn only. Your session&amp;rsquo;s effort setting does not change.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ultrathink about why this migration deadlocks when two workers run it at once
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Do not put it in every message. The team says you really do not need it for most tasks. It is useful when Claude is properly stuck.&lt;/p&gt;
+&lt;h2 id=&#34;teach-auto-mode-about-your-setup&#34;&gt;Teach Auto Mode About Your Setup
+&lt;/h2&gt;&lt;p&gt;Auto mode lets Claude work without asking permission at every step. By default it trusts only two things: your current working directory and that repo&amp;rsquo;s own remotes.&lt;/p&gt;
+&lt;p&gt;That is safe, but it means Claude gets blocked when it tries to push or send anything outside of that, even to other repos and services you own.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt; your mobile app lives in one repo and your backend API in another. Claude finishes a change and tries to push to the backend repo. It gets blocked, even though both repos are yours.&lt;/p&gt;
+&lt;p&gt;The fix is one command in the terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/auto-mode-setup
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;It looks at your project and at the commands Claude ran in your recent sessions there. Then it drafts a list of the repos, domains and cloud storage you trust. Once you accept the list, it is saved to &lt;code&gt;~/.claude/settings.json&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;10-smaller-updates&#34;&gt;10 Smaller Updates
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Long conversations respond sooner.&lt;/strong&gt; Claude Code used to send your whole conversation with every request. For most users it now sends only the new messages.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Switching models is smoother.&lt;/strong&gt; If your conversation is too long for the new model, the model you were on summarizes it before you switch.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Queued messages survive a restart.&lt;/strong&gt; If the desktop app quits, updates or crashes, the messages you queued in a local session come back when you reopen it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cloud sessions without a repository.&lt;/strong&gt; There is a new &amp;ldquo;No repository&amp;rdquo; option on Anthropic-hosted environments, for when you do not need a repo.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cloud sessions start even if a setup script fails.&lt;/strong&gt; A failing script used to stop the session from starting.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Effort level for cloud routines.&lt;/strong&gt; The model picker now has an effort level when you create or edit a routine that runs in the cloud.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A new safety setting.&lt;/strong&gt; Turn on &lt;code&gt;permissions.blockWritesOutsideWorkingDirectories&lt;/code&gt; and the Write, Edit and NotebookEdit tools refuse paths outside your working directories in every permission mode, apart from some of Claude Code&amp;rsquo;s own files. It does not limit shell commands, MCP tools or hooks.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fork subagents are on by default&lt;/strong&gt; in the desktop app and VS Code. A fork inherits your full conversation, so you do not have to explain everything again.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Background subagents use less of your limit.&lt;/strong&gt; In Anthropic&amp;rsquo;s test on Pro and Max, sessions with background subagents used about 5% less.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Claude Code no longer installs the IDE extension for you.&lt;/strong&gt; To install or update it, use &lt;code&gt;/ide&lt;/code&gt; from an outside terminal, or your editor&amp;rsquo;s extensions view.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The Claude Code team also published how they do code review. Claude reviews most of their changes before a person is asked to look, and the post explains how to set up the same thing.&lt;/p&gt;
+&lt;h2 id=&#34;two-prompts-from-anthropics-engineers&#34;&gt;Two Prompts from Anthropic&amp;rsquo;s Engineers
+&lt;/h2&gt;&lt;p&gt;Both of these come from Anthropic&amp;rsquo;s own engineering team.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;When Claude keeps stopping to ask you questions&lt;/strong&gt;, give it the go-ahead upfront:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Just build and use your best judgment. Make any call that&amp;#39;s reversible yourself, and check in later with the calls you made.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The engineer who shared it said it unblocked a large team of agents they had running.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;When you want to test a design&lt;/strong&gt;, skip the debate about whether it is flexible enough and have Claude build on it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;In a separate worktree, do a throwaway build of [a feature we might add later] on top of this design. Don&amp;#39;t polish it, just tell me where the design got in the way.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt; you have just designed your app&amp;rsquo;s data layer. Ask for a throwaway build of offline mode on top of it. You see right away where the design gets in the way, and then you delete all of it.&lt;/p&gt;
+&lt;h2 id=&#34;takeaways&#34;&gt;Takeaways
+&lt;/h2&gt;&lt;p&gt;If you remember only three things:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Try Fable 5.2 on Pro before November 16.&lt;/strong&gt; Use it for big, open-ended tasks and keep Opus 5.5 for everyday coding.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Run &lt;code&gt;/usage&lt;/code&gt; and press &lt;code&gt;f&lt;/code&gt;&lt;/strong&gt; to cut what is eating your limit.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Run &lt;code&gt;/storage&lt;/code&gt;&lt;/strong&gt; to get your disk space back, after you commit your changes.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Everything here comes from the Claude Code team&amp;rsquo;s update of November 10, 2026. The examples are my own, to make each feature easier to picture.&lt;/p&gt;
+&lt;p&gt;If you want to run Claude Code without a subscription, I covered that in &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/post/claude-code-free-vs-code-ollama-qwen/&#34; &gt;Claude Code For Free in VS Code&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Which update are you going to try first? Tell me in the comments on the video.&lt;/p&gt;
+&lt;p&gt;Thanks for reading, and see you in the next one.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Claude Code For Free in VS Code: Full Setup Guide with Ollama &#43; Qwen 3.8</title>
         <link>https://thecodestreet.dev/post/claude-code-free-vs-code-ollama-qwen/</link>
         <pubDate>Fri, 30 Oct 2026 10:00:00 +0530</pubDate>

@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="stylesheet" href="/css/custom.css"><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Everything in the November 2026 Claude Code update, explained simply: the new Fable 5.2 model and the Pro trial, automatic cloud environment setup, /storage, the /usage fix, Ultrathink, /auto-mode-setup and ten smaller changes.">
+<meta name="keywords" content="claude code update, claude code new update, claude fable 5.2, fable 5.2, claude code new features, claude code ultrathink, claude code usage limit, claude code auto mode setup"><title>Claude Code New Update: Fable 5.2, Ultrathink &amp; 15&#43; Features Explained</title>
+
+<link rel='canonical' href='https://thecodestreet.dev/post/claude-code-update-fable-5-2/'>
+
+<link rel="stylesheet" href="/scss/style.min.86afb6925d63f7c383f64abfa5b01183a2ad21c91d72cb626559e001e899e65c.css"><meta property='og:title' content="Claude Code New Update: Fable 5.2, Ultrathink & 15+ Features Explained">
+<meta property='og:description' content="Everything in the November 2026 Claude Code update, explained simply: the new Fable 5.2 model and the Pro trial, automatic cloud environment setup, /storage, the /usage fix, Ultrathink, /auto-mode-setup and ten smaller changes.">
+<meta property='og:url' content='https://thecodestreet.dev/post/claude-code-update-fable-5-2/'>
+<meta property='og:site_name' content='The Code Street'>
+<meta property='og:type' content='article'>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><meta property='article:section' content='Post' /><meta property='article:tag' content='Claude Code' /><meta property='article:tag' content='Fable 5.2' /><meta property='article:tag' content='Claude' /><meta property='article:tag' content='Anthropic' /><meta property='article:tag' content='Ultrathink' /><meta property='article:tag' content='AI Coding Assistant' /><meta property='article:published_time' content='2026-11-10T21:30:00&#43;05:30'/><meta property='article:modified_time' content='2026-11-10T21:30:00&#43;05:30'/><meta property='og:image' content='https://thecodestreet.dev/post/claude-code-update-fable-5-2/cover.png' />
+<meta name="twitter:title" content="Claude Code New Update: Fable 5.2, Ultrathink & 15+ Features Explained">
+<meta name="twitter:description" content="Everything in the November 2026 Claude Code update, explained simply: the new Fable 5.2 model and the Pro trial, automatic cloud environment setup, /storage, the /usage fix, Ultrathink, /auto-mode-setup and ten smaller changes."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://thecodestreet.dev/post/claude-code-update-fable-5-2/cover.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EVB34BL08"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-7EVB34BL08');
+        }
+      </script><link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","author":{"@type":"Person","name":"Rajiv Lochan Sharma","url":"https://thecodestreet.dev/about/"},"dateModified":"2026-11-10T21:30:00+05:30","datePublished":"2026-11-10T21:30:00+05:30","description":"Everything in the November 2026 Claude Code update, explained simply: the new Fable 5.2 model and the Pro trial, automatic cloud environment setup, /storage, the /usage fix, Ultrathink, /auto-mode-setup and ten smaller changes.","headline":"Claude Code New Update: Fable 5.2, Ultrathink \u0026 15+ Features Explained","image":"https://thecodestreet.dev/post/claude-code-update-fable-5-2/cover.png","mainEntityOfPage":"https://thecodestreet.dev/post/claude-code-update-fable-5-2/","publisher":{"@type":"Organization","logo":"https://thecodestreet.dev/img/logo_hu_3a37d9dbae6062.webp","name":"The Code Street","sameAs":["https://www.youtube.com/@TheCodeStreet","https://github.com/rajivcodelab","https://www.linkedin.com/in/rjvranjan80","https://facebook.com/thecodestreet"],"url":"https://thecodestreet.dev/"}},{"@type":"VideoObject","contentUrl":"https://www.youtube.com/watch?v=nOX1v1cTq_0","description":"Everything in the November 2026 Claude Code update, explained simply: the new Fable 5.2 model and the Pro trial, automatic cloud environment setup, /storage, the /usage fix, Ultrathink, /auto-mode-setup and ten smaller changes.","embedUrl":"https://www.youtube.com/embed/nOX1v1cTq_0","name":"Claude Code New Update: Fable 5.2, Ultrathink \u0026 15+ Features Explained","thumbnailUrl":"https://i.ytimg.com/vi/nOX1v1cTq_0/hqdefault.jpg","uploadDate":"2026-11-10"}]}
+</script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+
+        <a class="cs-skip" href="#content">Skip to content</a>
+        <header class="cs-header" id="cs-header">
+    <div class="cs-header__inner">
+        <a class="cs-brand" href="/" aria-label="The Code Street home"><img src="/img/logo_hu_2cd295f811d27b71.png" width="96" height="96" alt="">
+            <span>The <em>Code</em> Street</span>
+        </a>
+
+        <nav class="cs-nav" id="cs-nav" aria-label="Main">
+            <ul>
+                <li>
+                    <a class="cs-nav__link is-active" href="/post/" aria-current="page">Tutorials</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/categories/">Topics</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/videos/">Videos</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/projects/">Projects</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="https://shop.thecodestreet.dev/" target="_blank" rel="noopener">Shop<svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/about/">About</a>
+                </li>
+            </ul>
+            <a class="cs-btn cs-btn--youtube cs-nav__cta" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg><span>Subscribe</span>
+            </a>
+        </nav>
+
+        <div class="cs-header__actions">
+            <a class="cs-iconbtn" href="/search/" aria-label="Search tutorials"><svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></a>
+            <button class="cs-iconbtn cs-nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="cs-nav">
+                <span class="cs-nav-toggle__open"><svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></span>
+                <span class="cs-nav-toggle__close"><svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+            </button>
+        </div>
+    </div>
+    <div class="cs-progress" aria-hidden="true"><span></span></div>
+</header>
+
+        <div class="cs-shell ">
+            <main id="content" class="main cs-main">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/claude-code-update-fable-5-2/">
+                <img src="/post/claude-code-update-fable-5-2/cover_hu_775cb9bae0bc213c.png"
+                        srcset="/post/claude-code-update-fable-5-2/cover_hu_775cb9bae0bc213c.png 800w, /post/claude-code-update-fable-5-2/cover_hu_26e8950ea3215a59.png 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post Claude Code New Update: Fable 5.2, Ultrathink &amp; 15&#43; Features Explained" />
+                
+            </a>
+        </div>
+    
+
+    
+<div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/ai-coding/" >
+                AI Coding
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h1 class="article-title">
+            <a href="/post/claude-code-update-fable-5-2/">Claude Code New Update: Fable 5.2, Ultrathink &amp; 15&#43; Features Explained</a>
+        </h1>
+
+        
+        <p class="article-subtitle">
+            Everything in the November 2026 Claude Code update, explained simply: the new Fable 5.2 model and the Pro trial, automatic cloud environment setup, /storage, the /usage fix, Ultrathink, /auto-mode-setup and ten smaller changes.
+        </p>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 10, 2026</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    8 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Claude Code just got a new model, a way to try that model on the Pro plan this week, and a command that shows what is eating your usage limit and then fixes it for you.</p>
+<p>Those are three of the changes. This release has more than fifteen, and a few of them will change how you work every day.</p>
+<p>In this post I go through every one of them in plain language, with an example for each. It is the written version of my video, with all the commands and prompts in one place so you can copy them.</p>
+<h2 id="-watch-the-video">🎥 Watch the Video
+</h2><div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/nOX1v1cTq_0" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p>👉 <strong><a class="link" href="https://youtu.be/nOX1v1cTq_0"  target="_blank" rel="noopener"
+    >Watch on YouTube: Claude Code New Update</a></strong></p>
+<hr>
+<h2 id="quick-reference">Quick Reference
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>What</th>
+          <th>How to use it</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Switch to Fable 5.2</td>
+          <td><code>/model claude-fable-5-2</code> (needs v2.1.321 or later)</td>
+      </tr>
+      <tr>
+          <td>See and fix what is using your plan</td>
+          <td><code>/usage</code>, then press <code>f</code></td>
+      </tr>
+      <tr>
+          <td>Free up disk space</td>
+          <td><code>/storage</code> in the desktop app</td>
+      </tr>
+      <tr>
+          <td>Think harder for one turn</td>
+          <td>Put <code>ultrathink</code> in your message</td>
+      </tr>
+      <tr>
+          <td>Stop auto mode blocking your own repos</td>
+          <td><code>/auto-mode-setup</code> in the terminal</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="fable-52-and-the-pro-trial">Fable 5.2 and the Pro Trial
+</h2><p>Fable 5.2 is out. It generates output up to <strong>30% faster</strong> than Fable 5.1.</p>
+<p>The Claude Code team is honest about where it fits. Fable is a great model for big, open-ended tasks. For most everyday coding, they still recommend starting with <strong>Opus 5.5</strong>.</p>
+<p>A simple way to decide:</p>
+<ul>
+<li>&ldquo;Fix this bug in my login screen&rdquo; → stay on Opus 5.5.</li>
+<li>&ldquo;Plan and build the whole offline sync system for my app&rdquo; → this is where Fable 5.2 fits.</li>
+</ul>
+<p>To switch, run:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/model claude-fable-5-2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>You need Claude Code <strong>v2.1.321 or later</strong>.</p>
+<h3 id="try-fable-on-pro-this-week">Try Fable on Pro this week
+</h3><p>On <strong>Pro</strong> and <strong>Team Standard</strong>, Fable is included for up to <strong>50% of your weekly limit through November 16</strong>. After that, Fable uses usage credits, if you have turned them on.</p>
+<p>There may also be a Fable reset waiting for you. If you were a paid subscriber before November 9 at 10:00 AM PT, check <strong>Settings &gt; Usage</strong> on web or desktop. The deadline to use it depends on your plan:</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Plan</th>
+          <th>Use the Fable reset by</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Pro, Team Standard</td>
+          <td>November 16, 2026</td>
+      </tr>
+      <tr>
+          <td>Max, Ultra, Team Premium</td>
+          <td>March 8, 2027</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="claude-sets-up-your-cloud-environment">Claude Sets Up Your Cloud Environment
+</h2><p>A cloud session means Claude works on your code on Anthropic&rsquo;s servers, not on your laptop. You can start a task from any device and it keeps going in the background.</p>
+<p>The annoying part was the setup. Dependencies, network access and API keys were all your job.</p>
+<p>On <strong>Pro, Max and Ultra</strong>, Claude can now set up the cloud environment for you. It tells you when the session is missing a dependency, network access or an API key, and shows you the changes to approve.</p>
+<p><strong>Example:</strong> you open your React Native project in a cloud session and ask Claude to run the tests. The tests need a package that is not installed, and they need your Firebase API key. Claude now flags both and shows you the setup changes, so the session does not just fail.</p>
+<p>Two details matter here:</p>
+<ul>
+<li><strong>API keys go into a form</strong>, so Claude does not see the key itself.</li>
+<li><strong>The setup is saved</strong>, so your next session starts with the same environment.</li>
+</ul>
+<h2 id="free-up-disk-space-with-storage">Free Up Disk Space with /storage
+</h2><p>Old sessions in the desktop app leave their worktrees on your computer. A worktree is a separate working copy of your project, and after a few weeks of daily use they add up.</p>
+<p>Type <code>/storage</code>, or open Settings, to see how much space your sessions and worktrees take. From there you can clear the worktrees you have not used in a while. Your sessions, conversations and branches all stay. You can remove inactive tasks from the same place.</p>
+<blockquote>
+<p>⚠️ <strong>Commit first.</strong> Uncommitted changes are deleted along with the worktree.</p></blockquote>
+<h2 id="see-and-fix-what-is-using-your-plan">See and Fix What Is Using Your Plan
+</h2><p>Running <code>/usage</code> in the terminal already showed what was using most of your plan. It now also shows how to fix it.</p>
+<p>Press <code>f</code>, and Claude Code sends a prompt by itself to fix whatever it can.</p>
+<p><strong>Example:</strong> <code>/usage</code> shows that one very long conversation is burning through most of your limit. You press <code>f</code> and Claude takes care of it, so you do not have to work out the fix yourself.</p>
+<h3 id="idle-conversations-are-compacted-automatically">Idle conversations are compacted automatically
+</h3><p>There is a second saving that happens on its own. If a long conversation sits idle, Claude Code now compacts it, which means it replaces the conversation with a summary, before the cache expires. That takes about one hour.</p>
+<p>Why it matters: resuming an uncached conversation means reprocessing your full context, and that costs usage. So if you go for lunch in the middle of a long session, Claude works from the summary when you come back.</p>
+<p>You will see a banner when this happens, and you can turn it off in <code>/config</code>. It also works in VS Code and the desktop app&rsquo;s Code tab for conversations over 200K tokens.</p>
+<h2 id="ultrathink-is-back">Ultrathink Is Back
+</h2><p>Claude Code has effort levels, which control how hard Claude thinks before it answers. Put the word <code>ultrathink</code> in your message and Claude uses the <strong>xhigh</strong> effort level for that one turn only. Your session&rsquo;s effort setting does not change.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ultrathink about why this migration deadlocks when two workers run it at once
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Do not put it in every message. The team says you really do not need it for most tasks. It is useful when Claude is properly stuck.</p>
+<h2 id="teach-auto-mode-about-your-setup">Teach Auto Mode About Your Setup
+</h2><p>Auto mode lets Claude work without asking permission at every step. By default it trusts only two things: your current working directory and that repo&rsquo;s own remotes.</p>
+<p>That is safe, but it means Claude gets blocked when it tries to push or send anything outside of that, even to other repos and services you own.</p>
+<p><strong>Example:</strong> your mobile app lives in one repo and your backend API in another. Claude finishes a change and tries to push to the backend repo. It gets blocked, even though both repos are yours.</p>
+<p>The fix is one command in the terminal:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/auto-mode-setup
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>It looks at your project and at the commands Claude ran in your recent sessions there. Then it drafts a list of the repos, domains and cloud storage you trust. Once you accept the list, it is saved to <code>~/.claude/settings.json</code>.</p>
+<h2 id="10-smaller-updates">10 Smaller Updates
+</h2><ol>
+<li><strong>Long conversations respond sooner.</strong> Claude Code used to send your whole conversation with every request. For most users it now sends only the new messages.</li>
+<li><strong>Switching models is smoother.</strong> If your conversation is too long for the new model, the model you were on summarizes it before you switch.</li>
+<li><strong>Queued messages survive a restart.</strong> If the desktop app quits, updates or crashes, the messages you queued in a local session come back when you reopen it.</li>
+<li><strong>Cloud sessions without a repository.</strong> There is a new &ldquo;No repository&rdquo; option on Anthropic-hosted environments, for when you do not need a repo.</li>
+<li><strong>Cloud sessions start even if a setup script fails.</strong> A failing script used to stop the session from starting.</li>
+<li><strong>Effort level for cloud routines.</strong> The model picker now has an effort level when you create or edit a routine that runs in the cloud.</li>
+<li><strong>A new safety setting.</strong> Turn on <code>permissions.blockWritesOutsideWorkingDirectories</code> and the Write, Edit and NotebookEdit tools refuse paths outside your working directories in every permission mode, apart from some of Claude Code&rsquo;s own files. It does not limit shell commands, MCP tools or hooks.</li>
+<li><strong>Fork subagents are on by default</strong> in the desktop app and VS Code. A fork inherits your full conversation, so you do not have to explain everything again.</li>
+<li><strong>Background subagents use less of your limit.</strong> In Anthropic&rsquo;s test on Pro and Max, sessions with background subagents used about 5% less.</li>
+<li><strong>Claude Code no longer installs the IDE extension for you.</strong> To install or update it, use <code>/ide</code> from an outside terminal, or your editor&rsquo;s extensions view.</li>
+</ol>
+<p>The Claude Code team also published how they do code review. Claude reviews most of their changes before a person is asked to look, and the post explains how to set up the same thing.</p>
+<h2 id="two-prompts-from-anthropics-engineers">Two Prompts from Anthropic&rsquo;s Engineers
+</h2><p>Both of these come from Anthropic&rsquo;s own engineering team.</p>
+<p><strong>When Claude keeps stopping to ask you questions</strong>, give it the go-ahead upfront:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Just build and use your best judgment. Make any call that&#39;s reversible yourself, and check in later with the calls you made.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The engineer who shared it said it unblocked a large team of agents they had running.</p>
+<p><strong>When you want to test a design</strong>, skip the debate about whether it is flexible enough and have Claude build on it:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">In a separate worktree, do a throwaway build of [a feature we might add later] on top of this design. Don&#39;t polish it, just tell me where the design got in the way.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Example:</strong> you have just designed your app&rsquo;s data layer. Ask for a throwaway build of offline mode on top of it. You see right away where the design gets in the way, and then you delete all of it.</p>
+<h2 id="takeaways">Takeaways
+</h2><p>If you remember only three things:</p>
+<ol>
+<li><strong>Try Fable 5.2 on Pro before November 16.</strong> Use it for big, open-ended tasks and keep Opus 5.5 for everyday coding.</li>
+<li><strong>Run <code>/usage</code> and press <code>f</code></strong> to cut what is eating your limit.</li>
+<li><strong>Run <code>/storage</code></strong> to get your disk space back, after you commit your changes.</li>
+</ol>
+<p>Everything here comes from the Claude Code team&rsquo;s update of November 10, 2026. The examples are my own, to make each feature easier to picture.</p>
+<p>If you want to run Claude Code without a subscription, I covered that in <a class="link" href="/post/claude-code-free-vs-code-ollama-qwen/" >Claude Code For Free in VS Code</a>.</p>
+<p>Which update are you going to try first? Tell me in the comments on the video.</p>
+<p>Thanks for reading, and see you in the next one.</p>
+
+</section>
+
+
+    
+        <aside class="cs-post-cta">
+    
+    <div class="cs-post-cta-text">
+        <h2>Enjoyed this tutorial?</h2>
+        <p>
+            I publish step-by-step AI videos on YouTube: AI agents, local LLMs and AI coding tools.
+            Subscribe so you don't miss the next one, and join 4,900&#43; other developers.
+        </p>
+        <div class="cs-hero-actions">
+            
+<a class="cs-btn cs-btn--youtube" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    <span>Subscribe on YouTube</span>
+</a>
+
+            <a class="cs-btn cs-btn--ghost" href="/videos/">More videos</a>
+        </div>
+    </div>
+</aside>
+
+    
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/claude-code/">Claude Code</a>
+        
+            <a href="/tags/fable-5.2/">Fable 5.2</a>
+        
+            <a href="/tags/claude/">Claude</a>
+        
+            <a href="/tags/anthropic/">Anthropic</a>
+        
+            <a href="/tags/ultrathink/">Ultrathink</a>
+        
+            <a href="/tags/ai-coding-assistant/">AI Coding Assistant</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+<aside class="cs-related" aria-labelledby="cs-related-title">
+    <h2 id="cs-related-title">Keep learning</h2>
+    <div class="cs-grid cs-grid--related">
+        <article class="cs-card cs-card--default">
+    <a class="cs-card__media" href="/post/claude-code-free-vs-code-ollama-qwen/" tabindex="-1" aria-hidden="true"><img src="/post/claude-code-free-vs-code-ollama-qwen/cover_hu_6b348ea12ce5e16.jpg"
+                srcset="/post/claude-code-free-vs-code-ollama-qwen/cover_hu_6b348ea12ce5e16.jpg 640w, /post/claude-code-free-vs-code-ollama-qwen/cover.jpg 1280w"
+                sizes="(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw" width="640" height="360"
+                loading="lazy" alt="">
+    </a>
+    <div class="cs-card__body">
+        <div class="cs-tags"><a class="cs-tag" href="/categories/local-llms/">Local LLMs</a><a class="cs-tag" href="/categories/ai-coding/">AI Coding</a>
+        </div>
+        <h3 class="cs-card__title"><a href="/post/claude-code-free-vs-code-ollama-qwen/">Claude Code For Free in VS Code: Full Setup Guide with Ollama &#43; Qwen 3.8</a></h3><p class="cs-card__desc">Run Claude Code for free inside VS Code with no Claude login and no API bill. Install Ollama, download Qwen 3.8, set up the Claude Code extension with two small config changes, and build a full Space Shooter game from one prompt.</p>
+        <div class="cs-meta">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg><time datetime="2026-10-30">Oct 30, 2026</time></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+6 min read</span>
+        </div>
+    </div>
+</article>
+
+        <article class="cs-card cs-card--default">
+    <a class="cs-card__media" href="/post/claude-code-for-free-ollama-qwen/" tabindex="-1" aria-hidden="true"><img src="/post/claude-code-for-free-ollama-qwen/cover_hu_953d648817466eea.jpg"
+                srcset="/post/claude-code-for-free-ollama-qwen/cover_hu_953d648817466eea.jpg 640w, /post/claude-code-for-free-ollama-qwen/cover.jpg 1280w"
+                sizes="(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw" width="640" height="360"
+                loading="lazy" alt="">
+    </a>
+    <div class="cs-card__body">
+        <div class="cs-tags"><a class="cs-tag" href="/categories/local-llms/">Local LLMs</a><a class="cs-tag" href="/categories/ai-coding/">AI Coding</a>
+        </div>
+        <h3 class="cs-card__title"><a href="/post/claude-code-for-free-ollama-qwen/">Claude Code For Free: Local Setup with Ollama &#43; Qwen 3.8</a></h3><p class="cs-card__desc">Run Claude Code for free on your own PC. No API key, no subscription, no bill. A step-by-step local setup with Ollama and Qwen 3.8, plus the exact settings file and prompt I used.</p>
+        <div class="cs-meta">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg><time datetime="2026-10-28">Oct 28, 2026</time></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+6 min read</span>
+        </div>
+    </div>
+</article>
+
+        <article class="cs-card cs-card--default">
+    <a class="cs-card__media" href="/post/rea-reverse-engineer-anything-claude-code/" tabindex="-1" aria-hidden="true"><img src="/post/rea-reverse-engineer-anything-claude-code/cover_hu_cc0ede662ad01fef.jpg"
+                srcset="/post/rea-reverse-engineer-anything-claude-code/cover_hu_cc0ede662ad01fef.jpg 640w, /post/rea-reverse-engineer-anything-claude-code/cover.jpg 1280w"
+                sizes="(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw" width="640" height="360"
+                loading="lazy" alt="">
+    </a>
+    <div class="cs-card__body">
+        <div class="cs-tags"><a class="cs-tag" href="/categories/ai-coding/">AI Coding</a><a class="cs-tag" href="/categories/ai-agents/">AI Agents</a>
+        </div>
+        <h3 class="cs-card__title"><a href="/post/rea-reverse-engineer-anything-claude-code/">REA Tutorial: Reverse Engineer Any App with Claude Code (Setup, Fixes &amp; Honest Review)</a></h3><p class="cs-card__desc">REA (Reverse Engineer Anything) lets Claude Code look inside installed apps with no source code. Here&#39;s what it really does, how to set it up on Windows, the errors I hit and how to fix them, and whether it lives up to the hype.</p>
+        <div class="cs-meta">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg><time datetime="2026-10-20">Oct 20, 2026</time></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+7 min read</span>
+        </div>
+    </div>
+</article>
+
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "code-street" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#-watch-the-video">🎥 Watch the Video</a></li>
+    <li><a href="#quick-reference">Quick Reference</a></li>
+    <li><a href="#fable-52-and-the-pro-trial">Fable 5.2 and the Pro Trial</a>
+      <ol>
+        <li><a href="#try-fable-on-pro-this-week">Try Fable on Pro this week</a></li>
+      </ol>
+    </li>
+    <li><a href="#claude-sets-up-your-cloud-environment">Claude Sets Up Your Cloud Environment</a></li>
+    <li><a href="#free-up-disk-space-with-storage">Free Up Disk Space with /storage</a></li>
+    <li><a href="#see-and-fix-what-is-using-your-plan">See and Fix What Is Using Your Plan</a>
+      <ol>
+        <li><a href="#idle-conversations-are-compacted-automatically">Idle conversations are compacted automatically</a></li>
+      </ol>
+    </li>
+    <li><a href="#ultrathink-is-back">Ultrathink Is Back</a></li>
+    <li><a href="#teach-auto-mode-about-your-setup">Teach Auto Mode About Your Setup</a></li>
+    <li><a href="#10-smaller-updates">10 Smaller Updates</a></li>
+    <li><a href="#two-prompts-from-anthropics-engineers">Two Prompts from Anthropic&rsquo;s Engineers</a></li>
+    <li><a href="#takeaways">Takeaways</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+            
+                <section class="widget cs-youtube-widget">
+    <div class="widget-icon">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    </div>
+    <h2 class="widget-title section-title">Watch on YouTube</h2>
+
+    <div class="cs-youtube-widget-card">
+        <p>
+            Video walkthroughs of every tutorial, with <strong>4,900&#43;</strong> developers subscribed.
+        </p>
+        
+<a class="cs-btn cs-btn--youtube" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    <span>Subscribe on YouTube</span>
+</a>
+
+    </div>
+</section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <footer class="cs-footer">
+    <div class="cs-container cs-footer__grid">
+        <div class="cs-footer__brand">
+            <a class="cs-brand" href="/" aria-label="The Code Street home"><img src="/img/logo_hu_2cd295f811d27b71.png" width="96" height="96" alt="" loading="lazy">
+                <span>The <em>Code</em> Street</span>
+            </a>
+            <p>Hands-on AI tutorials for developers: AI agents, local LLMs and AI coding tools, through blogs and videos.</p>
+            <ul class="cs-social">
+                <li>
+                    <a href="https://facebook.com/thecodestreet" target="_blank" rel="noopener me" aria-label="Facebook" title="Facebook"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg></a>
+                </li>
+                <li>
+                    <a href="https://github.com/rajivcodelab" target="_blank" rel="noopener me" aria-label="GitHub" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+</a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/in/rjvranjan80" target="_blank" rel="noopener me" aria-label="LinkedIn" title="LinkedIn"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg></a>
+                </li>
+                <li>
+                    <a href="/index.xml" target="_blank" rel="noopener me" aria-label="RSS" title="RSS"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+</a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/@TheCodeStreet" target="_blank" rel="noopener me" aria-label="YouTube" title="YouTube"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg></a>
+                </li>
+            </ul>
+        </div>
+
+        <nav class="cs-footer__col" aria-label="Topics">
+            <p class="cs-footer__title">Topics</p>
+            <ul>
+                <li><a href="/categories/semantic-kernel/">Semantic Kernel</a></li>
+                <li><a href="/categories/ai-coding/">AI Coding</a></li>
+                <li><a href="/categories/local-llms/">Local LLMs</a></li>
+                <li><a href="/categories/ai-agents/">AI Agents</a></li>
+                <li><a href="/categories/genai/">GenAI</a></li>
+                <li><a href="/categories/microsoft-agent-framework/">Microsoft Agent Framework</a></li>
+                <li><a href="/categories/">All topics</a></li>
+            </ul>
+        </nav>
+
+        <nav class="cs-footer__col" aria-label="Learn">
+            <p class="cs-footer__title">Learn</p>
+            <ul>
+                <li><a href="/post/">All tutorials</a></li>
+                <li><a href="/videos/">Videos</a></li>
+                <li><a href="/projects/">Source code &amp; projects</a></li>
+                <li><a href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">YouTube channel</a></li>
+                <li><a href="/index.xml">RSS feed</a></li>
+            </ul>
+        </nav>
+
+        <nav class="cs-footer__col" aria-label="About">
+            <p class="cs-footer__title">The Code Street</p>
+            <ul>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/terms-conditions/">Terms</a></li>
+                <li><a href="/privacy-policy/">Privacy</a></li>
+                <li><a href="/disclaimer/">Disclaimer</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="cs-container cs-footer__bottom">
+        <span>&copy; 2024 &ndash; 2026 The Code Street</span>
+        <span>Made for developers learning AI.</span>
+    </div>
+</footer>
+
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.64e2e29c7b1bd8b3ca8af9b66224401a6b239f453fa4363850ad78c31899208a.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script>
+    
+    document.addEventListener('click', function (e) {
+        var facade = e.target.closest('.cs-video-facade');
+        if (!facade) return;
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + facade.dataset.videoId + '?autoplay=1&rel=0';
+        iframe.title = facade.getAttribute('aria-label');
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.className = 'cs-video-iframe';
+        facade.replaceWith(iframe);
+    });
+
+    
+    (function () {
+        var header = document.getElementById('cs-header');
+        if (!header) return;
+
+        var toggle = header.querySelector('.cs-nav-toggle');
+        function setMenu(open) {
+            header.classList.toggle('is-open', open);
+            if (toggle) toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        if (toggle) {
+            toggle.addEventListener('click', function () { setMenu(!header.classList.contains('is-open')); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+            document.addEventListener('click', function (e) { if (!header.contains(e.target)) setMenu(false); });
+            header.querySelector('.cs-nav').addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+        }
+
+        var bar = header.querySelector('.cs-progress span');
+        var article = document.querySelector('.article-content');
+        var ticking = false;
+        function update() {
+            ticking = false;
+            header.classList.toggle('is-scrolled', window.scrollY > 4);
+            if (bar && article) {
+                var top = article.getBoundingClientRect().top + window.scrollY;
+                var total = article.offsetHeight - window.innerHeight * 0.5;
+                var done = total > 0 ? (window.scrollY - top + header.offsetHeight) / total : 0;
+                bar.style.transform = 'scaleX(' + Math.max(0, Math.min(1, done)) + ')';
+            }
+        }
+        function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+        update();
+    })();
+</script>
+
+    </body>
+</html>

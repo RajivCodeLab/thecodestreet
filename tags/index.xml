@@ -7,7 +7,55 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>The Code Street</copyright>
-        <lastBuildDate>Mon, 09 Nov 2026 18:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 10 Nov 2026 21:30:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AI Coding Assistant</title>
+        <link>https://thecodestreet.dev/tags/ai-coding-assistant/</link>
+        <pubDate>Tue, 10 Nov 2026 21:30:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/ai-coding-assistant/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Anthropic</title>
+        <link>https://thecodestreet.dev/tags/anthropic/</link>
+        <pubDate>Tue, 10 Nov 2026 21:30:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/anthropic/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Claude</title>
+        <link>https://thecodestreet.dev/tags/claude/</link>
+        <pubDate>Tue, 10 Nov 2026 21:30:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/claude/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Claude Code</title>
+        <link>https://thecodestreet.dev/tags/claude-code/</link>
+        <pubDate>Tue, 10 Nov 2026 21:30:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/claude-code/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Fable 5.2</title>
+        <link>https://thecodestreet.dev/tags/fable-5.2/</link>
+        <pubDate>Tue, 10 Nov 2026 21:30:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/fable-5.2/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Ultrathink</title>
+        <link>https://thecodestreet.dev/tags/ultrathink/</link>
+        <pubDate>Tue, 10 Nov 2026 21:30:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/ultrathink/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>AI Agents</title>
         <link>https://thecodestreet.dev/tags/ai-agents/</link>
         <pubDate>Mon, 09 Nov 2026 18:00:00 +0530</pubDate>
@@ -85,22 +133,6 @@
         <pubDate>Wed, 04 Nov 2026 21:00:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/small-language-models/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>AI Coding Assistant</title>
-        <link>https://thecodestreet.dev/tags/ai-coding-assistant/</link>
-        <pubDate>Fri, 30 Oct 2026 10:00:00 +0530</pubDate>
-        
-        <guid>https://thecodestreet.dev/tags/ai-coding-assistant/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Claude Code</title>
-        <link>https://thecodestreet.dev/tags/claude-code/</link>
-        <pubDate>Fri, 30 Oct 2026 10:00:00 +0530</pubDate>
-        
-        <guid>https://thecodestreet.dev/tags/claude-code/</guid>
         <description></description>
         </item>
         <item>
