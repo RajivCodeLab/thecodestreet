@@ -13,7 +13,7 @@
         <pubDate>Wed, 11 Nov 2026 20:00:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/post/claude-skills-vs-projects/</guid>
-        <description>&lt;img src="https://thecodestreet.dev/cover.png" alt="Featured image of post Claude Skills vs Projects: Which One Do You Actually Need?" /&gt;&lt;p&gt;You&amp;rsquo;ve probably seen people talking about Claude Skills. And you might be thinking: wait, don&amp;rsquo;t I already have Projects for this?&lt;/p&gt;
+        <description>&lt;img src="https://thecodestreet.dev/post/claude-skills-vs-projects/cover.jpg" alt="Featured image of post Claude Skills vs Projects: Which One Do You Actually Need?" /&gt;&lt;p&gt;You&amp;rsquo;ve probably seen people talking about Claude Skills. And you might be thinking: wait, don&amp;rsquo;t I already have Projects for this?&lt;/p&gt;
 &lt;p&gt;That&amp;rsquo;s a fair question. In this post I explain what Claude Skills are, how Claude decides when to use one, and exactly when you should use a Skill instead of a Project. It is the written version of my video, so you can come back to it any time.&lt;/p&gt;
 &lt;h2 id=&#34;-watch-the-video&#34;&gt;🎥 Watch the Video
 &lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
@@ -173,7 +173,7 @@
 &lt;li&gt;&lt;strong&gt;Claude only opens a Skill when your request matches its description&lt;/strong&gt;, so you can keep many ready.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Project = WHAT, Skill = HOW.&lt;/strong&gt; Background goes in a Project, repeat processes go in a Skill.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;If you like running AI tools on your own machine, I also covered &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/post/claude-code-free-vs-code/&#34; &gt;Claude Code For Free in VS Code&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you like running AI tools on your own machine, I also covered &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/post/claude-code-free-vs-code-ollama-qwen/&#34; &gt;Claude Code For Free in VS Code&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;What task do you repeat most with Claude? Tell me in the comments on the video. That one might be your first Skill.&lt;/p&gt;
 &lt;p&gt;Thanks for reading, and see you in the next one.&lt;/p&gt;
 </description>
