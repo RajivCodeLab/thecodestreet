@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>SKILL.md on The Code Street</title>
+        <link>https://thecodestreet.dev/tags/skill.md/</link>
+        <description>Recent content in SKILL.md on The Code Street</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>The Code Street</copyright>
+        <lastBuildDate>Wed, 11 Nov 2026 20:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/skill.md/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Claude Skills vs Projects: Which One Do You Actually Need?</title>
+        <link>https://thecodestreet.dev/post/claude-skills-vs-projects/</link>
+        <pubDate>Wed, 11 Nov 2026 20:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/post/claude-skills-vs-projects/</guid>
+        <description>&lt;img src="https://thecodestreet.dev/cover.png" alt="Featured image of post Claude Skills vs Projects: Which One Do You Actually Need?" /&gt;&lt;p&gt;You&amp;rsquo;ve probably seen people talking about Claude Skills. And you might be thinking: wait, don&amp;rsquo;t I already have Projects for this?&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s a fair question. In this post I explain what Claude Skills are, how Claude decides when to use one, and exactly when you should use a Skill instead of a Project. It is the written version of my video, so you can come back to it any time.&lt;/p&gt;
+&lt;h2 id=&#34;-watch-the-video&#34;&gt;🎥 Watch the Video
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/_FxutHSIbto&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;👉 &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/_FxutHSIbto&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch on YouTube: Claude Skills vs Projects&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;quick-reference&#34;&gt;Quick Reference
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;Project&lt;/th&gt;
+          &lt;th&gt;Skill&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Answers&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;WHAT&lt;/strong&gt; Claude should know&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;HOW&lt;/strong&gt; Claude should do a task&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Holds&lt;/td&gt;
+          &lt;td&gt;Files, notes, custom instructions&lt;/td&gt;
+          &lt;td&gt;Step-by-step instructions, optional templates or scripts&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Tied to&lt;/td&gt;
+          &lt;td&gt;One topic or ongoing piece of work&lt;/td&gt;
+          &lt;td&gt;One kind of job, across any topic&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Loaded&lt;/td&gt;
+          &lt;td&gt;In every chat inside the Project&lt;/td&gt;
+          &lt;td&gt;Only when your request matches it&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;what-are-claude-skills&#34;&gt;What Are Claude Skills?
+&lt;/h2&gt;&lt;p&gt;A Skill is a set of instructions for one specific kind of job. You write it once, and Claude can use it again whenever that job comes up.&lt;/p&gt;
+&lt;p&gt;Think of it like a recipe card. The card doesn&amp;rsquo;t cook the meal for you. It tells the cook exactly what to do, step by step, so the meal comes out the same way every time.&lt;/p&gt;
+&lt;h2 id=&#34;what-goes-inside-a-skill&#34;&gt;What Goes Inside a Skill
+&lt;/h2&gt;&lt;p&gt;A Skill lives in a folder. The main file in that folder is called &lt;code&gt;SKILL.md&lt;/code&gt;, and it has two parts:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;At the top:&lt;/strong&gt; the Skill&amp;rsquo;s name and a short description of what it is for.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Below that:&lt;/strong&gt; the full instructions.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Some Skills also include extra files, like a template or a script.&lt;/p&gt;
+&lt;p&gt;Here is what a simple Skill for writing YouTube titles could look like:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;video-titles/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── SKILL.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── template.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── check.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;And the &lt;code&gt;SKILL.md&lt;/code&gt; file inside it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;name: video-titles
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;description: Write YouTube titles for my videos
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;## Rules
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Keep titles under 60 characters
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Use one of my 3 title styles
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Run the checklist before finishing
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;That small block at the top is what matters most for the next part.&lt;/p&gt;
+&lt;h2 id=&#34;how-claude-picks-the-right-skill&#34;&gt;How Claude Picks the Right Skill
+&lt;/h2&gt;&lt;p&gt;Claude doesn&amp;rsquo;t read every Skill you have every time you start a chat. That would be slow, and it would fill up the conversation for no reason.&lt;/p&gt;
+&lt;p&gt;Instead, it works like this:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Claude looks at the name and short description&lt;/strong&gt; of each Skill.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;When your request matches one&lt;/strong&gt;, Claude opens the full instructions and follows them.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;If nothing matches&lt;/strong&gt;, Claude just carries on as normal.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt; you ask &amp;ldquo;Give me 5 titles for my next video&amp;rdquo;. Claude scans your Skills, sees that &lt;code&gt;video-titles&lt;/code&gt; matches, and only then reads its full rules.&lt;/p&gt;
+&lt;p&gt;This is why you can keep many Skills ready without cluttering your chats. It is also why the description matters so much. A clear description is how Claude knows when to use your Skill.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-a-claude-project&#34;&gt;What Is a Claude Project?
+&lt;/h2&gt;&lt;p&gt;A Project is a workspace for one ongoing piece of work. It holds your background: your files, your notes and your custom instructions. Every chat inside that Project can see all of it.&lt;/p&gt;
+&lt;h2 id=&#34;the-key-difference-what-vs-how&#34;&gt;The Key Difference: WHAT vs HOW
+&lt;/h2&gt;&lt;p&gt;Here&amp;rsquo;s the simple way to remember it:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;A Project is about WHAT Claude should know.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A Skill is about HOW Claude should do a task.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For example, a Project for your YouTube channel might hold your brand guide, your past scripts and notes about your audience. That&amp;rsquo;s the background.&lt;/p&gt;
+&lt;p&gt;A Skill for writing video titles might hold your title rules, the three title styles you like and a checklist Claude runs before it finishes. That&amp;rsquo;s the process.&lt;/p&gt;
+&lt;h2 id=&#34;3-situations-where-a-skill-is-the-better-choice&#34;&gt;3 Situations Where a Skill Is the Better Choice
+&lt;/h2&gt;&lt;h3 id=&#34;1-you-repeat-the-same-process&#34;&gt;1. You repeat the same process
+&lt;/h3&gt;&lt;p&gt;Maybe every time you ask for a video script, you explain the same structure again: a hook, three main points, a call to action. If you&amp;rsquo;re typing that out every time, put it in a Skill.&lt;/p&gt;
+&lt;h3 id=&#34;2-the-same-kind-of-job-comes-up-in-different-topics&#34;&gt;2. The same kind of job comes up in different topics
+&lt;/h3&gt;&lt;p&gt;A Project is tied to one topic. A Skill is tied to one kind of job. So if you write scripts for three different series, one script-writing Skill can help with all three.&lt;/p&gt;
+&lt;h3 id=&#34;3-the-instructions-are-long-but-you-only-need-them-sometimes&#34;&gt;3. The instructions are long, but you only need them sometimes
+&lt;/h3&gt;&lt;p&gt;Long rules don&amp;rsquo;t have to sit in every chat. A Skill loads only when your request calls for it, so your conversations stay clean.&lt;/p&gt;
+&lt;h2 id=&#34;when-not-to-use-a-skill&#34;&gt;When NOT to Use a Skill
+&lt;/h2&gt;&lt;p&gt;Don&amp;rsquo;t turn everything into a Skill.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;One topic over many days?&lt;/strong&gt; If you need all your notes in view while the work goes on, a Project is the right tool.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Just background information?&lt;/strong&gt; Facts about your audience or details about a product belong in a Project. They aren&amp;rsquo;t a step-by-step process.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A good rule: &lt;strong&gt;if it&amp;rsquo;s background, use a Project. If it&amp;rsquo;s a process you repeat, use a Skill.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-simple-test&#34;&gt;The Simple Test
+&lt;/h2&gt;&lt;p&gt;Ask yourself one question:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Am I explaining the same…&lt;/th&gt;
+          &lt;th&gt;Use&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;steps&lt;/strong&gt; over and over?&lt;/td&gt;
+          &lt;td&gt;✅ Skill&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;background&lt;/strong&gt; over and over?&lt;/td&gt;
+          &lt;td&gt;✅ Project&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;how-to-find-your-first-custom-skill&#34;&gt;How to Find Your First Custom Skill
+&lt;/h2&gt;&lt;p&gt;The best Claude skills for you are the ones built around your own repeat work. Look back at your last few chats and find the instructions you keep typing again: a review checklist, a script structure, a formatting rule set. That is your first custom Skill.&lt;/p&gt;
+&lt;h2 id=&#34;takeaways&#34;&gt;Takeaways
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;A Skill is a recipe card.&lt;/strong&gt; One kind of job, written once, used again and again.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Claude only opens a Skill when your request matches its description&lt;/strong&gt;, so you can keep many ready.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Project = WHAT, Skill = HOW.&lt;/strong&gt; Background goes in a Project, repeat processes go in a Skill.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If you like running AI tools on your own machine, I also covered &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/post/claude-code-free-vs-code/&#34; &gt;Claude Code For Free in VS Code&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;What task do you repeat most with Claude? Tell me in the comments on the video. That one might be your first Skill.&lt;/p&gt;
+&lt;p&gt;Thanks for reading, and see you in the next one.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

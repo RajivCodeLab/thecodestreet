@@ -7,18 +7,18 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>The Code Street</copyright>
-        <lastBuildDate>Tue, 10 Nov 2026 21:30:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>AI Coding Assistant</title>
-        <link>https://thecodestreet.dev/tags/ai-coding-assistant/</link>
-        <pubDate>Tue, 10 Nov 2026 21:30:00 +0530</pubDate>
+        <lastBuildDate>Wed, 11 Nov 2026 20:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AI Workflow</title>
+        <link>https://thecodestreet.dev/tags/ai-workflow/</link>
+        <pubDate>Wed, 11 Nov 2026 20:00:00 +0530</pubDate>
         
-        <guid>https://thecodestreet.dev/tags/ai-coding-assistant/</guid>
+        <guid>https://thecodestreet.dev/tags/ai-workflow/</guid>
         <description></description>
         </item>
         <item>
         <title>Anthropic</title>
         <link>https://thecodestreet.dev/tags/anthropic/</link>
-        <pubDate>Tue, 10 Nov 2026 21:30:00 +0530</pubDate>
+        <pubDate>Wed, 11 Nov 2026 20:00:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/anthropic/</guid>
         <description></description>
@@ -26,9 +26,41 @@
         <item>
         <title>Claude</title>
         <link>https://thecodestreet.dev/tags/claude/</link>
-        <pubDate>Tue, 10 Nov 2026 21:30:00 +0530</pubDate>
+        <pubDate>Wed, 11 Nov 2026 20:00:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/claude/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Claude Projects</title>
+        <link>https://thecodestreet.dev/tags/claude-projects/</link>
+        <pubDate>Wed, 11 Nov 2026 20:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/claude-projects/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Claude Skills</title>
+        <link>https://thecodestreet.dev/tags/claude-skills/</link>
+        <pubDate>Wed, 11 Nov 2026 20:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/claude-skills/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>SKILL.md</title>
+        <link>https://thecodestreet.dev/tags/skill.md/</link>
+        <pubDate>Wed, 11 Nov 2026 20:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/skill.md/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>AI Coding Assistant</title>
+        <link>https://thecodestreet.dev/tags/ai-coding-assistant/</link>
+        <pubDate>Tue, 10 Nov 2026 21:30:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/ai-coding-assistant/</guid>
         <description></description>
         </item>
         <item>
