@@ -7,7 +7,260 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>The Code Street</copyright>
-        <lastBuildDate>Tue, 20 Oct 2026 18:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/categories/ai-agents/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 12 Nov 2026 14:45:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/categories/ai-agents/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Don&#39;t Build AI Apps From Scratch. Use This Free Repo Instead</title>
+        <link>https://thecodestreet.dev/post/awesome-llm-apps/</link>
+        <pubDate>Thu, 12 Nov 2026 14:45:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/post/awesome-llm-apps/</guid>
+        <description>&lt;img src="https://thecodestreet.dev/post/awesome-llm-apps/cover.png" alt="Featured image of post Don&#39;t Build AI Apps From Scratch. Use This Free Repo Instead" /&gt;&lt;p&gt;Before you build your next AI app from zero, check whether someone has already built it. There&amp;rsquo;s a good chance they have, and that the code is sitting in one GitHub repo.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Awesome LLM Apps&lt;/strong&gt; by Shubham Saboo has more than a hundred working AI apps in a single repository: agents, voice assistants, agent teams, generative UI, MCP agents and more. It has over 144,000 stars and it&amp;rsquo;s completely free. In the video I go through every section and then run one app on my own computer. This post covers the same ground in written form, with every command you need.&lt;/p&gt;
+&lt;h2 id=&#34;-watch-the-video&#34;&gt;🎥 Watch the Video
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/wN6GbAipbI8&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;👉 &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/wN6GbAipbI8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch on YouTube: Don&amp;rsquo;t Build AI Apps From Scratch&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-awesome-llm-apps-is&#34;&gt;What Awesome LLM Apps Is
+&lt;/h2&gt;&lt;p&gt;Many &amp;ldquo;awesome&amp;rdquo; repos on GitHub are just lists of links. This one is different: &lt;strong&gt;every app lives inside the repo&lt;/strong&gt;. You open a folder and the code is right there.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;License:&lt;/strong&gt; Apache 2.0. You can clone it, change it, use it in your own projects and even build a product on top of it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Models:&lt;/strong&gt; it isn&amp;rsquo;t locked to one AI company. Apps use Claude, GPT, Gemini, DeepSeek, Llama, Qwen and other open models.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Local options:&lt;/strong&gt; some apps run fully on your own machine with Ollama, with no API key at all.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🔗 &lt;strong&gt;Repo:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/Shubhamsaboo/awesome-llm-apps&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;github.com/Shubhamsaboo/awesome-llm-apps&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The README splits everything into 16 sections. Here&amp;rsquo;s what&amp;rsquo;s in each one.&lt;/p&gt;
+&lt;h2 id=&#34;agent-skills&#34;&gt;Agent Skills
+&lt;/h2&gt;&lt;p&gt;These aren&amp;rsquo;t browser apps. They&amp;rsquo;re skills you add to a coding agent like Claude Code, Cursor or Codex, and then use in plain English.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Project Graveyard&lt;/strong&gt; finds the side projects you&amp;rsquo;ve abandoned, explains why each one died, and helps you finish the one worth going back to.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;First Reader&lt;/strong&gt; simulates real readers going through your draft and tells you where they get bored or stop, without rewriting a word.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scope Creep Detector&lt;/strong&gt; checks whether a code change grew bigger than it was meant to be.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Commit Archaeologist&lt;/strong&gt; digs through Git history to explain why a piece of code exists.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dependency Doctor&lt;/strong&gt; flags old, broken or risky packages in your dependency file.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Thinking Out Loud&lt;/strong&gt; turns a messy voice ramble into a clean, short brief.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Self-Improving Agent Skills&lt;/strong&gt; is a project where skills test themselves and get better automatically.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;standalone-apps-and-tools&#34;&gt;Standalone Apps and Tools
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Excaliflow:&lt;/strong&gt; hand-drawn system diagrams with animated arrows, exportable as video.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Needle:&lt;/strong&gt; a Chrome extension that searches a page by meaning, not exact words.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ripple:&lt;/strong&gt; watches a Google Doc and finds what else must change when you edit one thing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;starter-ai-agents&#34;&gt;Starter AI Agents
+&lt;/h2&gt;&lt;p&gt;If you&amp;rsquo;re new to agents, start here. They&amp;rsquo;re small and easy to read.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Agent&lt;/th&gt;
+          &lt;th&gt;What it does&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Blog to Podcast&lt;/td&gt;
+          &lt;td&gt;Turns any blog link into a narrated podcast episode&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Data Analysis&lt;/td&gt;
+          &lt;td&gt;Answers plain-English questions about a CSV or Excel file&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Travel Agent&lt;/td&gt;
+          &lt;td&gt;Builds a day-by-day trip plan, with local and cloud versions&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Music Generator&lt;/td&gt;
+          &lt;td&gt;Turns a prompt into an MP3 track&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Meme Generator&lt;/td&gt;
+          &lt;td&gt;Makes memes by driving a real web browser&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Medical Imaging&lt;/td&gt;
+          &lt;td&gt;Analyses X-rays and scans&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Web Scraping&lt;/td&gt;
+          &lt;td&gt;Scrapes the data you describe&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Mixture of Agents&lt;/td&gt;
+          &lt;td&gt;Asks several models, then combines the best answer&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Breakup Recovery&lt;/td&gt;
+          &lt;td&gt;A team of agents that talks you through a breakup&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;advanced-ai-agents&#34;&gt;Advanced AI Agents
+&lt;/h2&gt;&lt;p&gt;Once you&amp;rsquo;re comfortable, this section gets serious:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Home Renovation Agent:&lt;/strong&gt; photos of your room in, renovation plan and realistic images out.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Deep Research Agent:&lt;/strong&gt; full web research and a written report on any topic.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;System Architect Agent:&lt;/strong&gt; reviews software architecture with a reasoning model plus Claude.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Investment Agent:&lt;/strong&gt; compares stocks and builds a report from Yahoo Finance data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Earnings Call Analyst:&lt;/strong&gt; turns YouTube earnings calls into a synced analysis workspace.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Movie Production Agent:&lt;/strong&gt; one-line idea in, script drafts and casting ideas out.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Journalist Agent:&lt;/strong&gt; researches, writes and edits articles.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Health &amp;amp; Fitness Agent:&lt;/strong&gt; diet and workout plans based on your goals.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Meeting Agent:&lt;/strong&gt; context, industry insights and a strategy brief before a meeting.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fraud Investigation Agent:&lt;/strong&gt; cross-checks public records to flag inconsistencies.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Self-Evolving Agent:&lt;/strong&gt; rewrites its own workflow to improve over time.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;always-on-agents&#34;&gt;Always-on Agents
+&lt;/h2&gt;&lt;p&gt;These run on a schedule instead of waiting for you to ask:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Hacker News Briefing Agent:&lt;/strong&gt; a ranked daily brief sent to Slack or email.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Release Radar Agent:&lt;/strong&gt; watches your dependencies for breaking changes, security fixes and major updates.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;multi-agent-teams&#34;&gt;Multi-agent Teams
+&lt;/h2&gt;&lt;p&gt;Instead of one AI doing everything, a team of agents each takes one job:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Finance Agent Team:&lt;/strong&gt; a financial analyst team in about twenty lines of Python.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Legal Agent Team:&lt;/strong&gt; research, contract analysis and strategy, with a local version too.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Recruitment Agent Team:&lt;/strong&gt; from resume screening to interview scheduling.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Real Estate Agent Team:&lt;/strong&gt; property search, market analysis and recommendations.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Teaching Agent Team:&lt;/strong&gt; a complete learning path from a &amp;ldquo;faculty&amp;rdquo; of agents.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Game Design Agent Team:&lt;/strong&gt; full game concepts from design specialists.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multimodal Coding Agent Team:&lt;/strong&gt; photo of a coding problem in, working solution out.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;UI/UX Feedback Team:&lt;/strong&gt; reviews your landing page and generates an improved version.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competitor Intelligence Team:&lt;/strong&gt; a competitor breakdown built from their own websites.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LLM Panel Team:&lt;/strong&gt; three models review the same code change blind, then argue it out.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;voice-ai-agents&#34;&gt;Voice AI Agents
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Audio Tour Agent:&lt;/strong&gt; a self-guided audio tour based on your location, interests and pace.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Customer Support Voice Agent:&lt;/strong&gt; answers out loud using your own documents.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Insurance Claim Live Agent Team:&lt;/strong&gt; takes your claim by voice, looks at the damage through your webcam and sketches what happened.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Voice dictation agent:&lt;/strong&gt; an open-source agent that types wherever you talk.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;generative-ui-and-agentic-frontends&#34;&gt;Generative UI and Agentic Frontends
+&lt;/h2&gt;&lt;p&gt;Here the AI builds the interface, not just the reply:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Dashboard Canvas Agent:&lt;/strong&gt; describe a dashboard in chat and the charts appear on a live canvas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Shadcn Component Generator:&lt;/strong&gt; chat your way to ready-to-use UI components.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MCP App Builder:&lt;/strong&gt; describe an app, get a live working version.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Financial Coach:&lt;/strong&gt; your budget and savings plan as interactive cards.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Generative UI Starter:&lt;/strong&gt; a kanban board you and the AI work on together.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;game-playing-agents&#34;&gt;Game-Playing Agents
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Chess Agent:&lt;/strong&gt; Agent White vs Agent Black, with every move validated.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tic-Tac-Toe Agent:&lt;/strong&gt; two different AI models play each other.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;3D PyGame Agent:&lt;/strong&gt; writes game code and runs it live in the browser.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;mcp-ai-agents&#34;&gt;MCP AI Agents
+&lt;/h2&gt;&lt;p&gt;MCP (Model Context Protocol) is the standard way to connect AI to outside tools and data.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Browser MCP Agent:&lt;/strong&gt; control a real browser by telling it what to do.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub MCP Agent:&lt;/strong&gt; explore any repo in plain English.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Notion MCP Agent:&lt;/strong&gt; talk to your Notion pages from the terminal.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Travel Planner MCP Agent:&lt;/strong&gt; trips built from live Airbnb and Google Maps data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dependency Upgrade Advisor:&lt;/strong&gt; tells you what will break before you upgrade.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;rag-memory-and-chat-with-x&#34;&gt;RAG, Memory and Chat with X
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;RAG:&lt;/strong&gt; more than twenty apps that answer questions from your own documents, including fully local versions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LLM Apps with Memory:&lt;/strong&gt; apps that remember you, like a travel agent that learns your preferences and a local ChatGPT clone with per-user memory.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chat with X:&lt;/strong&gt; chat with your Gmail inbox, a PDF, a GitHub repo, YouTube videos, research papers or a Substack archive. Most are around thirty lines of code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;optimization-fine-tuning-and-crash-courses&#34;&gt;Optimization, Fine-tuning and Crash Courses
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Optimization tools&lt;/strong&gt; that cut the tokens you send, lowering your API bill.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fine-tuning examples&lt;/strong&gt; for small open models like Gemma and Llama, one of which runs free on Google Colab.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Crash courses&lt;/strong&gt; for Google&amp;rsquo;s Agent Development Kit and the OpenAI Agents SDK.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;before-you-run-any-app&#34;&gt;Before You Run Any App
+&lt;/h2&gt;&lt;p&gt;Open the app&amp;rsquo;s folder and read two files: the &lt;strong&gt;README&lt;/strong&gt; and &lt;strong&gt;requirements.txt&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you see &amp;ldquo;OpenAI API key&amp;rdquo; (or another provider&amp;rsquo;s key), you&amp;rsquo;ll pay for that model.&lt;/li&gt;
+&lt;li&gt;If you see &lt;strong&gt;Ollama&lt;/strong&gt;, it usually runs locally on your own computer for free.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;demo-run-the-resume--job-matcher-locally&#34;&gt;Demo: Run the Resume &amp;amp; Job Matcher Locally
+&lt;/h2&gt;&lt;p&gt;I picked the &lt;strong&gt;Resume &amp;amp; Job Matcher&lt;/strong&gt; from &lt;code&gt;advanced_llm_apps/resume_job_matcher&lt;/code&gt;. You give it a resume PDF and a job description, and it returns a fit score out of 100, your strengths and what to improve. It runs on Ollama, so there&amp;rsquo;s no API key.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;You need:&lt;/strong&gt; Git, Python 3 and &lt;a class=&#34;link&#34; href=&#34;https://ollama.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ollama&lt;/a&gt; installed.&lt;/p&gt;
+&lt;h3 id=&#34;1-download-only-this-app&#34;&gt;1. Download only this app
+&lt;/h3&gt;&lt;p&gt;The repo is big, so use a sparse checkout to download just one folder:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone --depth &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; --filter&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;blob:none --sparse https://github.com/Shubhamsaboo/awesome-llm-apps.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; awesome-llm-apps
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git sparse-checkout &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; advanced_llm_apps/resume_job_matcher
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; advanced_llm_apps/resume_job_matcher
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;2-create-a-virtual-environment-and-install-packages&#34;&gt;2. Create a virtual environment and install packages
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python -m venv .venv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;.venv&lt;span class=&#34;se&#34;&gt;\S&lt;/span&gt;cripts&lt;span class=&#34;se&#34;&gt;\a&lt;/span&gt;ctivate          &lt;span class=&#34;c1&#34;&gt;# Windows&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# source .venv/bin/activate     # macOS / Linux&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -r requirements.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;3-get-the-model&#34;&gt;3. Get the model
+&lt;/h3&gt;&lt;p&gt;Open &lt;code&gt;app.py&lt;/code&gt;. On line 68 the model is set to &lt;code&gt;&amp;quot;llama3&amp;quot;&lt;/code&gt;. Either pull that model, or change the word to a model you already have in Ollama:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ollama pull llama3
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;4-start-the-app&#34;&gt;4. Start the app
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;streamlit run app.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The app opens in your browser. Upload the resume, paste or upload the job description, and in a few seconds you get a fit score, your strengths and what to improve for that exact job. Everything runs on your own computer: no account, no API key and no cost.&lt;/p&gt;
+&lt;h3 id=&#34;if-you-get-an-error&#34;&gt;If you get an error
+&lt;/h3&gt;&lt;p&gt;It&amp;rsquo;s almost always because Ollama isn&amp;rsquo;t running. Open the Ollama app, or run this in another terminal and try again:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ollama serve
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;takeaways&#34;&gt;Takeaways
+&lt;/h2&gt;&lt;p&gt;Awesome LLM Apps is more than a hundred AI apps across sixteen sections, from simple starter agents to voice agents, agent teams and full crash courses. All of it is free and open source.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re learning AI, don&amp;rsquo;t just read about it. &lt;strong&gt;Pick one app, run it, then change it and make it your own.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Which app are you trying first? Tell me in the comments on the video. Thanks for reading, and see you in the next one.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>REA Tutorial: Reverse Engineer Any App with Claude Code (Setup, Fixes &amp; Honest Review)</title>
         <link>https://thecodestreet.dev/post/rea-reverse-engineer-anything-claude-code/</link>
         <pubDate>Tue, 20 Oct 2026 18:00:00 +0530</pubDate>

@@ -2,6 +2,81 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://thecodestreet.dev/categories/ai-agents/</loc>
+    <lastmod>2026-11-12T14:45:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/ai-agents/</loc>
+    <lastmod>2026-11-12T14:45:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/post/</loc>
+    <lastmod>2026-11-12T14:45:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/awesome-llm-apps/</loc>
+    <lastmod>2026-11-12T14:45:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/categories/</loc>
+    <lastmod>2026-11-12T14:45:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/post/awesome-llm-apps/</loc>
+    <lastmod>2026-11-12T14:45:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/github/</loc>
+    <lastmod>2026-11-12T14:45:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/categories/local-llms/</loc>
+    <lastmod>2026-11-12T14:45:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/local-llms/</loc>
+    <lastmod>2026-11-12T14:45:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/ollama/</loc>
+    <lastmod>2026-11-12T14:45:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/open-source/</loc>
+    <lastmod>2026-11-12T14:45:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/python/</loc>
+    <lastmod>2026-11-12T14:45:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/streamlit/</loc>
+    <lastmod>2026-11-12T14:45:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/</loc>
+    <lastmod>2026-11-12T14:45:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/</loc>
+    <lastmod>2026-11-12T14:45:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://thecodestreet.dev/categories/ai-coding/</loc>
     <lastmod>2026-11-11T20:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -12,17 +87,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://thecodestreet.dev/post/</loc>
-    <lastmod>2026-11-11T20:00:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://thecodestreet.dev/tags/anthropic/</loc>
-    <lastmod>2026-11-11T20:00:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/categories/</loc>
     <lastmod>2026-11-11T20:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -52,16 +117,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://thecodestreet.dev/tags/</loc>
-    <lastmod>2026-11-11T20:00:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/</loc>
-    <lastmod>2026-11-11T20:00:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://thecodestreet.dev/tags/ai-coding-assistant/</loc>
     <lastmod>2026-11-10T21:30:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -87,11 +142,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://thecodestreet.dev/tags/ai-agents/</loc>
-    <lastmod>2026-11-09T18:00:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://thecodestreet.dev/post/lfm3-local-ai-agent/</loc>
     <lastmod>2026-11-09T18:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -107,22 +157,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://thecodestreet.dev/categories/local-llms/</loc>
-    <lastmod>2026-11-09T18:00:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/tags/local-llms/</loc>
-    <lastmod>2026-11-09T18:00:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://thecodestreet.dev/tags/node.js/</loc>
-    <lastmod>2026-11-09T18:00:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/tags/ollama/</loc>
     <lastmod>2026-11-09T18:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -164,11 +199,6 @@
   </url><url>
     <loc>https://thecodestreet.dev/post/claude-code-for-free-ollama-qwen/</loc>
     <lastmod>2026-10-28T10:00:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/categories/ai-agents/</loc>
-    <lastmod>2026-10-20T18:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
