@@ -7,7 +7,313 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>The Code Street</copyright>
-        <lastBuildDate>Thu, 12 Nov 2026 14:45:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/ai-agents/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 16 Nov 2026 20:30:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/ai-agents/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>I Built a FREE AI Agent on My Windows PC (Hermes &#43; Ollama &#43; Qwen 3.8)</title>
+        <link>https://thecodestreet.dev/post/hermes-agent-ollama-qwen-windows/</link>
+        <pubDate>Mon, 16 Nov 2026 20:30:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/post/hermes-agent-ollama-qwen-windows/</guid>
+        <description>&lt;img src="https://thecodestreet.dev/post/hermes-agent-ollama-qwen-windows/cover.png" alt="Featured image of post I Built a FREE AI Agent on My Windows PC (Hermes &#43; Ollama &#43; Qwen 3.8)" /&gt;&lt;p&gt;You can run a free AI agent on your own Windows PC with Hermes Agent, Ollama and Qwen 3.8. It needs no API key and no subscription, and your files never leave your machine. This guide walks through the full Hermes Agent setup in 5 steps, then tests it on 3 real tasks.&lt;/p&gt;
+&lt;p&gt;What you will do:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install Ollama on Windows&lt;/li&gt;
+&lt;li&gt;Download Qwen 3.8&lt;/li&gt;
+&lt;li&gt;Set the context length to 64K (the step most people miss)&lt;/li&gt;
+&lt;li&gt;Install Hermes Desktop&lt;/li&gt;
+&lt;li&gt;Connect Hermes to Ollama&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;-watch-the-video&#34;&gt;🎥 Watch the Video
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/U3DkUOjCwy4&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;👉 &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/U3DkUOjCwy4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch on YouTube: I Built a FREE AI Agent on My Windows PC&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-how-hermes-ollama-and-qwen-work-together&#34;&gt;🧩 How Hermes, Ollama and Qwen Work Together
+&lt;/h2&gt;&lt;p&gt;A local AI agent has three parts: an agent that does the work, a model that thinks, and an engine that runs the model.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Part&lt;/th&gt;
+          &lt;th&gt;Role&lt;/th&gt;
+          &lt;th&gt;What it does&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://hermes-agent.nousresearch.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hermes Agent&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;The worker&lt;/td&gt;
+          &lt;td&gt;Decides what to do and uses tools: reading files, running commands, memory, skills&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Qwen 3.8&lt;/td&gt;
+          &lt;td&gt;The brain&lt;/td&gt;
+          &lt;td&gt;The AI model that does the thinking&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://ollama.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ollama&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;The engine&lt;/td&gt;
+          &lt;td&gt;Runs the model on your own PC&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Hermes Desktop is the app window for Hermes, so you do not need the terminal for day-to-day use. Hermes is open source and built by Nous Research.&lt;/p&gt;
+&lt;h2 id=&#34;-hardware-requirements-for-qwen-38&#34;&gt;🖥️ Hardware Requirements for Qwen 3.8
+&lt;/h2&gt;&lt;p&gt;Qwen 3.8 27B runs smoothly on a GPU with about 24 GB of VRAM. On less, part of the model spills into system RAM and replies slow down. The 4-bit Ollama download is about 17 GB, and Unsloth lists &lt;a class=&#34;link&#34; href=&#34;https://unsloth.ai/docs/models/qwen3.8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;17–19 GB VRAM&lt;/a&gt; for 4-bit quants.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GPU:&lt;/strong&gt; 24 GB VRAM recommended (for example RTX 4090)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RAM:&lt;/strong&gt; 32 GB minimum&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Disk:&lt;/strong&gt; about 20 GB free&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OS:&lt;/strong&gt; Windows 10 or 11&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;My test machine: RTX 4070 (12 GB VRAM), 32 GB RAM, 1 TB SSD, Windows 11. That is below the recommendation, so my timings show the slow end.&lt;/p&gt;
+&lt;h3 id=&#34;which-model-for-your-gpu&#34;&gt;Which model for your GPU
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Your GPU VRAM&lt;/th&gt;
+          &lt;th&gt;Model to pull&lt;/th&gt;
+          &lt;th&gt;Download size&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;24 GB&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;qwen3.8:27b&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;~17 GB&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;12–16 GB&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;qwen3.5:9b&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;~6.6 GB&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;8 GB&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;qwen3.5:4b&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;~3.4 GB&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Every step below stays the same; only the model name changes.&lt;/p&gt;
+&lt;h2 id=&#34;-step-1-install-ollama-on-windows&#34;&gt;🦙 Step 1: Install Ollama on Windows
+&lt;/h2&gt;&lt;p&gt;Download the Windows installer from &lt;a class=&#34;link&#34; href=&#34;https://ollama.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ollama.com&lt;/a&gt; and run it. If Ollama is already installed, update it: Qwen 3.8 needs a recent Ollama release. Check your version in PowerShell:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ollama&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;-version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;-step-2-download-qwen-38&#34;&gt;🧠 Step 2: Download Qwen 3.8
+&lt;/h2&gt;&lt;p&gt;Pull the model in PowerShell. It is about 17 GB, so the time depends on your internet speed.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ollama&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pull&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;qwen3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;27b&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;why-not-regular-qwen-3&#34;&gt;Why not regular Qwen 3?
+&lt;/h3&gt;&lt;p&gt;Hermes needs at least 64,000 tokens of context and &lt;a class=&#34;link&#34; href=&#34;https://capitalandcompute.net/blog/best-local-models-for-hermes-agent/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;refuses to start below that&lt;/a&gt;. On Ollama, &lt;a class=&#34;link&#34; href=&#34;https://ollama.com/library/qwen3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;qwen3:8b, qwen3:14b and qwen3:32b&lt;/a&gt; are listed with a 40K context window, so Hermes rejects them. Qwen 3.8 supports 256K, so it clears the limit easily.&lt;/p&gt;
+&lt;h2 id=&#34;-step-3-set-ollama-context-length-to-64k&#34;&gt;⚠️ Step 3: Set Ollama Context Length to 64K
+&lt;/h2&gt;&lt;p&gt;This is the step that breaks Hermes for most people. Ollama sets its default context by VRAM: &lt;a class=&#34;link&#34; href=&#34;https://docs.ollama.com/context-length&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;4K under 24 GB, 32K from 24–48 GB&lt;/a&gt;, and 256K above that. Hermes needs 64K, because every turn it sends the model its tools, skills and memory. One guide puts that at &lt;a class=&#34;link&#34; href=&#34;https://lumadock.com/tutorials/hermes-ollama-context-window-fix&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;around 13,000 tokens per turn&lt;/a&gt; before your question.&lt;/p&gt;
+&lt;p&gt;On most Indian gaming GPUs you get 4K by default. Raise it one of two ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ollama app:&lt;/strong&gt; Settings → Context length slider → 64k&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Environment variable:&lt;/strong&gt; set &lt;code&gt;OLLAMA_CONTEXT_LENGTH&lt;/code&gt; to &lt;code&gt;64000&lt;/code&gt;, then restart Ollama&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Verify it worked. Load the model, then run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ollama&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;ps
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The &lt;strong&gt;CONTEXT&lt;/strong&gt; column should read around 64000, not 4096. The &lt;strong&gt;PROCESSOR&lt;/strong&gt; column shows whether the model sits fully on your GPU or is split with the CPU.&lt;/p&gt;
+&lt;p&gt;New to context size? I explain it in &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/p/ollama-context-size/&#34; &gt;What Is Context Size in Ollama?&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-step-4-install-hermes-desktop-on-windows&#34;&gt;🪽 Step 4: Install Hermes Desktop on Windows
+&lt;/h2&gt;&lt;p&gt;Hermes Desktop installs the app and the Hermes agent together. Get it from the &lt;a class=&#34;link&#34; href=&#34;https://hermes-agent.nousresearch.com/desktop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hermes desktop page&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Windows 11:&lt;/strong&gt; install from the Microsoft Store or the downloaded installer&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Windows 10:&lt;/strong&gt; use the PowerShell installer, then open the app&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;iex &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;irm &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;hermes-agent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;nousresearch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;install&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ps1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Ollama also documents a one-command route, &lt;code&gt;ollama launch hermes-desktop&lt;/code&gt;, in its &lt;a class=&#34;link&#34; href=&#34;https://docs.ollama.com/integrations/hermes-desktop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hermes Desktop integration guide&lt;/a&gt;. For Windows, it calls the desktop installer the recommended path.&lt;/p&gt;
+&lt;h2 id=&#34;-step-5-connect-hermes-agent-to-ollama&#34;&gt;🔌 Step 5: Connect Hermes Agent to Ollama
+&lt;/h2&gt;&lt;p&gt;When Hermes asks for a model provider, choose the custom, OpenAI-compatible endpoint option. The label can differ slightly between versions. Enter these values:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Setting&lt;/th&gt;
+          &lt;th&gt;Value&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Base URL&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;http://127.0.0.1:11434/v1&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;API key&lt;/td&gt;
+          &lt;td&gt;leave empty&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Model&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;qwen3.8:27b&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Context length&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;64000&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Save, send a quick &amp;ldquo;hi&amp;rdquo;, and check that Hermes replies. If it cannot connect, confirm the Ollama app is running and the URL ends in &lt;code&gt;/v1&lt;/code&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-3-real-things-a-local-ai-agent-can-do&#34;&gt;🛠️ 3 Real Things a Local AI Agent Can Do
+&lt;/h2&gt;&lt;p&gt;I tested Hermes on three everyday tasks. Copy the prompts and change the paths to your own folders.&lt;/p&gt;
+&lt;h3 id=&#34;1-find-large-files-eating-your-disk-space&#34;&gt;1. Find large files eating your disk space
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Find the 10 largest files in C:\Users\YourName\Downloads, list them with their sizes, and tell me which ones look safe to delete. Do not delete anything.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;The last line matters. An agent can run commands on your PC, so always say what it is not allowed to do.&lt;/p&gt;
+&lt;h3 id=&#34;2-summarise-a-pdf-privately&#34;&gt;2. Summarise a PDF privately
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Read the PDF in this folder and give me a five point summary in simple English.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;This is where local AI shines. Bank statements, offer letters and client documents never leave your PC.&lt;/p&gt;
+&lt;h3 id=&#34;3-generate-a-readme-for-a-project&#34;&gt;3. Generate a README for a project
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Look at the project in C:\Users\YourName\Projects\my-app. Read the files to understand what it does, then create a README.md in the same folder with: project name and description, features, tech stack, prerequisites, how to install, how to run, and folder structure. Only create README.md. Do not change or delete any other file.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;This is a true multi-step agent task: Hermes reads several files, works out the project, then writes a new file.&lt;/p&gt;
+&lt;h2 id=&#34;-local-ai-vs-cloud-ai-honest-verdict&#34;&gt;⚖️ Local AI vs Cloud AI: Honest Verdict
+&lt;/h2&gt;&lt;p&gt;On a 12 GB GPU, Qwen 3.8 works for tasks you can wait on, not quick back-and-forth chat. The 27B model does not fit fully on my RTX 4070, so part of it runs on the CPU. In an earlier test on this machine, the same model took 34 minutes to build a snake game in &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/p/claude-code-for-free-ollama-qwen/&#34; &gt;Claude Code&lt;/a&gt;.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;Local (Hermes + Ollama)&lt;/th&gt;
+          &lt;th&gt;Cloud API&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Cost&lt;/td&gt;
+          &lt;td&gt;Free after hardware&lt;/td&gt;
+          &lt;td&gt;Pay per use or subscription&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Privacy&lt;/td&gt;
+          &lt;td&gt;Files stay on your PC&lt;/td&gt;
+          &lt;td&gt;Data goes to the provider&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Speed&lt;/td&gt;
+          &lt;td&gt;Depends on your GPU&lt;/td&gt;
+          &lt;td&gt;Fast&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Long multi-step tasks&lt;/td&gt;
+          &lt;td&gt;Weaker on small GPUs&lt;/td&gt;
+          &lt;td&gt;Stronger&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;With a 24 GB GPU, Qwen 3.8 is a strong pick. With less, use the smaller Qwen 3.5 models for faster replies.&lt;/p&gt;
+&lt;h2 id=&#34;-hermes-agent--ollama-common-errors-and-fixes&#34;&gt;🧯 Hermes Agent + Ollama: Common Errors and Fixes
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Error&lt;/th&gt;
+          &lt;th&gt;Cause&lt;/th&gt;
+          &lt;th&gt;Fix&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Context window below the minimum required by Hermes&lt;/td&gt;
+          &lt;td&gt;Ollama still on 4K, or a 40K model like qwen3:8b&lt;/td&gt;
+          &lt;td&gt;Redo Step 3, check &lt;code&gt;ollama ps&lt;/code&gt;, use Qwen 3.8 or 3.5&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;ollama&lt;/code&gt; command not found&lt;/td&gt;
+          &lt;td&gt;PowerShell opened before install&lt;/td&gt;
+          &lt;td&gt;Restart PowerShell&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Very slow replies&lt;/td&gt;
+          &lt;td&gt;Model larger than VRAM, split across CPU and GPU&lt;/td&gt;
+          &lt;td&gt;Check PROCESSOR in &lt;code&gt;ollama ps&lt;/code&gt;; use a smaller model&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Hermes cannot connect&lt;/td&gt;
+          &lt;td&gt;Ollama not running or wrong URL&lt;/td&gt;
+          &lt;td&gt;Start the Ollama app; URL must end in &lt;code&gt;/v1&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Model forgets your request&lt;/td&gt;
+          &lt;td&gt;Context too small, prompt truncated&lt;/td&gt;
+          &lt;td&gt;Set context to 64K and restart Ollama&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-faq&#34;&gt;❓ FAQ
+&lt;/h2&gt;&lt;h3 id=&#34;is-hermes-agent-free&#34;&gt;Is Hermes Agent free?
+&lt;/h3&gt;&lt;p&gt;Yes. Hermes Agent is open source from Nous Research. With a local model through Ollama, there are no API costs.&lt;/p&gt;
+&lt;h3 id=&#34;can-i-run-hermes-agent-on-windows&#34;&gt;Can I run Hermes Agent on Windows?
+&lt;/h3&gt;&lt;p&gt;Yes. Hermes Desktop installs natively on Windows 11 and Windows 10. The command-line route through &lt;code&gt;ollama launch hermes&lt;/code&gt; needs WSL2 on Windows.&lt;/p&gt;
+&lt;h3 id=&#34;what-is-the-minimum-context-length-for-hermes-agent&#34;&gt;What is the minimum context length for Hermes Agent?
+&lt;/h3&gt;&lt;p&gt;64,000 tokens. Below that, Hermes refuses to start.&lt;/p&gt;
+&lt;h3 id=&#34;which-qwen-model-is-best-for-hermes-agent&#34;&gt;Which Qwen model is best for Hermes Agent?
+&lt;/h3&gt;&lt;p&gt;Qwen 3.8 27B on a 24 GB GPU. On 12–16 GB use &lt;code&gt;qwen3.5:9b&lt;/code&gt;, and on 8 GB use &lt;code&gt;qwen3.5:4b&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;does-it-work-offline&#34;&gt;Does it work offline?
+&lt;/h3&gt;&lt;p&gt;The model runs entirely on your PC, so your prompts and files are not sent to a cloud AI.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;takeaways&#34;&gt;Takeaways
+&lt;/h2&gt;&lt;p&gt;Hermes Desktop, Ollama and Qwen 3.8 give you a real AI agent on your own Windows PC for ₹0. The one setting to remember is context length: set it to 64K, or Hermes will not work.&lt;/p&gt;
+&lt;p&gt;What would you automate with a free local AI agent? Tell me in the comments on the video. Thanks for reading, and see you in the next one.&lt;/p&gt;
+&lt;h3 id=&#34;sources&#34;&gt;Sources
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.ollama.com/context-length&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ollama docs: Context length&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.ollama.com/integrations/hermes-desktop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ollama docs: Hermes Desktop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ollama.com/library/qwen3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ollama library: qwen3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://unsloth.ai/docs/models/qwen3.8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Unsloth: Qwen3.8&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://capitalandcompute.net/blog/best-local-models-for-hermes-agent/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Capital &amp;amp; Compute: Best local models for Hermes Agent&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://lumadock.com/tutorials/hermes-ollama-context-window-fix&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LumaDock: Hermes Ollama context fix&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Don&#39;t Build AI Apps From Scratch. Use This Free Repo Instead</title>
         <link>https://thecodestreet.dev/post/awesome-llm-apps/</link>
         <pubDate>Thu, 12 Nov 2026 14:45:00 +0530</pubDate>
