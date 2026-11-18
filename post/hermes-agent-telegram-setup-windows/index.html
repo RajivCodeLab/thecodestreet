@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="stylesheet" href="/css/custom.css"><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Connect Hermes Agent to Telegram on Windows and control your free local AI (Ollama + Qwen 3.8) from your phone. BotFather, user ID, hermes gateway setup, starting the gateway, /busy queue, and 3 real use cases.">
+<meta name="keywords" content="hermes agent telegram, hermes agent telegram setup, hermes gateway setup, hermes telegram bot, control pc from phone ai, local ai telegram bot, ollama telegram, hermes agent windows"><title>Hermes Agent Telegram Setup in 4 Steps: Control Your Local AI From Your Phone</title>
+
+<link rel='canonical' href='https://thecodestreet.dev/post/hermes-agent-telegram-setup-windows/'>
+
+<link rel="stylesheet" href="/scss/style.min.86afb6925d63f7c383f64abfa5b01183a2ad21c91d72cb626559e001e899e65c.css"><meta property='og:title' content="Hermes Agent Telegram Setup in 4 Steps: Control Your Local AI From Your Phone">
+<meta property='og:description' content="Connect Hermes Agent to Telegram on Windows and control your free local AI (Ollama + Qwen 3.8) from your phone. BotFather, user ID, hermes gateway setup, starting the gateway, /busy queue, and 3 real use cases.">
+<meta property='og:url' content='https://thecodestreet.dev/post/hermes-agent-telegram-setup-windows/'>
+<meta property='og:site_name' content='The Code Street'>
+<meta property='og:type' content='article'>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><meta property='article:section' content='Post' /><meta property='article:tag' content='Hermes Agent' /><meta property='article:tag' content='Telegram' /><meta property='article:tag' content='Ollama' /><meta property='article:tag' content='Qwen 3.8' /><meta property='article:tag' content='Local LLMs' /><meta property='article:tag' content='AI Agents' /><meta property='article:tag' content='Windows' /><meta property='article:published_time' content='2026-11-18T22:00:00&#43;05:30'/><meta property='article:modified_time' content='2026-11-18T22:00:00&#43;05:30'/><meta property='og:image' content='https://thecodestreet.dev/post/hermes-agent-telegram-setup-windows/cover.png' />
+<meta name="twitter:title" content="Hermes Agent Telegram Setup in 4 Steps: Control Your Local AI From Your Phone">
+<meta name="twitter:description" content="Connect Hermes Agent to Telegram on Windows and control your free local AI (Ollama + Qwen 3.8) from your phone. BotFather, user ID, hermes gateway setup, starting the gateway, /busy queue, and 3 real use cases."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://thecodestreet.dev/post/hermes-agent-telegram-setup-windows/cover.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EVB34BL08"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-7EVB34BL08');
+        }
+      </script><link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","author":{"@type":"Person","name":"Rajiv Lochan Sharma","url":"https://thecodestreet.dev/about/"},"dateModified":"2026-11-18T22:00:00+05:30","datePublished":"2026-11-18T22:00:00+05:30","description":"Connect Hermes Agent to Telegram on Windows and control your free local AI (Ollama + Qwen 3.8) from your phone. BotFather, user ID, hermes gateway setup, starting the gateway, /busy queue, and 3 real use cases.","headline":"Hermes Agent Telegram Setup in 4 Steps: Control Your Local AI From Your Phone","image":"https://thecodestreet.dev/post/hermes-agent-telegram-setup-windows/cover.png","mainEntityOfPage":"https://thecodestreet.dev/post/hermes-agent-telegram-setup-windows/","publisher":{"@type":"Organization","logo":"https://thecodestreet.dev/img/logo_hu_3a37d9dbae6062.webp","name":"The Code Street","sameAs":["https://www.youtube.com/@TheCodeStreet","https://github.com/rajivcodelab","https://www.linkedin.com/in/rjvranjan80","https://facebook.com/thecodestreet"],"url":"https://thecodestreet.dev/"}},{"@type":"VideoObject","contentUrl":"https://www.youtube.com/watch?v=S90M3i29DI4","description":"Connect Hermes Agent to Telegram on Windows and control your free local AI (Ollama + Qwen 3.8) from your phone. BotFather, user ID, hermes gateway setup, starting the gateway, /busy queue, and 3 real use cases.","embedUrl":"https://www.youtube.com/embed/S90M3i29DI4","name":"Hermes Agent Telegram Setup in 4 Steps: Control Your Local AI From Your Phone","thumbnailUrl":"https://i.ytimg.com/vi/S90M3i29DI4/hqdefault.jpg","uploadDate":"2026-11-18"}]}
+</script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+
+        <a class="cs-skip" href="#content">Skip to content</a>
+        <header class="cs-header" id="cs-header">
+    <div class="cs-header__inner">
+        <a class="cs-brand" href="/" aria-label="The Code Street home"><img src="/img/logo_hu_2cd295f811d27b71.png" width="96" height="96" alt="">
+            <span>The <em>Code</em> Street</span>
+        </a>
+
+        <nav class="cs-nav" id="cs-nav" aria-label="Main">
+            <ul>
+                <li>
+                    <a class="cs-nav__link is-active" href="/post/" aria-current="page">Tutorials</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/categories/">Topics</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/videos/">Videos</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/projects/">Projects</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="https://shop.thecodestreet.dev/" target="_blank" rel="noopener">Shop<svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/about/">About</a>
+                </li>
+            </ul>
+            <a class="cs-btn cs-btn--youtube cs-nav__cta" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg><span>Subscribe</span>
+            </a>
+        </nav>
+
+        <div class="cs-header__actions">
+            <a class="cs-iconbtn" href="/search/" aria-label="Search tutorials"><svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></a>
+            <button class="cs-iconbtn cs-nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="cs-nav">
+                <span class="cs-nav-toggle__open"><svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></span>
+                <span class="cs-nav-toggle__close"><svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+            </button>
+        </div>
+    </div>
+    <div class="cs-progress" aria-hidden="true"><span></span></div>
+</header>
+
+        <div class="cs-shell ">
+            <main id="content" class="main cs-main">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/hermes-agent-telegram-setup-windows/">
+                <img src="/post/hermes-agent-telegram-setup-windows/cover_hu_b92e9522a3fdb5e4.png"
+                        srcset="/post/hermes-agent-telegram-setup-windows/cover_hu_b92e9522a3fdb5e4.png 800w, /post/hermes-agent-telegram-setup-windows/cover_hu_d8a89ad6454b3302.png 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post Hermes Agent Telegram Setup in 4 Steps: Control Your Local AI From Your Phone" />
+                
+            </a>
+        </div>
+    
+
+    
+<div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/ai-agents/" >
+                AI Agents
+            </a>
+        
+            <a href="/categories/local-llms/" >
+                Local LLMs
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h1 class="article-title">
+            <a href="/post/hermes-agent-telegram-setup-windows/">Hermes Agent Telegram Setup in 4 Steps: Control Your Local AI From Your Phone</a>
+        </h1>
+
+        
+        <p class="article-subtitle">
+            Connect Hermes Agent to Telegram on Windows and control your free local AI (Ollama &#43; Qwen 3.8) from your phone. BotFather, user ID, hermes gateway setup, starting the gateway, /busy queue, and 3 real use cases.
+        </p>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 18, 2026</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    5 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>I sent a Telegram message from my phone, and my own PC answered. The reply came from a free AI model running locally in Ollama, with no API key and no subscription. In this post, we connect Hermes Agent to Telegram on Windows in 4 steps, then try three real things from the phone.</p>
+<p>This is Part 2. If Hermes, Ollama and Qwen are not set up yet, start with <a class="link" href="/post/hermes-agent-ollama-qwen-windows/" >Part 1: I Built a FREE AI Agent on My Windows PC</a>.</p>
+<h2 id="-watch-the-video">🎥 Watch the Video
+</h2><div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/S90M3i29DI4" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p>👉 <strong><a class="link" href="https://youtu.be/S90M3i29DI4"  target="_blank" rel="noopener"
+    >Watch on YouTube: Hermes Agent Telegram Setup</a></strong></p>
+<hr>
+<h2 id="-how-it-works">🔗 How It Works
+</h2><p>Your phone is the remote control. All the thinking happens on your PC.</p>
+<ol>
+<li>You send a message to your Telegram bot.</li>
+<li>The <strong>Hermes gateway</strong> on your PC keeps checking Telegram for new messages.</li>
+<li>Hermes hands your message to the AI model running in <strong>Ollama</strong> (Qwen 3.8).</li>
+<li>The model thinks, Hermes does the work, and the reply goes back to your phone.</li>
+</ol>
+<p>The default Telegram gateway uses outbound long polling, so you do not need a public IP, a domain or a VPS for this setup.</p>
+<h2 id="-before-you-start">✅ Before You Start
+</h2><p>Hermes and Ollama must already work on your PC. My setup for this video:</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Item</th>
+          <th>Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>GPU</td>
+          <td>RTX 4070 (12 GB VRAM)</td>
+      </tr>
+      <tr>
+          <td>RAM</td>
+          <td>32 GB</td>
+      </tr>
+      <tr>
+          <td>OS</td>
+          <td>Windows 11</td>
+      </tr>
+      <tr>
+          <td>Model</td>
+          <td><code>qwen3.8:27b</code> in Ollama</td>
+      </tr>
+      <tr>
+          <td>Context length</td>
+          <td>64000</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="-step-1-create-a-telegram-bot-with-botfather">🤖 Step 1: Create a Telegram Bot with BotFather
+</h2><ol>
+<li>Open Telegram and search for <strong>BotFather</strong>. Pick the official one with the blue tick.</li>
+<li>Start the chat and send <code>/newbot</code>.</li>
+<li>Enter a <strong>name</strong>. This is the display name, so anything works, like <em>My Hermes Agent</em>.</li>
+<li>Enter a <strong>username</strong>. It must be unique and must end in <code>bot</code>.</li>
+</ol>
+<p>BotFather now gives you a <strong>token</strong>. Treat it like your bot&rsquo;s password: anyone with it can control your bot. Never share it, and never show it in a screenshot or video.</p>
+<h2 id="-step-2-get-your-telegram-user-id">🆔 Step 2: Get Your Telegram User ID
+</h2><p>Search for <strong>userinfobot</strong>, start the chat, and it replies with a number. That number is your user ID. You need the number, not your @username.</p>
+<p>This is the most important security setting. Hermes <a class="link" href="https://hermes-agent.nousresearch.com/docs/user-guide/messaging/telegram"  target="_blank" rel="noopener"
+    >denies all users by default</a>, and only replies to user IDs you allow. Even if someone finds your bot, Hermes ignores them.</p>
+<h2 id="-step-3-run-hermes-gateway-setup">⚙️ Step 3: Run Hermes Gateway Setup
+</h2><p>Open PowerShell and run:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">hermes</span> <span class="n">gateway</span> <span class="n">setup</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The wizard walks you through it:</p>
+<ul>
+<li>Select <strong>Telegram</strong>. In my version it was option <strong>21</strong>.</li>
+<li>Choose the <strong>manual</strong> path (option <strong>2</strong> for me) and paste the bot token from BotFather. The terminal may look blank after you paste. The token is still entered, so press Enter.</li>
+<li>Paste your <strong>user ID</strong> for allowed users.</li>
+</ul>
+<p><strong>Never leave allowed users empty.</strong> That list is what keeps your PC under your control. Hermes saves these settings on your PC, so you only do this once.</p>
+<h2 id="-step-4-start-the-gateway-and-test">🚀 Step 4: Start the Gateway and Test
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">hermes</span> <span class="n">gateway</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>When the gateway is up, it reports that the Telegram adapter is connected. Keep this window open: the bot only replies while the gateway is running.</p>
+<p>Now open your bot in Telegram, press <strong>Start</strong> and say <em>hi</em>. The reply comes from Qwen running on your own PC.</p>
+<h3 id="-tip-use-busy-queue">⏳ Tip: Use <code>/busy queue</code>
+</h3><p>A local model on a 12 GB GPU can take a while to reply. If you send a new message while Hermes is still working, it treats your new message as a correction to the current task. Send this once in your bot chat:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/busy queue
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Now new messages wait their turn and run as separate tasks. <code>/busy status</code> shows the current mode, and <code>/stop</code> cancels the running task.</p>
+<hr>
+<h2 id="-3-things-you-can-do-from-your-phone">📱 3 Things You Can Do From Your Phone
+</h2><h3 id="1-check-your-pc-from-anywhere">1. Check your PC from anywhere
+</h3><blockquote>
+<p>Check how much free space is left on my C drive, and list the five biggest folders in my Downloads.</p></blockquote>
+<p>Hermes runs the commands on your PC and sends the answer back to Telegram.</p>
+<h3 id="2-send-a-pdf-and-get-a-summary">2. Send a PDF and get a summary
+</h3><p>Attach a PDF in the chat and ask:</p>
+<blockquote>
+<p>Give me a five point summary of this file in simple English.</p></blockquote>
+<p>The file goes to your PC, the local model reads it, and the summary comes back to your phone.</p>
+<h3 id="3-send-a-photo-and-ask-whats-in-it">3. Send a photo and ask what&rsquo;s in it
+</h3><p>Send a photo from your phone and ask Hermes to identify what it shows. The image is processed by the model on your PC.</p>
+<p>Hermes can also run <a class="link" href="https://hermes-agent.nousresearch.com/docs/user-guide/features/cron"  target="_blank" rel="noopener"
+    >scheduled tasks</a>, so you can ask it to message you with a daily reminder or report.</p>
+<h2 id="-honest-limits">⚖️ Honest Limits
+</h2><ul>
+<li><strong>Your PC must stay on.</strong> If it is off or asleep, or the gateway window is closed, the bot cannot reply.</li>
+<li><strong>Messages travel through Telegram.</strong> The AI model runs on your PC, but your chats pass through Telegram&rsquo;s servers. Keep that in mind for very private files.</li>
+<li><strong>Speed depends on your GPU.</strong> On a 12 GB card the 27B model is slow. On smaller GPUs, try <code>qwen3.5:9b</code> or <code>qwen3.5:4b</code>.</li>
+</ul>
+<h2 id="-quick-fixes">🧯 Quick Fixes
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Problem</th>
+          <th>Fix</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Bot does not reply</td>
+          <td>Check the gateway window is still open and your user ID is in allowed users</td>
+      </tr>
+      <tr>
+          <td>Unauthorized or invalid token</td>
+          <td>Copy the token again from BotFather and re-run <code>hermes gateway setup</code></td>
+      </tr>
+      <tr>
+          <td>Replies slow or cut off</td>
+          <td>Run <code>ollama ps</code> and check the context is still 64000</td>
+      </tr>
+      <tr>
+          <td>Hermes changed what it was doing</td>
+          <td>You sent a message mid-task. Use <code>/busy queue</code> or wait for the reply</td>
+      </tr>
+      <tr>
+          <td>Bot stopped overnight</td>
+          <td>Your PC went to sleep. Adjust Windows power settings</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h2 id="takeaways">Takeaways
+</h2><p>Four steps turn your PC into a private AI agent you can reach from your phone: create the bot, get your user ID, run <code>hermes gateway setup</code>, and start <code>hermes gateway</code>. The one setting you must never skip is allowed users.</p>
+<p>What would you ask your PC from your phone? Tell me in the comments on the video. Thanks for reading, and see you in the next one.</p>
+<h3 id="sources">Sources
+</h3><ul>
+<li><a class="link" href="https://hermes-agent.nousresearch.com/docs/user-guide/messaging/"  target="_blank" rel="noopener"
+    >Hermes messaging gateway</a></li>
+<li><a class="link" href="https://hermes-agent.nousresearch.com/docs/user-guide/messaging/telegram"  target="_blank" rel="noopener"
+    >Hermes Telegram setup</a></li>
+<li><a class="link" href="https://hermes-agent.nousresearch.com/docs/user-guide/features/cron"  target="_blank" rel="noopener"
+    >Hermes scheduled tasks (cron)</a></li>
+</ul>
+
+</section>
+
+
+    
+        <aside class="cs-post-cta">
+    
+    <div class="cs-post-cta-text">
+        <h2>Enjoyed this tutorial?</h2>
+        <p>
+            I publish step-by-step AI videos on YouTube: AI agents, local LLMs and AI coding tools.
+            Subscribe so you don't miss the next one, and join 4,900&#43; other developers.
+        </p>
+        <div class="cs-hero-actions">
+            
+<a class="cs-btn cs-btn--youtube" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    <span>Subscribe on YouTube</span>
+</a>
+
+            <a class="cs-btn cs-btn--ghost" href="/videos/">More videos</a>
+        </div>
+    </div>
+</aside>
+
+    
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hermes-agent/">Hermes Agent</a>
+        
+            <a href="/tags/telegram/">Telegram</a>
+        
+            <a href="/tags/ollama/">Ollama</a>
+        
+            <a href="/tags/qwen-3.8/">Qwen 3.8</a>
+        
+            <a href="/tags/local-llms/">Local LLMs</a>
+        
+            <a href="/tags/ai-agents/">AI Agents</a>
+        
+            <a href="/tags/windows/">Windows</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+<aside class="cs-related" aria-labelledby="cs-related-title">
+    <h2 id="cs-related-title">Keep learning</h2>
+    <div class="cs-grid cs-grid--related">
+        <article class="cs-card cs-card--default">
+    <a class="cs-card__media" href="/post/hermes-agent-ollama-qwen-windows/" tabindex="-1" aria-hidden="true"><img src="/post/hermes-agent-ollama-qwen-windows/cover_hu_1564cde07faa94e3.png"
+                srcset="/post/hermes-agent-ollama-qwen-windows/cover_hu_1564cde07faa94e3.png 640w, /post/hermes-agent-ollama-qwen-windows/cover.png 1280w"
+                sizes="(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw" width="640" height="360"
+                loading="lazy" alt="">
+    </a>
+    <div class="cs-card__body">
+        <div class="cs-tags"><a class="cs-tag" href="/categories/ai-agents/">AI Agents</a><a class="cs-tag" href="/categories/local-llms/">Local LLMs</a>
+        </div>
+        <h3 class="cs-card__title"><a href="/post/hermes-agent-ollama-qwen-windows/">I Built a FREE AI Agent on My Windows PC (Hermes &#43; Ollama &#43; Qwen 3.8)</a></h3><p class="cs-card__desc">Step-by-step Hermes Agent setup on Windows with Ollama and Qwen 3.8: install Ollama, download the model, fix the 64K context length error, install Hermes Desktop, connect it to Ollama, and test it on 3 real tasks. Free, local and private.</p>
+        <div class="cs-meta">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg><time datetime="2026-11-16">Nov 16, 2026</time></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+7 min read</span>
+        </div>
+    </div>
+</article>
+
+        <article class="cs-card cs-card--default">
+    <a class="cs-card__media" href="/post/awesome-llm-apps/" tabindex="-1" aria-hidden="true"><img src="/post/awesome-llm-apps/cover_hu_444631de8d4788e6.png"
+                srcset="/post/awesome-llm-apps/cover_hu_444631de8d4788e6.png 640w, /post/awesome-llm-apps/cover.png 1280w"
+                sizes="(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw" width="640" height="360"
+                loading="lazy" alt="">
+    </a>
+    <div class="cs-card__body">
+        <div class="cs-tags"><a class="cs-tag" href="/categories/ai-agents/">AI Agents</a><a class="cs-tag" href="/categories/local-llms/">Local LLMs</a>
+        </div>
+        <h3 class="cs-card__title"><a href="/post/awesome-llm-apps/">Don&#39;t Build AI Apps From Scratch. Use This Free Repo Instead</a></h3><p class="cs-card__desc">A tour of Awesome LLM Apps, a free GitHub repo with 144K stars and 100&#43; ready-to-run AI apps, from starter agents to voice agents, MCP agents and agent teams. Plus how to clone one app and run it locally with Ollama for $0.</p>
+        <div class="cs-meta">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg><time datetime="2026-11-12">Nov 12, 2026</time></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+8 min read</span>
+        </div>
+    </div>
+</article>
+
+        <article class="cs-card cs-card--default">
+    <a class="cs-card__media" href="/post/lfm3-local-ai-agent/" tabindex="-1" aria-hidden="true"><img src="/post/lfm3-local-ai-agent/cover_hu_68440b6b54633c6.png"
+                srcset="/post/lfm3-local-ai-agent/cover_hu_68440b6b54633c6.png 640w, /post/lfm3-local-ai-agent/cover.png 1200w"
+                sizes="(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw" width="640" height="336"
+                loading="lazy" alt="">
+    </a>
+    <div class="cs-card__body">
+        <div class="cs-tags"><a class="cs-tag" href="/categories/local-llms/">Local LLMs</a>
+        </div>
+        <h3 class="cs-card__title"><a href="/post/lfm3-local-ai-agent/">Can a 1.7B Model Be an AI Agent? Building a Local Agent with LFM3 &#43; Ollama</a></h3><p class="cs-card__desc">I built a fully local AI agent with Liquid AI&#39;s 1.7B LFM3 model, Ollama, Node.js and React. Here&#39;s how tool calling works, how a multi-tool request runs, and where a small model falls short.</p>
+        <div class="cs-meta">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg><time datetime="2026-11-09">Nov 09, 2026</time></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+6 min read</span>
+        </div>
+    </div>
+</article>
+
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "code-street" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#-watch-the-video">🎥 Watch the Video</a></li>
+    <li><a href="#-how-it-works">🔗 How It Works</a></li>
+    <li><a href="#-before-you-start">✅ Before You Start</a></li>
+    <li><a href="#-step-1-create-a-telegram-bot-with-botfather">🤖 Step 1: Create a Telegram Bot with BotFather</a></li>
+    <li><a href="#-step-2-get-your-telegram-user-id">🆔 Step 2: Get Your Telegram User ID</a></li>
+    <li><a href="#-step-3-run-hermes-gateway-setup">⚙️ Step 3: Run Hermes Gateway Setup</a></li>
+    <li><a href="#-step-4-start-the-gateway-and-test">🚀 Step 4: Start the Gateway and Test</a>
+      <ol>
+        <li><a href="#-tip-use-busy-queue">⏳ Tip: Use <code>/busy queue</code></a></li>
+      </ol>
+    </li>
+    <li><a href="#-3-things-you-can-do-from-your-phone">📱 3 Things You Can Do From Your Phone</a>
+      <ol>
+        <li><a href="#1-check-your-pc-from-anywhere">1. Check your PC from anywhere</a></li>
+        <li><a href="#2-send-a-pdf-and-get-a-summary">2. Send a PDF and get a summary</a></li>
+        <li><a href="#3-send-a-photo-and-ask-whats-in-it">3. Send a photo and ask what&rsquo;s in it</a></li>
+      </ol>
+    </li>
+    <li><a href="#-honest-limits">⚖️ Honest Limits</a></li>
+    <li><a href="#-quick-fixes">🧯 Quick Fixes</a></li>
+    <li><a href="#takeaways">Takeaways</a>
+      <ol>
+        <li><a href="#sources">Sources</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+            
+                <section class="widget cs-youtube-widget">
+    <div class="widget-icon">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    </div>
+    <h2 class="widget-title section-title">Watch on YouTube</h2>
+
+    <div class="cs-youtube-widget-card">
+        <p>
+            Video walkthroughs of every tutorial, with <strong>4,900&#43;</strong> developers subscribed.
+        </p>
+        
+<a class="cs-btn cs-btn--youtube" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    <span>Subscribe on YouTube</span>
+</a>
+
+    </div>
+</section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <footer class="cs-footer">
+    <div class="cs-container cs-footer__grid">
+        <div class="cs-footer__brand">
+            <a class="cs-brand" href="/" aria-label="The Code Street home"><img src="/img/logo_hu_2cd295f811d27b71.png" width="96" height="96" alt="" loading="lazy">
+                <span>The <em>Code</em> Street</span>
+            </a>
+            <p>Hands-on AI tutorials for developers: AI agents, local LLMs and AI coding tools, through blogs and videos.</p>
+            <ul class="cs-social">
+                <li>
+                    <a href="https://facebook.com/thecodestreet" target="_blank" rel="noopener me" aria-label="Facebook" title="Facebook"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg></a>
+                </li>
+                <li>
+                    <a href="https://github.com/rajivcodelab" target="_blank" rel="noopener me" aria-label="GitHub" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+</a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/in/rjvranjan80" target="_blank" rel="noopener me" aria-label="LinkedIn" title="LinkedIn"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg></a>
+                </li>
+                <li>
+                    <a href="/index.xml" target="_blank" rel="noopener me" aria-label="RSS" title="RSS"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+</a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/@TheCodeStreet" target="_blank" rel="noopener me" aria-label="YouTube" title="YouTube"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg></a>
+                </li>
+            </ul>
+        </div>
+
+        <nav class="cs-footer__col" aria-label="Topics">
+            <p class="cs-footer__title">Topics</p>
+            <ul>
+                <li><a href="/categories/local-llms/">Local LLMs</a></li>
+                <li><a href="/categories/ai-coding/">AI Coding</a></li>
+                <li><a href="/categories/semantic-kernel/">Semantic Kernel</a></li>
+                <li><a href="/categories/ai-agents/">AI Agents</a></li>
+                <li><a href="/categories/genai/">GenAI</a></li>
+                <li><a href="/categories/microsoft-agent-framework/">Microsoft Agent Framework</a></li>
+                <li><a href="/categories/">All topics</a></li>
+            </ul>
+        </nav>
+
+        <nav class="cs-footer__col" aria-label="Learn">
+            <p class="cs-footer__title">Learn</p>
+            <ul>
+                <li><a href="/post/">All tutorials</a></li>
+                <li><a href="/videos/">Videos</a></li>
+                <li><a href="/projects/">Source code &amp; projects</a></li>
+                <li><a href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">YouTube channel</a></li>
+                <li><a href="/index.xml">RSS feed</a></li>
+            </ul>
+        </nav>
+
+        <nav class="cs-footer__col" aria-label="About">
+            <p class="cs-footer__title">The Code Street</p>
+            <ul>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/terms-conditions/">Terms</a></li>
+                <li><a href="/privacy-policy/">Privacy</a></li>
+                <li><a href="/disclaimer/">Disclaimer</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="cs-container cs-footer__bottom">
+        <span>&copy; 2024 &ndash; 2026 The Code Street</span>
+        <span>Made for developers learning AI.</span>
+    </div>
+</footer>
+
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.64e2e29c7b1bd8b3ca8af9b66224401a6b239f453fa4363850ad78c31899208a.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script>
+    
+    document.addEventListener('click', function (e) {
+        var facade = e.target.closest('.cs-video-facade');
+        if (!facade) return;
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + facade.dataset.videoId + '?autoplay=1&rel=0';
+        iframe.title = facade.getAttribute('aria-label');
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.className = 'cs-video-iframe';
+        facade.replaceWith(iframe);
+    });
+
+    
+    (function () {
+        var header = document.getElementById('cs-header');
+        if (!header) return;
+
+        var toggle = header.querySelector('.cs-nav-toggle');
+        function setMenu(open) {
+            header.classList.toggle('is-open', open);
+            if (toggle) toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        if (toggle) {
+            toggle.addEventListener('click', function () { setMenu(!header.classList.contains('is-open')); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+            document.addEventListener('click', function (e) { if (!header.contains(e.target)) setMenu(false); });
+            header.querySelector('.cs-nav').addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+        }
+
+        var bar = header.querySelector('.cs-progress span');
+        var article = document.querySelector('.article-content');
+        var ticking = false;
+        function update() {
+            ticking = false;
+            header.classList.toggle('is-scrolled', window.scrollY > 4);
+            if (bar && article) {
+                var top = article.getBoundingClientRect().top + window.scrollY;
+                var total = article.offsetHeight - window.innerHeight * 0.5;
+                var done = total > 0 ? (window.scrollY - top + header.offsetHeight) / total : 0;
+                bar.style.transform = 'scaleX(' + Math.max(0, Math.min(1, done)) + ')';
+            }
+        }
+        function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+        update();
+    })();
+</script>
+
+    </body>
+</html>

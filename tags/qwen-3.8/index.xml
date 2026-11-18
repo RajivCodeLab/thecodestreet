@@ -7,7 +7,187 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>The Code Street</copyright>
-        <lastBuildDate>Mon, 16 Nov 2026 20:30:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/qwen-3.8/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 18 Nov 2026 22:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/qwen-3.8/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hermes Agent Telegram Setup in 4 Steps: Control Your Local AI From Your Phone</title>
+        <link>https://thecodestreet.dev/post/hermes-agent-telegram-setup-windows/</link>
+        <pubDate>Wed, 18 Nov 2026 22:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/post/hermes-agent-telegram-setup-windows/</guid>
+        <description>&lt;img src="https://thecodestreet.dev/post/hermes-agent-telegram-setup-windows/cover.png" alt="Featured image of post Hermes Agent Telegram Setup in 4 Steps: Control Your Local AI From Your Phone" /&gt;&lt;p&gt;I sent a Telegram message from my phone, and my own PC answered. The reply came from a free AI model running locally in Ollama, with no API key and no subscription. In this post, we connect Hermes Agent to Telegram on Windows in 4 steps, then try three real things from the phone.&lt;/p&gt;
+&lt;p&gt;This is Part 2. If Hermes, Ollama and Qwen are not set up yet, start with &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/post/hermes-agent-ollama-qwen-windows/&#34; &gt;Part 1: I Built a FREE AI Agent on My Windows PC&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;-watch-the-video&#34;&gt;🎥 Watch the Video
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/S90M3i29DI4&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;👉 &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/S90M3i29DI4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch on YouTube: Hermes Agent Telegram Setup&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-how-it-works&#34;&gt;🔗 How It Works
+&lt;/h2&gt;&lt;p&gt;Your phone is the remote control. All the thinking happens on your PC.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;You send a message to your Telegram bot.&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;Hermes gateway&lt;/strong&gt; on your PC keeps checking Telegram for new messages.&lt;/li&gt;
+&lt;li&gt;Hermes hands your message to the AI model running in &lt;strong&gt;Ollama&lt;/strong&gt; (Qwen 3.8).&lt;/li&gt;
+&lt;li&gt;The model thinks, Hermes does the work, and the reply goes back to your phone.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The default Telegram gateway uses outbound long polling, so you do not need a public IP, a domain or a VPS for this setup.&lt;/p&gt;
+&lt;h2 id=&#34;-before-you-start&#34;&gt;✅ Before You Start
+&lt;/h2&gt;&lt;p&gt;Hermes and Ollama must already work on your PC. My setup for this video:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Item&lt;/th&gt;
+          &lt;th&gt;Value&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;GPU&lt;/td&gt;
+          &lt;td&gt;RTX 4070 (12 GB VRAM)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;RAM&lt;/td&gt;
+          &lt;td&gt;32 GB&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;OS&lt;/td&gt;
+          &lt;td&gt;Windows 11&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Model&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;qwen3.8:27b&lt;/code&gt; in Ollama&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Context length&lt;/td&gt;
+          &lt;td&gt;64000&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-step-1-create-a-telegram-bot-with-botfather&#34;&gt;🤖 Step 1: Create a Telegram Bot with BotFather
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Open Telegram and search for &lt;strong&gt;BotFather&lt;/strong&gt;. Pick the official one with the blue tick.&lt;/li&gt;
+&lt;li&gt;Start the chat and send &lt;code&gt;/newbot&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Enter a &lt;strong&gt;name&lt;/strong&gt;. This is the display name, so anything works, like &lt;em&gt;My Hermes Agent&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Enter a &lt;strong&gt;username&lt;/strong&gt;. It must be unique and must end in &lt;code&gt;bot&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;BotFather now gives you a &lt;strong&gt;token&lt;/strong&gt;. Treat it like your bot&amp;rsquo;s password: anyone with it can control your bot. Never share it, and never show it in a screenshot or video.&lt;/p&gt;
+&lt;h2 id=&#34;-step-2-get-your-telegram-user-id&#34;&gt;🆔 Step 2: Get Your Telegram User ID
+&lt;/h2&gt;&lt;p&gt;Search for &lt;strong&gt;userinfobot&lt;/strong&gt;, start the chat, and it replies with a number. That number is your user ID. You need the number, not your @username.&lt;/p&gt;
+&lt;p&gt;This is the most important security setting. Hermes &lt;a class=&#34;link&#34; href=&#34;https://hermes-agent.nousresearch.com/docs/user-guide/messaging/telegram&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;denies all users by default&lt;/a&gt;, and only replies to user IDs you allow. Even if someone finds your bot, Hermes ignores them.&lt;/p&gt;
+&lt;h2 id=&#34;-step-3-run-hermes-gateway-setup&#34;&gt;⚙️ Step 3: Run Hermes Gateway Setup
+&lt;/h2&gt;&lt;p&gt;Open PowerShell and run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;hermes&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gateway&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;setup&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The wizard walks you through it:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Select &lt;strong&gt;Telegram&lt;/strong&gt;. In my version it was option &lt;strong&gt;21&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Choose the &lt;strong&gt;manual&lt;/strong&gt; path (option &lt;strong&gt;2&lt;/strong&gt; for me) and paste the bot token from BotFather. The terminal may look blank after you paste. The token is still entered, so press Enter.&lt;/li&gt;
+&lt;li&gt;Paste your &lt;strong&gt;user ID&lt;/strong&gt; for allowed users.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Never leave allowed users empty.&lt;/strong&gt; That list is what keeps your PC under your control. Hermes saves these settings on your PC, so you only do this once.&lt;/p&gt;
+&lt;h2 id=&#34;-step-4-start-the-gateway-and-test&#34;&gt;🚀 Step 4: Start the Gateway and Test
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;hermes&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gateway&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;When the gateway is up, it reports that the Telegram adapter is connected. Keep this window open: the bot only replies while the gateway is running.&lt;/p&gt;
+&lt;p&gt;Now open your bot in Telegram, press &lt;strong&gt;Start&lt;/strong&gt; and say &lt;em&gt;hi&lt;/em&gt;. The reply comes from Qwen running on your own PC.&lt;/p&gt;
+&lt;h3 id=&#34;-tip-use-busy-queue&#34;&gt;⏳ Tip: Use &lt;code&gt;/busy queue&lt;/code&gt;
+&lt;/h3&gt;&lt;p&gt;A local model on a 12 GB GPU can take a while to reply. If you send a new message while Hermes is still working, it treats your new message as a correction to the current task. Send this once in your bot chat:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/busy queue
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Now new messages wait their turn and run as separate tasks. &lt;code&gt;/busy status&lt;/code&gt; shows the current mode, and &lt;code&gt;/stop&lt;/code&gt; cancels the running task.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-3-things-you-can-do-from-your-phone&#34;&gt;📱 3 Things You Can Do From Your Phone
+&lt;/h2&gt;&lt;h3 id=&#34;1-check-your-pc-from-anywhere&#34;&gt;1. Check your PC from anywhere
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Check how much free space is left on my C drive, and list the five biggest folders in my Downloads.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Hermes runs the commands on your PC and sends the answer back to Telegram.&lt;/p&gt;
+&lt;h3 id=&#34;2-send-a-pdf-and-get-a-summary&#34;&gt;2. Send a PDF and get a summary
+&lt;/h3&gt;&lt;p&gt;Attach a PDF in the chat and ask:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Give me a five point summary of this file in simple English.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;The file goes to your PC, the local model reads it, and the summary comes back to your phone.&lt;/p&gt;
+&lt;h3 id=&#34;3-send-a-photo-and-ask-whats-in-it&#34;&gt;3. Send a photo and ask what&amp;rsquo;s in it
+&lt;/h3&gt;&lt;p&gt;Send a photo from your phone and ask Hermes to identify what it shows. The image is processed by the model on your PC.&lt;/p&gt;
+&lt;p&gt;Hermes can also run &lt;a class=&#34;link&#34; href=&#34;https://hermes-agent.nousresearch.com/docs/user-guide/features/cron&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;scheduled tasks&lt;/a&gt;, so you can ask it to message you with a daily reminder or report.&lt;/p&gt;
+&lt;h2 id=&#34;-honest-limits&#34;&gt;⚖️ Honest Limits
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Your PC must stay on.&lt;/strong&gt; If it is off or asleep, or the gateway window is closed, the bot cannot reply.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Messages travel through Telegram.&lt;/strong&gt; The AI model runs on your PC, but your chats pass through Telegram&amp;rsquo;s servers. Keep that in mind for very private files.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Speed depends on your GPU.&lt;/strong&gt; On a 12 GB card the 27B model is slow. On smaller GPUs, try &lt;code&gt;qwen3.5:9b&lt;/code&gt; or &lt;code&gt;qwen3.5:4b&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-quick-fixes&#34;&gt;🧯 Quick Fixes
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Problem&lt;/th&gt;
+          &lt;th&gt;Fix&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Bot does not reply&lt;/td&gt;
+          &lt;td&gt;Check the gateway window is still open and your user ID is in allowed users&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Unauthorized or invalid token&lt;/td&gt;
+          &lt;td&gt;Copy the token again from BotFather and re-run &lt;code&gt;hermes gateway setup&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Replies slow or cut off&lt;/td&gt;
+          &lt;td&gt;Run &lt;code&gt;ollama ps&lt;/code&gt; and check the context is still 64000&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Hermes changed what it was doing&lt;/td&gt;
+          &lt;td&gt;You sent a message mid-task. Use &lt;code&gt;/busy queue&lt;/code&gt; or wait for the reply&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Bot stopped overnight&lt;/td&gt;
+          &lt;td&gt;Your PC went to sleep. Adjust Windows power settings&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;takeaways&#34;&gt;Takeaways
+&lt;/h2&gt;&lt;p&gt;Four steps turn your PC into a private AI agent you can reach from your phone: create the bot, get your user ID, run &lt;code&gt;hermes gateway setup&lt;/code&gt;, and start &lt;code&gt;hermes gateway&lt;/code&gt;. The one setting you must never skip is allowed users.&lt;/p&gt;
+&lt;p&gt;What would you ask your PC from your phone? Tell me in the comments on the video. Thanks for reading, and see you in the next one.&lt;/p&gt;
+&lt;h3 id=&#34;sources&#34;&gt;Sources
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hermes-agent.nousresearch.com/docs/user-guide/messaging/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hermes messaging gateway&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hermes-agent.nousresearch.com/docs/user-guide/messaging/telegram&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hermes Telegram setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hermes-agent.nousresearch.com/docs/user-guide/features/cron&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hermes scheduled tasks (cron)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>I Built a FREE AI Agent on My Windows PC (Hermes &#43; Ollama &#43; Qwen 3.8)</title>
         <link>https://thecodestreet.dev/post/hermes-agent-ollama-qwen-windows/</link>
         <pubDate>Mon, 16 Nov 2026 20:30:00 +0530</pubDate>

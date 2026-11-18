@@ -3,27 +3,72 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://thecodestreet.dev/categories/ai-agents/</loc>
-    <lastmod>2026-11-16T20:30:00+05:30</lastmod>
+    <lastmod>2026-11-18T22:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/tags/ai-agents/</loc>
-    <lastmod>2026-11-16T20:30:00+05:30</lastmod>
+    <lastmod>2026-11-18T22:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/post/</loc>
-    <lastmod>2026-11-16T20:30:00+05:30</lastmod>
+    <lastmod>2026-11-18T22:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/categories/</loc>
-    <lastmod>2026-11-16T20:30:00+05:30</lastmod>
+    <lastmod>2026-11-18T22:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/tags/hermes-agent/</loc>
-    <lastmod>2026-11-16T20:30:00+05:30</lastmod>
+    <lastmod>2026-11-18T22:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/post/hermes-agent-telegram-setup-windows/</loc>
+    <lastmod>2026-11-18T22:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/categories/local-llms/</loc>
+    <lastmod>2026-11-18T22:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/local-llms/</loc>
+    <lastmod>2026-11-18T22:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/ollama/</loc>
+    <lastmod>2026-11-18T22:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/qwen-3.8/</loc>
+    <lastmod>2026-11-18T22:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/</loc>
+    <lastmod>2026-11-18T22:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/telegram/</loc>
+    <lastmod>2026-11-18T22:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/</loc>
+    <lastmod>2026-11-18T22:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/windows/</loc>
+    <lastmod>2026-11-18T22:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -33,41 +78,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/post/hermes-agent-ollama-qwen-windows/</loc>
-    <lastmod>2026-11-16T20:30:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/categories/local-llms/</loc>
-    <lastmod>2026-11-16T20:30:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/tags/local-llms/</loc>
-    <lastmod>2026-11-16T20:30:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/tags/ollama/</loc>
-    <lastmod>2026-11-16T20:30:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/tags/qwen-3.8/</loc>
-    <lastmod>2026-11-16T20:30:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/tags/</loc>
-    <lastmod>2026-11-16T20:30:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/</loc>
-    <lastmod>2026-11-16T20:30:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/tags/windows/</loc>
     <lastmod>2026-11-16T20:30:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
