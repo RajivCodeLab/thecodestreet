@@ -6,8 +6,7 @@
         <description>Recent content in Semantic Kernel on The Code Street</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <copyright>The Code Street</copyright>
-        <lastBuildDate>Sat, 13 Sep 2025 01:50:10 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/categories/semantic-kernel/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>The Code Street</copyright><atom:link href="https://thecodestreet.dev/categories/semantic-kernel/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Build a RAG Application with DeepSeek R1, OLLAMA, and Semantic Kernel</title>
         <link>https://thecodestreet.dev/post/build-a-rag-application-with-deepseek-r1-ollama-and-semantic-kernel/</link>
         <pubDate>Sat, 13 Sep 2025 01:50:10 +0530</pubDate>

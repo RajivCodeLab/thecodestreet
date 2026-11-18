@@ -1,0 +1,67 @@
+# The Code Street
+
+> Hands-on AI tutorials for developers: build AI agents, run local LLMs with Ollama and Qwen, and use AI coding tools like Claude Code. Every guide comes with a video.
+
+The Code Street is run by Rajiv Lochan Sharma, a software engineer and YouTuber. Every written tutorial on this site has a matching step-by-step video on the YouTube channel: https://www.youtube.com/@TheCodeStreet
+
+Key facts:
+- Site: https://thecodestreet.dev/
+- Author: Rajiv Lochan Sharma (https://thecodestreet.dev/about/)
+- YouTube: https://www.youtube.com/@TheCodeStreet
+- GitHub: https://github.com/rajivcodelab
+- Topics: AI agents, local LLMs (Ollama, Qwen, DeepSeek), AI coding tools (Claude Code), Semantic Kernel, Microsoft Agent Framework
+
+## Local LLMs
+
+- [Hermes Agent Telegram Setup in 4 Steps: Control Your Local AI From Your Phone](https://thecodestreet.dev/post/hermes-agent-telegram-setup-windows/): Connect Hermes Agent to Telegram on Windows and control your free local AI (Ollama + Qwen 3.8) from your phone. BotFather, user ID, hermes gateway setup, starting the gateway, /busy queue, and 3 real use cases.
+- [I Built a FREE AI Agent on My Windows PC (Hermes + Ollama + Qwen 3.8)](https://thecodestreet.dev/post/hermes-agent-ollama-qwen-windows/): Step-by-step Hermes Agent setup on Windows with Ollama and Qwen 3.8: install Ollama, download the model, fix the 64K context length error, install Hermes Desktop, connect it to Ollama, and test it on 3 real tasks. Free, local and private.
+- [Don't Build AI Apps From Scratch. Use This Free Repo Instead](https://thecodestreet.dev/post/awesome-llm-apps/): A tour of Awesome LLM Apps, a free GitHub repo with 144K stars and 100+ ready-to-run AI apps, from starter agents to voice agents, MCP agents and agent teams. Plus how to clone one app and run it locally with Ollama for $0.
+- [Can a 1.7B Model Be an AI Agent? Building a Local Agent with LFM3 + Ollama](https://thecodestreet.dev/post/lfm3-local-ai-agent/): I built a fully local AI agent with Liquid AI's 1.7B LFM3 model, Ollama, Node.js and React. Here's how tool calling works, how a multi-tool request runs, and where a small model falls short.
+- [Liquid LFM3 Explained: Is This the Most Efficient Local AI Model?](https://thecodestreet.dev/post/liquid-lfm3-explained/): Liquid AI's LFM3-1.7B fits in about 1 GB, supports a 256K-token context window, and beats Qwen 3.5 9B on agent tasks. Here's what it is, how its tri-hybrid architecture works, where it wins, and where bigger models still win.
+- [Claude Code For Free in VS Code: Full Setup Guide with Ollama + Qwen 3.8](https://thecodestreet.dev/post/claude-code-free-vs-code-ollama-qwen/): Run Claude Code for free inside VS Code with no Claude login and no API bill. Install Ollama, download Qwen 3.8, set up the Claude Code extension with two small config changes, and build a full Space Shooter game from one prompt.
+- [Claude Code For Free: Local Setup with Ollama + Qwen 3.8](https://thecodestreet.dev/post/claude-code-for-free-ollama-qwen/): Run Claude Code for free on your own PC. No API key, no subscription, no bill. A step-by-step local setup with Ollama and Qwen 3.8, plus the exact settings file and prompt I used.
+- [What Is Context Size in Ollama? Context Window Explained for Beginners](https://thecodestreet.dev/post/what-is-context-size-in-ollama/): What does changing Ollama's context length from 4K to 256K actually do? Learn what context size is, how tokens work, why bigger contexts use more memory, and how to choose the right setting for your PC.
+- [How to Use Qwen 3 with VS Code for Free: Local AI Coding with Ollama](https://thecodestreet.dev/post/qwen-3-vs-code-ollama/): Set up Qwen 3 as a free, private AI coding assistant in VS Code. Install Ollama, download a Qwen model, connect the Qwen Code Companion extension and generate your first app, step by step.
+
+## AI Coding
+
+- [Claude Skills vs Projects: Which One Do You Actually Need?](https://thecodestreet.dev/post/claude-skills-vs-projects/): What Claude Skills are, how to use skills in Claude, and when to use a Skill instead of a Project. Includes what goes inside a SKILL.md file and a simple test to decide every time.
+- [Claude Code New Update: Fable 5.2, Ultrathink & 15+ Features Explained](https://thecodestreet.dev/post/claude-code-update-fable-5-2/): Everything in the November 2026 Claude Code update, explained simply: the new Fable 5.2 model and the Pro trial, automatic cloud environment setup, /storage, the /usage fix, Ultrathink, /auto-mode-setup and ten smaller changes.
+- [Claude Code For Free in VS Code: Full Setup Guide with Ollama + Qwen 3.8](https://thecodestreet.dev/post/claude-code-free-vs-code-ollama-qwen/): Run Claude Code for free inside VS Code with no Claude login and no API bill. Install Ollama, download Qwen 3.8, set up the Claude Code extension with two small config changes, and build a full Space Shooter game from one prompt.
+- [Claude Code For Free: Local Setup with Ollama + Qwen 3.8](https://thecodestreet.dev/post/claude-code-for-free-ollama-qwen/): Run Claude Code for free on your own PC. No API key, no subscription, no bill. A step-by-step local setup with Ollama and Qwen 3.8, plus the exact settings file and prompt I used.
+- [REA Tutorial: Reverse Engineer Any App with Claude Code (Setup, Fixes & Honest Review)](https://thecodestreet.dev/post/rea-reverse-engineer-anything-claude-code/): REA (Reverse Engineer Anything) lets Claude Code look inside installed apps with no source code. Here's what it really does, how to set it up on Windows, the errors I hit and how to fix them, and whether it lives up to the hype.
+- [How to Use Qwen 3 with VS Code for Free: Local AI Coding with Ollama](https://thecodestreet.dev/post/qwen-3-vs-code-ollama/): Set up Qwen 3 as a free, private AI coding assistant in VS Code. Install Ollama, download a Qwen model, connect the Qwen Code Companion extension and generate your first app, step by step.
+- [Qwen 3 Coder Explained: The Agentic Coding Trick to Code 10X Faster](https://thecodestreet.dev/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/): Qwen 3 Coder explained in detail — learn how developers can leverage agentic coding to refactor code, run tests, and boost productivity 10X faster with AI-powered workflows.
+
+## Semantic Kernel
+
+- [Build a RAG Application with DeepSeek R1, OLLAMA, and Semantic Kernel](https://thecodestreet.dev/post/build-a-rag-application-with-deepseek-r1-ollama-and-semantic-kernel/): Learn step-by-step how to build a RAG application using DeepSeek R1, OLLAMA, and Microsoft Semantic Kernel. In this tutorial, we create an AI-powered expense manager that answers natural-language questions from your own documents.
+- [How to Create Your First Agent with the Agentic Framework in Semantic Kernel and .NET](https://thecodestreet.dev/post/how-to-create-your-first-agent-with-the-agentic-framework-in-semantic-kernel-and-.net/): In this step-by-step tutorial, you'll learn how to create our first AI Agent using Microsoft Semantic Kernel's Agentic Framework and .NET.
+- [Semantic Kernel Prompts: Complete Guide to All Types with Examples for .NET AI Apps](https://thecodestreet.dev/post/semantic-kernel-prompts-complete-guide-to-all-types-with-examples-for-.net-ai-apps/): When building AI-native applications with Semantic Kernel, prompts are the instructions you give to an LLM like GPT-4 to generate intelligent responses.
+- [What is the Process Framework in Semantic Kernel and How It Helps AI App Development](https://thecodestreet.dev/post/what-is-the-process-framework-in-semantic-kernel-and-how-it-helps-ai-app-development/): The Process Framework in Semantic Kernel helps developers codify AI behavior with precision, logic, and reuse. It enables building structured flows instead of just ad-hoc prompt chains — making your AI systems smarter, more maintainable, and enterprise-ready
+- [What is Semantic Kernel? Best Use Cases for Building AI-First Apps with Microsoft’s Open-Source SDK](https://thecodestreet.dev/post/what-is-semantic-kernel-best-use-cases-for-building-ai-first-apps-with-microsofts-open-source-sdk/): Microsoft’s Semantic Kernel (SK) enables developers to integrate powerful LLM capabilities like GPT-4 into real-world applications—using C#, Python, or Java. But what exactly is it, and where does it shine? Let’s dive in.
+- [How to Create AI Agents Using Semantic Kernel’s Agentic Framework](https://thecodestreet.dev/post/how-to-create-ai-agents-using-semantic-kernels-agentic-framework/): Leverage the power of Microsoft Semantic Kernel to build smart, modular, and scalable AI agents with C#. This blog walks you through building your first AI agent using the Agentic Framework.
+- [Semantic Kernel Plugins Explained: Boost Your AI App Development with Modular Functionality](https://thecodestreet.dev/post/semantic-kernel-plugins-explained-boost-your-ai-app-development-with-modular-functionality/): If you're building AI-powered applications using Microsoft technologies, Semantic Kernel plugins are an essential concept to master. In this SEO-optimized guide, we’ll break down what plugins are, why they matter, and how to use them to supercharge your AI apps using .NET and OpenAI.
+
+## AI Agents
+
+- [Hermes Agent Telegram Setup in 4 Steps: Control Your Local AI From Your Phone](https://thecodestreet.dev/post/hermes-agent-telegram-setup-windows/): Connect Hermes Agent to Telegram on Windows and control your free local AI (Ollama + Qwen 3.8) from your phone. BotFather, user ID, hermes gateway setup, starting the gateway, /busy queue, and 3 real use cases.
+- [I Built a FREE AI Agent on My Windows PC (Hermes + Ollama + Qwen 3.8)](https://thecodestreet.dev/post/hermes-agent-ollama-qwen-windows/): Step-by-step Hermes Agent setup on Windows with Ollama and Qwen 3.8: install Ollama, download the model, fix the 64K context length error, install Hermes Desktop, connect it to Ollama, and test it on 3 real tasks. Free, local and private.
+- [Don't Build AI Apps From Scratch. Use This Free Repo Instead](https://thecodestreet.dev/post/awesome-llm-apps/): A tour of Awesome LLM Apps, a free GitHub repo with 144K stars and 100+ ready-to-run AI apps, from starter agents to voice agents, MCP agents and agent teams. Plus how to clone one app and run it locally with Ollama for $0.
+- [REA Tutorial: Reverse Engineer Any App with Claude Code (Setup, Fixes & Honest Review)](https://thecodestreet.dev/post/rea-reverse-engineer-anything-claude-code/): REA (Reverse Engineer Anything) lets Claude Code look inside installed apps with no source code. Here's what it really does, how to set it up on Windows, the errors I hit and how to fix them, and whether it lives up to the hype.
+
+## GenAI
+
+- [Qwen 3 Coder Explained: The Agentic Coding Trick to Code 10X Faster](https://thecodestreet.dev/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/): Qwen 3 Coder explained in detail — learn how developers can leverage agentic coding to refactor code, run tests, and boost productivity 10X faster with AI-powered workflows.
+
+## Microsoft Agent Framework
+
+- [How to Use DevUI in Microsoft Agent Framework with .NET 10 | Build Real AI Agents](https://thecodestreet.dev/post/how-to-use-devui-in-microsoft-agent-framework-with-.net-10-build-real-ai-agents/): Learn how to use DevUI with the Microsoft Agent Framework in .NET 10 to build, run and debug real AI agents, including a multi-agent demo with GPT models and GitHub Copilot.
+
+## Other pages
+
+- [All tutorials](https://thecodestreet.dev/post/): every written guide, newest first
+- [Videos](https://thecodestreet.dev/videos/): all video tutorials
+- [Projects](https://thecodestreet.dev/projects/): source code for apps built in the videos
+- [About](https://thecodestreet.dev/about/): who writes The Code Street
+- [RSS feed](https://thecodestreet.dev/index.xml): full-content feed of new tutorials

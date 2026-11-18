@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>The Code Street</copyright>
-        <lastBuildDate>Wed, 18 Nov 2026 22:00:00 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/hermes-agent/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 18 Nov 2026 17:09:30 +0000</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/hermes-agent/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Hermes Agent Telegram Setup in 4 Steps: Control Your Local AI From Your Phone</title>
         <link>https://thecodestreet.dev/post/hermes-agent-telegram-setup-windows/</link>
         <pubDate>Wed, 18 Nov 2026 22:00:00 +0530</pubDate>
@@ -328,7 +328,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;The &lt;strong&gt;CONTEXT&lt;/strong&gt; column should read around 64000, not 4096. The &lt;strong&gt;PROCESSOR&lt;/strong&gt; column shows whether the model sits fully on your GPU or is split with the CPU.&lt;/p&gt;
-&lt;p&gt;New to context size? I explain it in &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/p/ollama-context-size/&#34; &gt;What Is Context Size in Ollama?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;New to context size? I explain it in &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/post/what-is-context-size-in-ollama/&#34; &gt;What Is Context Size in Ollama?&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;-step-4-install-hermes-desktop-on-windows&#34;&gt;🪽 Step 4: Install Hermes Desktop on Windows
 &lt;/h2&gt;&lt;p&gt;Hermes Desktop installs the app and the Hermes agent together. Get it from the &lt;a class=&#34;link&#34; href=&#34;https://hermes-agent.nousresearch.com/desktop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Hermes desktop page&lt;/a&gt;.&lt;/p&gt;
@@ -391,7 +391,7 @@
 &lt;p&gt;Look at the project in C:\Users\YourName\Projects\my-app. Read the files to understand what it does, then create a README.md in the same folder with: project name and description, features, tech stack, prerequisites, how to install, how to run, and folder structure. Only create README.md. Do not change or delete any other file.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;This is a true multi-step agent task: Hermes reads several files, works out the project, then writes a new file.&lt;/p&gt;
 &lt;h2 id=&#34;-local-ai-vs-cloud-ai-honest-verdict&#34;&gt;⚖️ Local AI vs Cloud AI: Honest Verdict
-&lt;/h2&gt;&lt;p&gt;On a 12 GB GPU, Qwen 3.8 works for tasks you can wait on, not quick back-and-forth chat. The 27B model does not fit fully on my RTX 4070, so part of it runs on the CPU. In an earlier test on this machine, the same model took 34 minutes to build a snake game in &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/p/claude-code-for-free-ollama-qwen/&#34; &gt;Claude Code&lt;/a&gt;.&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;On a 12 GB GPU, Qwen 3.8 works for tasks you can wait on, not quick back-and-forth chat. The 27B model does not fit fully on my RTX 4070, so part of it runs on the CPU. In an earlier test on this machine, the same model took 34 minutes to build a snake game in &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/post/claude-code-for-free-ollama-qwen/&#34; &gt;Claude Code&lt;/a&gt;.&lt;/p&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
