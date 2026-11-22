@@ -13,6 +13,7 @@ Key facts:
 
 ## Local LLMs
 
+- [Hermes Desktop Full Guide: Every Setting Explained (5 You Must Change Today)](https://thecodestreet.dev/post/hermes-desktop-settings-explained/): Every Hermes Desktop setting explained for a free local setup with Ollama and Qwen 3.8 on Windows: main model, custom endpoint, Local Models GPU check, approval mode, checkpoints, keep awake, and the 5 settings to change today.
 - [Hermes Agent Telegram Setup in 4 Steps: Control Your Local AI From Your Phone](https://thecodestreet.dev/post/hermes-agent-telegram-setup-windows/): Connect Hermes Agent to Telegram on Windows and control your free local AI (Ollama + Qwen 3.8) from your phone. BotFather, user ID, hermes gateway setup, starting the gateway, /busy queue, and 3 real use cases.
 - [I Built a FREE AI Agent on My Windows PC (Hermes + Ollama + Qwen 3.8)](https://thecodestreet.dev/post/hermes-agent-ollama-qwen-windows/): Step-by-step Hermes Agent setup on Windows with Ollama and Qwen 3.8: install Ollama, download the model, fix the 64K context length error, install Hermes Desktop, connect it to Ollama, and test it on 3 real tasks. Free, local and private.
 - [Don't Build AI Apps From Scratch. Use This Free Repo Instead](https://thecodestreet.dev/post/awesome-llm-apps/): A tour of Awesome LLM Apps, a free GitHub repo with 144K stars and 100+ ready-to-run AI apps, from starter agents to voice agents, MCP agents and agent teams. Plus how to clone one app and run it locally with Ollama for $0.
@@ -45,6 +46,7 @@ Key facts:
 
 ## AI Agents
 
+- [Hermes Desktop Full Guide: Every Setting Explained (5 You Must Change Today)](https://thecodestreet.dev/post/hermes-desktop-settings-explained/): Every Hermes Desktop setting explained for a free local setup with Ollama and Qwen 3.8 on Windows: main model, custom endpoint, Local Models GPU check, approval mode, checkpoints, keep awake, and the 5 settings to change today.
 - [Hermes Agent Telegram Setup in 4 Steps: Control Your Local AI From Your Phone](https://thecodestreet.dev/post/hermes-agent-telegram-setup-windows/): Connect Hermes Agent to Telegram on Windows and control your free local AI (Ollama + Qwen 3.8) from your phone. BotFather, user ID, hermes gateway setup, starting the gateway, /busy queue, and 3 real use cases.
 - [I Built a FREE AI Agent on My Windows PC (Hermes + Ollama + Qwen 3.8)](https://thecodestreet.dev/post/hermes-agent-ollama-qwen-windows/): Step-by-step Hermes Agent setup on Windows with Ollama and Qwen 3.8: install Ollama, download the model, fix the 64K context length error, install Hermes Desktop, connect it to Ollama, and test it on 3 real tasks. Free, local and private.
 - [Don't Build AI Apps From Scratch. Use This Free Repo Instead](https://thecodestreet.dev/post/awesome-llm-apps/): A tour of Awesome LLM Apps, a free GitHub repo with 144K stars and 100+ ready-to-run AI apps, from starter agents to voice agents, MCP agents and agent teams. Plus how to clone one app and run it locally with Ollama for $0.

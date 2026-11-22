@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="stylesheet" href="/css/custom.css"><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Every Hermes Desktop setting explained for a free local setup with Ollama and Qwen 3.8 on Windows: main model, custom endpoint, Local Models GPU check, approval mode, checkpoints, keep awake, and the 5 settings to change today.">
+<meta name="keywords" content="hermes desktop settings, hermes desktop full guide, hermes agent settings, hermes desktop ollama, hermes agent custom endpoint, ollama ps processor, qwen 3.8 27b vram, hermes approval mode"><title>Hermes Desktop Settings Explained: 5 to Change Today (Ollama &#43; Qwen 3.8)</title>
+
+<link rel='canonical' href='https://thecodestreet.dev/post/hermes-desktop-settings-explained/'>
+
+<link rel="stylesheet" href="/scss/style.min.86afb6925d63f7c383f64abfa5b01183a2ad21c91d72cb626559e001e899e65c.css"><meta property='og:title' content="Hermes Desktop Settings Explained: 5 to Change Today (Ollama + Qwen 3.8)">
+<meta property='og:description' content="Every Hermes Desktop setting explained for a free local setup with Ollama and Qwen 3.8 on Windows: main model, custom endpoint, Local Models GPU check, approval mode, checkpoints, keep awake, and the 5 settings to change today.">
+<meta property='og:url' content='https://thecodestreet.dev/post/hermes-desktop-settings-explained/'>
+<meta property='og:site_name' content='The Code Street'>
+<meta property='og:type' content='article'>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><meta property='article:section' content='Post' /><meta property='article:tag' content='Hermes Agent' /><meta property='article:tag' content='Hermes Desktop' /><meta property='article:tag' content='Ollama' /><meta property='article:tag' content='Qwen 3.8' /><meta property='article:tag' content='Local LLMs' /><meta property='article:tag' content='AI Agents' /><meta property='article:tag' content='Windows' /><meta property='article:published_time' content='2026-11-22T08:30:00&#43;05:30'/><meta property='article:modified_time' content='2026-11-22T03:07:17&#43;00:00'/><meta property='og:image' content='https://thecodestreet.dev/post/hermes-desktop-settings-explained/cover.png' />
+<meta name="twitter:title" content="Hermes Desktop Settings Explained: 5 to Change Today (Ollama + Qwen 3.8)">
+<meta name="twitter:description" content="Every Hermes Desktop setting explained for a free local setup with Ollama and Qwen 3.8 on Windows: main model, custom endpoint, Local Models GPU check, approval mode, checkpoints, keep awake, and the 5 settings to change today."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://thecodestreet.dev/post/hermes-desktop-settings-explained/cover.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EVB34BL08"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-7EVB34BL08');
+        }
+      </script><link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@id":"https://thecodestreet.dev/post/hermes-desktop-settings-explained/#article","@type":"BlogPosting","about":[{"@type":"Thing","name":"Hermes Agent"},{"@type":"Thing","name":"Hermes Desktop"},{"@type":"Thing","name":"Ollama"},{"@type":"Thing","name":"Qwen 3.8"},{"@type":"Thing","name":"Local LLMs"},{"@type":"Thing","name":"AI Agents"},{"@type":"Thing","name":"Windows"}],"articleSection":"AI Agents","author":{"@id":"https://thecodestreet.dev/about/#person","@type":"Person","name":"Rajiv Lochan Sharma","url":"https://thecodestreet.dev/about/"},"dateModified":"2026-11-22T03:07:17Z","datePublished":"2026-11-22T08:30:00+05:30","description":"Every Hermes Desktop setting explained for a free local setup with Ollama and Qwen 3.8 on Windows: main model, custom endpoint, Local Models GPU check, approval mode, checkpoints, keep awake, and the 5 settings to change today.","headline":"Hermes Desktop Full Guide: Every Setting Explained (5 You Must Change Today)","image":"https://thecodestreet.dev/post/hermes-desktop-settings-explained/cover.png","inLanguage":"en","isPartOf":{"@id":"https://thecodestreet.dev/#website"},"keywords":"hermes desktop settings, hermes desktop full guide, hermes agent settings, hermes desktop ollama, hermes agent custom endpoint, ollama ps processor, qwen 3.8 27b vram, hermes approval mode","mainEntityOfPage":"https://thecodestreet.dev/post/hermes-desktop-settings-explained/","publisher":{"@id":"https://thecodestreet.dev/#organization"},"wordCount":1549},{"@id":"https://thecodestreet.dev/#organization","@type":"Organization","founder":{"@id":"https://thecodestreet.dev/about/#person"},"logo":"https://thecodestreet.dev/img/logo_hu_3a37d9dbae6062.webp","name":"The Code Street","sameAs":["https://www.youtube.com/@TheCodeStreet","https://github.com/rajivcodelab","https://www.linkedin.com/in/rjvranjan80","https://facebook.com/thecodestreet"],"url":"https://thecodestreet.dev/"},{"@id":"https://thecodestreet.dev/about/#person","@type":"Person","alternateName":"Rajiv Sharma","image":"https://thecodestreet.dev/img/logo_hu_3a37d9dbae6062.webp","jobTitle":"Software Engineer","knowsAbout":["AI agents","Large language models","Local LLMs","Ollama","Semantic Kernel","Microsoft Agent Framework","AI coding tools","C#",".NET","Azure","React"],"name":"Rajiv Lochan Sharma","sameAs":["https://www.youtube.com/@TheCodeStreet","https://github.com/rajivcodelab","https://www.linkedin.com/in/rjvranjan80","https://facebook.com/thecodestreet"],"url":"https://thecodestreet.dev/about/","worksFor":{"@id":"https://thecodestreet.dev/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://thecodestreet.dev/","name":"Home","position":1},{"@type":"ListItem","item":"https://thecodestreet.dev/post/","name":"Tutorials","position":2},{"@type":"ListItem","item":"https://thecodestreet.dev/categories/ai-agents/","name":"AI Agents","position":3},{"@type":"ListItem","item":"https://thecodestreet.dev/post/hermes-desktop-settings-explained/","name":"Hermes Desktop Full Guide: Every Setting Explained (5 You Must Change Today)","position":4}]},{"@type":"VideoObject","author":{"@id":"https://thecodestreet.dev/about/#person"},"contentUrl":"https://www.youtube.com/watch?v=LACMqJc8u4g","description":"Every Hermes Desktop setting explained for a free local setup with Ollama and Qwen 3.8 on Windows: main model, custom endpoint, Local Models GPU check, approval mode, checkpoints, keep awake, and the 5 settings to change today.","embedUrl":"https://www.youtube.com/embed/LACMqJc8u4g","name":"Hermes Desktop Full Guide: Every Setting Explained (5 You Must Change Today)","thumbnailUrl":"https://i.ytimg.com/vi/LACMqJc8u4g/hqdefault.jpg","uploadDate":"2026-11-22"},{"@id":"https://thecodestreet.dev/post/hermes-desktop-settings-explained/#faq","@type":"FAQPage","mainEntity":[{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"In Settings → Model → Main model, under “Main model context window (override)”. 0 means Hermes uses the context it detects from the model. Check the real value with ollama ps, since Hermes needs at least 64K."},"name":"Where is the context window setting in Hermes Desktop?"},{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"Go to Settings → Providers → Custom Endpoints, use http://localhost:11434/v1 as the endpoint URL, leave API mode on Auto-detect and the API key blank, then click Test and Save."},"name":"How do I connect Hermes Desktop to Ollama?"},{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"Not fully. It’s roughly 17 GB, so on a 12 GB card like the RTX 4070 part of it runs from system RAM, and Hermes Desktop’s Local Models page labels it “Uses system RAM”. Run ollama ps and check the PROCESSOR column to see the split."},"name":"Does Qwen 3.8 27B fit on a 12 GB GPU?"},{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"Smart, which asks only for risky commands. Manual asks every time, and Off never asks, which isn’t safe for an agent that can run commands on your PC."},"name":"Which approval mode should I use in Hermes?"},{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"No. With Ollama and a local model, the Billing page shows $0 on the Free plan. Only cloud models, Hermes Cloud or paid add-on tools cost money."},"name":"Do I need to pay for anything in Hermes Desktop?"}]}]}
+</script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+
+        <a class="cs-skip" href="#content">Skip to content</a>
+        <header class="cs-header" id="cs-header">
+    <div class="cs-header__inner">
+        <a class="cs-brand" href="/" aria-label="The Code Street home"><img src="/img/logo_hu_2cd295f811d27b71.png" width="96" height="96" alt="The Code Street logo">
+            <span>The <em>Code</em> Street</span>
+        </a>
+
+        <nav class="cs-nav" id="cs-nav" aria-label="Main">
+            <ul>
+                <li>
+                    <a class="cs-nav__link is-active" href="/post/" aria-current="page">Tutorials</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/categories/">Topics</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/videos/">Videos</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/projects/">Projects</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="https://shop.thecodestreet.dev/" target="_blank" rel="noopener">Shop<svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/about/">About</a>
+                </li>
+            </ul>
+            <a class="cs-btn cs-btn--youtube cs-nav__cta" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg><span>Subscribe</span>
+            </a>
+        </nav>
+
+        <div class="cs-header__actions">
+            <a class="cs-iconbtn" href="/search/" aria-label="Search tutorials"><svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></a>
+            <button class="cs-iconbtn cs-nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="cs-nav">
+                <span class="cs-nav-toggle__open"><svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></span>
+                <span class="cs-nav-toggle__close"><svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+            </button>
+        </div>
+    </div>
+    <div class="cs-progress" aria-hidden="true"><span></span></div>
+</header>
+
+        <div class="cs-shell ">
+            <main id="content" class="main cs-main">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/hermes-desktop-settings-explained/">
+                <img src="/post/hermes-desktop-settings-explained/cover_hu_5315620f7e1b5546.png"
+                        srcset="/post/hermes-desktop-settings-explained/cover_hu_5315620f7e1b5546.png 800w, /post/hermes-desktop-settings-explained/cover_hu_bbda84124458ca9d.png 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post Hermes Desktop Full Guide: Every Setting Explained (5 You Must Change Today)" />
+                
+            </a>
+        </div>
+    
+
+    
+<div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/ai-agents/" >
+                AI Agents
+            </a>
+        
+            <a href="/categories/local-llms/" >
+                Local LLMs
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h1 class="article-title">
+            <a href="/post/hermes-desktop-settings-explained/">Hermes Desktop Full Guide: Every Setting Explained (5 You Must Change Today)</a>
+        </h1>
+
+        
+        <p class="article-subtitle">
+            Every Hermes Desktop setting explained for a free local setup with Ollama and Qwen 3.8 on Windows: main model, custom endpoint, Local Models GPU check, approval mode, checkpoints, keep awake, and the 5 settings to change today.
+        </p>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        <div class="article-author">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+            <span>By <a href="/about/" rel="author">Rajiv Lochan Sharma</a></span>
+        </div>
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published" datetime="2026-11-22T08:30:00&#43;05:30">Nov 22, 2026</time>
+            </div>
+        
+
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    8 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Hermes Desktop told me something about my own PC that I didn&rsquo;t know. My everyday model, Qwen 3.8 27B, doesn&rsquo;t fully fit on my RTX 4070&rsquo;s 12 GB of VRAM. Part of it spills into system RAM, which makes it slower. I found that on a Settings page I had never opened, so I went through all of them.</p>
+<p>This post covers every page in Hermes Desktop (v0.23.3 on Windows): what each one does, what I set it to, and what you can skip on a free, local setup. At the end are the 5 settings I&rsquo;d change today.</p>
+<p>This is Part 3 of the series. Part 1 is the <a class="link" href="/post/hermes-agent-ollama-qwen-windows/" >Hermes + Ollama + Qwen 3.8 setup on Windows</a>, and Part 2 is <a class="link" href="/post/hermes-agent-telegram-setup-windows/" >controlling Hermes from your phone with Telegram</a>.</p>
+<h2 id="-watch-the-video">🎥 Watch the Video
+</h2><div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/LACMqJc8u4g" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p>👉 <strong><a class="link" href="https://youtu.be/LACMqJc8u4g"  target="_blank" rel="noopener"
+    >Watch on YouTube: Hermes Desktop Full Guide</a></strong></p>
+<hr>
+<h2 id="-does-your-model-even-fit-on-your-gpu">🎮 Does Your Model Even Fit on Your GPU?
+</h2><p><img src="/post/hermes-desktop-settings-explained/hook_does_it_fit.webp"
+	width="1280"
+	height="720"
+	srcset="/post/hermes-desktop-settings-explained/hook_does_it_fit_hu_df77a2733f1b6101.webp 480w, /post/hermes-desktop-settings-explained/hook_does_it_fit_hu_2e8963f4a0ba99bd.webp 1024w"
+	loading="lazy"
+	
+		alt="Qwen 3.8 27B needs about 17 GB, more than the RTX 4070’s 12 GB of VRAM"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>Qwen 3.8 27B is roughly a 17 GB download. My graphics card has 12 GB, so Ollama keeps part of the model in normal RAM. It still works, just slower. Hermes Desktop shows this on its <strong>Local Models</strong> page, which we&rsquo;ll get to in the Providers section.</p>
+<h2 id="-two-places-to-know">🧭 Two Places to Know
+</h2><p>Hermes keeps things in two places:</p>
+<ul>
+<li><strong>The main sidebar</strong> (left) is about what Hermes can do: Capabilities, Messaging, Artifacts and Scheduled jobs.</li>
+<li><strong>Settings</strong> (<code>Ctrl + ,</code>) is about how Hermes behaves. It has 22 pages, from Model down to About.</li>
+</ul>
+<p><img src="/post/hermes-desktop-settings-explained/settings_map.webp"
+	width="1280"
+	height="720"
+	srcset="/post/hermes-desktop-settings-explained/settings_map_hu_d1b8b9cbbdb7b816.webp 480w, /post/hermes-desktop-settings-explained/settings_map_hu_7f54964dd082338c.webp 1024w"
+	loading="lazy"
+	
+		alt="Map of the 22 Hermes Desktop settings pages grouped into must-set, safety, power, comfort and skip"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<h2 id="-the-main-sidebar">🧩 The Main Sidebar
+</h2><h3 id="capabilities">Capabilities
+</h3><p>There are four tabs:</p>
+<ul>
+<li><strong>Skills:</strong> a catalog of skills you can switch on, grouped by topic.</li>
+<li><strong>Plugins</strong> and <strong>Connectors:</strong> add features and link outside apps.</li>
+<li><strong>Tools:</strong> an on/off switch for every tool Hermes can use, including files, browser automation, code execution, memory, the terminal, cron jobs and web search.</li>
+</ul>
+<p>If Hermes ever behaves strangely, check here first to see which skills and tools are on.</p>
+<h3 id="messaging">Messaging
+</h3><p>Hermes can connect to Telegram, WhatsApp, Discord, Slack, Signal, email, SMS and more. For Telegram there&rsquo;s now a <strong>Quick setup → Create with QR</strong> button. You scan, confirm in Telegram, and Hermes creates the bot and detects your user ID. In Part 2 I did this the manual way.</p>
+<p>Whichever way you do it, keep <strong>Allowed user IDs</strong> limited to your own ID and never leave it empty.</p>
+<h3 id="scheduled-jobs">Scheduled jobs
+</h3><p>This is where Hermes works without you typing anything. It comes with templates such as Morning briefing, Important mail monitor, Weekly review, Topic news digest, and Bills and renewals. Pick one and set a time.</p>
+<h2 id="-model">🤖 Model
+</h2><p><img src="/post/hermes-desktop-settings-explained/main_model.webp"
+	width="1280"
+	height="720"
+	srcset="/post/hermes-desktop-settings-explained/main_model_hu_329e05650d53543b.webp 480w, /post/hermes-desktop-settings-explained/main_model_hu_5cba4e8901457bea.webp 1024w"
+	loading="lazy"
+	
+		alt="Hermes Desktop main model settings: custom provider, qwen3.8:27b, Medium reasoning, context override 0"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p><strong>Model → Main model</strong> is the default model for new chats:</p>
+<ul>
+<li><strong>Provider:</strong> <code>custom</code> (our Ollama endpoint)</li>
+<li><strong>Model:</strong> <code>qwen3.8:27b</code></li>
+<li><strong>Reasoning:</strong> Medium</li>
+<li><strong>Main model context window (override):</strong> <code>0</code>, which means Hermes uses the context it detects from the model</li>
+</ul>
+<p>Click <strong>Apply</strong>. Until you do, nothing changes.</p>
+<p>Hermes needs at least 64K of context, so check the real value with <code>ollama ps</code> (below) instead of guessing.</p>
+<p>The Model section has four more pages:</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Page</th>
+          <th>What it does</th>
+          <th>For a free local setup</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Fallback models</td>
+          <td>Backup model if the main one fails</td>
+          <td>Optional</td>
+      </tr>
+      <tr>
+          <td>Auxiliary models</td>
+          <td>Small jobs: chat titles, vision, compression</td>
+          <td>Leave on &ldquo;use main model&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Subagents</td>
+          <td>Helper agents for big jobs</td>
+          <td>Keep the count low on 12 GB</td>
+      </tr>
+      <tr>
+          <td>Mixture of Agents</td>
+          <td>Several cloud models answer together</td>
+          <td>Skip, it isn&rsquo;t free</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="-providers-connect-ollama">🦙 Providers: Connect Ollama
+</h2><p><img src="/post/hermes-desktop-settings-explained/custom_endpoint.webp"
+	width="1280"
+	height="720"
+	srcset="/post/hermes-desktop-settings-explained/custom_endpoint_hu_b103fce3df766092.webp 480w, /post/hermes-desktop-settings-explained/custom_endpoint_hu_fa91055ecb77e03a.webp 1024w"
+	loading="lazy"
+	
+		alt="Hermes Desktop custom endpoint for Ollama at http://localhost:11434/v1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>Go to <strong>Providers → Custom Endpoints</strong> and add Ollama:</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Field</th>
+          <th>Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Endpoint URL</td>
+          <td><code>http://localhost:11434/v1</code></td>
+      </tr>
+      <tr>
+          <td>API mode</td>
+          <td>Auto-detect</td>
+      </tr>
+      <tr>
+          <td>Default model</td>
+          <td><code>qwen3.8:27b</code></td>
+      </tr>
+      <tr>
+          <td>API key</td>
+          <td>Leave blank</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>Click <strong>Test</strong>, then <strong>Save</strong>. If the test fails, Ollama usually isn&rsquo;t running, so start it and test again.</p>
+<h3 id="local-models-the-page-that-checks-your-pc">Local Models: the page that checks your PC
+</h3><p><img src="/post/hermes-desktop-settings-explained/local_models.webp"
+	width="1280"
+	height="720"
+	srcset="/post/hermes-desktop-settings-explained/local_models_hu_228826f8bdedf4d5.webp 480w, /post/hermes-desktop-settings-explained/local_models_hu_80af1108ab3e6fad.webp 1024w"
+	loading="lazy"
+	
+		alt="Hermes Desktop Local Models page detects the GPU and warns when a model uses system RAM"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p><strong>Providers → Local Models</strong> detected my RTX 4070 (12 GB) and 31.2 GB of RAM. It then labels each model: some say <strong>&ldquo;Uses system RAM&rdquo;</strong>, and the biggest say <strong>&ldquo;Too big for this machine&rdquo;</strong>.</p>
+<p>To confirm it yourself, run this in PowerShell while the model is loaded:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">ollama</span> <span class="nb">ps
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>PROCESSOR</strong> shows whether the model runs fully on the GPU or is split between CPU and GPU.</li>
+<li><strong>CONTEXT</strong> should be 64K or more for Hermes.</li>
+</ul>
+<p>If your model is split, you can accept the slower speed or switch to a smaller Qwen.</p>
+<h2 id="-memory-and-context">🧠 Memory and Context
+</h2><p>These two pages are easy to mix up:</p>
+<ul>
+<li><strong>Persistent memory</strong> is what Hermes remembers about you across chats, such as facts and a short user profile.</li>
+<li><strong>Context &amp; compression</strong> is what fits inside one chat. When a conversation gets long, Hermes summarizes the older messages.</li>
+</ul>
+<p><strong>Tip for local models:</strong> if your model is slow, raise <strong>Compression model timeout</strong> (default 120 seconds).</p>
+<h2 id="-safety">🛡️ Safety
+</h2><p><img src="/post/hermes-desktop-settings-explained/approval_mode.webp"
+	width="1280"
+	height="720"
+	srcset="/post/hermes-desktop-settings-explained/approval_mode_hu_831324e3fed054e2.webp 480w, /post/hermes-desktop-settings-explained/approval_mode_hu_8253e1ae8cbf8044.webp 1024w"
+	loading="lazy"
+	
+		alt="Hermes Desktop approval modes: Manual, Smart and Off"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p><strong>Approval mode</strong> decides what Hermes does before running commands:</p>
+<ul>
+<li><strong>Manual:</strong> asks every time.</li>
+<li><strong>Smart:</strong> asks only for risky commands. This is what I use.</li>
+<li><strong>Off:</strong> never asks. Avoid it, because an agent that runs any command without asking can also delete the wrong folder without asking.</li>
+</ul>
+<p><img src="/post/hermes-desktop-settings-explained/checkpoints.webp"
+	width="1280"
+	height="720"
+	srcset="/post/hermes-desktop-settings-explained/checkpoints_hu_d2548909086e7658.webp 480w, /post/hermes-desktop-settings-explained/checkpoints_hu_c5d171a828bbb51f.webp 1024w"
+	loading="lazy"
+	
+		alt="File checkpoints save a snapshot before Hermes edits files so you can roll back"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>Under <strong>Checkpoints</strong>, turn on <strong>File checkpoints</strong>. Hermes then saves a snapshot before it edits your files, so you can roll back. It&rsquo;s off by default.</p>
+<h2 id="-workspace-sessions-and-browser">🗂️ Workspace, Sessions and Browser
+</h2><ul>
+<li><strong>Workspace:</strong> your default project folder, and which folders Hermes scans for Git projects.</li>
+<li><strong>Sessions:</strong> auto-archive old chats to keep the sidebar clean.</li>
+<li><strong>Browser:</strong> &ldquo;Use my real browser profile&rdquo; lets Hermes use your saved logins. It&rsquo;s off by default, and I&rsquo;d leave it off unless you really need it.</li>
+</ul>
+<h2 id="-advanced">⚡ Advanced
+</h2><ul>
+<li><strong>Desktop &amp; startup → Keep computer awake:</strong> Off, While working or Always. Telegram and scheduled jobs only work while the PC is awake, so I use <strong>While working</strong>. This page also has <strong>Quick Entry</strong>, a small chat box you can open from anywhere, and <strong>Run onboarding again</strong>.</li>
+<li><strong>Terminal backend:</strong> where commands run. <strong>Local</strong> (your PC) is the default. Docker runs them in a sandbox, and Modal and Daytona are cloud sandboxes. The command timeout defaults to 180 seconds.</li>
+<li><strong>Agent limits, Tool access, Output limits:</strong> finer controls. The defaults are fine to start with.</li>
+</ul>
+<h2 id="-gateways-and-web-access">🌐 Gateways and Web Access
+</h2><ul>
+<li><strong>Gateways</strong> decides where Hermes runs. <strong>Local gateway</strong> (this PC, works offline) is the default. The other options are Hermes Cloud, a remote gateway on another machine, or your own server over SSH.</li>
+<li><strong>Web access</strong> lets you open Hermes from your phone&rsquo;s browser on the same Wi-Fi. The connection isn&rsquo;t encrypted on your network, so use it only at home.</li>
+</ul>
+<h2 id="-the-quick-ones">🎨 The Quick Ones
+</h2><ul>
+<li><strong>Chat:</strong> personality, time zone, and <strong>Reasoning Blocks</strong>, which shows or hides the model&rsquo;s thinking.</li>
+<li><strong>Appearance:</strong> language, theme, fonts, layout.</li>
+<li><strong>Voice:</strong> read replies aloud, speech to text, text to speech.</li>
+<li><strong>Notifications:</strong> desktop alerts, for example when Hermes needs your approval.</li>
+<li><strong>Keyboard Shortcuts:</strong> every binding can be changed. Remember <code>Ctrl + ,</code> (Settings) and <code>Ctrl + K</code> (search).</li>
+<li><strong>Backup &amp; Transfer:</strong> saves your whole agent (profiles, settings, memory, skills, schedules and chats) to one file. Do this once you&rsquo;ve finished setting up.</li>
+<li><strong>About:</strong> your version, update checks and uninstall.</li>
+</ul>
+<h2 id="-what-you-can-skip-on-a-free-setup">🗑️ What You Can Skip on a Free Setup
+</h2><ul>
+<li><strong>Billing:</strong> $0 on the Free plan, which is fine for a local setup.</li>
+<li><strong>Mixture of Agents</strong> and <strong>Hermes Cloud:</strong> these need cloud models or an account.</li>
+<li><strong>Tools &amp; Keys:</strong> only needed for paid add-on tools such as search APIs.</li>
+<li><strong>Fallback models:</strong> an optional backup.</li>
+<li><strong>Passwords &amp; Logins:</strong> leave it alone, and never open it on camera.</li>
+</ul>
+<h2 id="-my-5-must-change-settings">🏆 My 5 Must-Change Settings
+</h2><p><img src="/post/hermes-desktop-settings-explained/top5.webp"
+	width="1280"
+	height="720"
+	srcset="/post/hermes-desktop-settings-explained/top5_hu_ac4eab07ff8f3a62.webp 480w, /post/hermes-desktop-settings-explained/top5_hu_29229de375d6af0b.webp 1024w"
+	loading="lazy"
+	
+		alt="Top 5 Hermes Desktop settings to change today"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<ol>
+<li><strong>Providers:</strong> add Ollama as a Custom Endpoint, then click <strong>Test</strong>.</li>
+<li><strong>Model:</strong> set Qwen 3.8 as the main model, then click <strong>Apply</strong>.</li>
+<li><strong>Local Models + <code>ollama ps</code>:</strong> check that your model actually fits on your GPU.</li>
+<li><strong>Safety:</strong> set Approval mode to <strong>Smart</strong> and turn on <strong>File checkpoints</strong>.</li>
+<li><strong>Advanced:</strong> set Keep computer awake to <strong>While working</strong>.</li>
+</ol>
+<h2 id="-faq">❓ FAQ
+</h2><h3 id="where-is-the-context-window-setting-in-hermes-desktop">Where is the context window setting in Hermes Desktop?
+</h3><p>In <strong>Settings → Model → Main model</strong>, under &ldquo;Main model context window (override)&rdquo;. <code>0</code> means Hermes uses the context it detects from the model. Check the real value with <code>ollama ps</code>, since Hermes needs at least 64K.</p>
+<h3 id="how-do-i-connect-hermes-desktop-to-ollama">How do I connect Hermes Desktop to Ollama?
+</h3><p>Go to <strong>Settings → Providers → Custom Endpoints</strong>, use <code>http://localhost:11434/v1</code> as the endpoint URL, leave API mode on Auto-detect and the API key blank, then click <strong>Test</strong> and <strong>Save</strong>.</p>
+<h3 id="does-qwen-38-27b-fit-on-a-12-gb-gpu">Does Qwen 3.8 27B fit on a 12 GB GPU?
+</h3><p>Not fully. It&rsquo;s roughly 17 GB, so on a 12 GB card like the RTX 4070 part of it runs from system RAM, and Hermes Desktop&rsquo;s Local Models page labels it &ldquo;Uses system RAM&rdquo;. Run <code>ollama ps</code> and check the PROCESSOR column to see the split.</p>
+<h3 id="which-approval-mode-should-i-use-in-hermes">Which approval mode should I use in Hermes?
+</h3><p><strong>Smart</strong>, which asks only for risky commands. Manual asks every time, and Off never asks, which isn&rsquo;t safe for an agent that can run commands on your PC.</p>
+<h3 id="do-i-need-to-pay-for-anything-in-hermes-desktop">Do I need to pay for anything in Hermes Desktop?
+</h3><p>No. With Ollama and a local model, the Billing page shows $0 on the Free plan. Only cloud models, Hermes Cloud or paid add-on tools cost money.</p>
+<h2 id="takeaways">Takeaways
+</h2><ul>
+<li>Most of Hermes Desktop works fine on its defaults. Three pages decide whether a local setup works: <strong>Model</strong>, <strong>Providers</strong> and <strong>Safety</strong>.</li>
+<li><strong>Local Models</strong> and <code>ollama ps</code> tell you whether your model really fits on your GPU.</li>
+<li>Next up: Hermes sends me a daily report on Telegram using scheduled jobs. Subscribe on <a class="link" href="https://www.youtube.com/@thecodestreet"  target="_blank" rel="noopener"
+    >YouTube</a> so you don&rsquo;t miss it.</li>
+</ul>
+<h3 id="sources">Sources
+</h3><ul>
+<li><a class="link" href="https://hermes-agent.nousresearch.com/docs/user-guide/desktop"  target="_blank" rel="noopener"
+    >Hermes Agent: Desktop user guide</a></li>
+<li><a class="link" href="https://hermes-agent.nousresearch.com/docs/guides/local-ollama-setup"  target="_blank" rel="noopener"
+    >Hermes Agent: Local Ollama setup</a></li>
+<li><a class="link" href="https://docs.ollama.com/faq"  target="_blank" rel="noopener"
+    >Ollama FAQ (ollama ps)</a></li>
+<li><a class="link" href="https://docs.ollama.com/context-length"  target="_blank" rel="noopener"
+    >Ollama context length</a></li>
+</ul>
+
+</section>
+
+
+    
+        <aside class="cs-post-cta">
+    
+    <div class="cs-post-cta-text">
+        <h2>Enjoyed this tutorial?</h2>
+        <p>
+            I publish step-by-step AI videos on YouTube: AI agents, local LLMs and AI coding tools.
+            Subscribe so you don't miss the next one, and join 4,900&#43; other developers.
+        </p>
+        <div class="cs-hero-actions">
+            
+<a class="cs-btn cs-btn--youtube" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    <span>Subscribe on YouTube</span>
+</a>
+
+            <a class="cs-btn cs-btn--ghost" href="/videos/">More videos</a>
+        </div>
+    </div>
+</aside>
+
+    
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hermes-agent/">Hermes Agent</a>
+        
+            <a href="/tags/hermes-desktop/">Hermes Desktop</a>
+        
+            <a href="/tags/ollama/">Ollama</a>
+        
+            <a href="/tags/qwen-3.8/">Qwen 3.8</a>
+        
+            <a href="/tags/local-llms/">Local LLMs</a>
+        
+            <a href="/tags/ai-agents/">AI Agents</a>
+        
+            <a href="/tags/windows/">Windows</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on Nov 22, 2026 03:07 IST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+<aside class="cs-related" aria-labelledby="cs-related-title">
+    <h2 id="cs-related-title">Keep learning</h2>
+    <div class="cs-grid cs-grid--related">
+        <article class="cs-card cs-card--default">
+    <a class="cs-card__media" href="/post/hermes-agent-ollama-qwen-windows/" tabindex="-1" aria-hidden="true"><img src="/post/hermes-agent-ollama-qwen-windows/cover_hu_1564cde07faa94e3.png"
+                srcset="/post/hermes-agent-ollama-qwen-windows/cover_hu_1564cde07faa94e3.png 640w, /post/hermes-agent-ollama-qwen-windows/cover.png 1280w"
+                sizes="(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw" width="640" height="360"
+                loading="lazy" alt="I Built a FREE AI Agent on My Windows PC (Hermes &#43; Ollama &#43; Qwen 3.8)">
+    </a>
+    <div class="cs-card__body">
+        <div class="cs-tags"><a class="cs-tag" href="/categories/ai-agents/">AI Agents</a><a class="cs-tag" href="/categories/local-llms/">Local LLMs</a>
+        </div>
+        <h3 class="cs-card__title"><a href="/post/hermes-agent-ollama-qwen-windows/">I Built a FREE AI Agent on My Windows PC (Hermes &#43; Ollama &#43; Qwen 3.8)</a></h3><p class="cs-card__desc">Step-by-step Hermes Agent setup on Windows with Ollama and Qwen 3.8: install Ollama, download the model, fix the 64K context length error, install Hermes Desktop, connect it to Ollama, and test it on 3 real tasks. Free, local and private.</p>
+        <div class="cs-meta">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg><time datetime="2026-11-16">Nov 16, 2026</time></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+7 min read</span>
+        </div>
+    </div>
+</article>
+
+        <article class="cs-card cs-card--default">
+    <a class="cs-card__media" href="/post/hermes-agent-telegram-setup-windows/" tabindex="-1" aria-hidden="true"><img src="/post/hermes-agent-telegram-setup-windows/cover_hu_3108f5fa28e1e143.png"
+                srcset="/post/hermes-agent-telegram-setup-windows/cover_hu_3108f5fa28e1e143.png 640w, /post/hermes-agent-telegram-setup-windows/cover.png 1280w"
+                sizes="(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw" width="640" height="360"
+                loading="lazy" alt="Hermes Agent Telegram Setup in 4 Steps: Control Your Local AI From Your Phone">
+    </a>
+    <div class="cs-card__body">
+        <div class="cs-tags"><a class="cs-tag" href="/categories/ai-agents/">AI Agents</a><a class="cs-tag" href="/categories/local-llms/">Local LLMs</a>
+        </div>
+        <h3 class="cs-card__title"><a href="/post/hermes-agent-telegram-setup-windows/">Hermes Agent Telegram Setup in 4 Steps: Control Your Local AI From Your Phone</a></h3><p class="cs-card__desc">Connect Hermes Agent to Telegram on Windows and control your free local AI (Ollama &#43; Qwen 3.8) from your phone. BotFather, user ID, hermes gateway setup, starting the gateway, /busy queue, and 3 real use cases.</p>
+        <div class="cs-meta">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg><time datetime="2026-11-18">Nov 18, 2026</time></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+5 min read</span>
+        </div>
+    </div>
+</article>
+
+        <article class="cs-card cs-card--default">
+    <a class="cs-card__media" href="/post/awesome-llm-apps/" tabindex="-1" aria-hidden="true"><img src="/post/awesome-llm-apps/cover_hu_444631de8d4788e6.png"
+                srcset="/post/awesome-llm-apps/cover_hu_444631de8d4788e6.png 640w, /post/awesome-llm-apps/cover.png 1280w"
+                sizes="(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw" width="640" height="360"
+                loading="lazy" alt="Don&#39;t Build AI Apps From Scratch. Use This Free Repo Instead">
+    </a>
+    <div class="cs-card__body">
+        <div class="cs-tags"><a class="cs-tag" href="/categories/ai-agents/">AI Agents</a><a class="cs-tag" href="/categories/local-llms/">Local LLMs</a>
+        </div>
+        <h3 class="cs-card__title"><a href="/post/awesome-llm-apps/">Don&#39;t Build AI Apps From Scratch. Use This Free Repo Instead</a></h3><p class="cs-card__desc">A tour of Awesome LLM Apps, a free GitHub repo with 144K stars and 100&#43; ready-to-run AI apps, from starter agents to voice agents, MCP agents and agent teams. Plus how to clone one app and run it locally with Ollama for $0.</p>
+        <div class="cs-meta">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg><time datetime="2026-11-12">Nov 12, 2026</time></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+8 min read</span>
+        </div>
+    </div>
+</article>
+
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "code-street" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#-watch-the-video">🎥 Watch the Video</a></li>
+    <li><a href="#-does-your-model-even-fit-on-your-gpu">🎮 Does Your Model Even Fit on Your GPU?</a></li>
+    <li><a href="#-two-places-to-know">🧭 Two Places to Know</a></li>
+    <li><a href="#-the-main-sidebar">🧩 The Main Sidebar</a>
+      <ol>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#messaging">Messaging</a></li>
+        <li><a href="#scheduled-jobs">Scheduled jobs</a></li>
+      </ol>
+    </li>
+    <li><a href="#-model">🤖 Model</a></li>
+    <li><a href="#-providers-connect-ollama">🦙 Providers: Connect Ollama</a>
+      <ol>
+        <li><a href="#local-models-the-page-that-checks-your-pc">Local Models: the page that checks your PC</a></li>
+      </ol>
+    </li>
+    <li><a href="#-memory-and-context">🧠 Memory and Context</a></li>
+    <li><a href="#-safety">🛡️ Safety</a></li>
+    <li><a href="#-workspace-sessions-and-browser">🗂️ Workspace, Sessions and Browser</a></li>
+    <li><a href="#-advanced">⚡ Advanced</a></li>
+    <li><a href="#-gateways-and-web-access">🌐 Gateways and Web Access</a></li>
+    <li><a href="#-the-quick-ones">🎨 The Quick Ones</a></li>
+    <li><a href="#-what-you-can-skip-on-a-free-setup">🗑️ What You Can Skip on a Free Setup</a></li>
+    <li><a href="#-my-5-must-change-settings">🏆 My 5 Must-Change Settings</a></li>
+    <li><a href="#-faq">❓ FAQ</a>
+      <ol>
+        <li><a href="#where-is-the-context-window-setting-in-hermes-desktop">Where is the context window setting in Hermes Desktop?</a></li>
+        <li><a href="#how-do-i-connect-hermes-desktop-to-ollama">How do I connect Hermes Desktop to Ollama?</a></li>
+        <li><a href="#does-qwen-38-27b-fit-on-a-12-gb-gpu">Does Qwen 3.8 27B fit on a 12 GB GPU?</a></li>
+        <li><a href="#which-approval-mode-should-i-use-in-hermes">Which approval mode should I use in Hermes?</a></li>
+        <li><a href="#do-i-need-to-pay-for-anything-in-hermes-desktop">Do I need to pay for anything in Hermes Desktop?</a></li>
+      </ol>
+    </li>
+    <li><a href="#takeaways">Takeaways</a>
+      <ol>
+        <li><a href="#sources">Sources</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+            
+                <section class="widget cs-youtube-widget">
+    <div class="widget-icon">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    </div>
+    <h2 class="widget-title section-title">Watch on YouTube</h2>
+
+    <div class="cs-youtube-widget-card">
+        <p>
+            Video walkthroughs of every tutorial, with <strong>4,900&#43;</strong> developers subscribed.
+        </p>
+        
+<a class="cs-btn cs-btn--youtube" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    <span>Subscribe on YouTube</span>
+</a>
+
+    </div>
+</section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <footer class="cs-footer">
+    <div class="cs-container cs-footer__grid">
+        <div class="cs-footer__brand">
+            <a class="cs-brand" href="/" aria-label="The Code Street home"><img src="/img/logo_hu_2cd295f811d27b71.png" width="96" height="96" alt="The Code Street logo" loading="lazy">
+                <span>The <em>Code</em> Street</span>
+            </a>
+            <p>Hands-on AI tutorials for developers: AI agents, local LLMs and AI coding tools, through blogs and videos.</p>
+            <ul class="cs-social">
+                <li>
+                    <a href="https://facebook.com/thecodestreet" target="_blank" rel="noopener me" aria-label="Facebook" title="Facebook"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg></a>
+                </li>
+                <li>
+                    <a href="https://github.com/rajivcodelab" target="_blank" rel="noopener me" aria-label="GitHub" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+</a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/in/rjvranjan80" target="_blank" rel="noopener me" aria-label="LinkedIn" title="LinkedIn"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg></a>
+                </li>
+                <li>
+                    <a href="/index.xml" target="_blank" rel="noopener me" aria-label="RSS" title="RSS"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+</a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/@TheCodeStreet" target="_blank" rel="noopener me" aria-label="YouTube" title="YouTube"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg></a>
+                </li>
+            </ul>
+        </div>
+
+        <nav class="cs-footer__col" aria-label="Topics">
+            <p class="cs-footer__title">Topics</p>
+            <ul>
+                <li><a href="/categories/local-llms/">Local LLMs</a></li>
+                <li><a href="/categories/ai-coding/">AI Coding</a></li>
+                <li><a href="/categories/semantic-kernel/">Semantic Kernel</a></li>
+                <li><a href="/categories/ai-agents/">AI Agents</a></li>
+                <li><a href="/categories/genai/">GenAI</a></li>
+                <li><a href="/categories/microsoft-agent-framework/">Microsoft Agent Framework</a></li>
+                <li><a href="/categories/">All topics</a></li>
+            </ul>
+        </nav>
+
+        <nav class="cs-footer__col" aria-label="Learn">
+            <p class="cs-footer__title">Learn</p>
+            <ul>
+                <li><a href="/post/">All tutorials</a></li>
+                <li><a href="/videos/">Videos</a></li>
+                <li><a href="/projects/">Source code &amp; projects</a></li>
+                <li><a href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">YouTube channel</a></li>
+                <li><a href="/index.xml">RSS feed</a></li>
+            </ul>
+        </nav>
+
+        <nav class="cs-footer__col" aria-label="About">
+            <p class="cs-footer__title">The Code Street</p>
+            <ul>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/terms-conditions/">Terms</a></li>
+                <li><a href="/privacy-policy/">Privacy</a></li>
+                <li><a href="/disclaimer/">Disclaimer</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="cs-container cs-footer__bottom">
+        <span>&copy; 2024 &ndash; 2026 The Code Street</span>
+        <span>Made for developers learning AI.</span>
+    </div>
+</footer>
+
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.64e2e29c7b1bd8b3ca8af9b66224401a6b239f453fa4363850ad78c31899208a.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script>
+    
+    document.addEventListener('click', function (e) {
+        var facade = e.target.closest('.cs-video-facade');
+        if (!facade) return;
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + facade.dataset.videoId + '?autoplay=1&rel=0';
+        iframe.title = facade.getAttribute('aria-label');
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.className = 'cs-video-iframe';
+        facade.replaceWith(iframe);
+    });
+
+    
+    (function () {
+        var header = document.getElementById('cs-header');
+        if (!header) return;
+
+        var toggle = header.querySelector('.cs-nav-toggle');
+        function setMenu(open) {
+            header.classList.toggle('is-open', open);
+            if (toggle) toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        if (toggle) {
+            toggle.addEventListener('click', function () { setMenu(!header.classList.contains('is-open')); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+            document.addEventListener('click', function (e) { if (!header.contains(e.target)) setMenu(false); });
+            header.querySelector('.cs-nav').addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+        }
+
+        var bar = header.querySelector('.cs-progress span');
+        var article = document.querySelector('.article-content');
+        var ticking = false;
+        function update() {
+            ticking = false;
+            header.classList.toggle('is-scrolled', window.scrollY > 4);
+            if (bar && article) {
+                var top = article.getBoundingClientRect().top + window.scrollY;
+                var total = article.offsetHeight - window.innerHeight * 0.5;
+                var done = total > 0 ? (window.scrollY - top + header.offsetHeight) / total : 0;
+                bar.style.transform = 'scaleX(' + Math.max(0, Math.min(1, done)) + ')';
+            }
+        }
+        function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+        update();
+    })();
+</script>
+
+    </body>
+</html>

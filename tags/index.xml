@@ -7,10 +7,10 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>The Code Street</copyright>
-        <lastBuildDate>Wed, 18 Nov 2026 17:09:30 +0000</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 22 Nov 2026 03:07:17 +0000</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>AI Agents</title>
         <link>https://thecodestreet.dev/tags/ai-agents/</link>
-        <pubDate>Wed, 18 Nov 2026 22:00:00 +0530</pubDate>
+        <pubDate>Sun, 22 Nov 2026 08:30:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/ai-agents/</guid>
         <description></description>
@@ -18,15 +18,23 @@
         <item>
         <title>Hermes Agent</title>
         <link>https://thecodestreet.dev/tags/hermes-agent/</link>
-        <pubDate>Wed, 18 Nov 2026 22:00:00 +0530</pubDate>
+        <pubDate>Sun, 22 Nov 2026 08:30:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/hermes-agent/</guid>
         <description></description>
         </item>
         <item>
+        <title>Hermes Desktop</title>
+        <link>https://thecodestreet.dev/tags/hermes-desktop/</link>
+        <pubDate>Sun, 22 Nov 2026 08:30:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/hermes-desktop/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Local LLMs</title>
         <link>https://thecodestreet.dev/tags/local-llms/</link>
-        <pubDate>Wed, 18 Nov 2026 22:00:00 +0530</pubDate>
+        <pubDate>Sun, 22 Nov 2026 08:30:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/local-llms/</guid>
         <description></description>
@@ -34,7 +42,7 @@
         <item>
         <title>Ollama</title>
         <link>https://thecodestreet.dev/tags/ollama/</link>
-        <pubDate>Wed, 18 Nov 2026 22:00:00 +0530</pubDate>
+        <pubDate>Sun, 22 Nov 2026 08:30:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/ollama/</guid>
         <description></description>
@@ -42,9 +50,17 @@
         <item>
         <title>Qwen 3.8</title>
         <link>https://thecodestreet.dev/tags/qwen-3.8/</link>
-        <pubDate>Wed, 18 Nov 2026 22:00:00 +0530</pubDate>
+        <pubDate>Sun, 22 Nov 2026 08:30:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/qwen-3.8/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Windows</title>
+        <link>https://thecodestreet.dev/tags/windows/</link>
+        <pubDate>Sun, 22 Nov 2026 08:30:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/tags/windows/</guid>
         <description></description>
         </item>
         <item>
@@ -53,22 +69,6 @@
         <pubDate>Wed, 18 Nov 2026 22:00:00 +0530</pubDate>
         
         <guid>https://thecodestreet.dev/tags/telegram/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Windows</title>
-        <link>https://thecodestreet.dev/tags/windows/</link>
-        <pubDate>Wed, 18 Nov 2026 22:00:00 +0530</pubDate>
-        
-        <guid>https://thecodestreet.dev/tags/windows/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Hermes Desktop</title>
-        <link>https://thecodestreet.dev/tags/hermes-desktop/</link>
-        <pubDate>Mon, 16 Nov 2026 20:30:00 +0530</pubDate>
-        
-        <guid>https://thecodestreet.dev/tags/hermes-desktop/</guid>
         <description></description>
         </item>
         <item>

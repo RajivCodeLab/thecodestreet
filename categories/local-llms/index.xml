@@ -7,7 +7,339 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>The Code Street</copyright>
-        <lastBuildDate>Wed, 18 Nov 2026 17:09:30 +0000</lastBuildDate><atom:link href="https://thecodestreet.dev/categories/local-llms/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 22 Nov 2026 03:07:17 +0000</lastBuildDate><atom:link href="https://thecodestreet.dev/categories/local-llms/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hermes Desktop Full Guide: Every Setting Explained (5 You Must Change Today)</title>
+        <link>https://thecodestreet.dev/post/hermes-desktop-settings-explained/</link>
+        <pubDate>Sun, 22 Nov 2026 08:30:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/post/hermes-desktop-settings-explained/</guid>
+        <description>&lt;img src="https://thecodestreet.dev/post/hermes-desktop-settings-explained/cover.png" alt="Featured image of post Hermes Desktop Full Guide: Every Setting Explained (5 You Must Change Today)" /&gt;&lt;p&gt;Hermes Desktop told me something about my own PC that I didn&amp;rsquo;t know. My everyday model, Qwen 3.8 27B, doesn&amp;rsquo;t fully fit on my RTX 4070&amp;rsquo;s 12 GB of VRAM. Part of it spills into system RAM, which makes it slower. I found that on a Settings page I had never opened, so I went through all of them.&lt;/p&gt;
+&lt;p&gt;This post covers every page in Hermes Desktop (v0.23.3 on Windows): what each one does, what I set it to, and what you can skip on a free, local setup. At the end are the 5 settings I&amp;rsquo;d change today.&lt;/p&gt;
+&lt;p&gt;This is Part 3 of the series. Part 1 is the &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/post/hermes-agent-ollama-qwen-windows/&#34; &gt;Hermes + Ollama + Qwen 3.8 setup on Windows&lt;/a&gt;, and Part 2 is &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/post/hermes-agent-telegram-setup-windows/&#34; &gt;controlling Hermes from your phone with Telegram&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;-watch-the-video&#34;&gt;🎥 Watch the Video
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/LACMqJc8u4g&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;👉 &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/LACMqJc8u4g&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch on YouTube: Hermes Desktop Full Guide&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-does-your-model-even-fit-on-your-gpu&#34;&gt;🎮 Does Your Model Even Fit on Your GPU?
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/hermes-desktop-settings-explained/hook_does_it_fit.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/hermes-desktop-settings-explained/hook_does_it_fit_hu_df77a2733f1b6101.webp 480w, https://thecodestreet.dev/post/hermes-desktop-settings-explained/hook_does_it_fit_hu_2e8963f4a0ba99bd.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Qwen 3.8 27B needs about 17 GB, more than the RTX 4070’s 12 GB of VRAM&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Qwen 3.8 27B is roughly a 17 GB download. My graphics card has 12 GB, so Ollama keeps part of the model in normal RAM. It still works, just slower. Hermes Desktop shows this on its &lt;strong&gt;Local Models&lt;/strong&gt; page, which we&amp;rsquo;ll get to in the Providers section.&lt;/p&gt;
+&lt;h2 id=&#34;-two-places-to-know&#34;&gt;🧭 Two Places to Know
+&lt;/h2&gt;&lt;p&gt;Hermes keeps things in two places:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;The main sidebar&lt;/strong&gt; (left) is about what Hermes can do: Capabilities, Messaging, Artifacts and Scheduled jobs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Settings&lt;/strong&gt; (&lt;code&gt;Ctrl + ,&lt;/code&gt;) is about how Hermes behaves. It has 22 pages, from Model down to About.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/hermes-desktop-settings-explained/settings_map.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/hermes-desktop-settings-explained/settings_map_hu_d1b8b9cbbdb7b816.webp 480w, https://thecodestreet.dev/post/hermes-desktop-settings-explained/settings_map_hu_7f54964dd082338c.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Map of the 22 Hermes Desktop settings pages grouped into must-set, safety, power, comfort and skip&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-the-main-sidebar&#34;&gt;🧩 The Main Sidebar
+&lt;/h2&gt;&lt;h3 id=&#34;capabilities&#34;&gt;Capabilities
+&lt;/h3&gt;&lt;p&gt;There are four tabs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Skills:&lt;/strong&gt; a catalog of skills you can switch on, grouped by topic.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plugins&lt;/strong&gt; and &lt;strong&gt;Connectors:&lt;/strong&gt; add features and link outside apps.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tools:&lt;/strong&gt; an on/off switch for every tool Hermes can use, including files, browser automation, code execution, memory, the terminal, cron jobs and web search.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If Hermes ever behaves strangely, check here first to see which skills and tools are on.&lt;/p&gt;
+&lt;h3 id=&#34;messaging&#34;&gt;Messaging
+&lt;/h3&gt;&lt;p&gt;Hermes can connect to Telegram, WhatsApp, Discord, Slack, Signal, email, SMS and more. For Telegram there&amp;rsquo;s now a &lt;strong&gt;Quick setup → Create with QR&lt;/strong&gt; button. You scan, confirm in Telegram, and Hermes creates the bot and detects your user ID. In Part 2 I did this the manual way.&lt;/p&gt;
+&lt;p&gt;Whichever way you do it, keep &lt;strong&gt;Allowed user IDs&lt;/strong&gt; limited to your own ID and never leave it empty.&lt;/p&gt;
+&lt;h3 id=&#34;scheduled-jobs&#34;&gt;Scheduled jobs
+&lt;/h3&gt;&lt;p&gt;This is where Hermes works without you typing anything. It comes with templates such as Morning briefing, Important mail monitor, Weekly review, Topic news digest, and Bills and renewals. Pick one and set a time.&lt;/p&gt;
+&lt;h2 id=&#34;-model&#34;&gt;🤖 Model
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/hermes-desktop-settings-explained/main_model.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/hermes-desktop-settings-explained/main_model_hu_329e05650d53543b.webp 480w, https://thecodestreet.dev/post/hermes-desktop-settings-explained/main_model_hu_5cba4e8901457bea.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Hermes Desktop main model settings: custom provider, qwen3.8:27b, Medium reasoning, context override 0&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Model → Main model&lt;/strong&gt; is the default model for new chats:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Provider:&lt;/strong&gt; &lt;code&gt;custom&lt;/code&gt; (our Ollama endpoint)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Model:&lt;/strong&gt; &lt;code&gt;qwen3.8:27b&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reasoning:&lt;/strong&gt; Medium&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Main model context window (override):&lt;/strong&gt; &lt;code&gt;0&lt;/code&gt;, which means Hermes uses the context it detects from the model&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Click &lt;strong&gt;Apply&lt;/strong&gt;. Until you do, nothing changes.&lt;/p&gt;
+&lt;p&gt;Hermes needs at least 64K of context, so check the real value with &lt;code&gt;ollama ps&lt;/code&gt; (below) instead of guessing.&lt;/p&gt;
+&lt;p&gt;The Model section has four more pages:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Page&lt;/th&gt;
+          &lt;th&gt;What it does&lt;/th&gt;
+          &lt;th&gt;For a free local setup&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Fallback models&lt;/td&gt;
+          &lt;td&gt;Backup model if the main one fails&lt;/td&gt;
+          &lt;td&gt;Optional&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Auxiliary models&lt;/td&gt;
+          &lt;td&gt;Small jobs: chat titles, vision, compression&lt;/td&gt;
+          &lt;td&gt;Leave on &amp;ldquo;use main model&amp;rdquo;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Subagents&lt;/td&gt;
+          &lt;td&gt;Helper agents for big jobs&lt;/td&gt;
+          &lt;td&gt;Keep the count low on 12 GB&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Mixture of Agents&lt;/td&gt;
+          &lt;td&gt;Several cloud models answer together&lt;/td&gt;
+          &lt;td&gt;Skip, it isn&amp;rsquo;t free&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-providers-connect-ollama&#34;&gt;🦙 Providers: Connect Ollama
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/hermes-desktop-settings-explained/custom_endpoint.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/hermes-desktop-settings-explained/custom_endpoint_hu_b103fce3df766092.webp 480w, https://thecodestreet.dev/post/hermes-desktop-settings-explained/custom_endpoint_hu_fa91055ecb77e03a.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Hermes Desktop custom endpoint for Ollama at http://localhost:11434/v1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Go to &lt;strong&gt;Providers → Custom Endpoints&lt;/strong&gt; and add Ollama:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Field&lt;/th&gt;
+          &lt;th&gt;Value&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Endpoint URL&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;http://localhost:11434/v1&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;API mode&lt;/td&gt;
+          &lt;td&gt;Auto-detect&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Default model&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;qwen3.8:27b&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;API key&lt;/td&gt;
+          &lt;td&gt;Leave blank&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Click &lt;strong&gt;Test&lt;/strong&gt;, then &lt;strong&gt;Save&lt;/strong&gt;. If the test fails, Ollama usually isn&amp;rsquo;t running, so start it and test again.&lt;/p&gt;
+&lt;h3 id=&#34;local-models-the-page-that-checks-your-pc&#34;&gt;Local Models: the page that checks your PC
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/hermes-desktop-settings-explained/local_models.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/hermes-desktop-settings-explained/local_models_hu_228826f8bdedf4d5.webp 480w, https://thecodestreet.dev/post/hermes-desktop-settings-explained/local_models_hu_80af1108ab3e6fad.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Hermes Desktop Local Models page detects the GPU and warns when a model uses system RAM&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Providers → Local Models&lt;/strong&gt; detected my RTX 4070 (12 GB) and 31.2 GB of RAM. It then labels each model: some say &lt;strong&gt;&amp;ldquo;Uses system RAM&amp;rdquo;&lt;/strong&gt;, and the biggest say &lt;strong&gt;&amp;ldquo;Too big for this machine&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;To confirm it yourself, run this in PowerShell while the model is loaded:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ollama&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;ps
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PROCESSOR&lt;/strong&gt; shows whether the model runs fully on the GPU or is split between CPU and GPU.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CONTEXT&lt;/strong&gt; should be 64K or more for Hermes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If your model is split, you can accept the slower speed or switch to a smaller Qwen.&lt;/p&gt;
+&lt;h2 id=&#34;-memory-and-context&#34;&gt;🧠 Memory and Context
+&lt;/h2&gt;&lt;p&gt;These two pages are easy to mix up:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Persistent memory&lt;/strong&gt; is what Hermes remembers about you across chats, such as facts and a short user profile.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Context &amp;amp; compression&lt;/strong&gt; is what fits inside one chat. When a conversation gets long, Hermes summarizes the older messages.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Tip for local models:&lt;/strong&gt; if your model is slow, raise &lt;strong&gt;Compression model timeout&lt;/strong&gt; (default 120 seconds).&lt;/p&gt;
+&lt;h2 id=&#34;-safety&#34;&gt;🛡️ Safety
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/hermes-desktop-settings-explained/approval_mode.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/hermes-desktop-settings-explained/approval_mode_hu_831324e3fed054e2.webp 480w, https://thecodestreet.dev/post/hermes-desktop-settings-explained/approval_mode_hu_8253e1ae8cbf8044.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Hermes Desktop approval modes: Manual, Smart and Off&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Approval mode&lt;/strong&gt; decides what Hermes does before running commands:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Manual:&lt;/strong&gt; asks every time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Smart:&lt;/strong&gt; asks only for risky commands. This is what I use.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Off:&lt;/strong&gt; never asks. Avoid it, because an agent that runs any command without asking can also delete the wrong folder without asking.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/hermes-desktop-settings-explained/checkpoints.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/hermes-desktop-settings-explained/checkpoints_hu_d2548909086e7658.webp 480w, https://thecodestreet.dev/post/hermes-desktop-settings-explained/checkpoints_hu_c5d171a828bbb51f.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;File checkpoints save a snapshot before Hermes edits files so you can roll back&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Under &lt;strong&gt;Checkpoints&lt;/strong&gt;, turn on &lt;strong&gt;File checkpoints&lt;/strong&gt;. Hermes then saves a snapshot before it edits your files, so you can roll back. It&amp;rsquo;s off by default.&lt;/p&gt;
+&lt;h2 id=&#34;-workspace-sessions-and-browser&#34;&gt;🗂️ Workspace, Sessions and Browser
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Workspace:&lt;/strong&gt; your default project folder, and which folders Hermes scans for Git projects.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sessions:&lt;/strong&gt; auto-archive old chats to keep the sidebar clean.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Browser:&lt;/strong&gt; &amp;ldquo;Use my real browser profile&amp;rdquo; lets Hermes use your saved logins. It&amp;rsquo;s off by default, and I&amp;rsquo;d leave it off unless you really need it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-advanced&#34;&gt;⚡ Advanced
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Desktop &amp;amp; startup → Keep computer awake:&lt;/strong&gt; Off, While working or Always. Telegram and scheduled jobs only work while the PC is awake, so I use &lt;strong&gt;While working&lt;/strong&gt;. This page also has &lt;strong&gt;Quick Entry&lt;/strong&gt;, a small chat box you can open from anywhere, and &lt;strong&gt;Run onboarding again&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Terminal backend:&lt;/strong&gt; where commands run. &lt;strong&gt;Local&lt;/strong&gt; (your PC) is the default. Docker runs them in a sandbox, and Modal and Daytona are cloud sandboxes. The command timeout defaults to 180 seconds.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Agent limits, Tool access, Output limits:&lt;/strong&gt; finer controls. The defaults are fine to start with.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-gateways-and-web-access&#34;&gt;🌐 Gateways and Web Access
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Gateways&lt;/strong&gt; decides where Hermes runs. &lt;strong&gt;Local gateway&lt;/strong&gt; (this PC, works offline) is the default. The other options are Hermes Cloud, a remote gateway on another machine, or your own server over SSH.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Web access&lt;/strong&gt; lets you open Hermes from your phone&amp;rsquo;s browser on the same Wi-Fi. The connection isn&amp;rsquo;t encrypted on your network, so use it only at home.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-the-quick-ones&#34;&gt;🎨 The Quick Ones
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Chat:&lt;/strong&gt; personality, time zone, and &lt;strong&gt;Reasoning Blocks&lt;/strong&gt;, which shows or hides the model&amp;rsquo;s thinking.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Appearance:&lt;/strong&gt; language, theme, fonts, layout.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Voice:&lt;/strong&gt; read replies aloud, speech to text, text to speech.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Notifications:&lt;/strong&gt; desktop alerts, for example when Hermes needs your approval.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Keyboard Shortcuts:&lt;/strong&gt; every binding can be changed. Remember &lt;code&gt;Ctrl + ,&lt;/code&gt; (Settings) and &lt;code&gt;Ctrl + K&lt;/code&gt; (search).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Backup &amp;amp; Transfer:&lt;/strong&gt; saves your whole agent (profiles, settings, memory, skills, schedules and chats) to one file. Do this once you&amp;rsquo;ve finished setting up.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;About:&lt;/strong&gt; your version, update checks and uninstall.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-what-you-can-skip-on-a-free-setup&#34;&gt;🗑️ What You Can Skip on a Free Setup
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Billing:&lt;/strong&gt; $0 on the Free plan, which is fine for a local setup.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mixture of Agents&lt;/strong&gt; and &lt;strong&gt;Hermes Cloud:&lt;/strong&gt; these need cloud models or an account.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tools &amp;amp; Keys:&lt;/strong&gt; only needed for paid add-on tools such as search APIs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fallback models:&lt;/strong&gt; an optional backup.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Passwords &amp;amp; Logins:&lt;/strong&gt; leave it alone, and never open it on camera.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-my-5-must-change-settings&#34;&gt;🏆 My 5 Must-Change Settings
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/hermes-desktop-settings-explained/top5.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/hermes-desktop-settings-explained/top5_hu_ac4eab07ff8f3a62.webp 480w, https://thecodestreet.dev/post/hermes-desktop-settings-explained/top5_hu_29229de375d6af0b.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Top 5 Hermes Desktop settings to change today&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Providers:&lt;/strong&gt; add Ollama as a Custom Endpoint, then click &lt;strong&gt;Test&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Model:&lt;/strong&gt; set Qwen 3.8 as the main model, then click &lt;strong&gt;Apply&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Local Models + &lt;code&gt;ollama ps&lt;/code&gt;:&lt;/strong&gt; check that your model actually fits on your GPU.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Safety:&lt;/strong&gt; set Approval mode to &lt;strong&gt;Smart&lt;/strong&gt; and turn on &lt;strong&gt;File checkpoints&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Advanced:&lt;/strong&gt; set Keep computer awake to &lt;strong&gt;While working&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;-faq&#34;&gt;❓ FAQ
+&lt;/h2&gt;&lt;h3 id=&#34;where-is-the-context-window-setting-in-hermes-desktop&#34;&gt;Where is the context window setting in Hermes Desktop?
+&lt;/h3&gt;&lt;p&gt;In &lt;strong&gt;Settings → Model → Main model&lt;/strong&gt;, under &amp;ldquo;Main model context window (override)&amp;rdquo;. &lt;code&gt;0&lt;/code&gt; means Hermes uses the context it detects from the model. Check the real value with &lt;code&gt;ollama ps&lt;/code&gt;, since Hermes needs at least 64K.&lt;/p&gt;
+&lt;h3 id=&#34;how-do-i-connect-hermes-desktop-to-ollama&#34;&gt;How do I connect Hermes Desktop to Ollama?
+&lt;/h3&gt;&lt;p&gt;Go to &lt;strong&gt;Settings → Providers → Custom Endpoints&lt;/strong&gt;, use &lt;code&gt;http://localhost:11434/v1&lt;/code&gt; as the endpoint URL, leave API mode on Auto-detect and the API key blank, then click &lt;strong&gt;Test&lt;/strong&gt; and &lt;strong&gt;Save&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;does-qwen-38-27b-fit-on-a-12-gb-gpu&#34;&gt;Does Qwen 3.8 27B fit on a 12 GB GPU?
+&lt;/h3&gt;&lt;p&gt;Not fully. It&amp;rsquo;s roughly 17 GB, so on a 12 GB card like the RTX 4070 part of it runs from system RAM, and Hermes Desktop&amp;rsquo;s Local Models page labels it &amp;ldquo;Uses system RAM&amp;rdquo;. Run &lt;code&gt;ollama ps&lt;/code&gt; and check the PROCESSOR column to see the split.&lt;/p&gt;
+&lt;h3 id=&#34;which-approval-mode-should-i-use-in-hermes&#34;&gt;Which approval mode should I use in Hermes?
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Smart&lt;/strong&gt;, which asks only for risky commands. Manual asks every time, and Off never asks, which isn&amp;rsquo;t safe for an agent that can run commands on your PC.&lt;/p&gt;
+&lt;h3 id=&#34;do-i-need-to-pay-for-anything-in-hermes-desktop&#34;&gt;Do I need to pay for anything in Hermes Desktop?
+&lt;/h3&gt;&lt;p&gt;No. With Ollama and a local model, the Billing page shows $0 on the Free plan. Only cloud models, Hermes Cloud or paid add-on tools cost money.&lt;/p&gt;
+&lt;h2 id=&#34;takeaways&#34;&gt;Takeaways
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Most of Hermes Desktop works fine on its defaults. Three pages decide whether a local setup works: &lt;strong&gt;Model&lt;/strong&gt;, &lt;strong&gt;Providers&lt;/strong&gt; and &lt;strong&gt;Safety&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Local Models&lt;/strong&gt; and &lt;code&gt;ollama ps&lt;/code&gt; tell you whether your model really fits on your GPU.&lt;/li&gt;
+&lt;li&gt;Next up: Hermes sends me a daily report on Telegram using scheduled jobs. Subscribe on &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/@thecodestreet&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube&lt;/a&gt; so you don&amp;rsquo;t miss it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sources&#34;&gt;Sources
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hermes-agent.nousresearch.com/docs/user-guide/desktop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hermes Agent: Desktop user guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hermes-agent.nousresearch.com/docs/guides/local-ollama-setup&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hermes Agent: Local Ollama setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.ollama.com/faq&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ollama FAQ (ollama ps)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.ollama.com/context-length&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ollama context length&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Hermes Agent Telegram Setup in 4 Steps: Control Your Local AI From Your Phone</title>
         <link>https://thecodestreet.dev/post/hermes-agent-telegram-setup-windows/</link>
         <pubDate>Wed, 18 Nov 2026 22:00:00 +0530</pubDate>
