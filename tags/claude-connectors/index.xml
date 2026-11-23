@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Claude Connectors on The Code Street</title>
+        <link>https://thecodestreet.dev/tags/claude-connectors/</link>
+        <description>Recent content in Claude Connectors on The Code Street</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>The Code Street</copyright>
+        <lastBuildDate>Mon, 23 Nov 2026 14:45:56 +0000</lastBuildDate><atom:link href="https://thecodestreet.dev/tags/claude-connectors/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>How to Connect vidIQ to Claude (Free Plan, Step-by-Step Setup)</title>
+        <link>https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/</link>
+        <pubDate>Mon, 23 Nov 2026 20:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/</guid>
+        <description>&lt;img src="https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/cover.png" alt="Featured image of post How to Connect vidIQ to Claude (Free Plan, Step-by-Step Setup)" /&gt;&lt;p&gt;A channel with just 1,200 subscribers got 231K views on one GTA 6 video, and Claude found it for me in a single chat using real YouTube data from vidIQ. I did the whole thing on a brand-new free Claude account and a brand-new free vidIQ account.&lt;/p&gt;
+&lt;p&gt;This post covers how to connect vidIQ to Claude step by step, what you can do with it, and what you get on the free plans compared with paid ones.&lt;/p&gt;
+&lt;h2 id=&#34;-watch-the-video&#34;&gt;🎥 Watch the Video
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/z4DUOy--BXM&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;👉 &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/z4DUOy--BXM&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch on YouTube: How to Connect vidIQ to Claude&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-vidiq-claude-and-connectors-in-30-seconds&#34;&gt;🧠 vidIQ, Claude and Connectors in 30 Seconds
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;vidIQ&lt;/strong&gt; is a YouTube research tool. It shows how many people search a topic, how crowded that topic is, which small channels are getting unusually big views (outliers), and how your own channel is doing.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Claude&lt;/strong&gt; is an AI assistant by Anthropic. It&amp;rsquo;s good at ideas, scripts, titles and planning, but on its own it has no live YouTube numbers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A connector&lt;/strong&gt; links Claude to another app. You ask in plain English, Claude uses vidIQ&amp;rsquo;s tools through the connector, and real data comes back into your chat. You sign in once, and Claude asks before it uses each tool.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/what_are_connectors.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/what_are_connectors_hu_34ab257a1f7e6e0a.webp 480w, https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/what_are_connectors_hu_5d366b6f36f8e732.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Claude connects to vidIQ through a connector, and real YouTube data comes back&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-why-connect-them&#34;&gt;⚖️ Why Connect Them?
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/without_vs_with.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/without_vs_with_hu_53876cbfa0d57a3f.webp 480w, https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/without_vs_with_hu_14dcef054b9b5349.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Claude alone gives guesses; Claude with vidIQ gives ideas with numbers&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I asked the same question both ways: &amp;ldquo;Give me 5 GTA 6 video ideas that could get views fast.&amp;rdquo; Without vidIQ, the ideas sounded reasonable but had no search volume, no competition score and no proof. With vidIQ, every idea came with numbers.&lt;/p&gt;
+&lt;h2 id=&#34;-how-to-connect-vidiq-to-claude-free-plan&#34;&gt;🔌 How to Connect vidIQ to Claude (Free Plan)
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/setup_steps.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/setup_steps_hu_cc28f5f7730bc35.webp 480w, https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/setup_steps_hu_563783a48fa92cba.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Four steps to connect vidIQ to Claude&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;It takes about two minutes, and you don&amp;rsquo;t need an API key or any code.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Open vidIQ in Claude&amp;rsquo;s directory.&lt;/strong&gt; In Claude, go to &lt;strong&gt;Plugins&lt;/strong&gt; (the connector directory) and search for &lt;strong&gt;vidIQ&lt;/strong&gt;. You can also start from &lt;a class=&#34;link&#34; href=&#34;https://vidiq.com/claude/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vidIQ&amp;rsquo;s Claude page&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Click Connect.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sign in to vidIQ.&lt;/strong&gt; A free vidIQ account is enough. I signed up with Google.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Allow access.&lt;/strong&gt; You&amp;rsquo;ll see &lt;strong&gt;&amp;ldquo;Connected to Claude&amp;rdquo;&lt;/strong&gt;, and you&amp;rsquo;re done.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Tip for free Claude users:&lt;/strong&gt; the free plan allows only one &lt;em&gt;custom&lt;/em&gt; connector, so add vidIQ from the directory listing as shown here. If you&amp;rsquo;d rather add it as a custom connector, the server URL is &lt;code&gt;https://mcp.vidiq.com/mcp&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;-turn-it-on-in-a-chat&#34;&gt;💬 Turn It On in a Chat
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/turn_it_on.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/turn_it_on_hu_1bf080e09397d862.webp 480w, https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/turn_it_on_hu_17eea9706b4b86af.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Turn vidIQ on from &amp;#43; then Connectors, and start prompts with Use vidIQ to&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In any chat, click &lt;strong&gt;+ → Connectors&lt;/strong&gt; and make sure &lt;strong&gt;vidIQ&lt;/strong&gt; is on.&lt;/li&gt;
+&lt;li&gt;Start your prompt with &lt;strong&gt;&amp;ldquo;Use vidIQ to…&amp;rdquo;&lt;/strong&gt; so Claude knows to use real data.&lt;/li&gt;
+&lt;li&gt;Not sure what to ask? vidIQ&amp;rsquo;s Claude page has a free &lt;strong&gt;prompt library&lt;/strong&gt; you can copy from.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The first time Claude uses a vidIQ tool, it asks for permission. You can allow it once or always (more on this below).&lt;/p&gt;
+&lt;h2 id=&#34;-what-i-did-with-it&#34;&gt;📊 What I Did With It
+&lt;/h2&gt;&lt;h3 id=&#34;1-a-real-channel-check&#34;&gt;1. A real channel check
+&lt;/h3&gt;&lt;p&gt;I pasted this prompt from vidIQ&amp;rsquo;s library:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Use vidIQ to review my channel&amp;#39;s last 90 days. Compare views, watch time, and traffic sources with the previous 90 days, then suggest three things to investigate.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/channel_check.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/channel_check_hu_61af1bb76ae82ec6.webp 480w, https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/channel_check_hu_7c992bdd028565dc.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;My small gaming channel: engaged views -35%, watch time -18%, average view duration &amp;#43;26%, YouTube search -41%&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;On my small gaming channel, engaged views were down 35% and watch time down 18%. Average view duration went up 26%, but traffic from YouTube search dropped 41%. Claude also noticed that YouTube changed how it counts views in late August, so it compared engaged views instead of raw views. My takeaway was that my titles don&amp;rsquo;t match what people search for.&lt;/p&gt;
+&lt;h3 id=&#34;2-video-ideas-with-proof&#34;&gt;2. Video ideas with proof
+&lt;/h3&gt;&lt;p&gt;Then I asked for GTA 6 video ideas. Claude ran vidIQ&amp;rsquo;s &lt;strong&gt;outlier search&lt;/strong&gt; (small channels with big views) and &lt;strong&gt;rising keyword research&lt;/strong&gt; (what people are searching this week), then gave ideas backed by numbers:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/idea_proof.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/idea_proof_hu_7a43bd7b64f78a3e.webp 480w, https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/idea_proof_hu_b9ce105ca92ca09c.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GTA 6 ideas with search volumes and small-channel results&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&amp;ldquo;GTA 6 funny moments&amp;rdquo;:&lt;/strong&gt; about 945K estimated monthly searches, and a 1.2K-subscriber channel got 26.5K views on a crash compilation in two days.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&amp;ldquo;GTA 6 ending&amp;rdquo;:&lt;/strong&gt; the biggest demand (about 2.7M) but also the most crowded topic.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GTA intro-evolution video:&lt;/strong&gt; 231K views in four days from a channel with about 1.2K subscribers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&amp;ldquo;GTA 6 4K gameplay&amp;rdquo;:&lt;/strong&gt; about 230K searches, 38% of them from India.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These are vidIQ estimates. Treat them as a direction, not a promise. Claude also caught one search that came back in Hindi and re-ran it in English.&lt;/p&gt;
+&lt;h3 id=&#34;3-title-scoring&#34;&gt;3. Title scoring
+&lt;/h3&gt;&lt;p&gt;Finally, I asked vidIQ to score title options before choosing one. My best title scored 98 out of 100.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Use vidIQ to score these 4 titles and tell me which is best and why: …
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;-do-you-need-to-pay&#34;&gt;💸 Do You Need to Pay?
+&lt;/h2&gt;&lt;p&gt;Everything above ran on free plans.&lt;/p&gt;
+&lt;h3 id=&#34;vidiq-free-vs-boost-vs-max&#34;&gt;vidIQ: Free vs Boost vs MAX
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/vidiq_free_vs_paid.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/vidiq_free_vs_paid_hu_8a9eac6bec680751.webp 480w, https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/vidiq_free_vs_paid_hu_431d8f06ffacbe1f.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;vidIQ plans in India: Free ₹0, Boost ₹999 per month, MAX ₹2,490 per month&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Plan&lt;/th&gt;
+          &lt;th&gt;Price (India, monthly)&lt;/th&gt;
+          &lt;th&gt;AI credits per month&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Free&lt;/td&gt;
+          &lt;td&gt;₹0&lt;/td&gt;
+          &lt;td&gt;150&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Boost&lt;/td&gt;
+          &lt;td&gt;₹999&lt;/td&gt;
+          &lt;td&gt;2,000&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;MAX&lt;/td&gt;
+          &lt;td&gt;₹2,490&lt;/td&gt;
+          &lt;td&gt;6,000&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;These were the prices on the day I recorded, and yearly billing is cheaper. Check your own price at checkout.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/credits_math.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/credits_math_hu_ce004424de27d43d.webp 480w, https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/credits_math_hu_b4a6daf609fb50be.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;150 free credits is about 30 research lookups&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Most research calls cost about 5 credits each, so the free 150 credits come to roughly 30 lookups a month. That&amp;rsquo;s enough to plan a few videos. Unused credits don&amp;rsquo;t roll over.&lt;/p&gt;
+&lt;h3 id=&#34;claude-free-vs-pro&#34;&gt;Claude: Free vs Pro
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/claude_free_vs_pro.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/claude_free_vs_pro_hu_b88d0787c0cca6c6.webp 480w, https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/claude_free_vs_pro_hu_10c1551f6a98913.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Claude Free works for everything in this guide; Pro adds higher limits&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Free Claude handled everything in this guide. You&amp;rsquo;ll sometimes see &amp;ldquo;Claude is busy, retrying&amp;rdquo; and get upgrade prompts. Pro (about ₹2,000 a month in India) adds higher usage limits, more Claude models and Claude Code.&lt;/p&gt;
+&lt;h2 id=&#34;-permissions-stay-in-control&#34;&gt;🛡️ Permissions: Stay in Control
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/permissions.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/permissions_hu_6db3c08a0b2d6d41.webp 480w, https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/permissions_hu_d0d664070a538901.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Always allow research tools; keep anything that changes YouTube on Needs approval&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Go to &lt;strong&gt;Plugins → vidIQ → Permissions&lt;/strong&gt; to choose which tools run automatically and which need your approval.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Always allow:&lt;/strong&gt; research tools like keywords, outliers and analytics, which only read data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Needs approval:&lt;/strong&gt; anything that can change your YouTube videos, such as titles, thumbnails or video details.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-my-advice-for-new-channels&#34;&gt;✅ My Advice for New Channels
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Start with free Claude and free vidIQ.&lt;/li&gt;
+&lt;li&gt;Find outliers from small channels in your niche.&lt;/li&gt;
+&lt;li&gt;Pick searches that are rising but not crowded.&lt;/li&gt;
+&lt;li&gt;Upgrade only when you post every week and keep running out of credits.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;-faq&#34;&gt;❓ FAQ
+&lt;/h2&gt;&lt;h3 id=&#34;how-do-i-connect-vidiq-to-claude&#34;&gt;How do I connect vidIQ to Claude?
+&lt;/h3&gt;&lt;p&gt;In Claude, open &lt;strong&gt;Plugins&lt;/strong&gt;, find &lt;strong&gt;vidIQ&lt;/strong&gt;, click &lt;strong&gt;Connect&lt;/strong&gt;, sign in to vidIQ and allow access. Then turn vidIQ on from &lt;strong&gt;+ → Connectors&lt;/strong&gt; in a chat and start your prompt with &amp;ldquo;Use vidIQ to…&amp;rdquo;.&lt;/p&gt;
+&lt;h3 id=&#34;can-i-use-vidiq-in-claude-for-free&#34;&gt;Can I use vidIQ in Claude for free?
+&lt;/h3&gt;&lt;p&gt;Yes. The vidIQ connector works on the free vidIQ plan (150 AI credits a month) and on a free Claude account. Everything in this guide was done on free plans.&lt;/p&gt;
+&lt;h3 id=&#34;how-many-credits-does-vidiq-use-in-claude&#34;&gt;How many credits does vidIQ use in Claude?
+&lt;/h3&gt;&lt;p&gt;Most research calls, such as keyword research, outliers and title scores, cost about 5 credits each. The free plan&amp;rsquo;s 150 credits come to roughly 30 lookups a month.&lt;/p&gt;
+&lt;h3 id=&#34;do-i-need-an-api-key-to-connect-vidiq-to-claude&#34;&gt;Do I need an API key to connect vidIQ to Claude?
+&lt;/h3&gt;&lt;p&gt;No. With the directory listing you just click Connect and sign in. If you add it as a custom connector instead, the server URL is &lt;code&gt;https://mcp.vidiq.com/mcp&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;is-it-safe-to-give-claude-access-to-my-youtube-channel&#34;&gt;Is it safe to give Claude access to my YouTube channel?
+&lt;/h3&gt;&lt;p&gt;You stay in control. Claude asks before using each tool, and in &lt;strong&gt;Plugins → vidIQ → Permissions&lt;/strong&gt; you can keep anything that changes your videos on &amp;ldquo;Needs approval&amp;rdquo; while letting read-only research tools run automatically.&lt;/p&gt;
+&lt;h2 id=&#34;takeaways&#34;&gt;Takeaways
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Connecting vidIQ to Claude takes about two minutes, works on free plans, and needs no API key.&lt;/li&gt;
+&lt;li&gt;The real value is proof: every idea comes with search demand, competition and small-channel examples.&lt;/li&gt;
+&lt;li&gt;Start free, and upgrade only when you&amp;rsquo;re posting weekly and running out of credits.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Want free AI agents running on your own PC? Start with my &lt;a class=&#34;link&#34; href=&#34;https://thecodestreet.dev/post/hermes-agent-ollama-qwen-windows/&#34; &gt;Hermes Agent + Ollama setup on Windows&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;sources&#34;&gt;Sources
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://vidiq.com/claude/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vidIQ for Claude&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://vidiq.com/plans/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vidIQ plans&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://support.vidiq.com/en/articles/13928456-features-credits-by-plan&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vidIQ features and credits by plan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://support.claude.com/en/articles/11175166&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Claude: getting started with custom connectors&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

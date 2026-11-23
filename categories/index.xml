@@ -7,7 +7,23 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>The Code Street</copyright>
-        <lastBuildDate>Sun, 22 Nov 2026 03:07:17 +0000</lastBuildDate><atom:link href="https://thecodestreet.dev/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 23 Nov 2026 14:45:56 +0000</lastBuildDate><atom:link href="https://thecodestreet.dev/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AI Tools</title>
+        <link>https://thecodestreet.dev/categories/ai-tools/</link>
+        <pubDate>Mon, 23 Nov 2026 20:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/categories/ai-tools/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>YouTube</title>
+        <link>https://thecodestreet.dev/categories/youtube/</link>
+        <pubDate>Mon, 23 Nov 2026 20:00:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/categories/youtube/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>AI Agents</title>
         <link>https://thecodestreet.dev/categories/ai-agents/</link>
         <pubDate>Sun, 22 Nov 2026 08:30:00 +0530</pubDate>

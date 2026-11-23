@@ -52,6 +52,10 @@ Key facts:
 - [Don't Build AI Apps From Scratch. Use This Free Repo Instead](https://thecodestreet.dev/post/awesome-llm-apps/): A tour of Awesome LLM Apps, a free GitHub repo with 144K stars and 100+ ready-to-run AI apps, from starter agents to voice agents, MCP agents and agent teams. Plus how to clone one app and run it locally with Ollama for $0.
 - [REA Tutorial: Reverse Engineer Any App with Claude Code (Setup, Fixes & Honest Review)](https://thecodestreet.dev/post/rea-reverse-engineer-anything-claude-code/): REA (Reverse Engineer Anything) lets Claude Code look inside installed apps with no source code. Here's what it really does, how to set it up on Windows, the errors I hit and how to fix them, and whether it lives up to the hype.
 
+## AI Tools
+
+- [How to Connect vidIQ to Claude (Free Plan, Step-by-Step Setup)](https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/): Connect vidIQ to Claude on the free plan in about two minutes. What vidIQ, Claude and connectors are, the setup, real channel analytics and video ideas in Claude, vidIQ Free vs Boost vs MAX in rupees, and free Claude vs Pro.
+
 ## GenAI
 
 - [Qwen 3 Coder Explained: The Agentic Coding Trick to Code 10X Faster](https://thecodestreet.dev/post/qwen-3-coder-explained-the-agentic-coding-trick-to-code-10x-faster/): Qwen 3 Coder explained in detail — learn how developers can leverage agentic coding to refactor code, run tests, and boost productivity 10X faster with AI-powered workflows.
@@ -59,6 +63,10 @@ Key facts:
 ## Microsoft Agent Framework
 
 - [How to Use DevUI in Microsoft Agent Framework with .NET 10 | Build Real AI Agents](https://thecodestreet.dev/post/how-to-use-devui-in-microsoft-agent-framework-with-.net-10-build-real-ai-agents/): Learn how to use DevUI with the Microsoft Agent Framework in .NET 10 to build, run and debug real AI agents, including a multi-agent demo with GPT models and GitHub Copilot.
+
+## YouTube
+
+- [How to Connect vidIQ to Claude (Free Plan, Step-by-Step Setup)](https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/): Connect vidIQ to Claude on the free plan in about two minutes. What vidIQ, Claude and connectors are, the setup, real channel analytics and video ideas in Claude, vidIQ Free vs Boost vs MAX in rupees, and free Claude vs Pro.
 
 ## Other pages
 
