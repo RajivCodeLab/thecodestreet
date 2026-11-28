@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="stylesheet" href="/css/custom.css"><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Install OpenCode V2 on Windows 11 the right way (@opencode/cli, not the old opencode-ai package), connect a free AI model, and build an expense tracker from one prompt. Plan vs Build, shortcuts and quick fixes.">
+<meta name="keywords" content="how to use opencode, opencode windows, install opencode windows, opencode tutorial, opencode v2, opencode free models, free ai coding agent, claude code alternative"><title>How to Use OpenCode on Windows for Free: Install V2 &#43; First Project (2026)</title>
+
+<link rel='canonical' href='https://thecodestreet.dev/post/how-to-use-opencode-on-windows/'>
+
+<link rel="stylesheet" href="/scss/style.min.86afb6925d63f7c383f64abfa5b01183a2ad21c91d72cb626559e001e899e65c.css"><meta property='og:title' content="How to Use OpenCode on Windows for Free: Install V2 + First Project (2026)">
+<meta property='og:description' content="Install OpenCode V2 on Windows 11 the right way (@opencode/cli, not the old opencode-ai package), connect a free AI model, and build an expense tracker from one prompt. Plan vs Build, shortcuts and quick fixes.">
+<meta property='og:url' content='https://thecodestreet.dev/post/how-to-use-opencode-on-windows/'>
+<meta property='og:site_name' content='The Code Street'>
+<meta property='og:type' content='article'>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><meta property='article:section' content='Post' /><meta property='article:tag' content='OpenCode' /><meta property='article:tag' content='AI Coding Agent' /><meta property='article:tag' content='Windows 11' /><meta property='article:tag' content='Claude Code Alternative' /><meta property='article:tag' content='Node.js' /><meta property='article:tag' content='Free AI Models' /><meta property='article:published_time' content='2026-11-28T11:45:00&#43;05:30'/><meta property='article:modified_time' content='2026-11-28T12:12:21&#43;05:30'/><meta property='og:image' content='https://thecodestreet.dev/post/how-to-use-opencode-on-windows/cover.png' />
+<meta name="twitter:title" content="How to Use OpenCode on Windows for Free: Install V2 + First Project (2026)">
+<meta name="twitter:description" content="Install OpenCode V2 on Windows 11 the right way (@opencode/cli, not the old opencode-ai package), connect a free AI model, and build an expense tracker from one prompt. Plan vs Build, shortcuts and quick fixes."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://thecodestreet.dev/post/how-to-use-opencode-on-windows/cover.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EVB34BL08"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-7EVB34BL08');
+        }
+      </script><link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@id":"https://thecodestreet.dev/post/how-to-use-opencode-on-windows/#article","@type":"BlogPosting","about":[{"@type":"Thing","name":"OpenCode"},{"@type":"Thing","name":"AI Coding Agent"},{"@type":"Thing","name":"Windows 11"},{"@type":"Thing","name":"Claude Code Alternative"},{"@type":"Thing","name":"Node.js"},{"@type":"Thing","name":"Free AI Models"}],"articleSection":"AI Tools","author":{"@id":"https://thecodestreet.dev/about/#person","@type":"Person","name":"Rajiv Lochan Sharma","url":"https://thecodestreet.dev/about/"},"dateModified":"2026-11-28T12:12:21+05:30","datePublished":"2026-11-28T11:45:00+05:30","description":"Install OpenCode V2 on Windows 11 the right way (@opencode/cli, not the old opencode-ai package), connect a free AI model, and build an expense tracker from one prompt. Plan vs Build, shortcuts and quick fixes.","headline":"How to Use OpenCode on Windows for FREE (Install + First Project)","image":"https://thecodestreet.dev/post/how-to-use-opencode-on-windows/cover.png","inLanguage":"en","isPartOf":{"@id":"https://thecodestreet.dev/#website"},"keywords":"how to use opencode, opencode windows, install opencode windows, opencode tutorial, opencode v2, opencode free models, free ai coding agent, claude code alternative","mainEntityOfPage":"https://thecodestreet.dev/post/how-to-use-opencode-on-windows/","publisher":{"@id":"https://thecodestreet.dev/#organization"},"wordCount":1167},{"@id":"https://thecodestreet.dev/#organization","@type":"Organization","founder":{"@id":"https://thecodestreet.dev/about/#person"},"logo":"https://thecodestreet.dev/img/logo_hu_3a37d9dbae6062.webp","name":"The Code Street","sameAs":["https://www.youtube.com/@TheCodeStreet","https://github.com/rajivcodelab","https://www.linkedin.com/in/rjvranjan80","https://facebook.com/thecodestreet"],"url":"https://thecodestreet.dev/"},{"@id":"https://thecodestreet.dev/about/#person","@type":"Person","alternateName":"Rajiv Sharma","image":"https://thecodestreet.dev/img/logo_hu_3a37d9dbae6062.webp","jobTitle":"Software Engineer","knowsAbout":["AI agents","Large language models","Local LLMs","Ollama","Semantic Kernel","Microsoft Agent Framework","AI coding tools","C#",".NET","Azure","React"],"name":"Rajiv Lochan Sharma","sameAs":["https://www.youtube.com/@TheCodeStreet","https://github.com/rajivcodelab","https://www.linkedin.com/in/rjvranjan80","https://facebook.com/thecodestreet"],"url":"https://thecodestreet.dev/about/","worksFor":{"@id":"https://thecodestreet.dev/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://thecodestreet.dev/","name":"Home","position":1},{"@type":"ListItem","item":"https://thecodestreet.dev/post/","name":"Tutorials","position":2},{"@type":"ListItem","item":"https://thecodestreet.dev/categories/ai-tools/","name":"AI Tools","position":3},{"@type":"ListItem","item":"https://thecodestreet.dev/post/how-to-use-opencode-on-windows/","name":"How to Use OpenCode on Windows for FREE (Install + First Project)","position":4}]},{"@type":"VideoObject","author":{"@id":"https://thecodestreet.dev/about/#person"},"contentUrl":"https://www.youtube.com/watch?v=m5QaNy0Ktoc","description":"Install OpenCode V2 on Windows 11 the right way (@opencode/cli, not the old opencode-ai package), connect a free AI model, and build an expense tracker from one prompt. Plan vs Build, shortcuts and quick fixes.","embedUrl":"https://www.youtube.com/embed/m5QaNy0Ktoc","name":"How to Use OpenCode on Windows for FREE (Install + First Project)","thumbnailUrl":"https://i.ytimg.com/vi/m5QaNy0Ktoc/hqdefault.jpg","uploadDate":"2026-11-28"}]}
+</script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+
+        <a class="cs-skip" href="#content">Skip to content</a>
+        <header class="cs-header" id="cs-header">
+    <div class="cs-header__inner">
+        <a class="cs-brand" href="/" aria-label="The Code Street home"><img src="/img/logo_hu_2cd295f811d27b71.png" width="96" height="96" alt="The Code Street logo">
+            <span>The <em>Code</em> Street</span>
+        </a>
+
+        <nav class="cs-nav" id="cs-nav" aria-label="Main">
+            <ul>
+                <li>
+                    <a class="cs-nav__link is-active" href="/post/" aria-current="page">Tutorials</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/categories/">Topics</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/videos/">Videos</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/projects/">Projects</a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="https://shop.thecodestreet.dev/" target="_blank" rel="noopener">Shop<svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </li>
+                <li>
+                    <a class="cs-nav__link" href="/about/">About</a>
+                </li>
+            </ul>
+            <a class="cs-btn cs-btn--youtube cs-nav__cta" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg><span>Subscribe</span>
+            </a>
+        </nav>
+
+        <div class="cs-header__actions">
+            <a class="cs-iconbtn" href="/search/" aria-label="Search tutorials"><svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></a>
+            <button class="cs-iconbtn cs-nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="cs-nav">
+                <span class="cs-nav-toggle__open"><svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></span>
+                <span class="cs-nav-toggle__close"><svg class="cs-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+            </button>
+        </div>
+    </div>
+    <div class="cs-progress" aria-hidden="true"><span></span></div>
+</header>
+
+        <div class="cs-shell ">
+            <main id="content" class="main cs-main">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/how-to-use-opencode-on-windows/">
+                <img src="/post/how-to-use-opencode-on-windows/cover_hu_2c798500de736e8c.png"
+                        srcset="/post/how-to-use-opencode-on-windows/cover_hu_2c798500de736e8c.png 800w, /post/how-to-use-opencode-on-windows/cover_hu_f8ec29fcba4f5b91.png 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post How to Use OpenCode on Windows for FREE (Install &#43; First Project)" />
+                
+            </a>
+        </div>
+    
+
+    
+<div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/ai-tools/" >
+                AI Tools
+            </a>
+        
+            <a href="/categories/ai-coding/" >
+                AI Coding
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h1 class="article-title">
+            <a href="/post/how-to-use-opencode-on-windows/">How to Use OpenCode on Windows for FREE (Install &#43; First Project)</a>
+        </h1>
+
+        
+        <p class="article-subtitle">
+            Install OpenCode V2 on Windows 11 the right way (@opencode/cli, not the old opencode-ai package), connect a free AI model, and build an expense tracker from one prompt. Plan vs Build, shortcuts and quick fixes.
+        </p>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        <div class="article-author">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+            <span>By <a href="/about/" rel="author">Rajiv Lochan Sharma</a></span>
+        </div>
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published" datetime="2026-11-28T11:45:00&#43;05:30">Nov 28, 2026</time>
+            </div>
+        
+
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    6 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Most OpenCode install guides for Windows still tell you to run <code>npm install -g opencode-ai</code>. Run that today and you get version 1.19. The current OpenCode is version 2, and it ships under a different npm package: <code>@opencode/cli</code>.</p>
+<p>This guide installs the right version on Windows 11, connects a free AI model without paying anything, and builds a small working app from one prompt. You don&rsquo;t need a GPU, because the model runs in the cloud.</p>
+<p>This is part 1 of my OpenCode series. Everything later in the series builds on this setup.</p>
+<h2 id="-watch-the-video">🎥 Watch the Video
+</h2><div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/m5QaNy0Ktoc" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p>👉 <strong><a class="link" href="https://youtu.be/m5QaNy0Ktoc"  target="_blank" rel="noopener"
+    >Watch on YouTube: How to Use OpenCode on Windows for FREE</a></strong></p>
+<hr>
+<h2 id="-what-is-opencode">🧠 What Is OpenCode?
+</h2><p>OpenCode is an open-source AI coding agent that runs in your terminal. You describe what you want in plain English. It reads your project, writes files and runs commands. It&rsquo;s an open-source alternative to Claude Code, and you pick the model: a free one, a paid one with your own API key, or a local model through Ollama.</p>
+<h2 id="-what-you-need">🧰 What You Need
+</h2><ul>
+<li>Windows 10 or 11</li>
+<li>Node.js (OpenCode installs with npm)</li>
+<li>A terminal. I use Windows Terminal with PowerShell.</li>
+</ul>
+<p>OpenCode runs natively on Windows, but the official docs recommend WSL (Windows Subsystem for Linux) for the best experience. For a beginner, native Windows is the simplest way to start, so that&rsquo;s what this guide uses.</p>
+<h2 id="1-step-1-check-nodejs">1️⃣ Step 1: Check Node.js
+</h2><p>Open PowerShell and run:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">node</span> <span class="n">-v</span>
+</span></span><span class="line"><span class="cl"><span class="n">npm</span> <span class="n">-v</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If both print a version number, you&rsquo;re ready. If not, download the LTS installer from <a class="link" href="https://nodejs.org/en/download"  target="_blank" rel="noopener"
+    >nodejs.org</a>, install it with the defaults, then close and reopen your terminal. An old terminal window won&rsquo;t see the new install.</p>
+<h2 id="2-step-2-install-opencode-v2-the-right-package">2️⃣ Step 2: Install OpenCode V2 (the Right Package)
+</h2><p><img src="/post/how-to-use-opencode-on-windows/v1_vs_v2.webp"
+	width="1280"
+	height="720"
+	srcset="/post/how-to-use-opencode-on-windows/v1_vs_v2_hu_4b75daeacdfc75d6.webp 480w, /post/how-to-use-opencode-on-windows/v1_vs_v2_hu_c89c9371ffd225f2.webp 1024w"
+	loading="lazy"
+	
+		alt="Most tutorials install opencode-ai (V1, 1.19.6). The current package is @opencode/cli (V2, 2.4.1)."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>This is where most tutorials go wrong. If you installed OpenCode before, remove the old V1 package first, then install V2:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">npm</span> <span class="n">uninstall</span> <span class="n">-g</span> <span class="nb">opencode-ai</span>     <span class="c"># only if you installed V1 before</span>
+</span></span><span class="line"><span class="cl"><span class="n">npm</span> <span class="n">install</span> <span class="n">-g</span> <span class="nv">@opencode</span><span class="p">/</span><span class="nb">cli
+</span></span></span><span class="line"><span class="cl"><span class="nb"></span><span class="n">opencode</span> <span class="p">-</span><span class="n">-version</span>               <span class="c"># should start with 2</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If the version starts with 1, the old package is still on your machine. Uninstall it and run the install again.</p>
+<p>Two more things:</p>
+<ul>
+<li>The V2 docs say Windows package managers (Scoop, Chocolatey, winget) aren&rsquo;t supported. Use npm.</li>
+<li>If you prefer a normal app window, there&rsquo;s a Windows desktop app on the <a class="link" href="https://opencode.ai/download"  target="_blank" rel="noopener"
+    >OpenCode download page</a>. This guide uses the terminal version.</li>
+</ul>
+<h2 id="3-step-3-open-a-project">3️⃣ Step 3: Open a Project
+</h2><p>OpenCode works on whatever folder you start it in. Create a new one and launch it:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">mkdir</span> <span class="nb">expense-tracker</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd expense-tracker</span>
+</span></span><span class="line"><span class="cl"><span class="n">opencode</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The prompt box at the bottom of the OpenCode screen is where you type.</p>
+<h2 id="4-step-4-connect-a-free-model">4️⃣ Step 4: Connect a Free Model
+</h2><p><img src="/post/how-to-use-opencode-on-windows/connect_free_model.webp"
+	width="1280"
+	height="720"
+	srcset="/post/how-to-use-opencode-on-windows/connect_free_model_hu_321fa1a20d37ac98.webp 480w, /post/how-to-use-opencode-on-windows/connect_free_model_hu_b29b4ff1bcb8d080.webp 1024w"
+	loading="lazy"
+	
+		alt="Connect a free model: /connect, then /models"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">/connect   -&gt; OpenCode -&gt; sign in
+</span></span><span class="line"><span class="cl">/models    -&gt; pick a free model
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Type <code>/connect</code>, choose OpenCode and sign in with your OpenCode account. Then type <code>/models</code> and pick one of the free models. OpenCode&rsquo;s docs list several models as free for a limited time, including Big Pickle and DeepSeek V4.1 Flash Free.</p>
+<p>Two honest notes:</p>
+<ul>
+<li>The free list changes, so check <code>/models</code> for what&rsquo;s free today.</li>
+<li>Some free models may keep your prompts to improve the model. Don&rsquo;t paste client code, passwords or API keys into a free model. For practice projects, it&rsquo;s fine.</li>
+</ul>
+<p>If you already have an API key from OpenAI, Anthropic or Google Gemini, <code>/connect</code> is also where you add it.</p>
+<h2 id="5-step-5-plan-vs-build">5️⃣ Step 5: Plan vs Build
+</h2><p><img src="/post/how-to-use-opencode-on-windows/plan_vs_build.webp"
+	width="1280"
+	height="720"
+	srcset="/post/how-to-use-opencode-on-windows/plan_vs_build_hu_e3310ee39a1ba552.webp 480w, /post/how-to-use-opencode-on-windows/plan_vs_build_hu_fa214e4bacfb8a99.webp 1024w"
+	loading="lazy"
+	
+		alt="Plan explores and writes a plan; Build writes code and runs commands. Shift &#43; Tab switches."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>OpenCode has two main agents, and beginners often miss this:</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Agent</th>
+          <th>What it does</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Build</strong> (default)</td>
+          <td>Writes code, edits files and runs commands</td>
+      </tr>
+      <tr>
+          <td><strong>Plan</strong></td>
+          <td>Explores your project and writes a plan. It doesn&rsquo;t edit your project files.</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>Press <strong>Shift + Tab</strong> to switch between them. My rule: start every new task in Plan, read the plan, then switch to Build. It costs one extra step and saves a lot of undoing.</p>
+<h2 id="-your-first-project-an-expense-tracker-from-one-prompt">🚀 Your First Project: An Expense Tracker From One Prompt
+</h2><p>In Plan mode, paste this prompt:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Plan a simple expense tracker web app using HTML, CSS and JavaScript.
+</span></span><span class="line"><span class="cl">I want to add an expense with an amount in rupees, a category and a date,
+</span></span><span class="line"><span class="cl">see the monthly total, and save everything in the browser&#39;s localStorage.
+</span></span><span class="line"><span class="cl">Keep it in three files.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Read the plan. If it looks right, press <strong>Shift + Tab</strong> to switch to Build and type: <code>Go ahead and build it.</code></p>
+<p>When it finishes, open <code>index.html</code> in your browser. Add an expense and check that the total updates. Then refresh the page: if the data is still there, localStorage is working. The video shows the full run.</p>
+<h2 id="-shortcuts-worth-learning-on-day-one">⌨️ Shortcuts Worth Learning on Day One
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Shortcut</th>
+          <th>What it does</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>@</code> + file name</td>
+          <td>Attaches a file to your prompt, e.g. <code>@style.css add a dark mode</code></td>
+      </tr>
+      <tr>
+          <td><code>/undo</code></td>
+          <td>Reverts your last message and the changes that came with it</td>
+      </tr>
+      <tr>
+          <td><code>/redo</code></td>
+          <td>Brings an undone change back</td>
+      </tr>
+      <tr>
+          <td><code>!</code> + command</td>
+          <td>Runs a terminal command without leaving OpenCode, e.g. <code>!dir</code></td>
+      </tr>
+      <tr>
+          <td><code>Esc</code></td>
+          <td>Stops the agent mid-task</td>
+      </tr>
+      <tr>
+          <td><code>Ctrl + P</code></td>
+          <td>Opens the command menu</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="-honest-limits">⚠️ Honest Limits
+</h2><ul>
+<li><strong>Free models change and have limits.</strong> If one stops working or slows down, open <code>/models</code> and pick another.</li>
+<li><strong>Native Windows vs WSL.</strong> Native works, but the official recommendation is WSL for better file performance and terminal support. If you hit odd terminal problems, WSL is the fix.</li>
+<li><strong>Build runs commands without asking by default.</strong> OpenCode&rsquo;s permission rules allow everything unless you add rules. If you want it to ask before every shell command, add an <code>ask</code> rule for shell (see <a class="link" href="https://opencode.ai/docs/permissions"  target="_blank" rel="noopener"
+    >Permissions</a>). Either way, use Git or a test folder until you trust it.</li>
+</ul>
+<h2 id="-quick-fixes">🛠️ Quick Fixes
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Problem</th>
+          <th>Fix</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>opencode</code> is not recognized</td>
+          <td>Reopen the terminal. Still failing? Run <code>npm config get prefix</code> and add that folder to your PATH.</td>
+      </tr>
+      <tr>
+          <td>&ldquo;Running scripts is disabled on this system&rdquo;</td>
+          <td><code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned</code></td>
+      </tr>
+      <tr>
+          <td>Version shows 1.x</td>
+          <td><code>npm uninstall -g opencode-ai</code>, then <code>npm install -g @opencode/cli</code></td>
+      </tr>
+      <tr>
+          <td>No free models in <code>/models</code></td>
+          <td>Run <code>/connect</code>, choose OpenCode and sign in first</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="-faq">❓ FAQ
+</h2><p><strong>Is OpenCode free?</strong>
+OpenCode itself is open source and free. The models are separate: OpenCode offers some free models for a limited time, and paid models need your own API key or credits.</p>
+<p><strong>Do I need a GPU?</strong>
+Not for this setup. The free models run in the cloud. You only need a GPU if you run a local model, which is the next video.</p>
+<p><strong>Why does <code>opencode --version</code> show 1.x?</strong>
+You installed the old <code>opencode-ai</code> package. Uninstall it and install <code>@opencode/cli</code>.</p>
+<p><strong>Should I use WSL instead?</strong>
+The official docs recommend WSL for the best experience. Native Windows is simpler for a first setup, and you can switch later.</p>
+<h2 id="-next-in-the-series">⏭️ Next in the Series
+</h2><p>Next up: <strong>OpenCode + Ollama</strong>. You&rsquo;ll run a model on your own PC, so you don&rsquo;t need an account or an internet connection for the model. Subscribe to <a class="link" href="https://www.youtube.com/@thecodestreet"  target="_blank" rel="noopener"
+    >The Code Street</a> so you don&rsquo;t miss it.</p>
+<h2 id="-sources">📚 Sources
+</h2><ul>
+<li><a class="link" href="https://opencode.ai/download"  target="_blank" rel="noopener"
+    >OpenCode download</a></li>
+<li><a class="link" href="https://opencode.ai/docs/"  target="_blank" rel="noopener"
+    >OpenCode docs</a></li>
+<li><a class="link" href="https://opencode.ai/docs/windows-wsl"  target="_blank" rel="noopener"
+    >Windows (WSL)</a></li>
+<li><a class="link" href="https://opencode.ai/docs/zen"  target="_blank" rel="noopener"
+    >Free models (Console models)</a></li>
+<li><a class="link" href="https://opencode.ai/docs/agents"  target="_blank" rel="noopener"
+    >Agents: Plan and Build</a></li>
+<li><a class="link" href="https://opencode.ai/docs/tui"  target="_blank" rel="noopener"
+    >TUI</a></li>
+<li><a class="link" href="https://opencode.ai/docs/permissions"  target="_blank" rel="noopener"
+    >Permissions</a></li>
+<li><a class="link" href="https://nodejs.org/en/download"  target="_blank" rel="noopener"
+    >Node.js download</a></li>
+<li><a class="link" href="https://docs.npmjs.com/cli/v10/configuring-npm/folders"  target="_blank" rel="noopener"
+    >npm folders and PATH</a></li>
+<li><a class="link" href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies"  target="_blank" rel="noopener"
+    >PowerShell execution policies</a></li>
+</ul>
+
+</section>
+
+
+    
+        <aside class="cs-post-cta">
+    
+    <div class="cs-post-cta-text">
+        <h2>Enjoyed this tutorial?</h2>
+        <p>
+            I publish step-by-step AI videos on YouTube: AI agents, local LLMs and AI coding tools.
+            Subscribe so you don't miss the next one, and join 4,900&#43; other developers.
+        </p>
+        <div class="cs-hero-actions">
+            
+<a class="cs-btn cs-btn--youtube" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    <span>Subscribe on YouTube</span>
+</a>
+
+            <a class="cs-btn cs-btn--ghost" href="/videos/">More videos</a>
+        </div>
+    </div>
+</aside>
+
+    
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/opencode/">OpenCode</a>
+        
+            <a href="/tags/ai-coding-agent/">AI Coding Agent</a>
+        
+            <a href="/tags/windows-11/">Windows 11</a>
+        
+            <a href="/tags/claude-code-alternative/">Claude Code Alternative</a>
+        
+            <a href="/tags/node.js/">Node.js</a>
+        
+            <a href="/tags/free-ai-models/">Free AI Models</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on Nov 28, 2026 12:12 IST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+<aside class="cs-related" aria-labelledby="cs-related-title">
+    <h2 id="cs-related-title">Keep learning</h2>
+    <div class="cs-grid cs-grid--related">
+        <article class="cs-card cs-card--default">
+    <a class="cs-card__media" href="/post/how-to-connect-vidiq-to-claude/" tabindex="-1" aria-hidden="true"><img src="/post/how-to-connect-vidiq-to-claude/cover_hu_85ac6965da179afe.png"
+                srcset="/post/how-to-connect-vidiq-to-claude/cover_hu_85ac6965da179afe.png 640w, /post/how-to-connect-vidiq-to-claude/cover.png 1280w"
+                sizes="(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw" width="640" height="360"
+                loading="lazy" alt="How to Connect vidIQ to Claude (Free Plan, Step-by-Step Setup)">
+    </a>
+    <div class="cs-card__body">
+        <div class="cs-tags"><a class="cs-tag" href="/categories/ai-tools/">AI Tools</a><a class="cs-tag" href="/categories/youtube/">YouTube</a>
+        </div>
+        <h3 class="cs-card__title"><a href="/post/how-to-connect-vidiq-to-claude/">How to Connect vidIQ to Claude (Free Plan, Step-by-Step Setup)</a></h3><p class="cs-card__desc">Connect vidIQ to Claude on the free plan in about two minutes. What vidIQ, Claude and connectors are, the setup, real channel analytics and video ideas in Claude, vidIQ Free vs Boost vs MAX in rupees, and free Claude vs Pro.</p>
+        <div class="cs-meta">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg><time datetime="2026-11-23">Nov 23, 2026</time></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+6 min read</span>
+        </div>
+    </div>
+</article>
+
+        <article class="cs-card cs-card--default">
+    <a class="cs-card__media" href="/post/claude-skills-vs-projects/" tabindex="-1" aria-hidden="true"><img src="/post/claude-skills-vs-projects/cover_hu_de4b422a100e58bf.jpg"
+                srcset="/post/claude-skills-vs-projects/cover_hu_de4b422a100e58bf.jpg 640w, /post/claude-skills-vs-projects/cover_hu_dbc0a0ba2c69d319.jpg 1280w"
+                sizes="(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw" width="640" height="360"
+                loading="lazy" alt="Claude Skills vs Projects: Which One Do You Actually Need?">
+    </a>
+    <div class="cs-card__body">
+        <div class="cs-tags"><a class="cs-tag" href="/categories/ai-coding/">AI Coding</a>
+        </div>
+        <h3 class="cs-card__title"><a href="/post/claude-skills-vs-projects/">Claude Skills vs Projects: Which One Do You Actually Need?</a></h3><p class="cs-card__desc">What Claude Skills are, how to use skills in Claude, and when to use a Skill instead of a Project. Includes what goes inside a SKILL.md file and a simple test to decide every time.</p>
+        <div class="cs-meta">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg><time datetime="2026-11-11">Nov 11, 2026</time></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+5 min read</span>
+        </div>
+    </div>
+</article>
+
+        <article class="cs-card cs-card--default">
+    <a class="cs-card__media" href="/post/claude-code-update-fable-5-2/" tabindex="-1" aria-hidden="true"><img src="/post/claude-code-update-fable-5-2/cover_hu_7bd20c5d5677a58f.png"
+                srcset="/post/claude-code-update-fable-5-2/cover_hu_7bd20c5d5677a58f.png 640w, /post/claude-code-update-fable-5-2/cover.png 1280w"
+                sizes="(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw" width="640" height="360"
+                loading="lazy" alt="Claude Code New Update: Fable 5.2, Ultrathink &amp; 15&#43; Features Explained">
+    </a>
+    <div class="cs-card__body">
+        <div class="cs-tags"><a class="cs-tag" href="/categories/ai-coding/">AI Coding</a>
+        </div>
+        <h3 class="cs-card__title"><a href="/post/claude-code-update-fable-5-2/">Claude Code New Update: Fable 5.2, Ultrathink &amp; 15&#43; Features Explained</a></h3><p class="cs-card__desc">Everything in the November 2026 Claude Code update, explained simply: the new Fable 5.2 model and the Pro trial, automatic cloud environment setup, /storage, the /usage fix, Ultrathink, /auto-mode-setup and ten smaller changes.</p>
+        <div class="cs-meta">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg><time datetime="2026-11-10">Nov 10, 2026</time></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+8 min read</span>
+        </div>
+    </div>
+</article>
+
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "code-street" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#-watch-the-video">🎥 Watch the Video</a></li>
+    <li><a href="#-what-is-opencode">🧠 What Is OpenCode?</a></li>
+    <li><a href="#-what-you-need">🧰 What You Need</a></li>
+    <li><a href="#1-step-1-check-nodejs">1️⃣ Step 1: Check Node.js</a></li>
+    <li><a href="#2-step-2-install-opencode-v2-the-right-package">2️⃣ Step 2: Install OpenCode V2 (the Right Package)</a></li>
+    <li><a href="#3-step-3-open-a-project">3️⃣ Step 3: Open a Project</a></li>
+    <li><a href="#4-step-4-connect-a-free-model">4️⃣ Step 4: Connect a Free Model</a></li>
+    <li><a href="#5-step-5-plan-vs-build">5️⃣ Step 5: Plan vs Build</a></li>
+    <li><a href="#-your-first-project-an-expense-tracker-from-one-prompt">🚀 Your First Project: An Expense Tracker From One Prompt</a></li>
+    <li><a href="#-shortcuts-worth-learning-on-day-one">⌨️ Shortcuts Worth Learning on Day One</a></li>
+    <li><a href="#-honest-limits">⚠️ Honest Limits</a></li>
+    <li><a href="#-quick-fixes">🛠️ Quick Fixes</a></li>
+    <li><a href="#-faq">❓ FAQ</a></li>
+    <li><a href="#-next-in-the-series">⏭️ Next in the Series</a></li>
+    <li><a href="#-sources">📚 Sources</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+            
+                <section class="widget cs-youtube-widget">
+    <div class="widget-icon">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    </div>
+    <h2 class="widget-title section-title">Watch on YouTube</h2>
+
+    <div class="cs-youtube-widget-card">
+        <p>
+            Video walkthroughs of every tutorial, with <strong>4,900&#43;</strong> developers subscribed.
+        </p>
+        
+<a class="cs-btn cs-btn--youtube" href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">
+    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+    <span>Subscribe on YouTube</span>
+</a>
+
+    </div>
+</section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <footer class="cs-footer">
+    <div class="cs-container cs-footer__grid">
+        <div class="cs-footer__brand">
+            <a class="cs-brand" href="/" aria-label="The Code Street home"><img src="/img/logo_hu_2cd295f811d27b71.png" width="96" height="96" alt="The Code Street logo" loading="lazy">
+                <span>The <em>Code</em> Street</span>
+            </a>
+            <p>Hands-on AI tutorials for developers: AI agents, local LLMs and AI coding tools, through blogs and videos.</p>
+            <ul class="cs-social">
+                <li>
+                    <a href="https://facebook.com/thecodestreet" target="_blank" rel="noopener me" aria-label="Facebook" title="Facebook"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg></a>
+                </li>
+                <li>
+                    <a href="https://github.com/rajivcodelab" target="_blank" rel="noopener me" aria-label="GitHub" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+</a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/in/rjvranjan80" target="_blank" rel="noopener me" aria-label="LinkedIn" title="LinkedIn"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg></a>
+                </li>
+                <li>
+                    <a href="/index.xml" target="_blank" rel="noopener me" aria-label="RSS" title="RSS"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+</a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/@TheCodeStreet" target="_blank" rel="noopener me" aria-label="YouTube" title="YouTube"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg></a>
+                </li>
+            </ul>
+        </div>
+
+        <nav class="cs-footer__col" aria-label="Topics">
+            <p class="cs-footer__title">Topics</p>
+            <ul>
+                <li><a href="/categories/local-llms/">Local LLMs</a></li>
+                <li><a href="/categories/ai-coding/">AI Coding</a></li>
+                <li><a href="/categories/semantic-kernel/">Semantic Kernel</a></li>
+                <li><a href="/categories/ai-agents/">AI Agents</a></li>
+                <li><a href="/categories/ai-tools/">AI Tools</a></li>
+                <li><a href="/categories/genai/">GenAI</a></li>
+                <li><a href="/categories/">All topics</a></li>
+            </ul>
+        </nav>
+
+        <nav class="cs-footer__col" aria-label="Learn">
+            <p class="cs-footer__title">Learn</p>
+            <ul>
+                <li><a href="/post/">All tutorials</a></li>
+                <li><a href="/videos/">Videos</a></li>
+                <li><a href="/projects/">Source code &amp; projects</a></li>
+                <li><a href="https://www.youtube.com/@TheCodeStreet?sub_confirmation=1" target="_blank" rel="noopener">YouTube channel</a></li>
+                <li><a href="/index.xml">RSS feed</a></li>
+            </ul>
+        </nav>
+
+        <nav class="cs-footer__col" aria-label="About">
+            <p class="cs-footer__title">The Code Street</p>
+            <ul>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/terms-conditions/">Terms</a></li>
+                <li><a href="/privacy-policy/">Privacy</a></li>
+                <li><a href="/disclaimer/">Disclaimer</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="cs-container cs-footer__bottom">
+        <span>&copy; 2024 &ndash; 2026 The Code Street</span>
+        <span>Made for developers learning AI.</span>
+    </div>
+</footer>
+
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.64e2e29c7b1bd8b3ca8af9b66224401a6b239f453fa4363850ad78c31899208a.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script>
+    
+    document.addEventListener('click', function (e) {
+        var facade = e.target.closest('.cs-video-facade');
+        if (!facade) return;
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + facade.dataset.videoId + '?autoplay=1&rel=0';
+        iframe.title = facade.getAttribute('aria-label');
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.className = 'cs-video-iframe';
+        facade.replaceWith(iframe);
+    });
+
+    
+    (function () {
+        var header = document.getElementById('cs-header');
+        if (!header) return;
+
+        var toggle = header.querySelector('.cs-nav-toggle');
+        function setMenu(open) {
+            header.classList.toggle('is-open', open);
+            if (toggle) toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        if (toggle) {
+            toggle.addEventListener('click', function () { setMenu(!header.classList.contains('is-open')); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+            document.addEventListener('click', function (e) { if (!header.contains(e.target)) setMenu(false); });
+            header.querySelector('.cs-nav').addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+        }
+
+        var bar = header.querySelector('.cs-progress span');
+        var article = document.querySelector('.article-content');
+        var ticking = false;
+        function update() {
+            ticking = false;
+            header.classList.toggle('is-scrolled', window.scrollY > 4);
+            if (bar && article) {
+                var top = article.getBoundingClientRect().top + window.scrollY;
+                var total = article.offsetHeight - window.innerHeight * 0.5;
+                var done = total > 0 ? (window.scrollY - top + header.offsetHeight) / total : 0;
+                bar.style.transform = 'scaleX(' + Math.max(0, Math.min(1, done)) + ')';
+            }
+        }
+        function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+        update();
+    })();
+</script>
+
+    </body>
+</html>

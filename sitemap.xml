@@ -2,17 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://thecodestreet.dev/tags/ai-for-creators/</loc>
-    <lastmod>2026-11-23T14:45:56+00:00</lastmod>
+    <loc>https://thecodestreet.dev/categories/ai-coding/</loc>
+    <lastmod>2026-11-28T12:12:21+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/ai-coding-agent/</loc>
+    <lastmod>2026-11-28T12:12:21+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/categories/ai-tools/</loc>
-    <lastmod>2026-11-23T14:45:56+00:00</lastmod>
+    <lastmod>2026-11-28T12:12:21+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/categories/</loc>
+    <lastmod>2026-11-28T12:12:21+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/claude-code-alternative/</loc>
+    <lastmod>2026-11-28T12:12:21+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/free-ai-models/</loc>
+    <lastmod>2026-11-28T12:12:21+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/post/how-to-use-opencode-on-windows/</loc>
+    <lastmod>2026-11-28T12:12:21+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/node.js/</loc>
+    <lastmod>2026-11-28T12:12:21+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/opencode/</loc>
+    <lastmod>2026-11-28T12:12:21+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/</loc>
+    <lastmod>2026-11-28T12:12:21+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/windows-11/</loc>
+    <lastmod>2026-11-28T12:12:21+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://thecodestreet.dev/tags/ai-for-creators/</loc>
     <lastmod>2026-11-23T14:45:56+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -33,11 +78,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/tags/mcp/</loc>
-    <lastmod>2026-11-23T14:45:56+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/tags/</loc>
     <lastmod>2026-11-23T14:45:56+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -152,11 +192,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://thecodestreet.dev/categories/ai-coding/</loc>
-    <lastmod>2026-11-11T15:34:28+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://thecodestreet.dev/tags/ai-workflow/</loc>
     <lastmod>2026-11-11T15:34:28+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -223,11 +258,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://thecodestreet.dev/tags/liquid-ai/</loc>
-    <lastmod>2026-11-09T20:42:51+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://thecodestreet.dev/tags/node.js/</loc>
     <lastmod>2026-11-09T20:42:51+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

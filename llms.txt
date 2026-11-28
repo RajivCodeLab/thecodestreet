@@ -26,6 +26,7 @@ Key facts:
 
 ## AI Coding
 
+- [How to Use OpenCode on Windows for FREE (Install + First Project)](https://thecodestreet.dev/post/how-to-use-opencode-on-windows/): Install OpenCode V2 on Windows 11 the right way (@opencode/cli, not the old opencode-ai package), connect a free AI model, and build an expense tracker from one prompt. Plan vs Build, shortcuts and quick fixes.
 - [Claude Skills vs Projects: Which One Do You Actually Need?](https://thecodestreet.dev/post/claude-skills-vs-projects/): What Claude Skills are, how to use skills in Claude, and when to use a Skill instead of a Project. Includes what goes inside a SKILL.md file and a simple test to decide every time.
 - [Claude Code New Update: Fable 5.2, Ultrathink & 15+ Features Explained](https://thecodestreet.dev/post/claude-code-update-fable-5-2/): Everything in the November 2026 Claude Code update, explained simply: the new Fable 5.2 model and the Pro trial, automatic cloud environment setup, /storage, the /usage fix, Ultrathink, /auto-mode-setup and ten smaller changes.
 - [Claude Code For Free in VS Code: Full Setup Guide with Ollama + Qwen 3.8](https://thecodestreet.dev/post/claude-code-free-vs-code-ollama-qwen/): Run Claude Code for free inside VS Code with no Claude login and no API bill. Install Ollama, download Qwen 3.8, set up the Claude Code extension with two small config changes, and build a full Space Shooter game from one prompt.
@@ -54,6 +55,7 @@ Key facts:
 
 ## AI Tools
 
+- [How to Use OpenCode on Windows for FREE (Install + First Project)](https://thecodestreet.dev/post/how-to-use-opencode-on-windows/): Install OpenCode V2 on Windows 11 the right way (@opencode/cli, not the old opencode-ai package), connect a free AI model, and build an expense tracker from one prompt. Plan vs Build, shortcuts and quick fixes.
 - [How to Connect vidIQ to Claude (Free Plan, Step-by-Step Setup)](https://thecodestreet.dev/post/how-to-connect-vidiq-to-claude/): Connect vidIQ to Claude on the free plan in about two minutes. What vidIQ, Claude and connectors are, the setup, real channel analytics and video ideas in Claude, vidIQ Free vs Boost vs MAX in rupees, and free Claude vs Pro.
 
 ## GenAI

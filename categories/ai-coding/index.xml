@@ -7,7 +7,293 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>The Code Street</copyright>
-        <lastBuildDate>Wed, 11 Nov 2026 15:34:28 +0000</lastBuildDate><atom:link href="https://thecodestreet.dev/categories/ai-coding/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 28 Nov 2026 12:12:21 +0530</lastBuildDate><atom:link href="https://thecodestreet.dev/categories/ai-coding/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>How to Use OpenCode on Windows for FREE (Install &#43; First Project)</title>
+        <link>https://thecodestreet.dev/post/how-to-use-opencode-on-windows/</link>
+        <pubDate>Sat, 28 Nov 2026 11:45:00 +0530</pubDate>
+        
+        <guid>https://thecodestreet.dev/post/how-to-use-opencode-on-windows/</guid>
+        <description>&lt;img src="https://thecodestreet.dev/post/how-to-use-opencode-on-windows/cover.png" alt="Featured image of post How to Use OpenCode on Windows for FREE (Install &#43; First Project)" /&gt;&lt;p&gt;Most OpenCode install guides for Windows still tell you to run &lt;code&gt;npm install -g opencode-ai&lt;/code&gt;. Run that today and you get version 1.19. The current OpenCode is version 2, and it ships under a different npm package: &lt;code&gt;@opencode/cli&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This guide installs the right version on Windows 11, connects a free AI model without paying anything, and builds a small working app from one prompt. You don&amp;rsquo;t need a GPU, because the model runs in the cloud.&lt;/p&gt;
+&lt;p&gt;This is part 1 of my OpenCode series. Everything later in the series builds on this setup.&lt;/p&gt;
+&lt;h2 id=&#34;-watch-the-video&#34;&gt;🎥 Watch the Video
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/m5QaNy0Ktoc&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;👉 &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/m5QaNy0Ktoc&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch on YouTube: How to Use OpenCode on Windows for FREE&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-what-is-opencode&#34;&gt;🧠 What Is OpenCode?
+&lt;/h2&gt;&lt;p&gt;OpenCode is an open-source AI coding agent that runs in your terminal. You describe what you want in plain English. It reads your project, writes files and runs commands. It&amp;rsquo;s an open-source alternative to Claude Code, and you pick the model: a free one, a paid one with your own API key, or a local model through Ollama.&lt;/p&gt;
+&lt;h2 id=&#34;-what-you-need&#34;&gt;🧰 What You Need
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Windows 10 or 11&lt;/li&gt;
+&lt;li&gt;Node.js (OpenCode installs with npm)&lt;/li&gt;
+&lt;li&gt;A terminal. I use Windows Terminal with PowerShell.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;OpenCode runs natively on Windows, but the official docs recommend WSL (Windows Subsystem for Linux) for the best experience. For a beginner, native Windows is the simplest way to start, so that&amp;rsquo;s what this guide uses.&lt;/p&gt;
+&lt;h2 id=&#34;1-step-1-check-nodejs&#34;&gt;1️⃣ Step 1: Check Node.js
+&lt;/h2&gt;&lt;p&gt;Open PowerShell and run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;node&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-v&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-v&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If both print a version number, you&amp;rsquo;re ready. If not, download the LTS installer from &lt;a class=&#34;link&#34; href=&#34;https://nodejs.org/en/download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;nodejs.org&lt;/a&gt;, install it with the defaults, then close and reopen your terminal. An old terminal window won&amp;rsquo;t see the new install.&lt;/p&gt;
+&lt;h2 id=&#34;2-step-2-install-opencode-v2-the-right-package&#34;&gt;2️⃣ Step 2: Install OpenCode V2 (the Right Package)
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/how-to-use-opencode-on-windows/v1_vs_v2.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/how-to-use-opencode-on-windows/v1_vs_v2_hu_4b75daeacdfc75d6.webp 480w, https://thecodestreet.dev/post/how-to-use-opencode-on-windows/v1_vs_v2_hu_c89c9371ffd225f2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Most tutorials install opencode-ai (V1, 1.19.6). The current package is @opencode/cli (V2, 2.4.1).&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;This is where most tutorials go wrong. If you installed OpenCode before, remove the old V1 package first, then install V2:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uninstall&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-g&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;opencode-ai&lt;/span&gt;     &lt;span class=&#34;c&#34;&gt;# only if you installed V1 before&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-g&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;@opencode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;cli
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;opencode&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;-version&lt;/span&gt;               &lt;span class=&#34;c&#34;&gt;# should start with 2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If the version starts with 1, the old package is still on your machine. Uninstall it and run the install again.&lt;/p&gt;
+&lt;p&gt;Two more things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The V2 docs say Windows package managers (Scoop, Chocolatey, winget) aren&amp;rsquo;t supported. Use npm.&lt;/li&gt;
+&lt;li&gt;If you prefer a normal app window, there&amp;rsquo;s a Windows desktop app on the &lt;a class=&#34;link&#34; href=&#34;https://opencode.ai/download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenCode download page&lt;/a&gt;. This guide uses the terminal version.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-step-3-open-a-project&#34;&gt;3️⃣ Step 3: Open a Project
+&lt;/h2&gt;&lt;p&gt;OpenCode works on whatever folder you start it in. Create a new one and launch it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;mkdir&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;expense-tracker&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd expense-tracker&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;opencode&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The prompt box at the bottom of the OpenCode screen is where you type.&lt;/p&gt;
+&lt;h2 id=&#34;4-step-4-connect-a-free-model&#34;&gt;4️⃣ Step 4: Connect a Free Model
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/how-to-use-opencode-on-windows/connect_free_model.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/how-to-use-opencode-on-windows/connect_free_model_hu_321fa1a20d37ac98.webp 480w, https://thecodestreet.dev/post/how-to-use-opencode-on-windows/connect_free_model_hu_b29b4ff1bcb8d080.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Connect a free model: /connect, then /models&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/connect   -&amp;gt; OpenCode -&amp;gt; sign in
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/models    -&amp;gt; pick a free model
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Type &lt;code&gt;/connect&lt;/code&gt;, choose OpenCode and sign in with your OpenCode account. Then type &lt;code&gt;/models&lt;/code&gt; and pick one of the free models. OpenCode&amp;rsquo;s docs list several models as free for a limited time, including Big Pickle and DeepSeek V4.1 Flash Free.&lt;/p&gt;
+&lt;p&gt;Two honest notes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The free list changes, so check &lt;code&gt;/models&lt;/code&gt; for what&amp;rsquo;s free today.&lt;/li&gt;
+&lt;li&gt;Some free models may keep your prompts to improve the model. Don&amp;rsquo;t paste client code, passwords or API keys into a free model. For practice projects, it&amp;rsquo;s fine.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you already have an API key from OpenAI, Anthropic or Google Gemini, &lt;code&gt;/connect&lt;/code&gt; is also where you add it.&lt;/p&gt;
+&lt;h2 id=&#34;5-step-5-plan-vs-build&#34;&gt;5️⃣ Step 5: Plan vs Build
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://thecodestreet.dev/post/how-to-use-opencode-on-windows/plan_vs_build.webp&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://thecodestreet.dev/post/how-to-use-opencode-on-windows/plan_vs_build_hu_e3310ee39a1ba552.webp 480w, https://thecodestreet.dev/post/how-to-use-opencode-on-windows/plan_vs_build_hu_fa214e4bacfb8a99.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Plan explores and writes a plan; Build writes code and runs commands. Shift &amp;#43; Tab switches.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;OpenCode has two main agents, and beginners often miss this:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Agent&lt;/th&gt;
+          &lt;th&gt;What it does&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Build&lt;/strong&gt; (default)&lt;/td&gt;
+          &lt;td&gt;Writes code, edits files and runs commands&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Plan&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Explores your project and writes a plan. It doesn&amp;rsquo;t edit your project files.&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Press &lt;strong&gt;Shift + Tab&lt;/strong&gt; to switch between them. My rule: start every new task in Plan, read the plan, then switch to Build. It costs one extra step and saves a lot of undoing.&lt;/p&gt;
+&lt;h2 id=&#34;-your-first-project-an-expense-tracker-from-one-prompt&#34;&gt;🚀 Your First Project: An Expense Tracker From One Prompt
+&lt;/h2&gt;&lt;p&gt;In Plan mode, paste this prompt:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Plan a simple expense tracker web app using HTML, CSS and JavaScript.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;I want to add an expense with an amount in rupees, a category and a date,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;see the monthly total, and save everything in the browser&amp;#39;s localStorage.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Keep it in three files.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Read the plan. If it looks right, press &lt;strong&gt;Shift + Tab&lt;/strong&gt; to switch to Build and type: &lt;code&gt;Go ahead and build it.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;When it finishes, open &lt;code&gt;index.html&lt;/code&gt; in your browser. Add an expense and check that the total updates. Then refresh the page: if the data is still there, localStorage is working. The video shows the full run.&lt;/p&gt;
+&lt;h2 id=&#34;-shortcuts-worth-learning-on-day-one&#34;&gt;⌨️ Shortcuts Worth Learning on Day One
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Shortcut&lt;/th&gt;
+          &lt;th&gt;What it does&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;@&lt;/code&gt; + file name&lt;/td&gt;
+          &lt;td&gt;Attaches a file to your prompt, e.g. &lt;code&gt;@style.css add a dark mode&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;/undo&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Reverts your last message and the changes that came with it&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;/redo&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Brings an undone change back&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;!&lt;/code&gt; + command&lt;/td&gt;
+          &lt;td&gt;Runs a terminal command without leaving OpenCode, e.g. &lt;code&gt;!dir&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;Esc&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Stops the agent mid-task&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;Ctrl + P&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Opens the command menu&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-honest-limits&#34;&gt;⚠️ Honest Limits
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Free models change and have limits.&lt;/strong&gt; If one stops working or slows down, open &lt;code&gt;/models&lt;/code&gt; and pick another.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Native Windows vs WSL.&lt;/strong&gt; Native works, but the official recommendation is WSL for better file performance and terminal support. If you hit odd terminal problems, WSL is the fix.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Build runs commands without asking by default.&lt;/strong&gt; OpenCode&amp;rsquo;s permission rules allow everything unless you add rules. If you want it to ask before every shell command, add an &lt;code&gt;ask&lt;/code&gt; rule for shell (see &lt;a class=&#34;link&#34; href=&#34;https://opencode.ai/docs/permissions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Permissions&lt;/a&gt;). Either way, use Git or a test folder until you trust it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-quick-fixes&#34;&gt;🛠️ Quick Fixes
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Problem&lt;/th&gt;
+          &lt;th&gt;Fix&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;opencode&lt;/code&gt; is not recognized&lt;/td&gt;
+          &lt;td&gt;Reopen the terminal. Still failing? Run &lt;code&gt;npm config get prefix&lt;/code&gt; and add that folder to your PATH.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&amp;ldquo;Running scripts is disabled on this system&amp;rdquo;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;Set-ExecutionPolicy -Scope CurrentUser RemoteSigned&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Version shows 1.x&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;npm uninstall -g opencode-ai&lt;/code&gt;, then &lt;code&gt;npm install -g @opencode/cli&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;No free models in &lt;code&gt;/models&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Run &lt;code&gt;/connect&lt;/code&gt;, choose OpenCode and sign in first&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-faq&#34;&gt;❓ FAQ
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Is OpenCode free?&lt;/strong&gt;
+OpenCode itself is open source and free. The models are separate: OpenCode offers some free models for a limited time, and paid models need your own API key or credits.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Do I need a GPU?&lt;/strong&gt;
+Not for this setup. The free models run in the cloud. You only need a GPU if you run a local model, which is the next video.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Why does &lt;code&gt;opencode --version&lt;/code&gt; show 1.x?&lt;/strong&gt;
+You installed the old &lt;code&gt;opencode-ai&lt;/code&gt; package. Uninstall it and install &lt;code&gt;@opencode/cli&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Should I use WSL instead?&lt;/strong&gt;
+The official docs recommend WSL for the best experience. Native Windows is simpler for a first setup, and you can switch later.&lt;/p&gt;
+&lt;h2 id=&#34;-next-in-the-series&#34;&gt;⏭️ Next in the Series
+&lt;/h2&gt;&lt;p&gt;Next up: &lt;strong&gt;OpenCode + Ollama&lt;/strong&gt;. You&amp;rsquo;ll run a model on your own PC, so you don&amp;rsquo;t need an account or an internet connection for the model. Subscribe to &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/@thecodestreet&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The Code Street&lt;/a&gt; so you don&amp;rsquo;t miss it.&lt;/p&gt;
+&lt;h2 id=&#34;-sources&#34;&gt;📚 Sources
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://opencode.ai/download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenCode download&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://opencode.ai/docs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenCode docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://opencode.ai/docs/windows-wsl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Windows (WSL)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://opencode.ai/docs/zen&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Free models (Console models)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://opencode.ai/docs/agents&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Agents: Plan and Build&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://opencode.ai/docs/tui&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;TUI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://opencode.ai/docs/permissions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Permissions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nodejs.org/en/download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Node.js download&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.npmjs.com/cli/v10/configuring-npm/folders&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;npm folders and PATH&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PowerShell execution policies&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Claude Skills vs Projects: Which One Do You Actually Need?</title>
         <link>https://thecodestreet.dev/post/claude-skills-vs-projects/</link>
         <pubDate>Wed, 11 Nov 2026 20:00:00 +0530</pubDate>
